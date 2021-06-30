@@ -110,5 +110,21 @@ namespace Akihabara.Native.External
         public static extern MpReturnCode mp_Packet__GetFaceGeometryVector(IntPtr packet, out IntPtr serializedProto);
 
         #endregion
+
+        #region Standard Library
+
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        public static extern void delete_array__PKc(IntPtr str);
+
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        public static extern void std_string__delete(IntPtr str);
+
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        public static extern MpReturnCode std_string__PKC_i(byte[] bytes, int size, out IntPtr str);
+
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        public static extern void std_string__swap__Rstr(IntPtr src, IntPtr dst);
+
+        #endregion
     }
 }
