@@ -12,7 +12,7 @@ namespace Akihabara.External
 
         public StdString(byte[] bytes) : base()
         {
-            UnsafeNativeMethods.std_string__PKC_i(bytes, bytes.Length, out var ptr);
+            UnsafeNativeMethods.std_string__PKc_i(bytes, bytes.Length, out var ptr);
             this.Ptr = ptr;
         }
 
