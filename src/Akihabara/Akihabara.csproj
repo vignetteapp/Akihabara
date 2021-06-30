@@ -9,4 +9,10 @@
     <PackageReference Include="Google.Protobuf" Version="3.17.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\..\README.md">
+      <Link>README.md</Link>
+    </Content>
+  </ItemGroup>
+
 </Project>
