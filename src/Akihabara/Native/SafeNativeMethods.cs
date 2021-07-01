@@ -2,9 +2,9 @@
 using System.Diagnostics.Contracts;
 using System.Runtime.InteropServices;
 
-namespace Akihabara.Native.External
+namespace Akihabara.Native
 {
-    public class SafeNativeMethods : NativeMethods
+    public partial class SafeNativeMethods : NativeMethods
     {
         #region ABSL
 

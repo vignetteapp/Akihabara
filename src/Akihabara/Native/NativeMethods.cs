@@ -1,5 +1,9 @@
-﻿namespace Akihabara.Native.External
+﻿namespace Akihabara.Native
 {
+    /// <summary>
+    /// A base class where <see cref="SafeNativeMethods"/> and <see cref="UnsafeNativeMethods"/> relies on.
+    /// only fields that will be used by both classes are to be used here.
+    /// </summary>
     public partial class NativeMethods
     {
         // originally this would be different definitions as per the Unity

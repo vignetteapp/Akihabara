@@ -1,4 +1,4 @@
-﻿namespace Akihabara.Native.External
+﻿namespace Akihabara.Native
 {
     public enum MpReturnCode : int
     {
