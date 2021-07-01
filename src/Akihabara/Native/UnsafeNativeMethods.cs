@@ -2,9 +2,15 @@
 using System.Runtime.InteropServices;
 using Akihabara.External;
 
-namespace Akihabara.Native.External
+namespace Akihabara.Native
 {
-    public class UnsafeNativeMethods : NativeMethods
+    // TODO: Move these regions into their own files so it doesn't look cluttered.
+    /// <summary>
+    /// A class containing Unsafe native methods.
+    /// Using instructions here should be mindful that since these are unsafe,
+    /// There are no guarantee this wouldn't leak or cause a segfault.
+    /// </summary>
+    public partial class UnsafeNativeMethods : NativeMethods
     {
         #region ABSL
 

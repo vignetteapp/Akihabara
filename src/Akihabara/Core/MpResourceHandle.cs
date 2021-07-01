@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using Akihabara.Native.External;
+using Akihabara.Native;
 
 namespace Akihabara.Core
 {
