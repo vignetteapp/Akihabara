@@ -23,22 +23,22 @@ namespace Akihabara.External
             {
                 case Severity.Info:
                 {
-                    UnsafeNativeMethods.glog_LOG_INFO__PKc(str);
+                    UnsafeNativeMethods.glog_LOG_INFO__PKc(str).Assert();
                     break;
                 }
                 case Severity.Warning:
                 {
-                    UnsafeNativeMethods.glog_LOG_WARNING__PKc(str);
+                    UnsafeNativeMethods.glog_LOG_WARNING__PKc(str).Assert();
                     break;
                 }
                 case Severity.Error:
                 {
-                    UnsafeNativeMethods.glog_LOG_ERROR__PKc(str);
+                    UnsafeNativeMethods.glog_LOG_ERROR__PKc(str).Assert();
                     break;
                 }
                 case Severity.Fatal:
                 {
-                    UnsafeNativeMethods.glog_LOG_FATAL__PKc(str);
+                    UnsafeNativeMethods.glog_LOG_FATAL__PKc(str).Assert();
                     break;
                 }
                 default:

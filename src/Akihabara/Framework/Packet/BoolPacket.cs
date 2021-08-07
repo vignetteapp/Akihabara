@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Buffers.Text;
 using Akihabara.Framework.Port;
-using Akihabara.Native.Framework;
+using Akihabara.Native;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -13,14 +13,14 @@ namespace Akihabara.Framework.Packet
 
         public BoolPacket(bool value) : base()
         {
-            UnsafeNativeMethods.mp__MakeBoolPacket__b(value, out var ptr);
+            UnsafeNativeMethods.mp__MakeBoolPacket__b(value, out var ptr).Assert();
 
             this.Ptr = ptr;
         }
 
         public override bool Get()
         {
-            UnsafeNativeMethods.mp_Packet__GetBool(MpPtr, out var val);
+            UnsafeNativeMethods.mp_Packet__GetBool(MpPtr, out var val).Assert();
             
             GC.KeepAlive(this);
             return val;
@@ -36,7 +36,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            UnsafeNativeMethods.mp_Packet__ValidateAsBool(MpPtr, out var statusPtr);
+            UnsafeNativeMethods.mp_Packet__ValidateAsBool(MpPtr, out var statusPtr).Assert();
             
             GC.KeepAlive(this);
             return new Status(statusPtr);

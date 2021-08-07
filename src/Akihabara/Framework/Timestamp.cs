@@ -1,6 +1,8 @@
 ﻿using System;
 using Akihabara.Core;
-using Akihabara.Native.Framework;
+using Akihabara.Native;
+using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework
 {
@@ -63,7 +65,7 @@ namespace Akihabara.Framework
 
         public Timestamp NextAllowedInStream()
         {
-            UnsafeNativeMethods.mp_Timestamp__NextAllowedInStream(MpPtr, out var nextPtr);
+            UnsafeNativeMethods.mp_Timestamp__NextAllowedInStream(MpPtr, out var nextPtr).Assert();
             
             GC.KeepAlive(this);
             return new Timestamp(nextPtr);
@@ -71,7 +73,7 @@ namespace Akihabara.Framework
 
         public Timestamp PreviousAllowedInStream()
         {
-            UnsafeNativeMethods.mp_Timestamp__PreviousAllowedInStream(MpPtr, out var prevPtr);
+            UnsafeNativeMethods.mp_Timestamp__PreviousAllowedInStream(MpPtr, out var prevPtr).Assert();
             
             GC.KeepAlive(this);
             return new Timestamp(prevPtr);
@@ -79,7 +81,7 @@ namespace Akihabara.Framework
 
         public Timestamp FromSeconds(double seconds)
         {
-            UnsafeNativeMethods.mp_Timestamp_FromSeconds__d(seconds, out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_FromSeconds__d(seconds, out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
@@ -88,56 +90,56 @@ namespace Akihabara.Framework
 
         public static Timestamp Unset()
         {
-            UnsafeNativeMethods.mp_Timestamp_Unset(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_Unset(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp Unstarted()
         {
-            UnsafeNativeMethods.mp_Timestamp_Unstarted(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_Unstarted(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp PreStream()
         {
-            UnsafeNativeMethods.mp_Timestamp_PreStream(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_PreStream(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp Min()
         {
-            UnsafeNativeMethods.mp_Timestamp_Min(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_Min(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp Max()
         {
-            UnsafeNativeMethods.mp_Timestamp_Max(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_Max(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp PostStream()
         {
-            UnsafeNativeMethods.mp_Timestamp_PostStream(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_PostStream(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp OneOverPostStream()
         {
-            UnsafeNativeMethods.mp_Timestamp_OneOverPostStream(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_OneOverPostStream(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }
 
         public static Timestamp Done()
         {
-            UnsafeNativeMethods.mp_Timestamp_Done(out var ptr);
+            UnsafeNativeMethods.mp_Timestamp_Done(out var ptr).Assert();
 
             return new Timestamp(ptr);
         }

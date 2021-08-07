@@ -15,7 +15,7 @@ namespace Akihabara.External
         
         static Protobuf()
         {
-            UnsafeNativeMethods.google_protobuf__SetLogHandler__PF(protobufLogHandler);
+            UnsafeNativeMethods.google_protobuf__SetLogHandler__PF(protobufLogHandler).Assert();
         }
 
         static void LogProtobufMessage(int level, string filename, int line, string message)
