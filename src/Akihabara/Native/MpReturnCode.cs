@@ -1,4 +1,6 @@
-﻿namespace Akihabara.Native
+﻿using Akihabara.Core;
+
+namespace Akihabara.Native
 {
     public enum MpReturnCode : int
     {
@@ -18,5 +20,20 @@
         ///  Received an abort signal (SIGABRT)
         /// </summary>
         Aborted = 134
+    }
+
+    public static class MpReturnCodeExtension
+    {
+        public static void Assert(this MpReturnCode code)
+        {
+            switch (code)
+            {
+                case MpReturnCode.Success: return;
+                case MpReturnCode.Aborted:
+                    throw new MediaPipeException("MediaPipe has aborted. See Glog files for details.");
+                default: 
+                    throw new MediapipePluginException($"Failed to call a native function (code={code})");
+            }
+        }
     }
 }
