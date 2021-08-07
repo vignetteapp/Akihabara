@@ -47,7 +47,7 @@ namespace Akihabara.Framework.Port
 
         public static Status Build(StatusCode code, string message, bool isOwner = true)
         {
-            UnsafeNativeMethods.absl_Status__i_PKc((int) code, message, out var ptr);
+            UnsafeNativeMethods.absl_Status__i_PKc((int) code, message, out var ptr).Assert();
 
             return new Status(ptr, isOwner);
         }

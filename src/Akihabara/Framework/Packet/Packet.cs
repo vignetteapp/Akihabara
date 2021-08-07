@@ -1,7 +1,8 @@
 ﻿using System;
 using Akihabara.Core;
 using Akihabara.Framework.Port;
-using Akihabara.Native.Framework;
+using Akihabara.Native;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -23,7 +24,7 @@ namespace Akihabara.Framework.Packet
 
         public Packet<T> At(Timestamp timestamp)
         {
-            UnsafeNativeMethods.mp_Packet__At__Rt(MpPtr, timestamp.MpPtr, out var packetPtr);
+            UnsafeNativeMethods.mp_Packet__At__Rt(MpPtr, timestamp.MpPtr, out var packetPtr).Assert();
             
             GC.KeepAlive(timestamp);
 
@@ -32,7 +33,7 @@ namespace Akihabara.Framework.Packet
 
         public Status ValidateAsProtoMessageLite()
         {
-            UnsafeNativeMethods.mp_Packet__ValidateAsProtoMessageLite(MpPtr, out var statusPtr);
+            UnsafeNativeMethods.mp_Packet__ValidateAsProtoMessageLite(MpPtr, out var statusPtr).Assert();
             
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -42,7 +43,7 @@ namespace Akihabara.Framework.Packet
 
         public Timestamp Timestamp()
         {
-            UnsafeNativeMethods.mp_Packet__Timestamp(MpPtr, out var timestampPtr);
+            UnsafeNativeMethods.mp_Packet__Timestamp(MpPtr, out var timestampPtr).Assert();
             
             GC.KeepAlive(this);
             return new Timestamp(timestampPtr);
