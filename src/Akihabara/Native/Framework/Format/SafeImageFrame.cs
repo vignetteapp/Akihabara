@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 using System.Runtime.InteropServices;
+using Akihabara.Framework.ImageFormat;
 
 namespace Akihabara.Native.Framework.Format
 {
