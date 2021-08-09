@@ -1,0 +1,3 @@
+[submodule "src/Akihabara/ThirdParty/Mediapipe"]
+	path = src/Akihabara/ThirdParty/Mediapipe
+	url = https://github.com/google/mediapipe
