@@ -5,8 +5,8 @@ namespace Akihabara.Core
     /// <summary>
     /// An Exception within the Mediapipe Subsystem.
     /// </summary>
-    public class MediaPipeException : Exception
+    public class MediapipeException : Exception
     {
-        public MediaPipeException(string message) : base(message) {}
+        public MediapipeException(string message) : base(message) {}
     }
 }

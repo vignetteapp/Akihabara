@@ -14,15 +14,6 @@
     <Content Include="..\..\README.md">
       <Link>README.md</Link>
     </Content>
-    <Content Include="ThirdParty\Mediapipe\.git" />
-    <Content Include="ThirdParty\Mediapipe\.github\bot_config.yml" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\00-build-installation-issue.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\10-solution-issue.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\20-documentation-issue.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\30-bug-issue.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\40-feature-request.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\ISSUE_TEMPLATE\50-other-issues.md" />
-    <Content Include="ThirdParty\Mediapipe\.github\stale.yml" />
   </ItemGroup>
 
 </Project>
