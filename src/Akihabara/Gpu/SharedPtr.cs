@@ -19,7 +19,7 @@ namespace Akihabara.Gpu
         
         /// <summary>
         /// Calls reset() on the native side of the implementing class. GpuResources and GLSyncPoint is expected
-        /// to have this implemented since they need their synchronization context might need to get reset on
+        /// to have this implemented since they their synchronization context might need to get reset on
         /// specific cases.
         /// </summary>
         public override void Reset() {}
