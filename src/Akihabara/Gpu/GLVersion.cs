@@ -2,10 +2,10 @@
 
 namespace Akihabara.Gpu
 {
-    public enum GlVersion : UInt32
+    public enum GlVersion : uint
     {
-        kGL = 1,
-        kGLES2 = 2,
-        kGLES3 = 3,
+        KGl = 1,
+        KGles2 = 2,
+        KGles3 = 3,
     }
 }
