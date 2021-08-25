@@ -20,9 +20,9 @@ namespace Akihabara.Gpu
         /// </remarks>
         public delegate void DeletionCallback(IntPtr glSyncToken);
 
-        public GlTextureBuffer(uint ptr, bool isOwner = true) : base(isOwner)
+        public GlTextureBuffer(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            _sharedPtrHandle = new GlTextureBufferSharedPtr(Ptr, isOwner);
+            _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
 
             this.Ptr = _sharedPtrHandle.Get();
         }
