@@ -12,7 +12,7 @@ namespace Akihabara.Gpu
 
         public GlSyncPoint(IntPtr ptr) : base(ptr)
         {
-            _sharedPtrHandle = new GLSyncPointSharedPtr(ptr);
+            _sharedPtrHandle = new GlSyncPointSharedPtr(ptr);
 
             this.Ptr = _sharedPtrHandle.Get();
         }
@@ -57,9 +57,9 @@ namespace Akihabara.Gpu
         
     }
 
-    internal class GLSyncPointSharedPtr : SharedPtr
+    internal class GlSyncPointSharedPtr : SharedPtr
     {
-        public GLSyncPointSharedPtr(IntPtr ptr) : base(ptr) {}
+        public GlSyncPointSharedPtr(IntPtr ptr) : base(ptr) {}
 
         protected override void DeleteMpPtr()
         {

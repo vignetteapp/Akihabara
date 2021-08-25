@@ -7,8 +7,8 @@ namespace Akihabara.Gpu
     public struct GlTextureInfo
     {
         public int glInternalFormat;
-        public UInt32 glFormat;
-        public UInt32 glType;
+        public uint glFormat;
+        public uint glType;
         public int downscale;        
     }
 }
