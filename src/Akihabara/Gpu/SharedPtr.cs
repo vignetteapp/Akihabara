@@ -1,26 +1,32 @@
 ﻿using System;
 using Akihabara.Core;
-using Akihabara.Native.Gpu;
 
 namespace Akihabara.Gpu
 {
-    internal class SharedPtr : SharedPtrHandle
+    internal abstract class SharedPtr : SharedPtrHandle, ISharedPtr
     {
-        public SharedPtr(IntPtr ptr) : base(ptr) {}
-
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_SharedGpuResources__delete(Ptr);
-        }
-
+        protected SharedPtr(IntPtr ptr, bool isOwner = true): base(ptr , isOwner) {}
+        
+        /// <summary>
+        /// Gets the Mediapipe shared pointer to be used by other classes for your specific native implementation.
+        /// </summary>
         public override IntPtr Get()
         {
-            return SafeNativeMethods.mp_SharedGpuResources__get(MpPtr);
+            // as we're expecting it to be implemented and overriden by the implementing class
+            // this should never get called.
+            return IntPtr.Zero;
         }
-
-        public override void Reset()
-        {
-            UnsafeNativeMethods.mp_SharedGlContext__reset(MpPtr);
-        }
+        
+        /// <summary>
+        /// Calls reset() on the native side of the implementing class. GpuResources and GLSyncPoint is expected
+        /// to have this implemented since they need their synchronization context might need to get reset on
+        /// specific cases.
+        /// </summary>
+        public override void Reset() {}
+        
+        /// <summary>
+        /// Inherited from MpResourceHandle. This deletes the Mediapipe pointer associated with the shared pointer.
+        /// </summary>
+        protected override void DeleteMpPtr() {}
     }
 }

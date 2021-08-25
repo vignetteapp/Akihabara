@@ -19,7 +19,7 @@ namespace Akihabara.Gpu
 
         public GlContext(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            _sharedPtrHandle = new SharedPtr(ptr);
+            _sharedPtrHandle = new GLContextSharedPtr(ptr);
             this.Ptr = _sharedPtrHandle.Get();
         }
 
@@ -62,5 +62,25 @@ namespace Akihabara.Gpu
         public int GlMinorVersion => SafeNativeMethods.mp_GlContext__gl_minor_version(MpPtr);
 
         public long GlFinishCount => SafeNativeMethods.mp_GlContext__gl_finish_count(MpPtr);
+    }
+
+    internal class GLContextSharedPtr : SharedPtr
+    {
+        public GLContextSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+
+        protected override void DeleteMpPtr()
+        {
+            UnsafeNativeMethods.mp_SharedGlContext__delete(Ptr);
+        }
+
+        public override IntPtr Get()
+        {
+            return SafeNativeMethods.mp_SharedGlContext__get(MpPtr);
+        }
+
+        public override void Reset()
+        {
+            UnsafeNativeMethods.mp_SharedGlContext__reset(MpPtr);
+        }
     }
 }

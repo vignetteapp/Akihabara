@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Akihabara.Core;
 using Akihabara.Framework.Port;
 using Akihabara.Native;
@@ -13,7 +14,7 @@ namespace Akihabara.Gpu
         
         public GpuResources(IntPtr ptr) : base()
         {
-            _sharedPtrHandle = new SharedPtr(ptr);
+            _sharedPtrHandle = new GpuResourceSharedPtr(ptr);
 
             this.Ptr = _sharedPtrHandle.Get();
         }
@@ -52,5 +53,25 @@ namespace Akihabara.Gpu
         }
 
         public IntPtr IosGpuData => SafeNativeMethods.mp_GpuResources__ios_gpu_data(MpPtr);
+    }
+
+    internal class GpuResourceSharedPtr : SharedPtr
+    {
+        public GpuResourceSharedPtr(IntPtr ptr): base(ptr) {}
+
+        protected override void DeleteMpPtr()
+        {
+            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(MpPtr);
+        }
+
+        public override IntPtr Get()
+        {
+            return SafeNativeMethods.mp_SharedGpuResources__get(MpPtr);
+        }
+
+        public override void Reset()
+        {
+            UnsafeNativeMethods.mp_SharedGlContext__reset(MpPtr);
+        }
     }
 }
