@@ -12,170 +12,170 @@ using scg = global::System.Collections.Generic;
 namespace Akihabara.Framework.ProtoCalculator
 {
 
-  /// <summary>Holder for reflection information generated from calculator_contract_test.proto</summary>
-  public static partial class CalculatorContractTestReflection
-  {
-
-    #region Descriptor
-    /// <summary>File descriptor for calculator_contract_test.proto</summary>
-    public static pbr::FileDescriptor Descriptor
+    /// <summary>Holder for reflection information generated from calculator_contract_test.proto</summary>
+    public static partial class CalculatorContractTestReflection
     {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
 
-    static CalculatorContractTestReflection()
-    {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "Ch5jYWxjdWxhdG9yX2NvbnRyYWN0X3Rlc3QucHJvdG8SJGFraWhhYmFyYS5m",
-            "cmFtZXdvcmsucHJvdG9fY2FsY3VsYXRvchoQY2FsY3VsYXRvci5wcm90byLG",
-            "AQodQ2FsY3VsYXRvckNvbnRyYWN0VGVzdE9wdGlvbnMSFgoKdGVzdF9maWVs",
-            "ZBgBIAEoAToCLTEyjAEKA2V4dBI3LmFraWhhYmFyYS5mcmFtZXdvcmsucHJv",
-            "dG9fY2FsY3VsYXRvci5DYWxjdWxhdG9yT3B0aW9ucxi31YBaIAEoCzJDLmFr",
-            "aWhhYmFyYS5mcmFtZXdvcmsucHJvdG9fY2FsY3VsYXRvci5DYWxjdWxhdG9y",
-            "Q29udHJhY3RUZXN0T3B0aW9ucw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        #region Descriptor
+        /// <summary>File descriptor for calculator_contract_test.proto</summary>
+        public static pbr::FileDescriptor Descriptor
+        {
+            get { return descriptor; }
+        }
+        private static pbr::FileDescriptor descriptor;
+
+        static CalculatorContractTestReflection()
+        {
+            byte[] descriptorData = global::System.Convert.FromBase64String(
+                string.Concat(
+                  "Ch5jYWxjdWxhdG9yX2NvbnRyYWN0X3Rlc3QucHJvdG8SJGFraWhhYmFyYS5m",
+                  "cmFtZXdvcmsucHJvdG9fY2FsY3VsYXRvchoQY2FsY3VsYXRvci5wcm90byLG",
+                  "AQodQ2FsY3VsYXRvckNvbnRyYWN0VGVzdE9wdGlvbnMSFgoKdGVzdF9maWVs",
+                  "ZBgBIAEoAToCLTEyjAEKA2V4dBI3LmFraWhhYmFyYS5mcmFtZXdvcmsucHJv",
+                  "dG9fY2FsY3VsYXRvci5DYWxjdWxhdG9yT3B0aW9ucxi31YBaIAEoCzJDLmFr",
+                  "aWhhYmFyYS5mcmFtZXdvcmsucHJvdG9fY2FsY3VsYXRvci5DYWxjdWxhdG9y",
+                  "Q29udHJhY3RUZXN0T3B0aW9ucw=="));
+            descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
+                new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions), global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions.Parser, new[]{ "TestField" }, null, null, new pb::Extension[] { global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions.Extensions.Ext }, null)
-          }));
-    }
-    #endregion
+                }));
+        }
+        #endregion
 
-  }
-  #region Messages
-  public sealed partial class CalculatorContractTestOptions : pb::IMessage<CalculatorContractTestOptions>
+    }
+    #region Messages
+    public sealed partial class CalculatorContractTestOptions : pb::IMessage<CalculatorContractTestOptions>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<CalculatorContractTestOptions> _parser = new pb::MessageParser<CalculatorContractTestOptions>(() => new CalculatorContractTestOptions());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CalculatorContractTestOptions> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
     {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestReflection.Descriptor.MessageTypes[0]; }
-    }
+        private static readonly pb::MessageParser<CalculatorContractTestOptions> _parser = new pb::MessageParser<CalculatorContractTestOptions>(() => new CalculatorContractTestOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CalculatorContractTestOptions> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestReflection.Descriptor.MessageTypes[0]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorContractTestOptions()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    partial void OnConstruction();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorContractTestOptions()
+        {
+            OnConstruction();
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorContractTestOptions(CalculatorContractTestOptions other) : this()
-    {
-      _hasBits0 = other._hasBits0;
-      testField_ = other.testField_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorContractTestOptions Clone()
-    {
-      return new CalculatorContractTestOptions(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorContractTestOptions(CalculatorContractTestOptions other) : this()
+        {
+            _hasBits0 = other._hasBits0;
+            testField_ = other.testField_;
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    /// <summary>Field number for the "test_field" field.</summary>
-    public const int TestFieldFieldNumber = 1;
-    private readonly static double TestFieldDefaultValue = -1D;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorContractTestOptions Clone()
+        {
+            return new CalculatorContractTestOptions(this);
+        }
 
-    private double testField_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double TestField
-    {
-      get { if ((_hasBits0 & 1) != 0) { return testField_; } else { return TestFieldDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 1;
-        testField_ = value;
-      }
-    }
-    /// <summary>Gets whether the "test_field" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasTestField
-    {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "test_field" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearTestField()
-    {
-      _hasBits0 &= ~1;
-    }
+        /// <summary>Field number for the "test_field" field.</summary>
+        public const int TestFieldFieldNumber = 1;
+        private readonly static double TestFieldDefaultValue = -1D;
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as CalculatorContractTestOptions);
-    }
+        private double testField_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double TestField
+        {
+            get { if ((_hasBits0 & 1) != 0) { return testField_; } else { return TestFieldDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 1;
+                testField_ = value;
+            }
+        }
+        /// <summary>Gets whether the "test_field" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTestField
+        {
+            get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "test_field" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTestField()
+        {
+            _hasBits0 &= ~1;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CalculatorContractTestOptions other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TestField, other.TestField)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as CalculatorContractTestOptions);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasTestField) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TestField);
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CalculatorContractTestOptions other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TestField, other.TestField)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasTestField) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TestField);
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasTestField) {
         output.WriteRawTag(9);
@@ -185,62 +185,62 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasTestField)
-      {
-        output.WriteRawTag(9);
-        output.WriteDouble(TestField);
-      }
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasTestField)
+            {
+                output.WriteRawTag(9);
+                output.WriteDouble(TestField);
+            }
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasTestField)
-      {
-        size += 1 + 8;
-      }
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (HasTestField)
+            {
+                size += 1 + 8;
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CalculatorContractTestOptions other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasTestField)
-      {
-        TestField = other.TestField;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CalculatorContractTestOptions other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasTestField)
+            {
+                TestField = other.TestField;
+            }
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -255,45 +255,45 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 9:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              TestField = input.ReadDouble();
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 9:
+                        {
+                            TestField = input.ReadDouble();
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-    #region Extensions
-    /// <summary>Container for extensions for other messages declared in the CalculatorContractTestOptions message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Extensions
-    {
-      public static readonly pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions> Ext =
-        new pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions>(188754615, pb::FieldCodec.ForMessage(1510036922, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions.Parser));
+        #region Extensions
+        /// <summary>Container for extensions for other messages declared in the CalculatorContractTestOptions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Extensions
+        {
+            public static readonly pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions> Ext =
+              new pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions>(188754615, pb::FieldCodec.ForMessage(1510036922, global::Akihabara.Framework.ProtoCalculator.CalculatorContractTestOptions.Parser));
+        }
+        #endregion
+
     }
+
     #endregion
-
-  }
-
-  #endregion
 
 }
 
