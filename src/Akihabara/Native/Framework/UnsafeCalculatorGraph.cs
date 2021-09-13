@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
+using Akihabara.Framework;
+
 namespace Akihabara.Native.Framework
 {
     public partial class UnsafeNativeMethods : NativeMethods
     {
-        public delegate IntPtr NativePacketCallback(IntPtr packetPtr);
-
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_CalculatorGraph__(out IntPtr graph);
 
@@ -34,7 +34,7 @@ namespace Akihabara.Native.Framework
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_CalculatorGraph__ObserveOutputStream__PKc_PF(IntPtr graph,
             string streamName,
-            [MarshalAs(UnmanagedType.FunctionPtr)] NativePacketCallback packetCallback,
+            [MarshalAs(UnmanagedType.FunctionPtr)] CalculatorGraph.NativePacketCallback packetCallback,
             out IntPtr status);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
