@@ -196,7 +196,7 @@ namespace Akihabara.Framework.ImageFormat
                 code.Assert();
                 return val;
             }
-            catch (MediaPipeException)
+            catch (MediapipeException)
             {
                 throw new FormatException($"Invalid image format: {Format()}");
             }
