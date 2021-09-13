@@ -6,6 +6,7 @@ using Akihabara.Core;
 using Akihabara.External;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.ProtoCalculator;
 using Akihabara.Native;
 using nf = Akihabara.Native.Framework;
 
