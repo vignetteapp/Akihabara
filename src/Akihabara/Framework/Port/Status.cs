@@ -37,7 +37,7 @@ namespace Akihabara.Framework.Port
         public void AssertOk()
         {
             if (!ok)
-                throw new MediaPipeException(ToString());
+                throw new MediapipeException(ToString());
         }
         
         public StatusCode Code => (StatusCode)RawCode;
