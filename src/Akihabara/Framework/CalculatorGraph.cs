@@ -7,6 +7,7 @@ using Akihabara.External;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.ProtoCalculator;
+using Akihabara.Gpu;
 using Akihabara.Native;
 using nf = Akihabara.Native.Framework;
 
@@ -155,7 +156,7 @@ namespace Akihabara.Framework
 
         public bool HasError()
         {
-            return SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
+            return nf.SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
         }
 
         public Status AddPacketToInputStream<T>(string streamName, Packet<T> packet)
@@ -199,17 +200,17 @@ namespace Akihabara.Framework
 
         public bool GraphInputStreamsClosed()
         {
-            return SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
+            return nf.SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
         }
 
         public bool IsNodeThrottled(int nodeId)
         {
-            return SafeNativeMethods.mp_CalculatorGraph__IsNodeThrottled__i(MpPtr, nodeId);
+            return nf.SafeNativeMethods.mp_CalculatorGraph__IsNodeThrottled__i(MpPtr, nodeId);
         }
 
         public bool UnthrottleSources()
         {
-            return SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
+            return nf.SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
         }
 
         public GpuResources GetGpuResources()
@@ -229,6 +230,4 @@ namespace Akihabara.Framework
             return new Status(statusPtr);
         }
     }
-}
-}
 }
