@@ -25,6 +25,13 @@ namespace Akihabara.Framework.Packet
             this.Ptr = ptr;
         }
 
+        public BoolPacket(bool value, Timestamp timestamp) : base()
+        {
+            UnsafeNativeMethods.mp__MakeBoolPacket_At__b_Rt(value, timestamp.MpPtr, out var ptr).Assert();
+            GC.KeepAlive(timestamp);
+            this.Ptr = ptr;
+        }
+
         public override bool Get()
         {
             UnsafeNativeMethods.mp_Packet__GetBool(MpPtr, out var val).Assert();
