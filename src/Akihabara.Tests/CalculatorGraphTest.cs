@@ -4,7 +4,7 @@ using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.ProtoCalculator;
 
-namespace Tests
+namespace Akihabara.Tests
 {
     [TestFixture]
     public class CalculatorGraphTest
