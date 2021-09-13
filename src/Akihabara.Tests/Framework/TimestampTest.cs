@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Akihabara.Framework;
 
-namespace Akihabara.Tests
+namespace Akihabara.Tests.Framework
 {
     [TestFixture]
     public class TimestampTest
