@@ -58,6 +58,8 @@ namespace Akihabara.Framework.Packet
             return typeName ?? "";
         }
 
+        public string DebugTypeName() => MarshalStringFromNative(UnsafeNativeMethods.mp_Packet__DebugTypeName);
+
         protected override void DeleteMpPtr()
         {
             UnsafeNativeMethods.mp_Packet__delete(Ptr);
