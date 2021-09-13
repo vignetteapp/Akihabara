@@ -88,7 +88,7 @@ namespace Akihabara.Framework
             return new Timestamp(prevPtr);
         }
 
-        public Timestamp FromSeconds(double seconds)
+        public static Timestamp FromSeconds(double seconds)
         {
             UnsafeNativeMethods.mp_Timestamp_FromSeconds__d(seconds, out var ptr).Assert();
 
