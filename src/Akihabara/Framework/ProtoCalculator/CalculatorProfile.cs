@@ -12,325 +12,325 @@ using scg = global::System.Collections.Generic;
 namespace Akihabara.Framework.ProtoCalculator
 {
 
-  /// <summary>Holder for reflection information generated from calculator_profile.proto</summary>
-  public static partial class CalculatorProfileReflection
-  {
-
-    #region Descriptor
-    /// <summary>File descriptor for calculator_profile.proto</summary>
-    public static pbr::FileDescriptor Descriptor
+    /// <summary>Holder for reflection information generated from calculator_profile.proto</summary>
+    public static partial class CalculatorProfileReflection
     {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
 
-    static CalculatorProfileReflection()
-    {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "ChhjYWxjdWxhdG9yX3Byb2ZpbGUucHJvdG8SJGFraWhhYmFyYS5mcmFtZXdv",
-            "cmsucHJvdG9fY2FsY3VsYXRvchoQY2FsY3VsYXRvci5wcm90byJvCg1UaW1l",
-            "SGlzdG9ncmFtEhAKBXRvdGFsGAEgASgDOgEwEiMKEmludGVydmFsX3NpemVf",
-            "dXNlYxgCIAEoAzoHMTAwMDAwMBIYCg1udW1faW50ZXJ2YWxzGAMgASgDOgEx",
-            "Eg0KBWNvdW50GAQgAygDIn0KDVN0cmVhbVByb2ZpbGUSDAoEbmFtZRgBIAEo",
-            "CRIYCgliYWNrX2VkZ2UYAiABKAg6BWZhbHNlEkQKB2xhdGVuY3kYAyABKAsy",
-            "My5ha2loYWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuVGltZUhp",
-            "c3RvZ3JhbSKfAwoRQ2FsY3VsYXRvclByb2ZpbGUSDAoEbmFtZRgBIAEoCRIX",
-            "CgxvcGVuX3J1bnRpbWUYAiABKAM6ATASGAoNY2xvc2VfcnVudGltZRgDIAEo",
-            "AzoBMBJMCg9wcm9jZXNzX3J1bnRpbWUYBCABKAsyMy5ha2loYWJhcmEuZnJh",
-            "bWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuVGltZUhpc3RvZ3JhbRJSChVwcm9j",
-            "ZXNzX2lucHV0X2xhdGVuY3kYBSABKAsyMy5ha2loYWJhcmEuZnJhbWV3b3Jr",
-            "LnByb3RvX2NhbGN1bGF0b3IuVGltZUhpc3RvZ3JhbRJTChZwcm9jZXNzX291",
-            "dHB1dF9sYXRlbmN5GAYgASgLMjMuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90",
-            "b19jYWxjdWxhdG9yLlRpbWVIaXN0b2dyYW0SUgoVaW5wdXRfc3RyZWFtX3By",
-            "b2ZpbGVzGAcgAygLMjMuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b19jYWxj",
-            "dWxhdG9yLlN0cmVhbVByb2ZpbGUi1QcKCkdyYXBoVHJhY2USEQoJYmFzZV90",
-            "aW1lGAEgASgDEhYKDmJhc2VfdGltZXN0YW1wGAIgASgDEhcKD2NhbGN1bGF0",
-            "b3JfbmFtZRgDIAMoCRITCgtzdHJlYW1fbmFtZRgEIAMoCRJaChBjYWxjdWxh",
-            "dG9yX3RyYWNlGAUgAygLMkAuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b19j",
-            "YWxjdWxhdG9yLkdyYXBoVHJhY2UuQ2FsY3VsYXRvclRyYWNlGo4BCgtTdHJl",
-            "YW1UcmFjZRISCgpzdGFydF90aW1lGAEgASgDEhMKC2ZpbmlzaF90aW1lGAIg",
-            "ASgDEhgKEHBhY2tldF90aW1lc3RhbXAYAyABKAMSEQoJc3RyZWFtX2lkGAQg",
-            "ASgFEhUKCXBhY2tldF9pZBgFIAEoA0ICGAESEgoKZXZlbnRfZGF0YRgGIAEo",
-            "AxruAgoPQ2FsY3VsYXRvclRyYWNlEg8KB25vZGVfaWQYASABKAUSFwoPaW5w",
-            "dXRfdGltZXN0YW1wGAIgASgDEk4KCmV2ZW50X3R5cGUYAyABKA4yOi5ha2lo",
-            "YWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuR3JhcGhUcmFjZS5F",
-            "dmVudFR5cGUSEgoKc3RhcnRfdGltZRgEIAEoAxITCgtmaW5pc2hfdGltZRgF",
-            "IAEoAxJRCgtpbnB1dF90cmFjZRgGIAMoCzI8LmFraWhhYmFyYS5mcmFtZXdv",
-            "cmsucHJvdG9fY2FsY3VsYXRvci5HcmFwaFRyYWNlLlN0cmVhbVRyYWNlElIK",
-            "DG91dHB1dF90cmFjZRgHIAMoCzI8LmFraWhhYmFyYS5mcmFtZXdvcmsucHJv",
-            "dG9fY2FsY3VsYXRvci5HcmFwaFRyYWNlLlN0cmVhbVRyYWNlEhEKCXRocmVh",
-            "ZF9pZBgIIAEoBSKPAgoJRXZlbnRUeXBlEgsKB1VOS05PV04QABIICgRPUEVO",
-            "EAESCwoHUFJPQ0VTUxACEgkKBUNMT1NFEAMSDQoJTk9UX1JFQURZEAQSFQoR",
-            "UkVBRFlfRk9SX1BST0NFU1MQBRITCg9SRUFEWV9GT1JfQ0xPU0UQBhINCglU",
-            "SFJPVFRMRUQQBxIPCgtVTlRIUk9UVExFRBAIEhEKDUNQVV9UQVNLX1VTRVIQ",
-            "CRITCg9DUFVfVEFTS19TWVNURU0QChIMCghHUFVfVEFTSxALEgwKCERTUF9U",
-            "QVNLEAwSDAoIVFBVX1RBU0sQDRITCg9HUFVfQ0FMSUJSQVRJT04QDhIRCg1Q",
-            "QUNLRVRfUVVFVUVEEA8i+AEKDEdyYXBoUHJvZmlsZRJFCgtncmFwaF90cmFj",
-            "ZRgBIAMoCzIwLmFraWhhYmFyYS5mcmFtZXdvcmsucHJvdG9fY2FsY3VsYXRv",
-            "ci5HcmFwaFRyYWNlElQKE2NhbGN1bGF0b3JfcHJvZmlsZXMYAiADKAsyNy5h",
-            "a2loYWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuQ2FsY3VsYXRv",
-            "clByb2ZpbGUSSwoGY29uZmlnGAMgASgLMjsuYWtpaGFiYXJhLmZyYW1ld29y",
-            "ay5wcm90b19jYWxjdWxhdG9yLkNhbGN1bGF0b3JHcmFwaENvbmZpZw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        #region Descriptor
+        /// <summary>File descriptor for calculator_profile.proto</summary>
+        public static pbr::FileDescriptor Descriptor
+        {
+            get { return descriptor; }
+        }
+        private static pbr::FileDescriptor descriptor;
+
+        static CalculatorProfileReflection()
+        {
+            byte[] descriptorData = global::System.Convert.FromBase64String(
+                string.Concat(
+                  "ChhjYWxjdWxhdG9yX3Byb2ZpbGUucHJvdG8SJGFraWhhYmFyYS5mcmFtZXdv",
+                  "cmsucHJvdG9fY2FsY3VsYXRvchoQY2FsY3VsYXRvci5wcm90byJvCg1UaW1l",
+                  "SGlzdG9ncmFtEhAKBXRvdGFsGAEgASgDOgEwEiMKEmludGVydmFsX3NpemVf",
+                  "dXNlYxgCIAEoAzoHMTAwMDAwMBIYCg1udW1faW50ZXJ2YWxzGAMgASgDOgEx",
+                  "Eg0KBWNvdW50GAQgAygDIn0KDVN0cmVhbVByb2ZpbGUSDAoEbmFtZRgBIAEo",
+                  "CRIYCgliYWNrX2VkZ2UYAiABKAg6BWZhbHNlEkQKB2xhdGVuY3kYAyABKAsy",
+                  "My5ha2loYWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuVGltZUhp",
+                  "c3RvZ3JhbSKfAwoRQ2FsY3VsYXRvclByb2ZpbGUSDAoEbmFtZRgBIAEoCRIX",
+                  "CgxvcGVuX3J1bnRpbWUYAiABKAM6ATASGAoNY2xvc2VfcnVudGltZRgDIAEo",
+                  "AzoBMBJMCg9wcm9jZXNzX3J1bnRpbWUYBCABKAsyMy5ha2loYWJhcmEuZnJh",
+                  "bWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuVGltZUhpc3RvZ3JhbRJSChVwcm9j",
+                  "ZXNzX2lucHV0X2xhdGVuY3kYBSABKAsyMy5ha2loYWJhcmEuZnJhbWV3b3Jr",
+                  "LnByb3RvX2NhbGN1bGF0b3IuVGltZUhpc3RvZ3JhbRJTChZwcm9jZXNzX291",
+                  "dHB1dF9sYXRlbmN5GAYgASgLMjMuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90",
+                  "b19jYWxjdWxhdG9yLlRpbWVIaXN0b2dyYW0SUgoVaW5wdXRfc3RyZWFtX3By",
+                  "b2ZpbGVzGAcgAygLMjMuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b19jYWxj",
+                  "dWxhdG9yLlN0cmVhbVByb2ZpbGUi1QcKCkdyYXBoVHJhY2USEQoJYmFzZV90",
+                  "aW1lGAEgASgDEhYKDmJhc2VfdGltZXN0YW1wGAIgASgDEhcKD2NhbGN1bGF0",
+                  "b3JfbmFtZRgDIAMoCRITCgtzdHJlYW1fbmFtZRgEIAMoCRJaChBjYWxjdWxh",
+                  "dG9yX3RyYWNlGAUgAygLMkAuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b19j",
+                  "YWxjdWxhdG9yLkdyYXBoVHJhY2UuQ2FsY3VsYXRvclRyYWNlGo4BCgtTdHJl",
+                  "YW1UcmFjZRISCgpzdGFydF90aW1lGAEgASgDEhMKC2ZpbmlzaF90aW1lGAIg",
+                  "ASgDEhgKEHBhY2tldF90aW1lc3RhbXAYAyABKAMSEQoJc3RyZWFtX2lkGAQg",
+                  "ASgFEhUKCXBhY2tldF9pZBgFIAEoA0ICGAESEgoKZXZlbnRfZGF0YRgGIAEo",
+                  "AxruAgoPQ2FsY3VsYXRvclRyYWNlEg8KB25vZGVfaWQYASABKAUSFwoPaW5w",
+                  "dXRfdGltZXN0YW1wGAIgASgDEk4KCmV2ZW50X3R5cGUYAyABKA4yOi5ha2lo",
+                  "YWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuR3JhcGhUcmFjZS5F",
+                  "dmVudFR5cGUSEgoKc3RhcnRfdGltZRgEIAEoAxITCgtmaW5pc2hfdGltZRgF",
+                  "IAEoAxJRCgtpbnB1dF90cmFjZRgGIAMoCzI8LmFraWhhYmFyYS5mcmFtZXdv",
+                  "cmsucHJvdG9fY2FsY3VsYXRvci5HcmFwaFRyYWNlLlN0cmVhbVRyYWNlElIK",
+                  "DG91dHB1dF90cmFjZRgHIAMoCzI8LmFraWhhYmFyYS5mcmFtZXdvcmsucHJv",
+                  "dG9fY2FsY3VsYXRvci5HcmFwaFRyYWNlLlN0cmVhbVRyYWNlEhEKCXRocmVh",
+                  "ZF9pZBgIIAEoBSKPAgoJRXZlbnRUeXBlEgsKB1VOS05PV04QABIICgRPUEVO",
+                  "EAESCwoHUFJPQ0VTUxACEgkKBUNMT1NFEAMSDQoJTk9UX1JFQURZEAQSFQoR",
+                  "UkVBRFlfRk9SX1BST0NFU1MQBRITCg9SRUFEWV9GT1JfQ0xPU0UQBhINCglU",
+                  "SFJPVFRMRUQQBxIPCgtVTlRIUk9UVExFRBAIEhEKDUNQVV9UQVNLX1VTRVIQ",
+                  "CRITCg9DUFVfVEFTS19TWVNURU0QChIMCghHUFVfVEFTSxALEgwKCERTUF9U",
+                  "QVNLEAwSDAoIVFBVX1RBU0sQDRITCg9HUFVfQ0FMSUJSQVRJT04QDhIRCg1Q",
+                  "QUNLRVRfUVVFVUVEEA8i+AEKDEdyYXBoUHJvZmlsZRJFCgtncmFwaF90cmFj",
+                  "ZRgBIAMoCzIwLmFraWhhYmFyYS5mcmFtZXdvcmsucHJvdG9fY2FsY3VsYXRv",
+                  "ci5HcmFwaFRyYWNlElQKE2NhbGN1bGF0b3JfcHJvZmlsZXMYAiADKAsyNy5h",
+                  "a2loYWJhcmEuZnJhbWV3b3JrLnByb3RvX2NhbGN1bGF0b3IuQ2FsY3VsYXRv",
+                  "clByb2ZpbGUSSwoGY29uZmlnGAMgASgLMjsuYWtpaGFiYXJhLmZyYW1ld29y",
+                  "ay5wcm90b19jYWxjdWxhdG9yLkNhbGN1bGF0b3JHcmFwaENvbmZpZw=="));
+            descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
+                new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.TimeHistogram), global::Akihabara.Framework.ProtoCalculator.TimeHistogram.Parser, new[]{ "Total", "IntervalSizeUsec", "NumIntervals", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.StreamProfile), global::Akihabara.Framework.ProtoCalculator.StreamProfile.Parser, new[]{ "Name", "BackEdge", "Latency" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.CalculatorProfile), global::Akihabara.Framework.ProtoCalculator.CalculatorProfile.Parser, new[]{ "Name", "OpenRuntime", "CloseRuntime", "ProcessRuntime", "ProcessInputLatency", "ProcessOutputLatency", "InputStreamProfiles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Parser, new[]{ "BaseTime", "BaseTimestamp", "CalculatorName", "StreamName", "CalculatorTrace" }, null, new[]{ typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser, new[]{ "StartTime", "FinishTime", "PacketTimestamp", "StreamId", "PacketId", "EventData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace.Parser, new[]{ "NodeId", "InputTimestamp", "EventType", "StartTime", "FinishTime", "InputTrace", "OutputTrace", "ThreadId" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphProfile), global::Akihabara.Framework.ProtoCalculator.GraphProfile.Parser, new[]{ "GraphTrace", "CalculatorProfiles", "Config" }, null, null, null, null)
-          }));
-    }
-    #endregion
+                }));
+        }
+        #endregion
 
-  }
-  #region Messages
-  /// <summary>
-  /// Stores the profiling information.
-  ///
-  /// It is the responsibility of the user of this message to make sure the 'total'
-  /// field and the interval information (num, size and count) are in a valid
-  /// state and all get updated together.
-  ///
-  /// Each interval of the histogram is closed on the lower range and open on the
-  /// higher end. An example histogram with interval_size=1000 and num_interval=3
-  /// will have the following intervals:
-  /// - First interval = [0, 1000)
-  /// - Second interval = [1000, 2000)
-  /// - Third interval = [2000, +inf)
-  ///
-  /// IMPORTANT: If You add any new field, update CalculatorProfiler::Reset()
-  /// accordingly.
-  /// </summary>
-  public sealed partial class TimeHistogram : pb::IMessage<TimeHistogram>
+    }
+    #region Messages
+    /// <summary>
+    /// Stores the profiling information.
+    ///
+    /// It is the responsibility of the user of this message to make sure the 'total'
+    /// field and the interval information (num, size and count) are in a valid
+    /// state and all get updated together.
+    ///
+    /// Each interval of the histogram is closed on the lower range and open on the
+    /// higher end. An example histogram with interval_size=1000 and num_interval=3
+    /// will have the following intervals:
+    /// - First interval = [0, 1000)
+    /// - Second interval = [1000, 2000)
+    /// - Third interval = [2000, +inf)
+    ///
+    /// IMPORTANT: If You add any new field, update CalculatorProfiler::Reset()
+    /// accordingly.
+    /// </summary>
+    public sealed partial class TimeHistogram : pb::IMessage<TimeHistogram>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<TimeHistogram> _parser = new pb::MessageParser<TimeHistogram>(() => new TimeHistogram());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TimeHistogram> Parser { get { return _parser; } }
+    {
+        private static readonly pb::MessageParser<TimeHistogram> _parser = new pb::MessageParser<TimeHistogram>(() => new TimeHistogram());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TimeHistogram> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
-    {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[0]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[0]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TimeHistogram()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TimeHistogram()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TimeHistogram(TimeHistogram other) : this()
-    {
-      _hasBits0 = other._hasBits0;
-      total_ = other.total_;
-      intervalSizeUsec_ = other.intervalSizeUsec_;
-      numIntervals_ = other.numIntervals_;
-      count_ = other.count_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TimeHistogram(TimeHistogram other) : this()
+        {
+            _hasBits0 = other._hasBits0;
+            total_ = other.total_;
+            intervalSizeUsec_ = other.intervalSizeUsec_;
+            numIntervals_ = other.numIntervals_;
+            count_ = other.count_.Clone();
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TimeHistogram Clone()
-    {
-      return new TimeHistogram(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TimeHistogram Clone()
+        {
+            return new TimeHistogram(this);
+        }
 
-    /// <summary>Field number for the "total" field.</summary>
-    public const int TotalFieldNumber = 1;
-    private readonly static long TotalDefaultValue = 0L;
+        /// <summary>Field number for the "total" field.</summary>
+        public const int TotalFieldNumber = 1;
+        private readonly static long TotalDefaultValue = 0L;
 
-    private long total_;
-    /// <summary>
-    /// Total time (in microseconds).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Total
-    {
-      get { if ((_hasBits0 & 1) != 0) { return total_; } else { return TotalDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 1;
-        total_ = value;
-      }
-    }
-    /// <summary>Gets whether the "total" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasTotal
-    {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "total" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearTotal()
-    {
-      _hasBits0 &= ~1;
-    }
+        private long total_;
+        /// <summary>
+        /// Total time (in microseconds).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long Total
+        {
+            get { if ((_hasBits0 & 1) != 0) { return total_; } else { return TotalDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 1;
+                total_ = value;
+            }
+        }
+        /// <summary>Gets whether the "total" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTotal
+        {
+            get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "total" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTotal()
+        {
+            _hasBits0 &= ~1;
+        }
 
-    /// <summary>Field number for the "interval_size_usec" field.</summary>
-    public const int IntervalSizeUsecFieldNumber = 2;
-    private readonly static long IntervalSizeUsecDefaultValue = 1000000L;
+        /// <summary>Field number for the "interval_size_usec" field.</summary>
+        public const int IntervalSizeUsecFieldNumber = 2;
+        private readonly static long IntervalSizeUsecDefaultValue = 1000000L;
 
-    private long intervalSizeUsec_;
-    /// <summary>
-    /// Size of the runtimes histogram intervals (in microseconds) to generate the
-    /// histogram of the Process() time. The last interval extends to +inf.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long IntervalSizeUsec
-    {
-      get { if ((_hasBits0 & 2) != 0) { return intervalSizeUsec_; } else { return IntervalSizeUsecDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 2;
-        intervalSizeUsec_ = value;
-      }
-    }
-    /// <summary>Gets whether the "interval_size_usec" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasIntervalSizeUsec
-    {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "interval_size_usec" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearIntervalSizeUsec()
-    {
-      _hasBits0 &= ~2;
-    }
+        private long intervalSizeUsec_;
+        /// <summary>
+        /// Size of the runtimes histogram intervals (in microseconds) to generate the
+        /// histogram of the Process() time. The last interval extends to +inf.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long IntervalSizeUsec
+        {
+            get { if ((_hasBits0 & 2) != 0) { return intervalSizeUsec_; } else { return IntervalSizeUsecDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 2;
+                intervalSizeUsec_ = value;
+            }
+        }
+        /// <summary>Gets whether the "interval_size_usec" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIntervalSizeUsec
+        {
+            get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "interval_size_usec" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIntervalSizeUsec()
+        {
+            _hasBits0 &= ~2;
+        }
 
-    /// <summary>Field number for the "num_intervals" field.</summary>
-    public const int NumIntervalsFieldNumber = 3;
-    private readonly static long NumIntervalsDefaultValue = 1L;
+        /// <summary>Field number for the "num_intervals" field.</summary>
+        public const int NumIntervalsFieldNumber = 3;
+        private readonly static long NumIntervalsDefaultValue = 1L;
 
-    private long numIntervals_;
-    /// <summary>
-    /// Number of intervals to generate the histogram of the Process() runtime.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long NumIntervals
-    {
-      get { if ((_hasBits0 & 4) != 0) { return numIntervals_; } else { return NumIntervalsDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 4;
-        numIntervals_ = value;
-      }
-    }
-    /// <summary>Gets whether the "num_intervals" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasNumIntervals
-    {
-      get { return (_hasBits0 & 4) != 0; }
-    }
-    /// <summary>Clears the value of the "num_intervals" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearNumIntervals()
-    {
-      _hasBits0 &= ~4;
-    }
+        private long numIntervals_;
+        /// <summary>
+        /// Number of intervals to generate the histogram of the Process() runtime.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long NumIntervals
+        {
+            get { if ((_hasBits0 & 4) != 0) { return numIntervals_; } else { return NumIntervalsDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 4;
+                numIntervals_ = value;
+            }
+        }
+        /// <summary>Gets whether the "num_intervals" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasNumIntervals
+        {
+            get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "num_intervals" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearNumIntervals()
+        {
+            _hasBits0 &= ~4;
+        }
 
-    /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 4;
-    private static readonly pb::FieldCodec<long> _repeated_count_codec
-        = pb::FieldCodec.ForInt64(32);
-    private readonly pbc::RepeatedField<long> count_ = new pbc::RepeatedField<long>();
-    /// <summary>
-    /// Number of calls in each interval.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<long> Count
-    {
-      get { return count_; }
-    }
+        /// <summary>Field number for the "count" field.</summary>
+        public const int CountFieldNumber = 4;
+        private static readonly pb::FieldCodec<long> _repeated_count_codec
+            = pb::FieldCodec.ForInt64(32);
+        private readonly pbc::RepeatedField<long> count_ = new pbc::RepeatedField<long>();
+        /// <summary>
+        /// Number of calls in each interval.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<long> Count
+        {
+            get { return count_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as TimeHistogram);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as TimeHistogram);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TimeHistogram other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (Total != other.Total) return false;
-      if (IntervalSizeUsec != other.IntervalSizeUsec) return false;
-      if (NumIntervals != other.NumIntervals) return false;
-      if (!count_.Equals(other.count_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TimeHistogram other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (Total != other.Total) return false;
+            if (IntervalSizeUsec != other.IntervalSizeUsec) return false;
+            if (NumIntervals != other.NumIntervals) return false;
+            if (!count_.Equals(other.count_)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasTotal) hash ^= Total.GetHashCode();
-      if (HasIntervalSizeUsec) hash ^= IntervalSizeUsec.GetHashCode();
-      if (HasNumIntervals) hash ^= NumIntervals.GetHashCode();
-      hash ^= count_.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasTotal) hash ^= Total.GetHashCode();
+            if (HasIntervalSizeUsec) hash ^= IntervalSizeUsec.GetHashCode();
+            if (HasNumIntervals) hash ^= NumIntervals.GetHashCode();
+            hash ^= count_.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasTotal) {
         output.WriteRawTag(8);
@@ -349,91 +349,91 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasTotal)
-      {
-        output.WriteRawTag(8);
-        output.WriteInt64(Total);
-      }
-      if (HasIntervalSizeUsec)
-      {
-        output.WriteRawTag(16);
-        output.WriteInt64(IntervalSizeUsec);
-      }
-      if (HasNumIntervals)
-      {
-        output.WriteRawTag(24);
-        output.WriteInt64(NumIntervals);
-      }
-      count_.WriteTo(ref output, _repeated_count_codec);
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasTotal)
+            {
+                output.WriteRawTag(8);
+                output.WriteInt64(Total);
+            }
+            if (HasIntervalSizeUsec)
+            {
+                output.WriteRawTag(16);
+                output.WriteInt64(IntervalSizeUsec);
+            }
+            if (HasNumIntervals)
+            {
+                output.WriteRawTag(24);
+                output.WriteInt64(NumIntervals);
+            }
+            count_.WriteTo(ref output, _repeated_count_codec);
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasTotal)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Total);
-      }
-      if (HasIntervalSizeUsec)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntervalSizeUsec);
-      }
-      if (HasNumIntervals)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NumIntervals);
-      }
-      size += count_.CalculateSize(_repeated_count_codec);
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (HasTotal)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(Total);
+            }
+            if (HasIntervalSizeUsec)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntervalSizeUsec);
+            }
+            if (HasNumIntervals)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(NumIntervals);
+            }
+            size += count_.CalculateSize(_repeated_count_codec);
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TimeHistogram other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasTotal)
-      {
-        Total = other.Total;
-      }
-      if (other.HasIntervalSizeUsec)
-      {
-        IntervalSizeUsec = other.IntervalSizeUsec;
-      }
-      if (other.HasNumIntervals)
-      {
-        NumIntervals = other.NumIntervals;
-      }
-      count_.Add(other.count_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TimeHistogram other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasTotal)
+            {
+                Total = other.Total;
+            }
+            if (other.HasIntervalSizeUsec)
+            {
+                IntervalSizeUsec = other.IntervalSizeUsec;
+            }
+            if (other.HasNumIntervals)
+            {
+                NumIntervals = other.NumIntervals;
+            }
+            count_.Add(other.count_);
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -461,242 +461,242 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              Total = input.ReadInt64();
-              break;
-            }
-          case 16:
-            {
-              IntervalSizeUsec = input.ReadInt64();
-              break;
-            }
-          case 24:
-            {
-              NumIntervals = input.ReadInt64();
-              break;
-            }
-          case 34:
-          case 32:
-            {
-              count_.AddEntriesFrom(ref input, _repeated_count_codec);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 8:
+                        {
+                            Total = input.ReadInt64();
+                            break;
+                        }
+                    case 16:
+                        {
+                            IntervalSizeUsec = input.ReadInt64();
+                            break;
+                        }
+                    case 24:
+                        {
+                            NumIntervals = input.ReadInt64();
+                            break;
+                        }
+                    case 34:
+                    case 32:
+                        {
+                            count_.AddEntriesFrom(ref input, _repeated_count_codec);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-  }
+    }
 
-  /// <summary>
-  /// Stores the profiling information of a stream.
-  /// </summary>
-  public sealed partial class StreamProfile : pb::IMessage<StreamProfile>
+    /// <summary>
+    /// Stores the profiling information of a stream.
+    /// </summary>
+    public sealed partial class StreamProfile : pb::IMessage<StreamProfile>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<StreamProfile> _parser = new pb::MessageParser<StreamProfile>(() => new StreamProfile());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StreamProfile> Parser { get { return _parser; } }
+    {
+        private static readonly pb::MessageParser<StreamProfile> _parser = new pb::MessageParser<StreamProfile>(() => new StreamProfile());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StreamProfile> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
-    {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[1]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[1]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StreamProfile()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StreamProfile()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StreamProfile(StreamProfile other) : this()
-    {
-      _hasBits0 = other._hasBits0;
-      name_ = other.name_;
-      backEdge_ = other.backEdge_;
-      latency_ = other.latency_ != null ? other.latency_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StreamProfile(StreamProfile other) : this()
+        {
+            _hasBits0 = other._hasBits0;
+            name_ = other.name_;
+            backEdge_ = other.backEdge_;
+            latency_ = other.latency_ != null ? other.latency_.Clone() : null;
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StreamProfile Clone()
-    {
-      return new StreamProfile(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StreamProfile Clone()
+        {
+            return new StreamProfile(this);
+        }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private readonly static string NameDefaultValue = "";
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private readonly static string NameDefaultValue = "";
 
-    private string name_;
-    /// <summary>
-    /// Stream name.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name
-    {
-      get { return name_ ?? NameDefaultValue; }
-      set
-      {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "name" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasName
-    {
-      get { return name_ != null; }
-    }
-    /// <summary>Clears the value of the "name" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearName()
-    {
-      name_ = null;
-    }
+        private string name_;
+        /// <summary>
+        /// Stream name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name
+        {
+            get { return name_ ?? NameDefaultValue; }
+            set
+            {
+                name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasName
+        {
+            get { return name_ != null; }
+        }
+        /// <summary>Clears the value of the "name" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearName()
+        {
+            name_ = null;
+        }
 
-    /// <summary>Field number for the "back_edge" field.</summary>
-    public const int BackEdgeFieldNumber = 2;
-    private readonly static bool BackEdgeDefaultValue = false;
+        /// <summary>Field number for the "back_edge" field.</summary>
+        public const int BackEdgeFieldNumber = 2;
+        private readonly static bool BackEdgeDefaultValue = false;
 
-    private bool backEdge_;
-    /// <summary>
-    /// If true, than this is a back edge input stream and won't be profiled.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool BackEdge
-    {
-      get { if ((_hasBits0 & 1) != 0) { return backEdge_; } else { return BackEdgeDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 1;
-        backEdge_ = value;
-      }
-    }
-    /// <summary>Gets whether the "back_edge" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasBackEdge
-    {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "back_edge" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearBackEdge()
-    {
-      _hasBits0 &= ~1;
-    }
+        private bool backEdge_;
+        /// <summary>
+        /// If true, than this is a back edge input stream and won't be profiled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool BackEdge
+        {
+            get { if ((_hasBits0 & 1) != 0) { return backEdge_; } else { return BackEdgeDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 1;
+                backEdge_ = value;
+            }
+        }
+        /// <summary>Gets whether the "back_edge" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBackEdge
+        {
+            get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "back_edge" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBackEdge()
+        {
+            _hasBits0 &= ~1;
+        }
 
-    /// <summary>Field number for the "latency" field.</summary>
-    public const int LatencyFieldNumber = 3;
-    private global::Akihabara.Framework.ProtoCalculator.TimeHistogram latency_;
-    /// <summary>
-    /// Total and histogram of the time that this stream took.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.TimeHistogram Latency
-    {
-      get { return latency_; }
-      set
-      {
-        latency_ = value;
-      }
-    }
+        /// <summary>Field number for the "latency" field.</summary>
+        public const int LatencyFieldNumber = 3;
+        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram latency_;
+        /// <summary>
+        /// Total and histogram of the time that this stream took.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram Latency
+        {
+            get { return latency_; }
+            set
+            {
+                latency_ = value;
+            }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as StreamProfile);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as StreamProfile);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StreamProfile other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (BackEdge != other.BackEdge) return false;
-      if (!object.Equals(Latency, other.Latency)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StreamProfile other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (Name != other.Name) return false;
+            if (BackEdge != other.BackEdge) return false;
+            if (!object.Equals(Latency, other.Latency)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasName) hash ^= Name.GetHashCode();
-      if (HasBackEdge) hash ^= BackEdge.GetHashCode();
-      if (latency_ != null) hash ^= Latency.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasName) hash ^= Name.GetHashCode();
+            if (HasBackEdge) hash ^= BackEdge.GetHashCode();
+            if (latency_ != null) hash ^= Latency.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasName) {
         output.WriteRawTag(10);
@@ -714,92 +714,92 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasName)
-      {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (HasBackEdge)
-      {
-        output.WriteRawTag(16);
-        output.WriteBool(BackEdge);
-      }
-      if (latency_ != null)
-      {
-        output.WriteRawTag(26);
-        output.WriteMessage(Latency);
-      }
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasName)
+            {
+                output.WriteRawTag(10);
+                output.WriteString(Name);
+            }
+            if (HasBackEdge)
+            {
+                output.WriteRawTag(16);
+                output.WriteBool(BackEdge);
+            }
+            if (latency_ != null)
+            {
+                output.WriteRawTag(26);
+                output.WriteMessage(Latency);
+            }
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasName)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (HasBackEdge)
-      {
-        size += 1 + 1;
-      }
-      if (latency_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Latency);
-      }
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StreamProfile other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasName)
-      {
-        Name = other.Name;
-      }
-      if (other.HasBackEdge)
-      {
-        BackEdge = other.BackEdge;
-      }
-      if (other.latency_ != null)
-      {
-        if (latency_ == null)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
         {
-          Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+            int size = 0;
+            if (HasName)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+            }
+            if (HasBackEdge)
+            {
+                size += 1 + 1;
+            }
+            if (latency_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Latency);
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
         }
-        Latency.MergeFrom(other.Latency);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StreamProfile other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasName)
+            {
+                Name = other.Name;
+            }
+            if (other.HasBackEdge)
+            {
+                BackEdge = other.BackEdge;
+            }
+            if (other.latency_ != null)
+            {
+                if (latency_ == null)
+                {
+                    Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                }
+                Latency.MergeFrom(other.Latency);
+            }
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -825,340 +825,340 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              Name = input.ReadString();
-              break;
-            }
-          case 16:
-            {
-              BackEdge = input.ReadBool();
-              break;
-            }
-          case 26:
-            {
-              if (latency_ == null)
-              {
-                Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-              }
-              input.ReadMessage(Latency);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            Name = input.ReadString();
+                            break;
+                        }
+                    case 16:
+                        {
+                            BackEdge = input.ReadBool();
+                            break;
+                        }
+                    case 26:
+                        {
+                            if (latency_ == null)
+                            {
+                                Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                            }
+                            input.ReadMessage(Latency);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-  }
+    }
 
-  /// <summary>
-  /// Stores the profiling information for a calculator node.
-  /// All the times are in microseconds.
-  /// </summary>
-  public sealed partial class CalculatorProfile : pb::IMessage<CalculatorProfile>
+    /// <summary>
+    /// Stores the profiling information for a calculator node.
+    /// All the times are in microseconds.
+    /// </summary>
+    public sealed partial class CalculatorProfile : pb::IMessage<CalculatorProfile>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<CalculatorProfile> _parser = new pb::MessageParser<CalculatorProfile>(() => new CalculatorProfile());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CalculatorProfile> Parser { get { return _parser; } }
+    {
+        private static readonly pb::MessageParser<CalculatorProfile> _parser = new pb::MessageParser<CalculatorProfile>(() => new CalculatorProfile());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CalculatorProfile> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
-    {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[2]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[2]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorProfile()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorProfile()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorProfile(CalculatorProfile other) : this()
-    {
-      _hasBits0 = other._hasBits0;
-      name_ = other.name_;
-      openRuntime_ = other.openRuntime_;
-      closeRuntime_ = other.closeRuntime_;
-      processRuntime_ = other.processRuntime_ != null ? other.processRuntime_.Clone() : null;
-      processInputLatency_ = other.processInputLatency_ != null ? other.processInputLatency_.Clone() : null;
-      processOutputLatency_ = other.processOutputLatency_ != null ? other.processOutputLatency_.Clone() : null;
-      inputStreamProfiles_ = other.inputStreamProfiles_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorProfile(CalculatorProfile other) : this()
+        {
+            _hasBits0 = other._hasBits0;
+            name_ = other.name_;
+            openRuntime_ = other.openRuntime_;
+            closeRuntime_ = other.closeRuntime_;
+            processRuntime_ = other.processRuntime_ != null ? other.processRuntime_.Clone() : null;
+            processInputLatency_ = other.processInputLatency_ != null ? other.processInputLatency_.Clone() : null;
+            processOutputLatency_ = other.processOutputLatency_ != null ? other.processOutputLatency_.Clone() : null;
+            inputStreamProfiles_ = other.inputStreamProfiles_.Clone();
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CalculatorProfile Clone()
-    {
-      return new CalculatorProfile(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CalculatorProfile Clone()
+        {
+            return new CalculatorProfile(this);
+        }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private readonly static string NameDefaultValue = "";
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private readonly static string NameDefaultValue = "";
 
-    private string name_;
-    /// <summary>
-    /// The calculator name.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name
-    {
-      get { return name_ ?? NameDefaultValue; }
-      set
-      {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "name" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasName
-    {
-      get { return name_ != null; }
-    }
-    /// <summary>Clears the value of the "name" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearName()
-    {
-      name_ = null;
-    }
+        private string name_;
+        /// <summary>
+        /// The calculator name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name
+        {
+            get { return name_ ?? NameDefaultValue; }
+            set
+            {
+                name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasName
+        {
+            get { return name_ != null; }
+        }
+        /// <summary>Clears the value of the "name" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearName()
+        {
+            name_ = null;
+        }
 
-    /// <summary>Field number for the "open_runtime" field.</summary>
-    public const int OpenRuntimeFieldNumber = 2;
-    private readonly static long OpenRuntimeDefaultValue = 0L;
+        /// <summary>Field number for the "open_runtime" field.</summary>
+        public const int OpenRuntimeFieldNumber = 2;
+        private readonly static long OpenRuntimeDefaultValue = 0L;
 
-    private long openRuntime_;
-    /// <summary>
-    /// Total time the calculator spent on Open (in microseconds).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long OpenRuntime
-    {
-      get { if ((_hasBits0 & 1) != 0) { return openRuntime_; } else { return OpenRuntimeDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 1;
-        openRuntime_ = value;
-      }
-    }
-    /// <summary>Gets whether the "open_runtime" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasOpenRuntime
-    {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "open_runtime" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearOpenRuntime()
-    {
-      _hasBits0 &= ~1;
-    }
+        private long openRuntime_;
+        /// <summary>
+        /// Total time the calculator spent on Open (in microseconds).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long OpenRuntime
+        {
+            get { if ((_hasBits0 & 1) != 0) { return openRuntime_; } else { return OpenRuntimeDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 1;
+                openRuntime_ = value;
+            }
+        }
+        /// <summary>Gets whether the "open_runtime" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOpenRuntime
+        {
+            get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "open_runtime" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOpenRuntime()
+        {
+            _hasBits0 &= ~1;
+        }
 
-    /// <summary>Field number for the "close_runtime" field.</summary>
-    public const int CloseRuntimeFieldNumber = 3;
-    private readonly static long CloseRuntimeDefaultValue = 0L;
+        /// <summary>Field number for the "close_runtime" field.</summary>
+        public const int CloseRuntimeFieldNumber = 3;
+        private readonly static long CloseRuntimeDefaultValue = 0L;
 
-    private long closeRuntime_;
-    /// <summary>
-    /// Total time the calculator spent on Close (in microseconds).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long CloseRuntime
-    {
-      get { if ((_hasBits0 & 2) != 0) { return closeRuntime_; } else { return CloseRuntimeDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 2;
-        closeRuntime_ = value;
-      }
-    }
-    /// <summary>Gets whether the "close_runtime" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasCloseRuntime
-    {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "close_runtime" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearCloseRuntime()
-    {
-      _hasBits0 &= ~2;
-    }
+        private long closeRuntime_;
+        /// <summary>
+        /// Total time the calculator spent on Close (in microseconds).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long CloseRuntime
+        {
+            get { if ((_hasBits0 & 2) != 0) { return closeRuntime_; } else { return CloseRuntimeDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 2;
+                closeRuntime_ = value;
+            }
+        }
+        /// <summary>Gets whether the "close_runtime" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCloseRuntime
+        {
+            get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "close_runtime" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCloseRuntime()
+        {
+            _hasBits0 &= ~2;
+        }
 
-    /// <summary>Field number for the "process_runtime" field.</summary>
-    public const int ProcessRuntimeFieldNumber = 4;
-    private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processRuntime_;
-    /// <summary>
-    /// Total and histogram of the time that the calculator spent on the Process()
-    /// (in microseconds).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessRuntime
-    {
-      get { return processRuntime_; }
-      set
-      {
-        processRuntime_ = value;
-      }
-    }
+        /// <summary>Field number for the "process_runtime" field.</summary>
+        public const int ProcessRuntimeFieldNumber = 4;
+        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processRuntime_;
+        /// <summary>
+        /// Total and histogram of the time that the calculator spent on the Process()
+        /// (in microseconds).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessRuntime
+        {
+            get { return processRuntime_; }
+            set
+            {
+                processRuntime_ = value;
+            }
+        }
 
-    /// <summary>Field number for the "process_input_latency" field.</summary>
-    public const int ProcessInputLatencyFieldNumber = 5;
-    private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processInputLatency_;
-    /// <summary>
-    /// Total and histogram of the time that the input latency, ie. difference
-    /// between input timestamp and process call time.
-    /// (in microseconds).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessInputLatency
-    {
-      get { return processInputLatency_; }
-      set
-      {
-        processInputLatency_ = value;
-      }
-    }
+        /// <summary>Field number for the "process_input_latency" field.</summary>
+        public const int ProcessInputLatencyFieldNumber = 5;
+        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processInputLatency_;
+        /// <summary>
+        /// Total and histogram of the time that the input latency, ie. difference
+        /// between input timestamp and process call time.
+        /// (in microseconds).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessInputLatency
+        {
+            get { return processInputLatency_; }
+            set
+            {
+                processInputLatency_ = value;
+            }
+        }
 
-    /// <summary>Field number for the "process_output_latency" field.</summary>
-    public const int ProcessOutputLatencyFieldNumber = 6;
-    private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processOutputLatency_;
-    /// <summary>
-    /// Total and histogram of the time that the output latency, ie. difference
-    /// between input timestamp and process finished time.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessOutputLatency
-    {
-      get { return processOutputLatency_; }
-      set
-      {
-        processOutputLatency_ = value;
-      }
-    }
+        /// <summary>Field number for the "process_output_latency" field.</summary>
+        public const int ProcessOutputLatencyFieldNumber = 6;
+        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processOutputLatency_;
+        /// <summary>
+        /// Total and histogram of the time that the output latency, ie. difference
+        /// between input timestamp and process finished time.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessOutputLatency
+        {
+            get { return processOutputLatency_; }
+            set
+            {
+                processOutputLatency_ = value;
+            }
+        }
 
-    /// <summary>Field number for the "input_stream_profiles" field.</summary>
-    public const int InputStreamProfilesFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.StreamProfile> _repeated_inputStreamProfiles_codec
-        = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.StreamProfile.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> inputStreamProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile>();
-    /// <summary>
-    /// Total and histogram of the time that input streams of this calculator took.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> InputStreamProfiles
-    {
-      get { return inputStreamProfiles_; }
-    }
+        /// <summary>Field number for the "input_stream_profiles" field.</summary>
+        public const int InputStreamProfilesFieldNumber = 7;
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.StreamProfile> _repeated_inputStreamProfiles_codec
+            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.StreamProfile.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> inputStreamProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile>();
+        /// <summary>
+        /// Total and histogram of the time that input streams of this calculator took.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> InputStreamProfiles
+        {
+            get { return inputStreamProfiles_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as CalculatorProfile);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as CalculatorProfile);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CalculatorProfile other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (OpenRuntime != other.OpenRuntime) return false;
-      if (CloseRuntime != other.CloseRuntime) return false;
-      if (!object.Equals(ProcessRuntime, other.ProcessRuntime)) return false;
-      if (!object.Equals(ProcessInputLatency, other.ProcessInputLatency)) return false;
-      if (!object.Equals(ProcessOutputLatency, other.ProcessOutputLatency)) return false;
-      if (!inputStreamProfiles_.Equals(other.inputStreamProfiles_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CalculatorProfile other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (Name != other.Name) return false;
+            if (OpenRuntime != other.OpenRuntime) return false;
+            if (CloseRuntime != other.CloseRuntime) return false;
+            if (!object.Equals(ProcessRuntime, other.ProcessRuntime)) return false;
+            if (!object.Equals(ProcessInputLatency, other.ProcessInputLatency)) return false;
+            if (!object.Equals(ProcessOutputLatency, other.ProcessOutputLatency)) return false;
+            if (!inputStreamProfiles_.Equals(other.inputStreamProfiles_)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasName) hash ^= Name.GetHashCode();
-      if (HasOpenRuntime) hash ^= OpenRuntime.GetHashCode();
-      if (HasCloseRuntime) hash ^= CloseRuntime.GetHashCode();
-      if (processRuntime_ != null) hash ^= ProcessRuntime.GetHashCode();
-      if (processInputLatency_ != null) hash ^= ProcessInputLatency.GetHashCode();
-      if (processOutputLatency_ != null) hash ^= ProcessOutputLatency.GetHashCode();
-      hash ^= inputStreamProfiles_.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasName) hash ^= Name.GetHashCode();
+            if (HasOpenRuntime) hash ^= OpenRuntime.GetHashCode();
+            if (HasCloseRuntime) hash ^= CloseRuntime.GetHashCode();
+            if (processRuntime_ != null) hash ^= ProcessRuntime.GetHashCode();
+            if (processInputLatency_ != null) hash ^= ProcessInputLatency.GetHashCode();
+            if (processOutputLatency_ != null) hash ^= ProcessOutputLatency.GetHashCode();
+            hash ^= inputStreamProfiles_.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasName) {
         output.WriteRawTag(10);
@@ -1189,142 +1189,142 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasName)
-      {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (HasOpenRuntime)
-      {
-        output.WriteRawTag(16);
-        output.WriteInt64(OpenRuntime);
-      }
-      if (HasCloseRuntime)
-      {
-        output.WriteRawTag(24);
-        output.WriteInt64(CloseRuntime);
-      }
-      if (processRuntime_ != null)
-      {
-        output.WriteRawTag(34);
-        output.WriteMessage(ProcessRuntime);
-      }
-      if (processInputLatency_ != null)
-      {
-        output.WriteRawTag(42);
-        output.WriteMessage(ProcessInputLatency);
-      }
-      if (processOutputLatency_ != null)
-      {
-        output.WriteRawTag(50);
-        output.WriteMessage(ProcessOutputLatency);
-      }
-      inputStreamProfiles_.WriteTo(ref output, _repeated_inputStreamProfiles_codec);
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasName)
+            {
+                output.WriteRawTag(10);
+                output.WriteString(Name);
+            }
+            if (HasOpenRuntime)
+            {
+                output.WriteRawTag(16);
+                output.WriteInt64(OpenRuntime);
+            }
+            if (HasCloseRuntime)
+            {
+                output.WriteRawTag(24);
+                output.WriteInt64(CloseRuntime);
+            }
+            if (processRuntime_ != null)
+            {
+                output.WriteRawTag(34);
+                output.WriteMessage(ProcessRuntime);
+            }
+            if (processInputLatency_ != null)
+            {
+                output.WriteRawTag(42);
+                output.WriteMessage(ProcessInputLatency);
+            }
+            if (processOutputLatency_ != null)
+            {
+                output.WriteRawTag(50);
+                output.WriteMessage(ProcessOutputLatency);
+            }
+            inputStreamProfiles_.WriteTo(ref output, _repeated_inputStreamProfiles_codec);
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasName)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (HasOpenRuntime)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OpenRuntime);
-      }
-      if (HasCloseRuntime)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CloseRuntime);
-      }
-      if (processRuntime_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessRuntime);
-      }
-      if (processInputLatency_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessInputLatency);
-      }
-      if (processOutputLatency_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessOutputLatency);
-      }
-      size += inputStreamProfiles_.CalculateSize(_repeated_inputStreamProfiles_codec);
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (HasName)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+            }
+            if (HasOpenRuntime)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(OpenRuntime);
+            }
+            if (HasCloseRuntime)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(CloseRuntime);
+            }
+            if (processRuntime_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessRuntime);
+            }
+            if (processInputLatency_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessInputLatency);
+            }
+            if (processOutputLatency_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessOutputLatency);
+            }
+            size += inputStreamProfiles_.CalculateSize(_repeated_inputStreamProfiles_codec);
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CalculatorProfile other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasName)
-      {
-        Name = other.Name;
-      }
-      if (other.HasOpenRuntime)
-      {
-        OpenRuntime = other.OpenRuntime;
-      }
-      if (other.HasCloseRuntime)
-      {
-        CloseRuntime = other.CloseRuntime;
-      }
-      if (other.processRuntime_ != null)
-      {
-        if (processRuntime_ == null)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CalculatorProfile other)
         {
-          ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasName)
+            {
+                Name = other.Name;
+            }
+            if (other.HasOpenRuntime)
+            {
+                OpenRuntime = other.OpenRuntime;
+            }
+            if (other.HasCloseRuntime)
+            {
+                CloseRuntime = other.CloseRuntime;
+            }
+            if (other.processRuntime_ != null)
+            {
+                if (processRuntime_ == null)
+                {
+                    ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                }
+                ProcessRuntime.MergeFrom(other.ProcessRuntime);
+            }
+            if (other.processInputLatency_ != null)
+            {
+                if (processInputLatency_ == null)
+                {
+                    ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                }
+                ProcessInputLatency.MergeFrom(other.ProcessInputLatency);
+            }
+            if (other.processOutputLatency_ != null)
+            {
+                if (processOutputLatency_ == null)
+                {
+                    ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                }
+                ProcessOutputLatency.MergeFrom(other.ProcessOutputLatency);
+            }
+            inputStreamProfiles_.Add(other.inputStreamProfiles_);
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
-        ProcessRuntime.MergeFrom(other.ProcessRuntime);
-      }
-      if (other.processInputLatency_ != null)
-      {
-        if (processInputLatency_ == null)
-        {
-          ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-        }
-        ProcessInputLatency.MergeFrom(other.ProcessInputLatency);
-      }
-      if (other.processOutputLatency_ != null)
-      {
-        if (processOutputLatency_ == null)
-        {
-          ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-        }
-        ProcessOutputLatency.MergeFrom(other.ProcessOutputLatency);
-      }
-      inputStreamProfiles_.Add(other.inputStreamProfiles_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1372,303 +1372,303 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              Name = input.ReadString();
-              break;
-            }
-          case 16:
-            {
-              OpenRuntime = input.ReadInt64();
-              break;
-            }
-          case 24:
-            {
-              CloseRuntime = input.ReadInt64();
-              break;
-            }
-          case 34:
-            {
-              if (processRuntime_ == null)
-              {
-                ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-              }
-              input.ReadMessage(ProcessRuntime);
-              break;
-            }
-          case 42:
-            {
-              if (processInputLatency_ == null)
-              {
-                ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-              }
-              input.ReadMessage(ProcessInputLatency);
-              break;
-            }
-          case 50:
-            {
-              if (processOutputLatency_ == null)
-              {
-                ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
-              }
-              input.ReadMessage(ProcessOutputLatency);
-              break;
-            }
-          case 58:
-            {
-              inputStreamProfiles_.AddEntriesFrom(ref input, _repeated_inputStreamProfiles_codec);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            Name = input.ReadString();
+                            break;
+                        }
+                    case 16:
+                        {
+                            OpenRuntime = input.ReadInt64();
+                            break;
+                        }
+                    case 24:
+                        {
+                            CloseRuntime = input.ReadInt64();
+                            break;
+                        }
+                    case 34:
+                        {
+                            if (processRuntime_ == null)
+                            {
+                                ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                            }
+                            input.ReadMessage(ProcessRuntime);
+                            break;
+                        }
+                    case 42:
+                        {
+                            if (processInputLatency_ == null)
+                            {
+                                ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                            }
+                            input.ReadMessage(ProcessInputLatency);
+                            break;
+                        }
+                    case 50:
+                        {
+                            if (processOutputLatency_ == null)
+                            {
+                                ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                            }
+                            input.ReadMessage(ProcessOutputLatency);
+                            break;
+                        }
+                    case 58:
+                        {
+                            inputStreamProfiles_.AddEntriesFrom(ref input, _repeated_inputStreamProfiles_codec);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-  }
+    }
 
-  /// <summary>
-  /// Latency timing for recent mediapipe packets.
-  /// </summary>
-  public sealed partial class GraphTrace : pb::IMessage<GraphTrace>
+    /// <summary>
+    /// Latency timing for recent mediapipe packets.
+    /// </summary>
+    public sealed partial class GraphTrace : pb::IMessage<GraphTrace>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<GraphTrace> _parser = new pb::MessageParser<GraphTrace>(() => new GraphTrace());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GraphTrace> Parser { get { return _parser; } }
+    {
+        private static readonly pb::MessageParser<GraphTrace> _parser = new pb::MessageParser<GraphTrace>(() => new GraphTrace());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GraphTrace> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
-    {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[3]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[3]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphTrace()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphTrace()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphTrace(GraphTrace other) : this()
-    {
-      _hasBits0 = other._hasBits0;
-      baseTime_ = other.baseTime_;
-      baseTimestamp_ = other.baseTimestamp_;
-      calculatorName_ = other.calculatorName_.Clone();
-      streamName_ = other.streamName_.Clone();
-      calculatorTrace_ = other.calculatorTrace_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphTrace(GraphTrace other) : this()
+        {
+            _hasBits0 = other._hasBits0;
+            baseTime_ = other.baseTime_;
+            baseTimestamp_ = other.baseTimestamp_;
+            calculatorName_ = other.calculatorName_.Clone();
+            streamName_ = other.streamName_.Clone();
+            calculatorTrace_ = other.calculatorTrace_.Clone();
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphTrace Clone()
-    {
-      return new GraphTrace(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphTrace Clone()
+        {
+            return new GraphTrace(this);
+        }
 
-    /// <summary>Field number for the "base_time" field.</summary>
-    public const int BaseTimeFieldNumber = 1;
-    private readonly static long BaseTimeDefaultValue = 0L;
+        /// <summary>Field number for the "base_time" field.</summary>
+        public const int BaseTimeFieldNumber = 1;
+        private readonly static long BaseTimeDefaultValue = 0L;
 
-    private long baseTime_;
-    /// <summary>
-    /// The time represented as 0 in the trace.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long BaseTime
-    {
-      get { if ((_hasBits0 & 1) != 0) { return baseTime_; } else { return BaseTimeDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 1;
-        baseTime_ = value;
-      }
-    }
-    /// <summary>Gets whether the "base_time" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasBaseTime
-    {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "base_time" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearBaseTime()
-    {
-      _hasBits0 &= ~1;
-    }
+        private long baseTime_;
+        /// <summary>
+        /// The time represented as 0 in the trace.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long BaseTime
+        {
+            get { if ((_hasBits0 & 1) != 0) { return baseTime_; } else { return BaseTimeDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 1;
+                baseTime_ = value;
+            }
+        }
+        /// <summary>Gets whether the "base_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBaseTime
+        {
+            get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "base_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBaseTime()
+        {
+            _hasBits0 &= ~1;
+        }
 
-    /// <summary>Field number for the "base_timestamp" field.</summary>
-    public const int BaseTimestampFieldNumber = 2;
-    private readonly static long BaseTimestampDefaultValue = 0L;
+        /// <summary>Field number for the "base_timestamp" field.</summary>
+        public const int BaseTimestampFieldNumber = 2;
+        private readonly static long BaseTimestampDefaultValue = 0L;
 
-    private long baseTimestamp_;
-    /// <summary>
-    /// The timestamp represented as 0 in the trace.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long BaseTimestamp
-    {
-      get { if ((_hasBits0 & 2) != 0) { return baseTimestamp_; } else { return BaseTimestampDefaultValue; } }
-      set
-      {
-        _hasBits0 |= 2;
-        baseTimestamp_ = value;
-      }
-    }
-    /// <summary>Gets whether the "base_timestamp" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasBaseTimestamp
-    {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "base_timestamp" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearBaseTimestamp()
-    {
-      _hasBits0 &= ~2;
-    }
+        private long baseTimestamp_;
+        /// <summary>
+        /// The timestamp represented as 0 in the trace.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long BaseTimestamp
+        {
+            get { if ((_hasBits0 & 2) != 0) { return baseTimestamp_; } else { return BaseTimestampDefaultValue; } }
+            set
+            {
+                _hasBits0 |= 2;
+                baseTimestamp_ = value;
+            }
+        }
+        /// <summary>Gets whether the "base_timestamp" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBaseTimestamp
+        {
+            get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "base_timestamp" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBaseTimestamp()
+        {
+            _hasBits0 &= ~2;
+        }
 
-    /// <summary>Field number for the "calculator_name" field.</summary>
-    public const int CalculatorNameFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_calculatorName_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> calculatorName_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// The list of calculator node names indexed by node id.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> CalculatorName
-    {
-      get { return calculatorName_; }
-    }
+        /// <summary>Field number for the "calculator_name" field.</summary>
+        public const int CalculatorNameFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_calculatorName_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> calculatorName_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The list of calculator node names indexed by node id.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> CalculatorName
+        {
+            get { return calculatorName_; }
+        }
 
-    /// <summary>Field number for the "stream_name" field.</summary>
-    public const int StreamNameFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_streamName_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> streamName_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// The list of stream names indexed by stream id.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> StreamName
-    {
-      get { return streamName_; }
-    }
+        /// <summary>Field number for the "stream_name" field.</summary>
+        public const int StreamNameFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_streamName_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> streamName_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The list of stream names indexed by stream id.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> StreamName
+        {
+            get { return streamName_; }
+        }
 
-    /// <summary>Field number for the "calculator_trace" field.</summary>
-    public const int CalculatorTraceFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> _repeated_calculatorTrace_codec
-        = pb::FieldCodec.ForMessage(42, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> calculatorTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace>();
-    /// <summary>
-    /// Recent packet timing informtion about each calculator node and stream.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> CalculatorTrace
-    {
-      get { return calculatorTrace_; }
-    }
+        /// <summary>Field number for the "calculator_trace" field.</summary>
+        public const int CalculatorTraceFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> _repeated_calculatorTrace_codec
+            = pb::FieldCodec.ForMessage(42, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> calculatorTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace>();
+        /// <summary>
+        /// Recent packet timing informtion about each calculator node and stream.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> CalculatorTrace
+        {
+            get { return calculatorTrace_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as GraphTrace);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as GraphTrace);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GraphTrace other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (BaseTime != other.BaseTime) return false;
-      if (BaseTimestamp != other.BaseTimestamp) return false;
-      if (!calculatorName_.Equals(other.calculatorName_)) return false;
-      if (!streamName_.Equals(other.streamName_)) return false;
-      if (!calculatorTrace_.Equals(other.calculatorTrace_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GraphTrace other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (BaseTime != other.BaseTime) return false;
+            if (BaseTimestamp != other.BaseTimestamp) return false;
+            if (!calculatorName_.Equals(other.calculatorName_)) return false;
+            if (!streamName_.Equals(other.streamName_)) return false;
+            if (!calculatorTrace_.Equals(other.calculatorTrace_)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasBaseTime) hash ^= BaseTime.GetHashCode();
-      if (HasBaseTimestamp) hash ^= BaseTimestamp.GetHashCode();
-      hash ^= calculatorName_.GetHashCode();
-      hash ^= streamName_.GetHashCode();
-      hash ^= calculatorTrace_.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasBaseTime) hash ^= BaseTime.GetHashCode();
+            if (HasBaseTimestamp) hash ^= BaseTimestamp.GetHashCode();
+            hash ^= calculatorName_.GetHashCode();
+            hash ^= streamName_.GetHashCode();
+            hash ^= calculatorTrace_.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasBaseTime) {
         output.WriteRawTag(8);
@@ -1685,84 +1685,84 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasBaseTime)
-      {
-        output.WriteRawTag(8);
-        output.WriteInt64(BaseTime);
-      }
-      if (HasBaseTimestamp)
-      {
-        output.WriteRawTag(16);
-        output.WriteInt64(BaseTimestamp);
-      }
-      calculatorName_.WriteTo(ref output, _repeated_calculatorName_codec);
-      streamName_.WriteTo(ref output, _repeated_streamName_codec);
-      calculatorTrace_.WriteTo(ref output, _repeated_calculatorTrace_codec);
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasBaseTime)
+            {
+                output.WriteRawTag(8);
+                output.WriteInt64(BaseTime);
+            }
+            if (HasBaseTimestamp)
+            {
+                output.WriteRawTag(16);
+                output.WriteInt64(BaseTimestamp);
+            }
+            calculatorName_.WriteTo(ref output, _repeated_calculatorName_codec);
+            streamName_.WriteTo(ref output, _repeated_streamName_codec);
+            calculatorTrace_.WriteTo(ref output, _repeated_calculatorTrace_codec);
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasBaseTime)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseTime);
-      }
-      if (HasBaseTimestamp)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseTimestamp);
-      }
-      size += calculatorName_.CalculateSize(_repeated_calculatorName_codec);
-      size += streamName_.CalculateSize(_repeated_streamName_codec);
-      size += calculatorTrace_.CalculateSize(_repeated_calculatorTrace_codec);
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (HasBaseTime)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseTime);
+            }
+            if (HasBaseTimestamp)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseTimestamp);
+            }
+            size += calculatorName_.CalculateSize(_repeated_calculatorName_codec);
+            size += streamName_.CalculateSize(_repeated_streamName_codec);
+            size += calculatorTrace_.CalculateSize(_repeated_calculatorTrace_codec);
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GraphTrace other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasBaseTime)
-      {
-        BaseTime = other.BaseTime;
-      }
-      if (other.HasBaseTimestamp)
-      {
-        BaseTimestamp = other.BaseTimestamp;
-      }
-      calculatorName_.Add(other.calculatorName_);
-      streamName_.Add(other.streamName_);
-      calculatorTrace_.Add(other.calculatorTrace_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GraphTrace other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasBaseTime)
+            {
+                BaseTime = other.BaseTime;
+            }
+            if (other.HasBaseTimestamp)
+            {
+                BaseTimestamp = other.BaseTimestamp;
+            }
+            calculatorName_.Add(other.calculatorName_);
+            streamName_.Add(other.streamName_);
+            calculatorTrace_.Add(other.calculatorTrace_);
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1793,405 +1793,405 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              BaseTime = input.ReadInt64();
-              break;
-            }
-          case 16:
-            {
-              BaseTimestamp = input.ReadInt64();
-              break;
-            }
-          case 26:
-            {
-              calculatorName_.AddEntriesFrom(ref input, _repeated_calculatorName_codec);
-              break;
-            }
-          case 34:
-            {
-              streamName_.AddEntriesFrom(ref input, _repeated_streamName_codec);
-              break;
-            }
-          case 42:
-            {
-              calculatorTrace_.AddEntriesFrom(ref input, _repeated_calculatorTrace_codec);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 8:
+                        {
+                            BaseTime = input.ReadInt64();
+                            break;
+                        }
+                    case 16:
+                        {
+                            BaseTimestamp = input.ReadInt64();
+                            break;
+                        }
+                    case 26:
+                        {
+                            calculatorName_.AddEntriesFrom(ref input, _repeated_calculatorName_codec);
+                            break;
+                        }
+                    case 34:
+                        {
+                            streamName_.AddEntriesFrom(ref input, _repeated_streamName_codec);
+                            break;
+                        }
+                    case 42:
+                        {
+                            calculatorTrace_.AddEntriesFrom(ref input, _repeated_calculatorTrace_codec);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-    #region Nested types
-    /// <summary>Container for nested types declared in the GraphTrace message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types
-    {
-      /// <summary>
-      /// The kind of event recorded.
-      /// </summary>
-      public enum EventType
-      {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("OPEN")] Open = 1,
-        [pbr::OriginalName("PROCESS")] Process = 2,
-        [pbr::OriginalName("CLOSE")] Close = 3,
-        [pbr::OriginalName("NOT_READY")] NotReady = 4,
-        [pbr::OriginalName("READY_FOR_PROCESS")] ReadyForProcess = 5,
-        [pbr::OriginalName("READY_FOR_CLOSE")] ReadyForClose = 6,
-        [pbr::OriginalName("THROTTLED")] Throttled = 7,
-        [pbr::OriginalName("UNTHROTTLED")] Unthrottled = 8,
-        [pbr::OriginalName("CPU_TASK_USER")] CpuTaskUser = 9,
-        [pbr::OriginalName("CPU_TASK_SYSTEM")] CpuTaskSystem = 10,
-        [pbr::OriginalName("GPU_TASK")] GpuTask = 11,
-        [pbr::OriginalName("DSP_TASK")] DspTask = 12,
-        [pbr::OriginalName("TPU_TASK")] TpuTask = 13,
-        [pbr::OriginalName("GPU_CALIBRATION")] GpuCalibration = 14,
-        [pbr::OriginalName("PACKET_QUEUED")] PacketQueued = 15,
-      }
+        #region Nested types
+        /// <summary>Container for nested types declared in the GraphTrace message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types
+        {
+            /// <summary>
+            /// The kind of event recorded.
+            /// </summary>
+            public enum EventType
+            {
+                [pbr::OriginalName("UNKNOWN")] Unknown = 0,
+                [pbr::OriginalName("OPEN")] Open = 1,
+                [pbr::OriginalName("PROCESS")] Process = 2,
+                [pbr::OriginalName("CLOSE")] Close = 3,
+                [pbr::OriginalName("NOT_READY")] NotReady = 4,
+                [pbr::OriginalName("READY_FOR_PROCESS")] ReadyForProcess = 5,
+                [pbr::OriginalName("READY_FOR_CLOSE")] ReadyForClose = 6,
+                [pbr::OriginalName("THROTTLED")] Throttled = 7,
+                [pbr::OriginalName("UNTHROTTLED")] Unthrottled = 8,
+                [pbr::OriginalName("CPU_TASK_USER")] CpuTaskUser = 9,
+                [pbr::OriginalName("CPU_TASK_SYSTEM")] CpuTaskSystem = 10,
+                [pbr::OriginalName("GPU_TASK")] GpuTask = 11,
+                [pbr::OriginalName("DSP_TASK")] DspTask = 12,
+                [pbr::OriginalName("TPU_TASK")] TpuTask = 13,
+                [pbr::OriginalName("GPU_CALIBRATION")] GpuCalibration = 14,
+                [pbr::OriginalName("PACKET_QUEUED")] PacketQueued = 15,
+            }
 
-      /// <summary>
-      /// The timing for one packet across one packet stream.
-      /// </summary>
-      public sealed partial class StreamTrace : pb::IMessage<StreamTrace>
+            /// <summary>
+            /// The timing for one packet across one packet stream.
+            /// </summary>
+            public sealed partial class StreamTrace : pb::IMessage<StreamTrace>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
 #endif
-      {
-        private static readonly pb::MessageParser<StreamTrace> _parser = new pb::MessageParser<StreamTrace>(() => new StreamTrace());
-        private pb::UnknownFieldSet _unknownFields;
-        private int _hasBits0;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<StreamTrace> Parser { get { return _parser; } }
+            {
+                private static readonly pb::MessageParser<StreamTrace> _parser = new pb::MessageParser<StreamTrace>(() => new StreamTrace());
+                private pb::UnknownFieldSet _unknownFields;
+                private int _hasBits0;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<StreamTrace> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor
-        {
-          get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[0]; }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor
+                {
+                    get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[0]; }
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor
-        {
-          get { return Descriptor; }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor
+                {
+                    get { return Descriptor; }
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public StreamTrace()
-        {
-          OnConstruction();
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StreamTrace()
+                {
+                    OnConstruction();
+                }
 
-        partial void OnConstruction();
+                partial void OnConstruction();
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public StreamTrace(StreamTrace other) : this()
-        {
-          _hasBits0 = other._hasBits0;
-          startTime_ = other.startTime_;
-          finishTime_ = other.finishTime_;
-          packetTimestamp_ = other.packetTimestamp_;
-          streamId_ = other.streamId_;
-          packetId_ = other.packetId_;
-          eventData_ = other.eventData_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StreamTrace(StreamTrace other) : this()
+                {
+                    _hasBits0 = other._hasBits0;
+                    startTime_ = other.startTime_;
+                    finishTime_ = other.finishTime_;
+                    packetTimestamp_ = other.packetTimestamp_;
+                    streamId_ = other.streamId_;
+                    packetId_ = other.packetId_;
+                    eventData_ = other.eventData_;
+                    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public StreamTrace Clone()
-        {
-          return new StreamTrace(this);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StreamTrace Clone()
+                {
+                    return new StreamTrace(this);
+                }
 
-        /// <summary>Field number for the "start_time" field.</summary>
-        public const int StartTimeFieldNumber = 1;
-        private readonly static long StartTimeDefaultValue = 0L;
+                /// <summary>Field number for the "start_time" field.</summary>
+                public const int StartTimeFieldNumber = 1;
+                private readonly static long StartTimeDefaultValue = 0L;
 
-        private long startTime_;
-        /// <summary>
-        /// The time at which the packet entered the stream.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long StartTime
-        {
-          get { if ((_hasBits0 & 1) != 0) { return startTime_; } else { return StartTimeDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 1;
-            startTime_ = value;
-          }
-        }
-        /// <summary>Gets whether the "start_time" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasStartTime
-        {
-          get { return (_hasBits0 & 1) != 0; }
-        }
-        /// <summary>Clears the value of the "start_time" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearStartTime()
-        {
-          _hasBits0 &= ~1;
-        }
+                private long startTime_;
+                /// <summary>
+                /// The time at which the packet entered the stream.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long StartTime
+                {
+                    get { if ((_hasBits0 & 1) != 0) { return startTime_; } else { return StartTimeDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 1;
+                        startTime_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "start_time" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasStartTime
+                {
+                    get { return (_hasBits0 & 1) != 0; }
+                }
+                /// <summary>Clears the value of the "start_time" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearStartTime()
+                {
+                    _hasBits0 &= ~1;
+                }
 
-        /// <summary>Field number for the "finish_time" field.</summary>
-        public const int FinishTimeFieldNumber = 2;
-        private readonly static long FinishTimeDefaultValue = 0L;
+                /// <summary>Field number for the "finish_time" field.</summary>
+                public const int FinishTimeFieldNumber = 2;
+                private readonly static long FinishTimeDefaultValue = 0L;
 
-        private long finishTime_;
-        /// <summary>
-        /// The time at which the packet exited the stream.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long FinishTime
-        {
-          get { if ((_hasBits0 & 2) != 0) { return finishTime_; } else { return FinishTimeDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 2;
-            finishTime_ = value;
-          }
-        }
-        /// <summary>Gets whether the "finish_time" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasFinishTime
-        {
-          get { return (_hasBits0 & 2) != 0; }
-        }
-        /// <summary>Clears the value of the "finish_time" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearFinishTime()
-        {
-          _hasBits0 &= ~2;
-        }
+                private long finishTime_;
+                /// <summary>
+                /// The time at which the packet exited the stream.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long FinishTime
+                {
+                    get { if ((_hasBits0 & 2) != 0) { return finishTime_; } else { return FinishTimeDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 2;
+                        finishTime_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "finish_time" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasFinishTime
+                {
+                    get { return (_hasBits0 & 2) != 0; }
+                }
+                /// <summary>Clears the value of the "finish_time" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearFinishTime()
+                {
+                    _hasBits0 &= ~2;
+                }
 
-        /// <summary>Field number for the "packet_timestamp" field.</summary>
-        public const int PacketTimestampFieldNumber = 3;
-        private readonly static long PacketTimestampDefaultValue = 0L;
+                /// <summary>Field number for the "packet_timestamp" field.</summary>
+                public const int PacketTimestampFieldNumber = 3;
+                private readonly static long PacketTimestampDefaultValue = 0L;
 
-        private long packetTimestamp_;
-        /// <summary>
-        /// The identifying timetamp of the packet.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long PacketTimestamp
-        {
-          get { if ((_hasBits0 & 4) != 0) { return packetTimestamp_; } else { return PacketTimestampDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 4;
-            packetTimestamp_ = value;
-          }
-        }
-        /// <summary>Gets whether the "packet_timestamp" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasPacketTimestamp
-        {
-          get { return (_hasBits0 & 4) != 0; }
-        }
-        /// <summary>Clears the value of the "packet_timestamp" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearPacketTimestamp()
-        {
-          _hasBits0 &= ~4;
-        }
+                private long packetTimestamp_;
+                /// <summary>
+                /// The identifying timetamp of the packet.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long PacketTimestamp
+                {
+                    get { if ((_hasBits0 & 4) != 0) { return packetTimestamp_; } else { return PacketTimestampDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 4;
+                        packetTimestamp_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "packet_timestamp" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasPacketTimestamp
+                {
+                    get { return (_hasBits0 & 4) != 0; }
+                }
+                /// <summary>Clears the value of the "packet_timestamp" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearPacketTimestamp()
+                {
+                    _hasBits0 &= ~4;
+                }
 
-        /// <summary>Field number for the "stream_id" field.</summary>
-        public const int StreamIdFieldNumber = 4;
-        private readonly static int StreamIdDefaultValue = 0;
+                /// <summary>Field number for the "stream_id" field.</summary>
+                public const int StreamIdFieldNumber = 4;
+                private readonly static int StreamIdDefaultValue = 0;
 
-        private int streamId_;
-        /// <summary>
-        /// The index of the stream in the stream_name list.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int StreamId
-        {
-          get { if ((_hasBits0 & 8) != 0) { return streamId_; } else { return StreamIdDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 8;
-            streamId_ = value;
-          }
-        }
-        /// <summary>Gets whether the "stream_id" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasStreamId
-        {
-          get { return (_hasBits0 & 8) != 0; }
-        }
-        /// <summary>Clears the value of the "stream_id" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearStreamId()
-        {
-          _hasBits0 &= ~8;
-        }
+                private int streamId_;
+                /// <summary>
+                /// The index of the stream in the stream_name list.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int StreamId
+                {
+                    get { if ((_hasBits0 & 8) != 0) { return streamId_; } else { return StreamIdDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 8;
+                        streamId_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "stream_id" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasStreamId
+                {
+                    get { return (_hasBits0 & 8) != 0; }
+                }
+                /// <summary>Clears the value of the "stream_id" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearStreamId()
+                {
+                    _hasBits0 &= ~8;
+                }
 
-        /// <summary>Field number for the "packet_id" field.</summary>
-        public const int PacketIdFieldNumber = 5;
-        private readonly static long PacketIdDefaultValue = 0L;
+                /// <summary>Field number for the "packet_id" field.</summary>
+                public const int PacketIdFieldNumber = 5;
+                private readonly static long PacketIdDefaultValue = 0L;
 
-        private long packetId_;
-        /// <summary>
-        /// The address of the packet contents.
-        /// </summary>
-        [global::System.ObsoleteAttribute]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long PacketId
-        {
-          get { if ((_hasBits0 & 16) != 0) { return packetId_; } else { return PacketIdDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 16;
-            packetId_ = value;
-          }
-        }
-        /// <summary>Gets whether the "packet_id" field is set</summary>
-        [global::System.ObsoleteAttribute]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasPacketId
-        {
-          get { return (_hasBits0 & 16) != 0; }
-        }
-        /// <summary>Clears the value of the "packet_id" field</summary>
-        [global::System.ObsoleteAttribute]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearPacketId()
-        {
-          _hasBits0 &= ~16;
-        }
+                private long packetId_;
+                /// <summary>
+                /// The address of the packet contents.
+                /// </summary>
+                [global::System.ObsoleteAttribute]
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long PacketId
+                {
+                    get { if ((_hasBits0 & 16) != 0) { return packetId_; } else { return PacketIdDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 16;
+                        packetId_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "packet_id" field is set</summary>
+                [global::System.ObsoleteAttribute]
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasPacketId
+                {
+                    get { return (_hasBits0 & 16) != 0; }
+                }
+                /// <summary>Clears the value of the "packet_id" field</summary>
+                [global::System.ObsoleteAttribute]
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearPacketId()
+                {
+                    _hasBits0 &= ~16;
+                }
 
-        /// <summary>Field number for the "event_data" field.</summary>
-        public const int EventDataFieldNumber = 6;
-        private readonly static long EventDataDefaultValue = 0L;
+                /// <summary>Field number for the "event_data" field.</summary>
+                public const int EventDataFieldNumber = 6;
+                private readonly static long EventDataDefaultValue = 0L;
 
-        private long eventData_;
-        /// <summary>
-        /// Data describing the event, such as the packet contents.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long EventData
-        {
-          get { if ((_hasBits0 & 32) != 0) { return eventData_; } else { return EventDataDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 32;
-            eventData_ = value;
-          }
-        }
-        /// <summary>Gets whether the "event_data" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasEventData
-        {
-          get { return (_hasBits0 & 32) != 0; }
-        }
-        /// <summary>Clears the value of the "event_data" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearEventData()
-        {
-          _hasBits0 &= ~32;
-        }
+                private long eventData_;
+                /// <summary>
+                /// Data describing the event, such as the packet contents.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long EventData
+                {
+                    get { if ((_hasBits0 & 32) != 0) { return eventData_; } else { return EventDataDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 32;
+                        eventData_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "event_data" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasEventData
+                {
+                    get { return (_hasBits0 & 32) != 0; }
+                }
+                /// <summary>Clears the value of the "event_data" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearEventData()
+                {
+                    _hasBits0 &= ~32;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other)
-        {
-          return Equals(other as StreamTrace);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other)
+                {
+                    return Equals(other as StreamTrace);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(StreamTrace other)
-        {
-          if (ReferenceEquals(other, null))
-          {
-            return false;
-          }
-          if (ReferenceEquals(other, this))
-          {
-            return true;
-          }
-          if (StartTime != other.StartTime) return false;
-          if (FinishTime != other.FinishTime) return false;
-          if (PacketTimestamp != other.PacketTimestamp) return false;
-          if (StreamId != other.StreamId) return false;
-          if (PacketId != other.PacketId) return false;
-          if (EventData != other.EventData) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(StreamTrace other)
+                {
+                    if (ReferenceEquals(other, null))
+                    {
+                        return false;
+                    }
+                    if (ReferenceEquals(other, this))
+                    {
+                        return true;
+                    }
+                    if (StartTime != other.StartTime) return false;
+                    if (FinishTime != other.FinishTime) return false;
+                    if (PacketTimestamp != other.PacketTimestamp) return false;
+                    if (StreamId != other.StreamId) return false;
+                    if (PacketId != other.PacketId) return false;
+                    if (EventData != other.EventData) return false;
+                    return Equals(_unknownFields, other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode()
-        {
-          int hash = 1;
-          if (HasStartTime) hash ^= StartTime.GetHashCode();
-          if (HasFinishTime) hash ^= FinishTime.GetHashCode();
-          if (HasPacketTimestamp) hash ^= PacketTimestamp.GetHashCode();
-          if (HasStreamId) hash ^= StreamId.GetHashCode();
-          if (HasPacketId) hash ^= PacketId.GetHashCode();
-          if (HasEventData) hash ^= EventData.GetHashCode();
-          if (_unknownFields != null)
-          {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode()
+                {
+                    int hash = 1;
+                    if (HasStartTime) hash ^= StartTime.GetHashCode();
+                    if (HasFinishTime) hash ^= FinishTime.GetHashCode();
+                    if (HasPacketTimestamp) hash ^= PacketTimestamp.GetHashCode();
+                    if (HasStreamId) hash ^= StreamId.GetHashCode();
+                    if (HasPacketId) hash ^= PacketId.GetHashCode();
+                    if (HasEventData) hash ^= EventData.GetHashCode();
+                    if (_unknownFields != null)
+                    {
+                        hash ^= _unknownFields.GetHashCode();
+                    }
+                    return hash;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString()
-        {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString()
+                {
+                    return pb::JsonFormatter.ToDiagnosticString(this);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output)
-        {
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output)
+                {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
+                    output.WriteRawMessage(this);
 #else
           if (HasStartTime) {
             output.WriteRawTag(8);
@@ -2221,127 +2221,127 @@ namespace Akihabara.Framework.ProtoCalculator
             _unknownFields.WriteTo(output);
           }
 #endif
-        }
+                }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-        {
-          if (HasStartTime)
-          {
-            output.WriteRawTag(8);
-            output.WriteInt64(StartTime);
-          }
-          if (HasFinishTime)
-          {
-            output.WriteRawTag(16);
-            output.WriteInt64(FinishTime);
-          }
-          if (HasPacketTimestamp)
-          {
-            output.WriteRawTag(24);
-            output.WriteInt64(PacketTimestamp);
-          }
-          if (HasStreamId)
-          {
-            output.WriteRawTag(32);
-            output.WriteInt32(StreamId);
-          }
-          if (HasPacketId)
-          {
-            output.WriteRawTag(40);
-            output.WriteInt64(PacketId);
-          }
-          if (HasEventData)
-          {
-            output.WriteRawTag(48);
-            output.WriteInt64(EventData);
-          }
-          if (_unknownFields != null)
-          {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+                {
+                    if (HasStartTime)
+                    {
+                        output.WriteRawTag(8);
+                        output.WriteInt64(StartTime);
+                    }
+                    if (HasFinishTime)
+                    {
+                        output.WriteRawTag(16);
+                        output.WriteInt64(FinishTime);
+                    }
+                    if (HasPacketTimestamp)
+                    {
+                        output.WriteRawTag(24);
+                        output.WriteInt64(PacketTimestamp);
+                    }
+                    if (HasStreamId)
+                    {
+                        output.WriteRawTag(32);
+                        output.WriteInt32(StreamId);
+                    }
+                    if (HasPacketId)
+                    {
+                        output.WriteRawTag(40);
+                        output.WriteInt64(PacketId);
+                    }
+                    if (HasEventData)
+                    {
+                        output.WriteRawTag(48);
+                        output.WriteInt64(EventData);
+                    }
+                    if (_unknownFields != null)
+                    {
+                        _unknownFields.WriteTo(ref output);
+                    }
+                }
 #endif
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize()
-        {
-          int size = 0;
-          if (HasStartTime)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
-          }
-          if (HasFinishTime)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(FinishTime);
-          }
-          if (HasPacketTimestamp)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(PacketTimestamp);
-          }
-          if (HasStreamId)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(StreamId);
-          }
-          if (HasPacketId)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(PacketId);
-          }
-          if (HasEventData)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(EventData);
-          }
-          if (_unknownFields != null)
-          {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize()
+                {
+                    int size = 0;
+                    if (HasStartTime)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
+                    }
+                    if (HasFinishTime)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FinishTime);
+                    }
+                    if (HasPacketTimestamp)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PacketTimestamp);
+                    }
+                    if (HasStreamId)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StreamId);
+                    }
+                    if (HasPacketId)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PacketId);
+                    }
+                    if (HasEventData)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EventData);
+                    }
+                    if (_unknownFields != null)
+                    {
+                        size += _unknownFields.CalculateSize();
+                    }
+                    return size;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(StreamTrace other)
-        {
-          if (other == null)
-          {
-            return;
-          }
-          if (other.HasStartTime)
-          {
-            StartTime = other.StartTime;
-          }
-          if (other.HasFinishTime)
-          {
-            FinishTime = other.FinishTime;
-          }
-          if (other.HasPacketTimestamp)
-          {
-            PacketTimestamp = other.PacketTimestamp;
-          }
-          if (other.HasStreamId)
-          {
-            StreamId = other.StreamId;
-          }
-          if (other.HasPacketId)
-          {
-            PacketId = other.PacketId;
-          }
-          if (other.HasEventData)
-          {
-            EventData = other.EventData;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(StreamTrace other)
+                {
+                    if (other == null)
+                    {
+                        return;
+                    }
+                    if (other.HasStartTime)
+                    {
+                        StartTime = other.StartTime;
+                    }
+                    if (other.HasFinishTime)
+                    {
+                        FinishTime = other.FinishTime;
+                    }
+                    if (other.HasPacketTimestamp)
+                    {
+                        PacketTimestamp = other.PacketTimestamp;
+                    }
+                    if (other.HasStreamId)
+                    {
+                        StreamId = other.StreamId;
+                    }
+                    if (other.HasPacketId)
+                    {
+                        PacketId = other.PacketId;
+                    }
+                    if (other.HasEventData)
+                    {
+                        EventData = other.EventData;
+                    }
+                    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input)
-        {
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input)
+                {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
+                    input.ReadRawMessage(this);
 #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2376,416 +2376,416 @@ namespace Akihabara.Framework.ProtoCalculator
             }
           }
 #endif
-        }
+                }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-        {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0)
-          {
-            switch (tag)
-            {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 8:
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
                 {
-                  StartTime = input.ReadInt64();
-                  break;
+                    uint tag;
+                    while ((tag = input.ReadTag()) != 0)
+                    {
+                        switch (tag)
+                        {
+                            default:
+                                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                                break;
+                            case 8:
+                                {
+                                    StartTime = input.ReadInt64();
+                                    break;
+                                }
+                            case 16:
+                                {
+                                    FinishTime = input.ReadInt64();
+                                    break;
+                                }
+                            case 24:
+                                {
+                                    PacketTimestamp = input.ReadInt64();
+                                    break;
+                                }
+                            case 32:
+                                {
+                                    StreamId = input.ReadInt32();
+                                    break;
+                                }
+                            case 40:
+                                {
+                                    PacketId = input.ReadInt64();
+                                    break;
+                                }
+                            case 48:
+                                {
+                                    EventData = input.ReadInt64();
+                                    break;
+                                }
+                        }
+                    }
                 }
-              case 16:
-                {
-                  FinishTime = input.ReadInt64();
-                  break;
-                }
-              case 24:
-                {
-                  PacketTimestamp = input.ReadInt64();
-                  break;
-                }
-              case 32:
-                {
-                  StreamId = input.ReadInt32();
-                  break;
-                }
-              case 40:
-                {
-                  PacketId = input.ReadInt64();
-                  break;
-                }
-              case 48:
-                {
-                  EventData = input.ReadInt64();
-                  break;
-                }
-            }
-          }
-        }
 #endif
 
-      }
+            }
 
-      /// <summary>
-      /// The timing for one packet set being processed at one caclulator node.
-      /// </summary>
-      public sealed partial class CalculatorTrace : pb::IMessage<CalculatorTrace>
+            /// <summary>
+            /// The timing for one packet set being processed at one caclulator node.
+            /// </summary>
+            public sealed partial class CalculatorTrace : pb::IMessage<CalculatorTrace>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
 #endif
-      {
-        private static readonly pb::MessageParser<CalculatorTrace> _parser = new pb::MessageParser<CalculatorTrace>(() => new CalculatorTrace());
-        private pb::UnknownFieldSet _unknownFields;
-        private int _hasBits0;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<CalculatorTrace> Parser { get { return _parser; } }
+            {
+                private static readonly pb::MessageParser<CalculatorTrace> _parser = new pb::MessageParser<CalculatorTrace>(() => new CalculatorTrace());
+                private pb::UnknownFieldSet _unknownFields;
+                private int _hasBits0;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<CalculatorTrace> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pbr::MessageDescriptor Descriptor
-        {
-          get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[1]; }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor
+                {
+                    get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[1]; }
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        pbr::MessageDescriptor pb::IMessage.Descriptor
-        {
-          get { return Descriptor; }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor
+                {
+                    get { return Descriptor; }
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public CalculatorTrace()
-        {
-          OnConstruction();
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CalculatorTrace()
+                {
+                    OnConstruction();
+                }
 
-        partial void OnConstruction();
+                partial void OnConstruction();
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public CalculatorTrace(CalculatorTrace other) : this()
-        {
-          _hasBits0 = other._hasBits0;
-          nodeId_ = other.nodeId_;
-          inputTimestamp_ = other.inputTimestamp_;
-          eventType_ = other.eventType_;
-          startTime_ = other.startTime_;
-          finishTime_ = other.finishTime_;
-          inputTrace_ = other.inputTrace_.Clone();
-          outputTrace_ = other.outputTrace_.Clone();
-          threadId_ = other.threadId_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CalculatorTrace(CalculatorTrace other) : this()
+                {
+                    _hasBits0 = other._hasBits0;
+                    nodeId_ = other.nodeId_;
+                    inputTimestamp_ = other.inputTimestamp_;
+                    eventType_ = other.eventType_;
+                    startTime_ = other.startTime_;
+                    finishTime_ = other.finishTime_;
+                    inputTrace_ = other.inputTrace_.Clone();
+                    outputTrace_ = other.outputTrace_.Clone();
+                    threadId_ = other.threadId_;
+                    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public CalculatorTrace Clone()
-        {
-          return new CalculatorTrace(this);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CalculatorTrace Clone()
+                {
+                    return new CalculatorTrace(this);
+                }
 
-        /// <summary>Field number for the "node_id" field.</summary>
-        public const int NodeIdFieldNumber = 1;
-        private readonly static int NodeIdDefaultValue = 0;
+                /// <summary>Field number for the "node_id" field.</summary>
+                public const int NodeIdFieldNumber = 1;
+                private readonly static int NodeIdDefaultValue = 0;
 
-        private int nodeId_;
-        /// <summary>
-        /// The index of the calculator node in the calculator_name list.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int NodeId
-        {
-          get { if ((_hasBits0 & 1) != 0) { return nodeId_; } else { return NodeIdDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 1;
-            nodeId_ = value;
-          }
-        }
-        /// <summary>Gets whether the "node_id" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasNodeId
-        {
-          get { return (_hasBits0 & 1) != 0; }
-        }
-        /// <summary>Clears the value of the "node_id" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearNodeId()
-        {
-          _hasBits0 &= ~1;
-        }
+                private int nodeId_;
+                /// <summary>
+                /// The index of the calculator node in the calculator_name list.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int NodeId
+                {
+                    get { if ((_hasBits0 & 1) != 0) { return nodeId_; } else { return NodeIdDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 1;
+                        nodeId_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "node_id" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasNodeId
+                {
+                    get { return (_hasBits0 & 1) != 0; }
+                }
+                /// <summary>Clears the value of the "node_id" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearNodeId()
+                {
+                    _hasBits0 &= ~1;
+                }
 
-        /// <summary>Field number for the "input_timestamp" field.</summary>
-        public const int InputTimestampFieldNumber = 2;
-        private readonly static long InputTimestampDefaultValue = 0L;
+                /// <summary>Field number for the "input_timestamp" field.</summary>
+                public const int InputTimestampFieldNumber = 2;
+                private readonly static long InputTimestampDefaultValue = 0L;
 
-        private long inputTimestamp_;
-        /// <summary>
-        /// The input timestamp during Open, Process, or Close.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long InputTimestamp
-        {
-          get { if ((_hasBits0 & 2) != 0) { return inputTimestamp_; } else { return InputTimestampDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 2;
-            inputTimestamp_ = value;
-          }
-        }
-        /// <summary>Gets whether the "input_timestamp" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasInputTimestamp
-        {
-          get { return (_hasBits0 & 2) != 0; }
-        }
-        /// <summary>Clears the value of the "input_timestamp" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearInputTimestamp()
-        {
-          _hasBits0 &= ~2;
-        }
+                private long inputTimestamp_;
+                /// <summary>
+                /// The input timestamp during Open, Process, or Close.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long InputTimestamp
+                {
+                    get { if ((_hasBits0 & 2) != 0) { return inputTimestamp_; } else { return InputTimestampDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 2;
+                        inputTimestamp_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "input_timestamp" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasInputTimestamp
+                {
+                    get { return (_hasBits0 & 2) != 0; }
+                }
+                /// <summary>Clears the value of the "input_timestamp" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearInputTimestamp()
+                {
+                    _hasBits0 &= ~2;
+                }
 
-        /// <summary>Field number for the "event_type" field.</summary>
-        public const int EventTypeFieldNumber = 3;
-        private readonly static global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventTypeDefaultValue = global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType.Unknown;
+                /// <summary>Field number for the "event_type" field.</summary>
+                public const int EventTypeFieldNumber = 3;
+                private readonly static global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventTypeDefaultValue = global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType.Unknown;
 
-        private global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType eventType_;
-        /// <summary>
-        /// The kind of event, 1=Open, 2=Process, 3=Close, etc.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventType
-        {
-          get { if ((_hasBits0 & 4) != 0) { return eventType_; } else { return EventTypeDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 4;
-            eventType_ = value;
-          }
-        }
-        /// <summary>Gets whether the "event_type" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasEventType
-        {
-          get { return (_hasBits0 & 4) != 0; }
-        }
-        /// <summary>Clears the value of the "event_type" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearEventType()
-        {
-          _hasBits0 &= ~4;
-        }
+                private global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType eventType_;
+                /// <summary>
+                /// The kind of event, 1=Open, 2=Process, 3=Close, etc.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventType
+                {
+                    get { if ((_hasBits0 & 4) != 0) { return eventType_; } else { return EventTypeDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 4;
+                        eventType_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "event_type" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasEventType
+                {
+                    get { return (_hasBits0 & 4) != 0; }
+                }
+                /// <summary>Clears the value of the "event_type" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearEventType()
+                {
+                    _hasBits0 &= ~4;
+                }
 
-        /// <summary>Field number for the "start_time" field.</summary>
-        public const int StartTimeFieldNumber = 4;
-        private readonly static long StartTimeDefaultValue = 0L;
+                /// <summary>Field number for the "start_time" field.</summary>
+                public const int StartTimeFieldNumber = 4;
+                private readonly static long StartTimeDefaultValue = 0L;
 
-        private long startTime_;
-        /// <summary>
-        /// The time at which the packets entered the caclulator node.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long StartTime
-        {
-          get { if ((_hasBits0 & 8) != 0) { return startTime_; } else { return StartTimeDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 8;
-            startTime_ = value;
-          }
-        }
-        /// <summary>Gets whether the "start_time" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasStartTime
-        {
-          get { return (_hasBits0 & 8) != 0; }
-        }
-        /// <summary>Clears the value of the "start_time" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearStartTime()
-        {
-          _hasBits0 &= ~8;
-        }
+                private long startTime_;
+                /// <summary>
+                /// The time at which the packets entered the caclulator node.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long StartTime
+                {
+                    get { if ((_hasBits0 & 8) != 0) { return startTime_; } else { return StartTimeDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 8;
+                        startTime_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "start_time" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasStartTime
+                {
+                    get { return (_hasBits0 & 8) != 0; }
+                }
+                /// <summary>Clears the value of the "start_time" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearStartTime()
+                {
+                    _hasBits0 &= ~8;
+                }
 
-        /// <summary>Field number for the "finish_time" field.</summary>
-        public const int FinishTimeFieldNumber = 5;
-        private readonly static long FinishTimeDefaultValue = 0L;
+                /// <summary>Field number for the "finish_time" field.</summary>
+                public const int FinishTimeFieldNumber = 5;
+                private readonly static long FinishTimeDefaultValue = 0L;
 
-        private long finishTime_;
-        /// <summary>
-        /// The time at which the packets exited the caclulator node.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public long FinishTime
-        {
-          get { if ((_hasBits0 & 16) != 0) { return finishTime_; } else { return FinishTimeDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 16;
-            finishTime_ = value;
-          }
-        }
-        /// <summary>Gets whether the "finish_time" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasFinishTime
-        {
-          get { return (_hasBits0 & 16) != 0; }
-        }
-        /// <summary>Clears the value of the "finish_time" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearFinishTime()
-        {
-          _hasBits0 &= ~16;
-        }
+                private long finishTime_;
+                /// <summary>
+                /// The time at which the packets exited the caclulator node.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long FinishTime
+                {
+                    get { if ((_hasBits0 & 16) != 0) { return finishTime_; } else { return FinishTimeDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 16;
+                        finishTime_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "finish_time" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasFinishTime
+                {
+                    get { return (_hasBits0 & 16) != 0; }
+                }
+                /// <summary>Clears the value of the "finish_time" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearFinishTime()
+                {
+                    _hasBits0 &= ~16;
+                }
 
-        /// <summary>Field number for the "input_trace" field.</summary>
-        public const int InputTraceFieldNumber = 6;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_inputTrace_codec
-            = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> inputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
-        /// <summary>
-        /// The timing data for each input packet.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> InputTrace
-        {
-          get { return inputTrace_; }
-        }
+                /// <summary>Field number for the "input_trace" field.</summary>
+                public const int InputTraceFieldNumber = 6;
+                private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_inputTrace_codec
+                    = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
+                private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> inputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
+                /// <summary>
+                /// The timing data for each input packet.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> InputTrace
+                {
+                    get { return inputTrace_; }
+                }
 
-        /// <summary>Field number for the "output_trace" field.</summary>
-        public const int OutputTraceFieldNumber = 7;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_outputTrace_codec
-            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> outputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
-        /// <summary>
-        /// The identifying timetamp and stream_id for each output packet.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> OutputTrace
-        {
-          get { return outputTrace_; }
-        }
+                /// <summary>Field number for the "output_trace" field.</summary>
+                public const int OutputTraceFieldNumber = 7;
+                private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_outputTrace_codec
+                    = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
+                private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> outputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
+                /// <summary>
+                /// The identifying timetamp and stream_id for each output packet.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> OutputTrace
+                {
+                    get { return outputTrace_; }
+                }
 
-        /// <summary>Field number for the "thread_id" field.</summary>
-        public const int ThreadIdFieldNumber = 8;
-        private readonly static int ThreadIdDefaultValue = 0;
+                /// <summary>Field number for the "thread_id" field.</summary>
+                public const int ThreadIdFieldNumber = 8;
+                private readonly static int ThreadIdDefaultValue = 0;
 
-        private int threadId_;
-        /// <summary>
-        /// An identifier for the current process thread.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int ThreadId
-        {
-          get { if ((_hasBits0 & 32) != 0) { return threadId_; } else { return ThreadIdDefaultValue; } }
-          set
-          {
-            _hasBits0 |= 32;
-            threadId_ = value;
-          }
-        }
-        /// <summary>Gets whether the "thread_id" field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool HasThreadId
-        {
-          get { return (_hasBits0 & 32) != 0; }
-        }
-        /// <summary>Clears the value of the "thread_id" field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearThreadId()
-        {
-          _hasBits0 &= ~32;
-        }
+                private int threadId_;
+                /// <summary>
+                /// An identifier for the current process thread.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int ThreadId
+                {
+                    get { if ((_hasBits0 & 32) != 0) { return threadId_; } else { return ThreadIdDefaultValue; } }
+                    set
+                    {
+                        _hasBits0 |= 32;
+                        threadId_ = value;
+                    }
+                }
+                /// <summary>Gets whether the "thread_id" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasThreadId
+                {
+                    get { return (_hasBits0 & 32) != 0; }
+                }
+                /// <summary>Clears the value of the "thread_id" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearThreadId()
+                {
+                    _hasBits0 &= ~32;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override bool Equals(object other)
-        {
-          return Equals(other as CalculatorTrace);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other)
+                {
+                    return Equals(other as CalculatorTrace);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(CalculatorTrace other)
-        {
-          if (ReferenceEquals(other, null))
-          {
-            return false;
-          }
-          if (ReferenceEquals(other, this))
-          {
-            return true;
-          }
-          if (NodeId != other.NodeId) return false;
-          if (InputTimestamp != other.InputTimestamp) return false;
-          if (EventType != other.EventType) return false;
-          if (StartTime != other.StartTime) return false;
-          if (FinishTime != other.FinishTime) return false;
-          if (!inputTrace_.Equals(other.inputTrace_)) return false;
-          if (!outputTrace_.Equals(other.outputTrace_)) return false;
-          if (ThreadId != other.ThreadId) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(CalculatorTrace other)
+                {
+                    if (ReferenceEquals(other, null))
+                    {
+                        return false;
+                    }
+                    if (ReferenceEquals(other, this))
+                    {
+                        return true;
+                    }
+                    if (NodeId != other.NodeId) return false;
+                    if (InputTimestamp != other.InputTimestamp) return false;
+                    if (EventType != other.EventType) return false;
+                    if (StartTime != other.StartTime) return false;
+                    if (FinishTime != other.FinishTime) return false;
+                    if (!inputTrace_.Equals(other.inputTrace_)) return false;
+                    if (!outputTrace_.Equals(other.outputTrace_)) return false;
+                    if (ThreadId != other.ThreadId) return false;
+                    return Equals(_unknownFields, other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override int GetHashCode()
-        {
-          int hash = 1;
-          if (HasNodeId) hash ^= NodeId.GetHashCode();
-          if (HasInputTimestamp) hash ^= InputTimestamp.GetHashCode();
-          if (HasEventType) hash ^= EventType.GetHashCode();
-          if (HasStartTime) hash ^= StartTime.GetHashCode();
-          if (HasFinishTime) hash ^= FinishTime.GetHashCode();
-          hash ^= inputTrace_.GetHashCode();
-          hash ^= outputTrace_.GetHashCode();
-          if (HasThreadId) hash ^= ThreadId.GetHashCode();
-          if (_unknownFields != null)
-          {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode()
+                {
+                    int hash = 1;
+                    if (HasNodeId) hash ^= NodeId.GetHashCode();
+                    if (HasInputTimestamp) hash ^= InputTimestamp.GetHashCode();
+                    if (HasEventType) hash ^= EventType.GetHashCode();
+                    if (HasStartTime) hash ^= StartTime.GetHashCode();
+                    if (HasFinishTime) hash ^= FinishTime.GetHashCode();
+                    hash ^= inputTrace_.GetHashCode();
+                    hash ^= outputTrace_.GetHashCode();
+                    if (HasThreadId) hash ^= ThreadId.GetHashCode();
+                    if (_unknownFields != null)
+                    {
+                        hash ^= _unknownFields.GetHashCode();
+                    }
+                    return hash;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public override string ToString()
-        {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString()
+                {
+                    return pb::JsonFormatter.ToDiagnosticString(this);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void WriteTo(pb::CodedOutputStream output)
-        {
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output)
+                {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
+                    output.WriteRawMessage(this);
 #else
           if (HasNodeId) {
             output.WriteRawTag(8);
@@ -2817,133 +2817,133 @@ namespace Akihabara.Framework.ProtoCalculator
             _unknownFields.WriteTo(output);
           }
 #endif
-        }
+                }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-        {
-          if (HasNodeId)
-          {
-            output.WriteRawTag(8);
-            output.WriteInt32(NodeId);
-          }
-          if (HasInputTimestamp)
-          {
-            output.WriteRawTag(16);
-            output.WriteInt64(InputTimestamp);
-          }
-          if (HasEventType)
-          {
-            output.WriteRawTag(24);
-            output.WriteEnum((int)EventType);
-          }
-          if (HasStartTime)
-          {
-            output.WriteRawTag(32);
-            output.WriteInt64(StartTime);
-          }
-          if (HasFinishTime)
-          {
-            output.WriteRawTag(40);
-            output.WriteInt64(FinishTime);
-          }
-          inputTrace_.WriteTo(ref output, _repeated_inputTrace_codec);
-          outputTrace_.WriteTo(ref output, _repeated_outputTrace_codec);
-          if (HasThreadId)
-          {
-            output.WriteRawTag(64);
-            output.WriteInt32(ThreadId);
-          }
-          if (_unknownFields != null)
-          {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+                {
+                    if (HasNodeId)
+                    {
+                        output.WriteRawTag(8);
+                        output.WriteInt32(NodeId);
+                    }
+                    if (HasInputTimestamp)
+                    {
+                        output.WriteRawTag(16);
+                        output.WriteInt64(InputTimestamp);
+                    }
+                    if (HasEventType)
+                    {
+                        output.WriteRawTag(24);
+                        output.WriteEnum((int)EventType);
+                    }
+                    if (HasStartTime)
+                    {
+                        output.WriteRawTag(32);
+                        output.WriteInt64(StartTime);
+                    }
+                    if (HasFinishTime)
+                    {
+                        output.WriteRawTag(40);
+                        output.WriteInt64(FinishTime);
+                    }
+                    inputTrace_.WriteTo(ref output, _repeated_inputTrace_codec);
+                    outputTrace_.WriteTo(ref output, _repeated_outputTrace_codec);
+                    if (HasThreadId)
+                    {
+                        output.WriteRawTag(64);
+                        output.WriteInt32(ThreadId);
+                    }
+                    if (_unknownFields != null)
+                    {
+                        _unknownFields.WriteTo(ref output);
+                    }
+                }
 #endif
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public int CalculateSize()
-        {
-          int size = 0;
-          if (HasNodeId)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeId);
-          }
-          if (HasInputTimestamp)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(InputTimestamp);
-          }
-          if (HasEventType)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)EventType);
-          }
-          if (HasStartTime)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
-          }
-          if (HasFinishTime)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(FinishTime);
-          }
-          size += inputTrace_.CalculateSize(_repeated_inputTrace_codec);
-          size += outputTrace_.CalculateSize(_repeated_outputTrace_codec);
-          if (HasThreadId)
-          {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ThreadId);
-          }
-          if (_unknownFields != null)
-          {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize()
+                {
+                    int size = 0;
+                    if (HasNodeId)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeId);
+                    }
+                    if (HasInputTimestamp)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(InputTimestamp);
+                    }
+                    if (HasEventType)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)EventType);
+                    }
+                    if (HasStartTime)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
+                    }
+                    if (HasFinishTime)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FinishTime);
+                    }
+                    size += inputTrace_.CalculateSize(_repeated_inputTrace_codec);
+                    size += outputTrace_.CalculateSize(_repeated_outputTrace_codec);
+                    if (HasThreadId)
+                    {
+                        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ThreadId);
+                    }
+                    if (_unknownFields != null)
+                    {
+                        size += _unknownFields.CalculateSize();
+                    }
+                    return size;
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(CalculatorTrace other)
-        {
-          if (other == null)
-          {
-            return;
-          }
-          if (other.HasNodeId)
-          {
-            NodeId = other.NodeId;
-          }
-          if (other.HasInputTimestamp)
-          {
-            InputTimestamp = other.InputTimestamp;
-          }
-          if (other.HasEventType)
-          {
-            EventType = other.EventType;
-          }
-          if (other.HasStartTime)
-          {
-            StartTime = other.StartTime;
-          }
-          if (other.HasFinishTime)
-          {
-            FinishTime = other.FinishTime;
-          }
-          inputTrace_.Add(other.inputTrace_);
-          outputTrace_.Add(other.outputTrace_);
-          if (other.HasThreadId)
-          {
-            ThreadId = other.ThreadId;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(CalculatorTrace other)
+                {
+                    if (other == null)
+                    {
+                        return;
+                    }
+                    if (other.HasNodeId)
+                    {
+                        NodeId = other.NodeId;
+                    }
+                    if (other.HasInputTimestamp)
+                    {
+                        InputTimestamp = other.InputTimestamp;
+                    }
+                    if (other.HasEventType)
+                    {
+                        EventType = other.EventType;
+                    }
+                    if (other.HasStartTime)
+                    {
+                        StartTime = other.StartTime;
+                    }
+                    if (other.HasFinishTime)
+                    {
+                        FinishTime = other.FinishTime;
+                    }
+                    inputTrace_.Add(other.inputTrace_);
+                    outputTrace_.Add(other.outputTrace_);
+                    if (other.HasThreadId)
+                    {
+                        ThreadId = other.ThreadId;
+                    }
+                    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(pb::CodedInputStream input)
-        {
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input)
+                {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
+                    input.ReadRawMessage(this);
 #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2986,227 +2986,227 @@ namespace Akihabara.Framework.ProtoCalculator
             }
           }
 #endif
-        }
+                }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-        {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0)
-          {
-            switch (tag)
-            {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 8:
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
                 {
-                  NodeId = input.ReadInt32();
-                  break;
+                    uint tag;
+                    while ((tag = input.ReadTag()) != 0)
+                    {
+                        switch (tag)
+                        {
+                            default:
+                                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                                break;
+                            case 8:
+                                {
+                                    NodeId = input.ReadInt32();
+                                    break;
+                                }
+                            case 16:
+                                {
+                                    InputTimestamp = input.ReadInt64();
+                                    break;
+                                }
+                            case 24:
+                                {
+                                    EventType = (global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType)input.ReadEnum();
+                                    break;
+                                }
+                            case 32:
+                                {
+                                    StartTime = input.ReadInt64();
+                                    break;
+                                }
+                            case 40:
+                                {
+                                    FinishTime = input.ReadInt64();
+                                    break;
+                                }
+                            case 50:
+                                {
+                                    inputTrace_.AddEntriesFrom(ref input, _repeated_inputTrace_codec);
+                                    break;
+                                }
+                            case 58:
+                                {
+                                    outputTrace_.AddEntriesFrom(ref input, _repeated_outputTrace_codec);
+                                    break;
+                                }
+                            case 64:
+                                {
+                                    ThreadId = input.ReadInt32();
+                                    break;
+                                }
+                        }
+                    }
                 }
-              case 16:
-                {
-                  InputTimestamp = input.ReadInt64();
-                  break;
-                }
-              case 24:
-                {
-                  EventType = (global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType)input.ReadEnum();
-                  break;
-                }
-              case 32:
-                {
-                  StartTime = input.ReadInt64();
-                  break;
-                }
-              case 40:
-                {
-                  FinishTime = input.ReadInt64();
-                  break;
-                }
-              case 50:
-                {
-                  inputTrace_.AddEntriesFrom(ref input, _repeated_inputTrace_codec);
-                  break;
-                }
-              case 58:
-                {
-                  outputTrace_.AddEntriesFrom(ref input, _repeated_outputTrace_codec);
-                  break;
-                }
-              case 64:
-                {
-                  ThreadId = input.ReadInt32();
-                  break;
-                }
-            }
-          }
-        }
 #endif
 
-      }
+            }
+
+        }
+        #endregion
 
     }
-    #endregion
 
-  }
-
-  /// <summary>
-  /// Latency events and summaries for recent mediapipe packets.
-  /// </summary>
-  public sealed partial class GraphProfile : pb::IMessage<GraphProfile>
+    /// <summary>
+    /// Latency events and summaries for recent mediapipe packets.
+    /// </summary>
+    public sealed partial class GraphProfile : pb::IMessage<GraphProfile>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<GraphProfile> _parser = new pb::MessageParser<GraphProfile>(() => new GraphProfile());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GraphProfile> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
     {
-      get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[4]; }
-    }
+        private static readonly pb::MessageParser<GraphProfile> _parser = new pb::MessageParser<GraphProfile>(() => new GraphProfile());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GraphProfile> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[4]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphProfile()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    partial void OnConstruction();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphProfile()
+        {
+            OnConstruction();
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphProfile(GraphProfile other) : this()
-    {
-      graphTrace_ = other.graphTrace_.Clone();
-      calculatorProfiles_ = other.calculatorProfiles_.Clone();
-      config_ = other.config_ != null ? other.config_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GraphProfile Clone()
-    {
-      return new GraphProfile(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphProfile(GraphProfile other) : this()
+        {
+            graphTrace_ = other.graphTrace_.Clone();
+            calculatorProfiles_ = other.calculatorProfiles_.Clone();
+            config_ = other.config_ != null ? other.config_.Clone() : null;
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    /// <summary>Field number for the "graph_trace" field.</summary>
-    public const int GraphTraceFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace> _repeated_graphTrace_codec
-        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> graphTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace>();
-    /// <summary>
-    /// Recent packet timing informtion about each calculator node and stream.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> GraphTrace
-    {
-      get { return graphTrace_; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GraphProfile Clone()
+        {
+            return new GraphProfile(this);
+        }
 
-    /// <summary>Field number for the "calculator_profiles" field.</summary>
-    public const int CalculatorProfilesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> _repeated_calculatorProfiles_codec
-        = pb::FieldCodec.ForMessage(18, global::Akihabara.Framework.ProtoCalculator.CalculatorProfile.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> calculatorProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile>();
-    /// <summary>
-    /// Aggregated latency information about each calculator node.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> CalculatorProfiles
-    {
-      get { return calculatorProfiles_; }
-    }
+        /// <summary>Field number for the "graph_trace" field.</summary>
+        public const int GraphTraceFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace> _repeated_graphTrace_codec
+            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> graphTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace>();
+        /// <summary>
+        /// Recent packet timing informtion about each calculator node and stream.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> GraphTrace
+        {
+            get { return graphTrace_; }
+        }
 
-    /// <summary>Field number for the "config" field.</summary>
-    public const int ConfigFieldNumber = 3;
-    private global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig config_;
-    /// <summary>
-    /// The canonicalized calculator graph that is traced.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig Config
-    {
-      get { return config_; }
-      set
-      {
-        config_ = value;
-      }
-    }
+        /// <summary>Field number for the "calculator_profiles" field.</summary>
+        public const int CalculatorProfilesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> _repeated_calculatorProfiles_codec
+            = pb::FieldCodec.ForMessage(18, global::Akihabara.Framework.ProtoCalculator.CalculatorProfile.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> calculatorProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile>();
+        /// <summary>
+        /// Aggregated latency information about each calculator node.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> CalculatorProfiles
+        {
+            get { return calculatorProfiles_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as GraphProfile);
-    }
+        /// <summary>Field number for the "config" field.</summary>
+        public const int ConfigFieldNumber = 3;
+        private global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig config_;
+        /// <summary>
+        /// The canonicalized calculator graph that is traced.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig Config
+        {
+            get { return config_; }
+            set
+            {
+                config_ = value;
+            }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GraphProfile other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (!graphTrace_.Equals(other.graphTrace_)) return false;
-      if (!calculatorProfiles_.Equals(other.calculatorProfiles_)) return false;
-      if (!object.Equals(Config, other.Config)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as GraphProfile);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      hash ^= graphTrace_.GetHashCode();
-      hash ^= calculatorProfiles_.GetHashCode();
-      if (config_ != null) hash ^= Config.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GraphProfile other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (!graphTrace_.Equals(other.graphTrace_)) return false;
+            if (!calculatorProfiles_.Equals(other.calculatorProfiles_)) return false;
+            if (!object.Equals(Config, other.Config)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            hash ^= graphTrace_.GetHashCode();
+            hash ^= calculatorProfiles_.GetHashCode();
+            if (config_ != null) hash ^= Config.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       graphTrace_.WriteTo(output, _repeated_graphTrace_codec);
       calculatorProfiles_.WriteTo(output, _repeated_calculatorProfiles_codec);
@@ -3218,72 +3218,72 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      graphTrace_.WriteTo(ref output, _repeated_graphTrace_codec);
-      calculatorProfiles_.WriteTo(ref output, _repeated_calculatorProfiles_codec);
-      if (config_ != null)
-      {
-        output.WriteRawTag(26);
-        output.WriteMessage(Config);
-      }
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            graphTrace_.WriteTo(ref output, _repeated_graphTrace_codec);
+            calculatorProfiles_.WriteTo(ref output, _repeated_calculatorProfiles_codec);
+            if (config_ != null)
+            {
+                output.WriteRawTag(26);
+                output.WriteMessage(Config);
+            }
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      size += graphTrace_.CalculateSize(_repeated_graphTrace_codec);
-      size += calculatorProfiles_.CalculateSize(_repeated_calculatorProfiles_codec);
-      if (config_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
-      }
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GraphProfile other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      graphTrace_.Add(other.graphTrace_);
-      calculatorProfiles_.Add(other.calculatorProfiles_);
-      if (other.config_ != null)
-      {
-        if (config_ == null)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
         {
-          Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+            int size = 0;
+            size += graphTrace_.CalculateSize(_repeated_graphTrace_codec);
+            size += calculatorProfiles_.CalculateSize(_repeated_calculatorProfiles_codec);
+            if (config_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
         }
-        Config.MergeFrom(other.Config);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GraphProfile other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            graphTrace_.Add(other.graphTrace_);
+            calculatorProfiles_.Add(other.calculatorProfiles_);
+            if (other.config_ != null)
+            {
+                if (config_ == null)
+                {
+                    Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+                }
+                Config.MergeFrom(other.Config);
+            }
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3309,48 +3309,48 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              graphTrace_.AddEntriesFrom(ref input, _repeated_graphTrace_codec);
-              break;
-            }
-          case 18:
-            {
-              calculatorProfiles_.AddEntriesFrom(ref input, _repeated_calculatorProfiles_codec);
-              break;
-            }
-          case 26:
-            {
-              if (config_ == null)
-              {
-                Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
-              }
-              input.ReadMessage(Config);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            graphTrace_.AddEntriesFrom(ref input, _repeated_graphTrace_codec);
+                            break;
+                        }
+                    case 18:
+                        {
+                            calculatorProfiles_.AddEntriesFrom(ref input, _repeated_calculatorProfiles_codec);
+                            break;
+                        }
+                    case 26:
+                        {
+                            if (config_ == null)
+                            {
+                                Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+                            }
+                            input.ReadMessage(Config);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-  }
+    }
 
-  #endregion
+    #endregion
 
 }
 

@@ -12,232 +12,232 @@ using scg = global::System.Collections.Generic;
 namespace Akihabara.Framework.ProtoCalculator
 {
 
-  /// <summary>Holder for reflection information generated from status_handler.proto</summary>
-  public static partial class StatusHandlerReflection
-  {
-
-    #region Descriptor
-    /// <summary>File descriptor for status_handler.proto</summary>
-    public static pbr::FileDescriptor Descriptor
+    /// <summary>Holder for reflection information generated from status_handler.proto</summary>
+    public static partial class StatusHandlerReflection
     {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
 
-    static StatusHandlerReflection()
-    {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "ChRzdGF0dXNfaGFuZGxlci5wcm90bxIkYWtpaGFiYXJhLmZyYW1ld29yay5w",
-            "cm90b19jYWxjdWxhdG9yGhdtZWRpYXBpcGVfb3B0aW9ucy5wcm90byKqAQoT",
-            "U3RhdHVzSGFuZGxlckNvbmZpZxIWCg5zdGF0dXNfaGFuZGxlchgBIAEoCRIZ",
-            "ChFpbnB1dF9zaWRlX3BhY2tldBgCIAMoCRIXCg5leHRlcm5hbF9pbnB1dBjq",
-            "ByADKAkSRwoHb3B0aW9ucxgDIAEoCzI2LmFraWhhYmFyYS5mcmFtZXdvcmsu",
-            "cHJvdG9fY2FsY3VsYXRvci5NZWRpYVBpcGVPcHRpb25z"));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        #region Descriptor
+        /// <summary>File descriptor for status_handler.proto</summary>
+        public static pbr::FileDescriptor Descriptor
+        {
+            get { return descriptor; }
+        }
+        private static pbr::FileDescriptor descriptor;
+
+        static StatusHandlerReflection()
+        {
+            byte[] descriptorData = global::System.Convert.FromBase64String(
+                string.Concat(
+                  "ChRzdGF0dXNfaGFuZGxlci5wcm90bxIkYWtpaGFiYXJhLmZyYW1ld29yay5w",
+                  "cm90b19jYWxjdWxhdG9yGhdtZWRpYXBpcGVfb3B0aW9ucy5wcm90byKqAQoT",
+                  "U3RhdHVzSGFuZGxlckNvbmZpZxIWCg5zdGF0dXNfaGFuZGxlchgBIAEoCRIZ",
+                  "ChFpbnB1dF9zaWRlX3BhY2tldBgCIAMoCRIXCg5leHRlcm5hbF9pbnB1dBjq",
+                  "ByADKAkSRwoHb3B0aW9ucxgDIAEoCzI2LmFraWhhYmFyYS5mcmFtZXdvcmsu",
+                  "cHJvdG9fY2FsY3VsYXRvci5NZWRpYVBpcGVPcHRpb25z"));
+            descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor, },
+                new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig), global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig.Parser, new[]{ "StatusHandler", "InputSidePacket", "ExternalInput", "Options" }, null, null, null, null)
-          }));
-    }
-    #endregion
+                }));
+        }
+        #endregion
 
-  }
-  #region Messages
-  /// <summary>
-  /// The settings specifying a status handler and its required external inputs.
-  /// </summary>
-  public sealed partial class StatusHandlerConfig : pb::IMessage<StatusHandlerConfig>
+    }
+    #region Messages
+    /// <summary>
+    /// The settings specifying a status handler and its required external inputs.
+    /// </summary>
+    public sealed partial class StatusHandlerConfig : pb::IMessage<StatusHandlerConfig>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
 #endif
-  {
-    private static readonly pb::MessageParser<StatusHandlerConfig> _parser = new pb::MessageParser<StatusHandlerConfig>(() => new StatusHandlerConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StatusHandlerConfig> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor
     {
-      get { return global::Akihabara.Framework.ProtoCalculator.StatusHandlerReflection.Descriptor.MessageTypes[0]; }
-    }
+        private static readonly pb::MessageParser<StatusHandlerConfig> _parser = new pb::MessageParser<StatusHandlerConfig>(() => new StatusHandlerConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StatusHandlerConfig> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.ProtoCalculator.StatusHandlerReflection.Descriptor.MessageTypes[0]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StatusHandlerConfig()
-    {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    partial void OnConstruction();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusHandlerConfig()
+        {
+            OnConstruction();
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StatusHandlerConfig(StatusHandlerConfig other) : this()
-    {
-      statusHandler_ = other.statusHandler_;
-      inputSidePacket_ = other.inputSidePacket_.Clone();
-      externalInput_ = other.externalInput_.Clone();
-      options_ = other.options_ != null ? other.options_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StatusHandlerConfig Clone()
-    {
-      return new StatusHandlerConfig(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusHandlerConfig(StatusHandlerConfig other) : this()
+        {
+            statusHandler_ = other.statusHandler_;
+            inputSidePacket_ = other.inputSidePacket_.Clone();
+            externalInput_ = other.externalInput_.Clone();
+            options_ = other.options_ != null ? other.options_.Clone() : null;
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    /// <summary>Field number for the "status_handler" field.</summary>
-    public const int StatusHandlerFieldNumber = 1;
-    private readonly static string StatusHandlerDefaultValue = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusHandlerConfig Clone()
+        {
+            return new StatusHandlerConfig(this);
+        }
 
-    private string statusHandler_;
-    /// <summary>
-    /// The name of the registered status handler class.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string StatusHandler
-    {
-      get { return statusHandler_ ?? StatusHandlerDefaultValue; }
-      set
-      {
-        statusHandler_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "status_handler" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasStatusHandler
-    {
-      get { return statusHandler_ != null; }
-    }
-    /// <summary>Clears the value of the "status_handler" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearStatusHandler()
-    {
-      statusHandler_ = null;
-    }
+        /// <summary>Field number for the "status_handler" field.</summary>
+        public const int StatusHandlerFieldNumber = 1;
+        private readonly static string StatusHandlerDefaultValue = "";
 
-    /// <summary>Field number for the "input_side_packet" field.</summary>
-    public const int InputSidePacketFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_inputSidePacket_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> inputSidePacket_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// The name of the input side packets.  The StatusHandler can access its
-    /// input side packets by index or by tag.  A StatusHandler will only
-    /// be called if all of its requested input side packets are available
-    /// (and won't be called if a PacketFactory or PacketGenerator which
-    /// produces one fails).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> InputSidePacket
-    {
-      get { return inputSidePacket_; }
-    }
+        private string statusHandler_;
+        /// <summary>
+        /// The name of the registered status handler class.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StatusHandler
+        {
+            get { return statusHandler_ ?? StatusHandlerDefaultValue; }
+            set
+            {
+                statusHandler_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "status_handler" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStatusHandler
+        {
+            get { return statusHandler_ != null; }
+        }
+        /// <summary>Clears the value of the "status_handler" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStatusHandler()
+        {
+            statusHandler_ = null;
+        }
 
-    /// <summary>Field number for the "external_input" field.</summary>
-    public const int ExternalInputFieldNumber = 1002;
-    private static readonly pb::FieldCodec<string> _repeated_externalInput_codec
-        = pb::FieldCodec.ForString(8018);
-    private readonly pbc::RepeatedField<string> externalInput_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// DEPRECATED(mgeorg) The old name for input_side_packet.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> ExternalInput
-    {
-      get { return externalInput_; }
-    }
+        /// <summary>Field number for the "input_side_packet" field.</summary>
+        public const int InputSidePacketFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_inputSidePacket_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> inputSidePacket_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The name of the input side packets.  The StatusHandler can access its
+        /// input side packets by index or by tag.  A StatusHandler will only
+        /// be called if all of its requested input side packets are available
+        /// (and won't be called if a PacketFactory or PacketGenerator which
+        /// produces one fails).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> InputSidePacket
+        {
+            get { return inputSidePacket_; }
+        }
 
-    /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
-    private global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions options_;
-    /// <summary>
-    /// The options for the status handler.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions Options
-    {
-      get { return options_; }
-      set
-      {
-        options_ = value;
-      }
-    }
+        /// <summary>Field number for the "external_input" field.</summary>
+        public const int ExternalInputFieldNumber = 1002;
+        private static readonly pb::FieldCodec<string> _repeated_externalInput_codec
+            = pb::FieldCodec.ForString(8018);
+        private readonly pbc::RepeatedField<string> externalInput_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// DEPRECATED(mgeorg) The old name for input_side_packet.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ExternalInput
+        {
+            get { return externalInput_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other)
-    {
-      return Equals(other as StatusHandlerConfig);
-    }
+        /// <summary>Field number for the "options" field.</summary>
+        public const int OptionsFieldNumber = 3;
+        private global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions options_;
+        /// <summary>
+        /// The options for the status handler.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions Options
+        {
+            get { return options_; }
+            set
+            {
+                options_ = value;
+            }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StatusHandlerConfig other)
-    {
-      if (ReferenceEquals(other, null))
-      {
-        return false;
-      }
-      if (ReferenceEquals(other, this))
-      {
-        return true;
-      }
-      if (StatusHandler != other.StatusHandler) return false;
-      if (!inputSidePacket_.Equals(other.inputSidePacket_)) return false;
-      if (!externalInput_.Equals(other.externalInput_)) return false;
-      if (!object.Equals(Options, other.Options)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as StatusHandlerConfig);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode()
-    {
-      int hash = 1;
-      if (HasStatusHandler) hash ^= StatusHandler.GetHashCode();
-      hash ^= inputSidePacket_.GetHashCode();
-      hash ^= externalInput_.GetHashCode();
-      if (options_ != null) hash ^= Options.GetHashCode();
-      if (_unknownFields != null)
-      {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StatusHandlerConfig other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (StatusHandler != other.StatusHandler) return false;
+            if (!inputSidePacket_.Equals(other.inputSidePacket_)) return false;
+            if (!externalInput_.Equals(other.externalInput_)) return false;
+            if (!object.Equals(Options, other.Options)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString()
-    {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasStatusHandler) hash ^= StatusHandler.GetHashCode();
+            hash ^= inputSidePacket_.GetHashCode();
+            hash ^= externalInput_.GetHashCode();
+            if (options_ != null) hash ^= Options.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
+            output.WriteRawMessage(this);
 #else
       if (HasStatusHandler) {
         output.WriteRawTag(10);
@@ -253,85 +253,85 @@ namespace Akihabara.Framework.ProtoCalculator
         _unknownFields.WriteTo(output);
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
-    {
-      if (HasStatusHandler)
-      {
-        output.WriteRawTag(10);
-        output.WriteString(StatusHandler);
-      }
-      inputSidePacket_.WriteTo(ref output, _repeated_inputSidePacket_codec);
-      if (options_ != null)
-      {
-        output.WriteRawTag(26);
-        output.WriteMessage(Options);
-      }
-      externalInput_.WriteTo(ref output, _repeated_externalInput_codec);
-      if (_unknownFields != null)
-      {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasStatusHandler)
+            {
+                output.WriteRawTag(10);
+                output.WriteString(StatusHandler);
+            }
+            inputSidePacket_.WriteTo(ref output, _repeated_inputSidePacket_codec);
+            if (options_ != null)
+            {
+                output.WriteRawTag(26);
+                output.WriteMessage(Options);
+            }
+            externalInput_.WriteTo(ref output, _repeated_externalInput_codec);
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
 #endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize()
-    {
-      int size = 0;
-      if (HasStatusHandler)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(StatusHandler);
-      }
-      size += inputSidePacket_.CalculateSize(_repeated_inputSidePacket_codec);
-      size += externalInput_.CalculateSize(_repeated_externalInput_codec);
-      if (options_ != null)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
-      }
-      if (_unknownFields != null)
-      {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StatusHandlerConfig other)
-    {
-      if (other == null)
-      {
-        return;
-      }
-      if (other.HasStatusHandler)
-      {
-        StatusHandler = other.StatusHandler;
-      }
-      inputSidePacket_.Add(other.inputSidePacket_);
-      externalInput_.Add(other.externalInput_);
-      if (other.options_ != null)
-      {
-        if (options_ == null)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
         {
-          Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+            int size = 0;
+            if (HasStatusHandler)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(StatusHandler);
+            }
+            size += inputSidePacket_.CalculateSize(_repeated_inputSidePacket_codec);
+            size += externalInput_.CalculateSize(_repeated_externalInput_codec);
+            if (options_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
         }
-        Options.MergeFrom(other.Options);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StatusHandlerConfig other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasStatusHandler)
+            {
+                StatusHandler = other.StatusHandler;
+            }
+            inputSidePacket_.Add(other.inputSidePacket_);
+            externalInput_.Add(other.externalInput_);
+            if (other.options_ != null)
+            {
+                if (options_ == null)
+                {
+                    Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                }
+                Options.MergeFrom(other.Options);
+            }
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
+            input.ReadRawMessage(this);
 #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -361,53 +361,53 @@ namespace Akihabara.Framework.ProtoCalculator
         }
       }
 #endif
-    }
+        }
 
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
-    {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
         {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10:
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
             {
-              StatusHandler = input.ReadString();
-              break;
-            }
-          case 18:
-            {
-              inputSidePacket_.AddEntriesFrom(ref input, _repeated_inputSidePacket_codec);
-              break;
-            }
-          case 26:
-            {
-              if (options_ == null)
-              {
-                Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
-              }
-              input.ReadMessage(Options);
-              break;
-            }
-          case 8018:
-            {
-              externalInput_.AddEntriesFrom(ref input, _repeated_externalInput_codec);
-              break;
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            StatusHandler = input.ReadString();
+                            break;
+                        }
+                    case 18:
+                        {
+                            inputSidePacket_.AddEntriesFrom(ref input, _repeated_inputSidePacket_codec);
+                            break;
+                        }
+                    case 26:
+                        {
+                            if (options_ == null)
+                            {
+                                Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                            }
+                            input.ReadMessage(Options);
+                            break;
+                        }
+                    case 8018:
+                        {
+                            externalInput_.AddEntriesFrom(ref input, _repeated_externalInput_codec);
+                            break;
+                        }
+                }
             }
         }
-      }
-    }
 #endif
 
-  }
+    }
 
-  #endregion
+    #endregion
 
 }
 
