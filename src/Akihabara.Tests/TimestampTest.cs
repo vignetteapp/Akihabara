@@ -6,22 +6,22 @@ namespace Akihabara.Tests
     [TestFixture]
     public class TimestampTest
     {
-        #region #isDisposed
+        #region #IsDisposed
         [Test]
-        public void isDisposed_ShouldReturnFalse_When_NotDisposedYet()
+        public void IsDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
             var timestamp = new Timestamp(1);
 
-            Assert.False(timestamp.isDisposed);
+            Assert.False(timestamp.IsDisposed);
         }
 
         [Test]
-        public void isDisposed_ShouldReturnTrue_When_AlreadyDisposed()
+        public void IsDisposed_ShouldReturnTrue_When_AlreadyDisposed()
         {
             var timestamp = new Timestamp(1);
             timestamp.Dispose();
 
-            Assert.True(timestamp.isDisposed);
+            Assert.True(timestamp.IsDisposed);
         }
         #endregion
 

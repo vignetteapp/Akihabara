@@ -11,7 +11,7 @@ namespace Akihabara.Core
     {
         private volatile int disposeSignaled = 0;
 
-        public bool isDisposed { get; protected set; }
+        public bool IsDisposed { get; protected set; }
         protected bool isOwner { get; private set; }
 
         protected DisposableObject() : this(true)
@@ -20,7 +20,7 @@ namespace Akihabara.Core
 
         protected DisposableObject(bool isOwner)
         {
-            isDisposed = false;
+            IsDisposed = false;
             this.isOwner = isOwner;
         }
 
@@ -37,7 +37,7 @@ namespace Akihabara.Core
                 return;
             }
 
-            isDisposed = true;
+            IsDisposed = true;
 
             if (disposing)
             {
@@ -67,7 +67,7 @@ namespace Akihabara.Core
 
         public void ThrowIfDisposed()
         {
-            if (isDisposed)
+            if (IsDisposed)
             {
                 throw new ObjectDisposedException(GetType().FullName);
             }
