@@ -34,6 +34,8 @@ namespace Akihabara.Gpu
             // This is supposed to do nothing
             // if it does anything please let me know
             // because I will donate my life savings to the HoloCouncil
+            // actually I won't because I have to care about a roof
+            // if you are seeing this please help me this is a call for help
         }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
