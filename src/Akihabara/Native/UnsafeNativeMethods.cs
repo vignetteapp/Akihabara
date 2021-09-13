@@ -33,33 +33,33 @@ namespace Akihabara.Native
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode google_ShutdownGoogleLogging();
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
         public static extern MpReturnCode glog_LOG_INFO__PKc(string str);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
         public static extern MpReturnCode glog_LOG_WARNING__PKc(string str);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
         public static extern MpReturnCode glog_LOG_ERROR__PKc(string str);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
         public static extern MpReturnCode glog_LOG_FATAL__PKc(string str);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode google_FlushLogFiles(Glog.Severity severity);
 
         #endregion
 
         #region Protobuf Messaging
-        
-        [DllImport (MediaPipeLibrary, ExactSpelling = true)]
-        public static extern MpReturnCode google_protobuf__SetLogHandler__PF(
-            [MarshalAs(UnmanagedType.FunctionPtr)]Protobuf.ProtobufLogHandler logHandler);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        public static extern MpReturnCode google_protobuf__SetLogHandler__PF(
+            [MarshalAs(UnmanagedType.FunctionPtr)] Protobuf.ProtobufLogHandler logHandler);
+
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_api_SerializedProto__delete(IntPtr serializedProto);
 
-        [DllImport (MediaPipeLibrary, ExactSpelling = true)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_api_SerializedProtoVector__delete(IntPtr serializedProtoVector);
 
         #endregion
