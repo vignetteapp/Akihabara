@@ -223,7 +223,7 @@ namespace Akihabara.Framework
 
         public Status SetGpuResources(GpuResources gpuResources)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__SetGpuResources__SPgpu(MpPtr, gpuResources.sharedPtr, out var statusPtr).Assert();
+            nf.UnsafeNativeMethods.mp_CalculatorGraph__SetGpuResources__SPgpu(MpPtr, gpuResources.SharedPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(gpuResources);
             GC.KeepAlive(this);
