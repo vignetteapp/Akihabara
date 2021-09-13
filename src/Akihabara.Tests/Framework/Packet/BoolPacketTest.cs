@@ -52,9 +52,9 @@ namespace Akihabara.Tests.Framework.Packet
         }
         #endregion
 
-        #region #isDisposed
+        #region #IsDisposed
         [Test]
-        public void isDisposed_ShouldReturnFalse_When_NotDisposedYet()
+        public void IsDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
             var packet = new BoolPacket();
 
@@ -62,7 +62,7 @@ namespace Akihabara.Tests.Framework.Packet
         }
 
         [Test]
-        public void isDisposed_ShouldReturnTrue_When_AlreadyDisposed()
+        public void IsDisposed_ShouldReturnTrue_When_AlreadyDisposed()
         {
             var packet = new BoolPacket();
             packet.Dispose();
