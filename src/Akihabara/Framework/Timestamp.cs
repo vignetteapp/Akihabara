@@ -8,7 +8,9 @@ namespace Akihabara.Framework
 {
     public class Timestamp : MpResourceHandle, IEquatable<Timestamp>
     {
-        public Timestamp(IntPtr ptr): base(ptr) {}
+        public Timestamp(IntPtr ptr) : base(ptr)
+        {
+        }
 
         public Timestamp(long val) : base()
         {
@@ -22,35 +24,42 @@ namespace Akihabara.Framework
         }
 
         #region IEquatable<Timestamp>
-        public bool Equals(Timestamp other) {
+        public bool Equals(Timestamp other)
+        {
             if (other == null) { return false; }
 
             return Microseconds() == other.Microseconds();
         }
 
-        public override bool Equals(Object obj) {
+        public override bool Equals(Object obj)
+        {
             Timestamp timestampObj = obj == null ? null : (obj as Timestamp);
 
             return timestampObj != null && Equals(timestampObj);
         }
 
-        public static bool operator ==(Timestamp x, Timestamp y) {
-            if (((object)x) == null || ((object)y) == null) {
+        public static bool operator ==(Timestamp x, Timestamp y)
+        {
+            if (((object)x) == null || ((object)y) == null)
+            {
                 return Object.Equals(x, y);
             }
 
             return x.Equals(y);
         }
 
-        public static bool operator !=(Timestamp x, Timestamp y) {
-            if (((object)x) == null || ((object)y) == null) {
+        public static bool operator !=(Timestamp x, Timestamp y)
+        {
+            if (((object)x) == null || ((object)y) == null)
+            {
                 return !Object.Equals(x, y);
             }
 
             return !(x.Equals(y));
         }
 
-        public override int GetHashCode() {
+        public override int GetHashCode()
+        {
             return this.Microseconds().GetHashCode();
         }
         #endregion
@@ -66,7 +75,7 @@ namespace Akihabara.Framework
         public Timestamp NextAllowedInStream()
         {
             UnsafeNativeMethods.mp_Timestamp__NextAllowedInStream(MpPtr, out var nextPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new Timestamp(nextPtr);
         }
@@ -74,7 +83,7 @@ namespace Akihabara.Framework
         public Timestamp PreviousAllowedInStream()
         {
             UnsafeNativeMethods.mp_Timestamp__PreviousAllowedInStream(MpPtr, out var prevPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new Timestamp(prevPtr);
         }

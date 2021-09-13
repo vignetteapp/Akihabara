@@ -17,7 +17,7 @@ namespace Akihabara.Framework.Port
 
         public override bool Ok => SafeNativeMethods.mp_StatusOrGpuBuffer__ok(MpPtr);
 
-        public override Status status
+        public override Status Status
         {
             get
             {
