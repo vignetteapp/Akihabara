@@ -15,12 +15,12 @@ namespace Akihabara.Framework
         public Timestamp(long val) : base()
         {
             UnsafeNativeMethods.mp_Timestamp__l(val, out var ptr);
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_Timestamp__delete(Ptr);
+            UnsafeNativeMethods.mp_Timestamp__delete(ptr);
         }
 
         #region IEquatable<Timestamp>

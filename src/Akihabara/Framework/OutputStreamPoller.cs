@@ -9,13 +9,13 @@ namespace Akihabara.Framework
 {
     public class OutputStreamPoller<T> : MpResourceHandle
     {
-        public OutputStreamPoller(IntPtr Ptr) : base(Ptr)
+        public OutputStreamPoller(IntPtr ptr) : base(ptr)
         {
         }
 
         protected override void DeleteMpPtr()
         {
-            nf.UnsafeNativeMethods.mp_OutputStreamPoller__delete(Ptr);
+            nf.UnsafeNativeMethods.mp_OutputStreamPoller__delete(ptr);
         }
 
         public bool Next(Packet<T> packet)

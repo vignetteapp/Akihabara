@@ -12,21 +12,21 @@ namespace Akihabara.Gpu
         {
             UnsafeNativeMethods.mp_GlTexture__(out var ptr).Assert();
 
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         public GlTexture(uint name, int width, int height) : base()
         {
             UnsafeNativeMethods.mp_GlTexture__ui_i_i(name, width, height, out var ptr).Assert();
 
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_GlTexture__delete(Ptr);
+            UnsafeNativeMethods.mp_GlTexture__delete(ptr);
         }
 
         public int Width => SafeNativeMethods.mp_GlTexture__width(MpPtr);

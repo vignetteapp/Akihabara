@@ -30,9 +30,9 @@ namespace Akihabara.Framework.Port
         {
         }
 
-        protected override void DeleteMpPtr() => UnsafeNativeMethods.absl_Status__delete(Ptr);
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.absl_Status__delete(ptr);
 
-        public bool ok => SafeNativeMethods.absl_Status__ok(Ptr);
+        public bool ok => SafeNativeMethods.absl_Status__ok(ptr);
 
         public void AssertOk()
         {

@@ -16,7 +16,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GpuResourceSharedPtr(ptr);
 
-            this.Ptr = _sharedPtrHandle.Get();
+            this.ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
