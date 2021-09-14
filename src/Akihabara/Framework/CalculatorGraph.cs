@@ -9,7 +9,8 @@ using Akihabara.Framework.Packet;
 using Akihabara.Framework.ProtoCalculator;
 using Akihabara.Gpu;
 using Akihabara.Native;
-using nf = Akihabara.Native.Framework;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
+using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
 
 namespace Akihabara.Framework
 {
@@ -20,30 +21,30 @@ namespace Akihabara.Framework
 
         public CalculatorGraph() : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(string textFormatConfig) : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(byte[] serializedConfig) : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(CalculatorGraphConfig config) : this(config.ToByteArray()) { }
 
-        protected override void DeleteMpPtr() => nf.UnsafeNativeMethods.mp_CalculatorGraph__delete(ptr);
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_CalculatorGraph__delete(Ptr);
 
         public Status Initialize(CalculatorGraphConfig config)
         {
             var bytes = config.ToByteArray();
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__Initialize__PKc_i(MpPtr, bytes, bytes.Length, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__Initialize__PKc_i(MpPtr, bytes, bytes.Length, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -52,7 +53,7 @@ namespace Akihabara.Framework
         public Status Initialize(CalculatorGraphConfig config, SidePacket sidePacket)
         {
             var bytes = config.ToByteArray();
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__Initialize__PKc_i_Rsp(MpPtr, bytes, bytes.Length, sidePacket.MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__Initialize__PKc_i_Rsp(MpPtr, bytes, bytes.Length, sidePacket.MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -61,18 +62,18 @@ namespace Akihabara.Framework
         /// <remarks>Crashes if config is not set</remarks>
         public CalculatorGraphConfig Config()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__Config(MpPtr, out var serializedProtoPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__Config(MpPtr, out var serializedProtoPtr).Assert();
             GC.KeepAlive(this);
 
             var config = Protobuf.DeserializeProto<CalculatorGraphConfig>(serializedProtoPtr, CalculatorGraphConfig.Parser);
-            UnsafeNativeMethods.mp_api_SerializedProto__delete(serializedProtoPtr);
+            Native.UnsafeNativeMethods.mp_api_SerializedProto__delete(serializedProtoPtr);
 
             return config;
         }
 
         public Status ObserveOutputStream(string streamName, NativePacketCallback nativePacketCallback)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__ObserveOutputStream__PKc_PF(MpPtr, streamName, nativePacketCallback, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__ObserveOutputStream__PKc_PF(MpPtr, streamName, nativePacketCallback, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -101,7 +102,7 @@ namespace Akihabara.Framework
 
         public StatusOrPoller<T> AddOutputStreamPoller<T>(string streamName)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__AddOutputStreamPoller__PKc(MpPtr, streamName, out var statusOrPollerPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__AddOutputStreamPoller__PKc(MpPtr, streamName, out var statusOrPollerPtr).Assert();
 
             GC.KeepAlive(this);
             return new StatusOrPoller<T>(statusOrPollerPtr);
@@ -111,7 +112,7 @@ namespace Akihabara.Framework
 
         public Status Run(SidePacket sidePacket)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__Run__Rsp(MpPtr, sidePacket.MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__Run__Rsp(MpPtr, sidePacket.MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(sidePacket);
             GC.KeepAlive(this);
@@ -122,7 +123,7 @@ namespace Akihabara.Framework
 
         public Status StartRun(SidePacket sidePacket)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__StartRun__Rsp(MpPtr, sidePacket.MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__StartRun__Rsp(MpPtr, sidePacket.MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(sidePacket);
             GC.KeepAlive(this);
@@ -131,7 +132,7 @@ namespace Akihabara.Framework
 
         public Status WaitUntilIdle()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__WaitUntilIdle(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__WaitUntilIdle(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -139,17 +140,17 @@ namespace Akihabara.Framework
 
         public Status WaitUntilDone()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__WaitUntilDone(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__WaitUntilDone(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
         }
 
-        public bool HasError() => nf.SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
+        public bool HasError() => SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
 
         public Status AddPacketToInputStream<T>(string streamName, Packet<T> packet)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__AddPacketToInputStream__PKc_Ppacket(MpPtr, streamName, packet.MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__AddPacketToInputStream__PKc_Ppacket(MpPtr, streamName, packet.MpPtr, out var statusPtr).Assert();
             packet.Dispose(); // respect move semantics
 
             GC.KeepAlive(this);
@@ -158,7 +159,7 @@ namespace Akihabara.Framework
 
         public Status SetInputStreamMaxQueueSize(string streamName, int maxQueueSize)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__SetInputStreamMaxQueueSize__PKc_i(MpPtr, streamName, maxQueueSize, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__SetInputStreamMaxQueueSize__PKc_i(MpPtr, streamName, maxQueueSize, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -166,7 +167,7 @@ namespace Akihabara.Framework
 
         public Status CloseInputStream(string streamName)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__CloseInputStream__PKc(MpPtr, streamName, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__CloseInputStream__PKc(MpPtr, streamName, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -174,7 +175,7 @@ namespace Akihabara.Framework
 
         public Status CloseAllPacketSources()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__CloseAllPacketSources(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__CloseAllPacketSources(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -182,22 +183,22 @@ namespace Akihabara.Framework
 
         public void Cancel()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__Cancel(MpPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__Cancel(MpPtr).Assert();
             GC.KeepAlive(this);
         }
 
-        public bool GraphInputStreamsClosed() => nf.SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
+        public bool GraphInputStreamsClosed() => SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
 
         public bool IsNodeThrottled(int nodeId)
         {
-            return nf.SafeNativeMethods.mp_CalculatorGraph__IsNodeThrottled__i(MpPtr, nodeId);
+            return SafeNativeMethods.mp_CalculatorGraph__IsNodeThrottled__i(MpPtr, nodeId);
         }
 
-        public bool UnthrottleSources() => nf.SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
+        public bool UnthrottleSources() => SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
 
         public GpuResources GetGpuResources()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__GetGpuResources(MpPtr, out var gpuResourcesPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__GetGpuResources(MpPtr, out var gpuResourcesPtr).Assert();
 
             GC.KeepAlive(this);
             return new GpuResources(gpuResourcesPtr);
@@ -205,7 +206,7 @@ namespace Akihabara.Framework
 
         public Status SetGpuResources(GpuResources gpuResources)
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__SetGpuResources__SPgpu(MpPtr, gpuResources.SharedPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_CalculatorGraph__SetGpuResources__SPgpu(MpPtr, gpuResources.SharedPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(gpuResources);
             GC.KeepAlive(this);

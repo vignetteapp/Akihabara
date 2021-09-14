@@ -6,7 +6,8 @@ namespace Akihabara.Framework.Port
 {
     public class Status : MpResourceHandle
     {
-        public enum StatusCode : int {
+        public enum StatusCode : int
+        {
             Ok = 0,
             Cancelled = 1,
             Unknown = 2,
@@ -30,16 +31,16 @@ namespace Akihabara.Framework.Port
         {
         }
 
-        protected override void DeleteMpPtr() => UnsafeNativeMethods.absl_Status__delete(ptr);
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.absl_Status__delete(Ptr);
 
-        public bool ok => SafeNativeMethods.absl_Status__ok(ptr);
+        public bool ok => SafeNativeMethods.absl_Status__ok(Ptr);
 
         public void AssertOk()
         {
             if (!ok)
                 throw new MediapipeException(ToString());
         }
-        
+
         public StatusCode Code => (StatusCode)RawCode;
         public int RawCode => SafeNativeMethods.absl_Status__raw_code(MpPtr);
 
@@ -47,7 +48,7 @@ namespace Akihabara.Framework.Port
 
         public static Status Build(StatusCode code, string message, bool isOwner = true)
         {
-            UnsafeNativeMethods.absl_Status__i_PKc((int) code, message, out var ptr).Assert();
+            UnsafeNativeMethods.absl_Status__i_PKc((int)code, message, out var ptr).Assert();
 
             return new Status(ptr, isOwner);
         }

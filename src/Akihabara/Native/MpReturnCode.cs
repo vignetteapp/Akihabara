@@ -31,7 +31,7 @@ namespace Akihabara.Native
                 case MpReturnCode.Success: return;
                 case MpReturnCode.Aborted:
                     throw new MediapipeException("MediaPipe has aborted. See Glog files for details.");
-                default: 
+                default:
                     throw new MediapipePluginException($"Failed to call a native function (code={code})");
             }
         }

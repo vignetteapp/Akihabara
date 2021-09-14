@@ -4,6 +4,6 @@ namespace Akihabara.Core
 {
     public class MediapipePluginException : Exception
     {
-        public MediapipePluginException(string message): base(message) {}
+        public MediapipePluginException(string message) : base(message) { }
     }
 }

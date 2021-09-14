@@ -8,11 +8,11 @@ namespace Akihabara.Framework.Port
 {
     public class StatusOrGpuResources : StatusOr<GpuResources>
     {
-        public StatusOrGpuResources(IntPtr ptr) : base(ptr) {}
+        public StatusOrGpuResources(IntPtr ptr) : base(ptr) { }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(ptr);
+            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(Ptr);
         }
 
         public override bool Ok => SafeNativeMethods.mp_StatusOrGpuBuffer__ok(MpPtr);
@@ -22,7 +22,7 @@ namespace Akihabara.Framework.Port
             get
             {
                 UnsafeNativeMethods.mp_StatusOrGpuResources__status(MpPtr, out var statusPtr).Assert();
-                
+
                 GC.KeepAlive(this);
                 return new Status(statusPtr);
             }

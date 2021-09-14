@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using Akihabara.Core;
 using Akihabara.Framework.Port;
 using Akihabara.Native;
@@ -11,12 +10,12 @@ namespace Akihabara.Gpu
     public class GpuResources : MpResourceHandle
     {
         private SharedPtrHandle _sharedPtrHandle;
-        
+
         public GpuResources(IntPtr ptr) : base()
         {
             _sharedPtrHandle = new GpuResourceSharedPtr(ptr);
 
-            this.ptr = _sharedPtrHandle.Get();
+            this.Ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
@@ -34,6 +33,8 @@ namespace Akihabara.Gpu
             // This is supposed to do nothing
             // if it does anything please let me know
             // because I will donate my life savings to the HoloCouncil
+            // actually I won't because I have to care about a roof
+            // if you are seeing this please help me this is a call for help
         }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
@@ -57,7 +58,7 @@ namespace Akihabara.Gpu
 
     internal class GpuResourceSharedPtr : SharedPtr
     {
-        public GpuResourceSharedPtr(IntPtr ptr): base(ptr) {}
+        public GpuResourceSharedPtr(IntPtr ptr) : base(ptr) { }
 
         protected override void DeleteMpPtr()
         {
