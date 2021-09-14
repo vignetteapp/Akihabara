@@ -19,12 +19,12 @@ namespace Akihabara.Gpu
         {
             UnsafeNativeMethods.mp_GlCalculatorHelper__(out var ptr).Assert();
 
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__delete(ptr);
+            UnsafeNativeMethods.mp_GlCalculatorHelper__delete(Ptr);
         }
 
         public void InitializeForTest(GpuResources gpuResources)

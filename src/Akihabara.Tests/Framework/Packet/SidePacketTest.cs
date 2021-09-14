@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using Akihabara.Framework;
 using Akihabara.Framework.Packet;
 
 namespace Akihabara.Tests.Framework.Packet
@@ -42,7 +41,7 @@ namespace Akihabara.Tests.Framework.Packet
 
             Assert.AreEqual(sidePacket.Size, 1);
             Assert.AreEqual(sidePacket.At<FloatPacket>("value").Get(), 1.0f);
-            Assert.True(flagPacket.isDisposed);
+            Assert.True(flagPacket.IsDisposed);
         }
 
         [Test]

@@ -20,7 +20,7 @@ namespace Akihabara.Gpu
         public GlContext(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
             _sharedPtrHandle = new GlContextSharedPtr(ptr);
-            this.ptr = _sharedPtrHandle.Get();
+            this.Ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
@@ -70,7 +70,7 @@ namespace Akihabara.Gpu
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_SharedGlContext__delete(ptr);
+            UnsafeNativeMethods.mp_SharedGlContext__delete(Ptr);
         }
 
         public override IntPtr Get()
