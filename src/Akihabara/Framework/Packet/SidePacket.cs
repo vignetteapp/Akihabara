@@ -9,12 +9,12 @@ namespace Akihabara.Framework.Packet
         public SidePacket() : base()
         {
             UnsafeNativeMethods.mp_SidePacket__(out var ptr);
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_SidePacket__delete(Ptr);
+            UnsafeNativeMethods.mp_SidePacket__delete(ptr);
         }
 
         public int Size => SafeNativeMethods.mp_SidePacket__size(MpPtr);
