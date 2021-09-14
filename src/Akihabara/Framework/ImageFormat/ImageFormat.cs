@@ -3,19 +3,19 @@
     public class ImageFormat
     {
         public enum Format : int {
-            UNKNOWN = 0,
-            SRGB = 1,
-            SRGBA = 2,
-            GRAY8 = 3,
-            GRAY16 = 4,
-            YCBCR420P = 5,
-            YCBCR420P10 = 6,
-            SRGB48 = 7,
-            SRGBA64 = 8,
-            VEC32F1 = 9,
-            LAB8 = 10,
-            SBGRA = 11,
-            VEC32F2 = 12,
+            Unknown = 0,
+            Srgb = 1,
+            Srgba = 2,
+            Gray8 = 3,
+            Gray16 = 4,
+            Ycbcr420P = 5,
+            Ycbcr420P10 = 6,
+            Srgb48 = 7,
+            Srgba64 = 8,
+            Vec32F1 = 9,
+            Lab8 = 10,
+            Sbgra = 11,
+            Vec32F2 = 12,
         }        
     }
 }
