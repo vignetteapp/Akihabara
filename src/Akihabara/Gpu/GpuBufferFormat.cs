@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Native.Gpu;
 

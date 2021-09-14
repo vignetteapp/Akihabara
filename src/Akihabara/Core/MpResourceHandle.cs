@@ -6,15 +6,15 @@ namespace Akihabara.Core
 {
     public abstract class MpResourceHandle : DisposableObject, IMpResourceHandle
     {
-        protected IntPtr ptr;
-        
+        protected IntPtr Ptr;
+
         protected MpResourceHandle(bool isOwner = true) : this(IntPtr.Zero, isOwner)
         {
         }
 
         protected MpResourceHandle(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         #region IMpResourceHandle
@@ -24,7 +24,7 @@ namespace Akihabara.Core
             get
             {
                 ThrowIfDisposed();
-                return ptr;
+                return Ptr;
             }
         }
 
@@ -39,7 +39,7 @@ namespace Akihabara.Core
 
         public bool OwnsResource()
         {
-            return IsOwner && ptr != IntPtr.Zero;
+            return IsOwner && Ptr != IntPtr.Zero;
         }
 
         #endregion
@@ -51,16 +51,16 @@ namespace Akihabara.Core
                 ReleaseMpPtr();
             }
         }
-        
+
         /// <summary>
         /// Forget pointer address.
         /// After calling this method, <see cref="OwnsResource"/> will return false.
         /// </summary>
         protected void ReleaseMpPtr()
         {
-            ptr = IntPtr.Zero;
+            Ptr = IntPtr.Zero;
         }
-        
+
         /// <summary>
         ///  Relase the memory (call `delete` or `delete[]`) whether or not it owns it
         /// </summary>

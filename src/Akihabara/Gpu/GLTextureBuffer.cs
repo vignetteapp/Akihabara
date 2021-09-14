@@ -24,7 +24,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
 
-            this.ptr = _sharedPtrHandle.Get();
+            this.Ptr = _sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint target, uint name, int width, int height, GpuBufferFormat format,
@@ -35,7 +35,7 @@ namespace Akihabara.Gpu
                 callback, sharedCtxPtr, out var ptr).Assert();
 
             _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr);
-            base.ptr = _sharedPtrHandle.Get();
+            base.Ptr = _sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint name, int width, int height, GpuBufferFormat format, DeletionCallback callback,
@@ -53,11 +53,11 @@ namespace Akihabara.Gpu
 
             base.DisposeManaged();
         }
-        
+
         /// <summary>
         /// This does nothing.
         /// </summary>
-        protected override void DeleteMpPtr() {}
+        protected override void DeleteMpPtr() { }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
@@ -93,11 +93,11 @@ namespace Akihabara.Gpu
 
     internal class GlTextureBufferSharedPtr : SharedPtr
     {
-        public GlTextureBufferSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public GlTextureBufferSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_SharedGlTextureBuffer__delete(ptr);
+            UnsafeNativeMethods.mp_SharedGlTextureBuffer__delete(Ptr);
         }
 
         public override IntPtr Get()

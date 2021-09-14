@@ -46,6 +46,6 @@ namespace Akihabara.Native.Framework
         public static extern MpReturnCode mp_Timestamp_OneOverPostStream(out IntPtr timestamp);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern MpReturnCode mp_Timestamp_Done(out IntPtr timestamp);        
+        public static extern MpReturnCode mp_Timestamp_Done(out IntPtr timestamp);
     }
 }
