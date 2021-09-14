@@ -13,12 +13,12 @@ namespace Akihabara.External
         public StdString(byte[] bytes) : base()
         {
             UnsafeNativeMethods.std_string__PKc_i(bytes, bytes.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.std_string__delete(Ptr);
+            UnsafeNativeMethods.std_string__delete(ptr);
         }
 
         public void Swap(StdString str)

@@ -11,25 +11,25 @@ namespace Akihabara.Framework.ImageFormat
     {
         // do not edit arbitrary values here unless you know what you're doing
         // since this basically defines the alignment boundary on the GL context
-        public static readonly uint kDefaultAligmentBoundary = 16;
-        public static readonly uint kGlDefaultAlignmentBoundary = 4;
+        public static readonly uint KDefaultAligmentBoundary = 16;
+        public static readonly uint KGlDefaultAlignmentBoundary = 4;
 
         public delegate void Deleter(IntPtr ptr);
 
         public ImageFrame() : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__(out var ptr);
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
-        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
-
-        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, kDefaultAligmentBoundary) { }
-
+        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) {}
+        
+        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, KDefaultAligmentBoundary) {}
+        
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
         // there is no equivalent of NativeArray<T> so the closest thing we have is UnmanagedArray<T> or ArrayPooL<T>, which is recommended
@@ -46,13 +46,13 @@ namespace Akihabara.Framework.ImageFormat
                     out var ptr
                 );
 
-                this.Ptr = ptr;
+                this.ptr = ptr;
             }
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_ImageFrame__delete(Ptr);
+            UnsafeNativeMethods.mp_ImageFrame__delete(ptr);
         }
 
         private static void ReleasePixelData(IntPtr ptr)

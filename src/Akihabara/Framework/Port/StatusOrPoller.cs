@@ -14,7 +14,7 @@ namespace Akihabara.Framework.Port
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_StatusOrPoller__delete(Ptr);
+            nf.UnsafeNativeMethods.mp_StatusOrPoller__delete(ptr);
         }
 
         public override bool Ok

@@ -5,7 +5,7 @@ namespace Akihabara.Gpu
 {
     public class Gl
     {
-        public static uint GlTexture2D = 0x0DE1;
+        public static uint glTexture2D = 0x0DE1;
 
         public static void Flush()
         {

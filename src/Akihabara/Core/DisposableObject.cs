@@ -7,10 +7,10 @@ namespace Akihabara.Core
     // https://git.io/Jc3xr
     public abstract class DisposableObject : IDisposable
     {
-        private volatile int disposeSignaled = 0;
+        private volatile int _disposeSignaled = 0;
 
-        public bool isDisposed { get; protected set; }
-        protected bool isOwner { get; private set; }
+        public bool IsDisposed { get; protected set; }
+        protected bool IsOwner { get; private set; }
 
         protected DisposableObject() : this(true)
         {
@@ -18,8 +18,8 @@ namespace Akihabara.Core
 
         protected DisposableObject(bool isOwner)
         {
-            isDisposed = false;
-            this.isOwner = isOwner;
+            IsDisposed = false;
+            this.IsOwner = isOwner;
         }
 
         public void Dispose()
@@ -30,12 +30,12 @@ namespace Akihabara.Core
 
         protected virtual void Dispose(bool disposing)
         {
-            if (Interlocked.Exchange(ref disposeSignaled, 1) != 0)
+            if (Interlocked.Exchange(ref _disposeSignaled, 1) != 0)
             {
                 return;
             }
 
-            isDisposed = true;
+            IsDisposed = true;
 
             if (disposing)
             {
@@ -60,12 +60,12 @@ namespace Akihabara.Core
 
         public void TransferOwnership()
         {
-            isOwner = false;
+            IsOwner = false;
         }
 
         public void ThrowIfDisposed()
         {
-            if (isDisposed)
+            if (IsDisposed)
             {
                 throw new ObjectDisposedException(GetType().FullName);
             }
