@@ -10,7 +10,6 @@ namespace Akihabara.Core
         private volatile int _disposeSignaled = 0;
 
         public bool IsDisposed { get; protected set; }
-        
         protected bool IsOwner { get; private set; }
 
         protected DisposableObject() : this(true)
@@ -20,7 +19,6 @@ namespace Akihabara.Core
         protected DisposableObject(bool isOwner)
         {
             IsDisposed = false;
-
             this.IsOwner = isOwner;
         }
 

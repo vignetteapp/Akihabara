@@ -39,7 +39,7 @@ namespace Akihabara.Core
 
         public bool OwnsResource()
         {
-            return IsOwner && ptr != IntPtr.Zero;
+            return IsOwner && Ptr != IntPtr.Zero;
         }
 
         #endregion
