@@ -24,14 +24,14 @@ namespace Akihabara.Gpu
                 _sharedPtrHandle.Dispose();
                 _sharedPtrHandle = null;
             }
-            
+
             base.DisposeManaged();
         }
-        
+
         /// <summary>
         /// This will do nothing
         /// </summary>
-        protected override void DeleteMpPtr() {}
+        protected override void DeleteMpPtr() { }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
@@ -40,9 +40,9 @@ namespace Akihabara.Gpu
         public void WaitOnGpu() => UnsafeNativeMethods.mp_GlSyncPoint__WaitOnGpu(MpPtr).Assert();
 
         public bool IsReady()
-        { 
+        {
             UnsafeNativeMethods.mp_GlSyncPoint__IsReady(MpPtr, out var val).Assert();
-            
+
             GC.KeepAlive(this);
             return val;
         }
@@ -50,16 +50,16 @@ namespace Akihabara.Gpu
         public GlContext GetContext()
         {
             UnsafeNativeMethods.mp_GlSyncPoint__GetContext(MpPtr, out var sharedGlContextPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new GlContext(sharedGlContextPtr);
         }
-        
+
     }
 
     internal class GlSyncPointSharedPtr : SharedPtr
     {
-        public GlSyncPointSharedPtr(IntPtr ptr) : base(ptr) {}
+        public GlSyncPointSharedPtr(IntPtr ptr) : base(ptr) { }
 
         protected override void DeleteMpPtr()
         {

@@ -6,7 +6,7 @@ using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
-    public abstract class Packet<T>: MpResourceHandle
+    public abstract class Packet<T> : MpResourceHandle
     {
         public Packet() : base()
         {
@@ -25,16 +25,16 @@ namespace Akihabara.Framework.Packet
         public Packet<T> At(Timestamp timestamp)
         {
             UnsafeNativeMethods.mp_Packet__At__Rt(MpPtr, timestamp.MpPtr, out var packetPtr).Assert();
-            
+
             GC.KeepAlive(timestamp);
 
-            return (Packet<T>) Activator.CreateInstance(this.GetType(), packetPtr, true);
+            return (Packet<T>)Activator.CreateInstance(this.GetType(), packetPtr, true);
         }
 
         public Status ValidateAsProtoMessageLite()
         {
             UnsafeNativeMethods.mp_Packet__ValidateAsProtoMessageLite(MpPtr, out var statusPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new Status(statusPtr);
         }
@@ -44,7 +44,7 @@ namespace Akihabara.Framework.Packet
         public Timestamp Timestamp()
         {
             UnsafeNativeMethods.mp_Packet__Timestamp(MpPtr, out var timestampPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new Timestamp(timestampPtr);
         }

@@ -41,7 +41,7 @@ namespace Akihabara.Gpu
         }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
-        
+
         // GLES functions here!
         // only use this if you're invoking this from a GLES device
         public IntPtr EglDisplay => SafeNativeMethods.mp_GlContext__egl_display(MpPtr);
@@ -66,7 +66,7 @@ namespace Akihabara.Gpu
 
     internal class GlContextSharedPtr : SharedPtr
     {
-        public GlContextSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public GlContextSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         protected override void DeleteMpPtr()
         {

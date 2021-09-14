@@ -22,7 +22,7 @@ namespace Akihabara.Gpu
             this.Ptr = ptr;
         }
 
-        public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         protected override void DeleteMpPtr()
         {
@@ -46,7 +46,7 @@ namespace Akihabara.Gpu
         public GpuBuffer GetGpuBufferFrame()
         {
             UnsafeNativeMethods.mp_GlTexture__GetGpuBufferFrame(MpPtr, out var gpuBufferPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new GpuBuffer(gpuBufferPtr);
         }

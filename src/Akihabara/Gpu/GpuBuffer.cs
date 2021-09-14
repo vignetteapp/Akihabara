@@ -8,7 +8,7 @@ namespace Akihabara.Gpu
 {
     public class GpuBuffer : MpResourceHandle
     {
-        public GpuBuffer(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public GpuBuffer(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         public GpuBuffer(GlTextureBuffer glTextureBuffer) : base()
         {

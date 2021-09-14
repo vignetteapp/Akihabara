@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace Akihabara.Gpu
 {
@@ -9,6 +8,6 @@ namespace Akihabara.Gpu
         public int glInternalFormat;
         public uint glFormat;
         public uint glType;
-        public int downscale;        
+        public int downscale;
     }
 }

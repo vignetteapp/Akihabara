@@ -22,16 +22,16 @@ namespace Akihabara.Framework.ImageFormat
             this.Ptr = ptr;
         }
 
-        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) {}
-        
-        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, kDefaultAligmentBoundary) {}
+        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
+
+        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, kDefaultAligmentBoundary) { }
 
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
             this.Ptr = ptr;
         }
-        
+
         // there is no equivalent of NativeArray<T> so the closest thing we have is UnmanagedArray<T> or ArrayPooL<T>, which is recommended
         // by MSDN anyways and this is what a friend from Discord said :D.
         // https://docs.microsoft.com/en-us/dotnet/standard/native-interop/best-practices
@@ -74,7 +74,7 @@ namespace Akihabara.Framework.ImageFormat
         public bool IsAligned(uint alignmentBoundary)
         {
             SafeNativeMethods.mp_ImageFrame__IsAligned__ui(MpPtr, alignmentBoundary, out var value);
-            
+
             GC.KeepAlive(this);
             return value;
         }
@@ -97,7 +97,7 @@ namespace Akihabara.Framework.ImageFormat
         public int ChannelSize()
         {
             SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
-            
+
             // This is supposed to have a ValueOrFormatException() Function but we don't know
             // what it implements.
             GC.KeepAlive(this);
@@ -107,7 +107,7 @@ namespace Akihabara.Framework.ImageFormat
         public int NumberOfChannels()
         {
             SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val).Assert();
-            
+
             GC.KeepAlive(this);
             return val;
         }
@@ -115,7 +115,7 @@ namespace Akihabara.Framework.ImageFormat
         public int ByteDepth()
         {
             SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val).Assert();
-            
+
             GC.KeepAlive(this);
             return val;
         }
@@ -138,7 +138,7 @@ namespace Akihabara.Framework.ImageFormat
         public int PixelDataSizeStoredContiguously()
         {
             SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
-            
+
             GC.KeepAlive(this);
             return val;
         }
@@ -184,7 +184,7 @@ namespace Akihabara.Framework.ImageFormat
                     handler(MpPtr, (IntPtr)bufferPtr, bufferSize);
                 }
             }
-            
+
             GC.KeepAlive(this);
             return buffer;
         }

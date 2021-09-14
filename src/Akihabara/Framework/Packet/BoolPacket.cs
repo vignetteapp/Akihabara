@@ -7,9 +7,9 @@ namespace Akihabara.Framework.Packet
 {
     public class BoolPacket : Packet<bool>
     {
-        public BoolPacket() : base() {}
-        
-        public BoolPacket(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public BoolPacket() : base() { }
+
+        public BoolPacket(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         public BoolPacket(bool value) : base()
         {
@@ -21,11 +21,11 @@ namespace Akihabara.Framework.Packet
         public override bool Get()
         {
             UnsafeNativeMethods.mp_Packet__GetBool(MpPtr, out var val).Assert();
-            
+
             GC.KeepAlive(this);
             return val;
         }
-        
+
         // This is not supported for some reason...
         // oh well...
         public override StatusOr<bool> Consume()
@@ -37,7 +37,7 @@ namespace Akihabara.Framework.Packet
         public override Status ValidateAsType()
         {
             UnsafeNativeMethods.mp_Packet__ValidateAsBool(MpPtr, out var statusPtr).Assert();
-            
+
             GC.KeepAlive(this);
             return new Status(statusPtr);
         }
