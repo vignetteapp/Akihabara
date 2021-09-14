@@ -22,10 +22,10 @@ namespace Akihabara.Framework.ImageFormat
             this.ptr = ptr;
         }
 
-        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) {}
-        
-        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, KDefaultAligmentBoundary) {}
-        
+        public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
+
+        public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, KDefaultAligmentBoundary) { }
+
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
