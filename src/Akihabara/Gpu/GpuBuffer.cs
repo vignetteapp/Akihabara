@@ -15,10 +15,10 @@ namespace Akihabara.Gpu
             UnsafeNativeMethods.mp_GpuBuffer__PSgtb(glTextureBuffer.SharedPtr, out var ptr).Assert();
             glTextureBuffer.Dispose();
 
-            this.Ptr = ptr;
+            this.ptr = ptr;
         }
 
-        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GpuBuffer__delete(Ptr);
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GpuBuffer__delete(ptr);
 
         public GlTextureBuffer GetGlTextureBuffer() =>
             new GlTextureBuffer(SafeNativeMethods.mp_GpuBuffer__GetGlTextureBufferSharedPtr(MpPtr),

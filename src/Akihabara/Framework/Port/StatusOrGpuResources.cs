@@ -12,7 +12,7 @@ namespace Akihabara.Framework.Port
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(Ptr);
+            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(ptr);
         }
 
         public override bool Ok => SafeNativeMethods.mp_StatusOrGpuBuffer__ok(MpPtr);

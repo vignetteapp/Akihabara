@@ -14,7 +14,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GlSyncPointSharedPtr(ptr);
 
-            this.Ptr = _sharedPtrHandle.Get();
+            this.ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
@@ -63,7 +63,7 @@ namespace Akihabara.Gpu
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_GlSyncToken__delete(Ptr);
+            UnsafeNativeMethods.mp_GlSyncToken__delete(ptr);
         }
 
         public override IntPtr Get()
