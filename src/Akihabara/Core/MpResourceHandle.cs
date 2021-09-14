@@ -14,7 +14,7 @@ namespace Akihabara.Core
 
         protected MpResourceHandle(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         #region IMpResourceHandle
@@ -24,7 +24,7 @@ namespace Akihabara.Core
             get
             {
                 ThrowIfDisposed();
-                return ptr;
+                return Ptr;
             }
         }
 
@@ -39,7 +39,7 @@ namespace Akihabara.Core
 
         public bool OwnsResource()
         {
-            return IsOwner && ptr != IntPtr.Zero;
+            return IsOwner && Ptr != IntPtr.Zero;
         }
 
         #endregion
@@ -58,7 +58,7 @@ namespace Akihabara.Core
         /// </summary>
         protected void ReleaseMpPtr()
         {
-            ptr = IntPtr.Zero;
+            Ptr = IntPtr.Zero;
         }
 
         /// <summary>

@@ -19,7 +19,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame() : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__(out var ptr);
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
@@ -29,7 +29,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         // there is no equivalent of NativeArray<T> so the closest thing we have is UnmanagedArray<T> or ArrayPooL<T>, which is recommended
@@ -46,13 +46,13 @@ namespace Akihabara.Framework.ImageFormat
                     out var ptr
                 );
 
-                this.ptr = ptr;
+                this.Ptr = ptr;
             }
         }
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_ImageFrame__delete(ptr);
+            UnsafeNativeMethods.mp_ImageFrame__delete(Ptr);
         }
 
         private static void ReleasePixelData(IntPtr ptr)
