@@ -11,7 +11,7 @@ namespace Akihabara.Framework.Packet
         public Packet() : base()
         {
             UnsafeNativeMethods.mp_Packet__(out var ptr);
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         public Packet(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner)
@@ -60,7 +60,7 @@ namespace Akihabara.Framework.Packet
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_Packet__delete(ptr);
+            UnsafeNativeMethods.mp_Packet__delete(Ptr);
         }
     }
 }

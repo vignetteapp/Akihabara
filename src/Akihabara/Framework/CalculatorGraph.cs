@@ -21,25 +21,25 @@ namespace Akihabara.Framework
 
         public CalculatorGraph() : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(string textFormatConfig) : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(byte[] serializedConfig) : base()
         {
-            nf.UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
-            this.ptr = ptr;
+            UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
+            this.Ptr = ptr;
         }
 
         public CalculatorGraph(CalculatorGraphConfig config) : this(config.ToByteArray()) { }
 
-        protected override void DeleteMpPtr() => nf.UnsafeNativeMethods.mp_CalculatorGraph__delete(ptr);
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_CalculatorGraph__delete(Ptr);
 
         public Status Initialize(CalculatorGraphConfig config)
         {
@@ -146,7 +146,7 @@ namespace Akihabara.Framework
             return new Status(statusPtr);
         }
 
-        public bool HasError() => nf.SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
+        public bool HasError() => SafeNativeMethods.mp_CalculatorGraph__HasError(MpPtr);
 
         public Status AddPacketToInputStream<T>(string streamName, Packet<T> packet)
         {
@@ -187,14 +187,14 @@ namespace Akihabara.Framework
             GC.KeepAlive(this);
         }
 
-        public bool GraphInputStreamsClosed() => nf.SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
+        public bool GraphInputStreamsClosed() => SafeNativeMethods.mp_CalculatorGraph__GraphInputStreamsClosed(MpPtr);
 
         public bool IsNodeThrottled(int nodeId)
         {
             return SafeNativeMethods.mp_CalculatorGraph__IsNodeThrottled__i(MpPtr, nodeId);
         }
 
-        public bool UnthrottleSources() => nf.SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
+        public bool UnthrottleSources() => SafeNativeMethods.mp_CalculatorGraph__UnthrottleSources(MpPtr);
 
         public GpuResources GetGpuResources()
         {

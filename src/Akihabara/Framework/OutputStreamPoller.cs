@@ -15,7 +15,7 @@ namespace Akihabara.Framework
 
         protected override void DeleteMpPtr()
         {
-            nf.UnsafeNativeMethods.mp_OutputStreamPoller__delete(ptr);
+            UnsafeNativeMethods.mp_OutputStreamPoller__delete(Ptr);
         }
 
         public bool Next(Packet<T> packet)

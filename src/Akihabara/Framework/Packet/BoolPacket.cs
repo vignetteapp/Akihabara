@@ -15,7 +15,7 @@ namespace Akihabara.Framework.Packet
         {
             UnsafeNativeMethods.mp__MakeBoolPacket__b(value, out var ptr).Assert();
 
-            this.ptr = ptr;
+            this.Ptr = ptr;
         }
 
         public override bool Get()
