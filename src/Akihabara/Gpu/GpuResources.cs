@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using Akihabara.Core;
 using Akihabara.Framework.Port;
 using Akihabara.Native;
@@ -11,7 +10,7 @@ namespace Akihabara.Gpu
     public class GpuResources : MpResourceHandle
     {
         private SharedPtrHandle _sharedPtrHandle;
-        
+
         public GpuResources(IntPtr ptr) : base()
         {
             _sharedPtrHandle = new GpuResourceSharedPtr(ptr);
@@ -59,7 +58,7 @@ namespace Akihabara.Gpu
 
     internal class GpuResourceSharedPtr : SharedPtr
     {
-        public GpuResourceSharedPtr(IntPtr ptr): base(ptr) {}
+        public GpuResourceSharedPtr(IntPtr ptr) : base(ptr) { }
 
         protected override void DeleteMpPtr()
         {

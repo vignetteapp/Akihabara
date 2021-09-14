@@ -53,11 +53,11 @@ namespace Akihabara.Gpu
 
             base.DisposeManaged();
         }
-        
+
         /// <summary>
         /// This does nothing.
         /// </summary>
-        protected override void DeleteMpPtr() {}
+        protected override void DeleteMpPtr() { }
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
@@ -93,7 +93,7 @@ namespace Akihabara.Gpu
 
     internal class GlTextureBufferSharedPtr : SharedPtr
     {
-        public GlTextureBufferSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) {}
+        public GlTextureBufferSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
         protected override void DeleteMpPtr()
         {

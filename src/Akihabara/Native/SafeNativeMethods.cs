@@ -15,6 +15,6 @@ namespace Akihabara.Native
         public static extern int absl_Status__raw_code(IntPtr status);
 
         #endregion
-        
+
     }
 }

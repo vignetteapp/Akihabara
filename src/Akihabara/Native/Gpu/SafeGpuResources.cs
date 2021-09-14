@@ -9,7 +9,7 @@ namespace Akihabara.Native.Gpu
         // HACK: ONLY CALL THIS IF YOU'RE DOING iOS STUFF!
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern IntPtr mp_GpuResources__ios_gpu_data(IntPtr gpuResources);
-        
+
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern IntPtr mp_SharedGpuResources__get(IntPtr gpuResources);
 

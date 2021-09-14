@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Akihabara.Gpu
+﻿namespace Akihabara.Gpu
 {
     public enum GlVersion : uint
     {

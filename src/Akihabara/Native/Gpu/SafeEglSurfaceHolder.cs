@@ -10,10 +10,10 @@ namespace Akihabara.Native.Gpu
     {
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern IntPtr mp_EglSurfaceHolderUniquePtr__get(IntPtr eglSurfaceHolder);
-        
+
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern IntPtr mp_EglSurfaceHolderUniquePtr__release(IntPtr eglSurfaceHolder);
-        
+
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_EglSurfaceHolder__SetFlipY__b(IntPtr eglSurfaceHolder, bool flipY);
 

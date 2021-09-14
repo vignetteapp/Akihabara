@@ -12,7 +12,7 @@ namespace Akihabara.External
         public delegate void ProtobufLogHandler(int level, string filename, int line, string message);
 
         private static readonly ProtobufLogHandler protobufLogHandler = LogProtobufMessage;
-        
+
         static Protobuf()
         {
             UnsafeNativeMethods.google_protobuf__SetLogHandler__PF(protobufLogHandler).Assert();
@@ -34,12 +34,12 @@ namespace Akihabara.External
             }
         }
 
-        public static T DeserializeProto<T>(IntPtr ptr, pb::MessageParser<T> parser) 
+        public static T DeserializeProto<T>(IntPtr ptr, pb::MessageParser<T> parser)
             where T : pb::IMessage<T>
         {
             var serializedProto = Marshal.PtrToStructure<SerializedProto>(ptr);
             var bytes = new byte[serializedProto.length];
-            
+
             Marshal.Copy(serializedProto.str, bytes, 0, bytes.Length);
 
             return parser.ParseFrom(bytes);
@@ -50,12 +50,12 @@ namespace Akihabara.External
         {
             var serializedProtoVector = Marshal.PtrToStructure<SerializedProtoVector>(ptr);
             var protos = new List<T>(serializedProtoVector.size);
-            
+
             // UNSAFE CODE AHOY!
             // Do not touch this one unless you have an idea with pointers!
             unsafe
             {
-                byte** protoPtr = (byte**) serializedProtoVector.data;
+                byte** protoPtr = (byte**)serializedProtoVector.data;
 
                 for (var i = 0; i < serializedProtoVector.size; i++)
                 {
