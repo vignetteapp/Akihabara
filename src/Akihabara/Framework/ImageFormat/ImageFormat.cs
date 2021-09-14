@@ -2,7 +2,8 @@
 {
     public class ImageFormat
     {
-        public enum Format : int {
+        public enum Format : int
+        {
             Unknown = 0,
             Srgb = 1,
             Srgba = 2,

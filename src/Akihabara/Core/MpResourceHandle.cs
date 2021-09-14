@@ -7,7 +7,7 @@ namespace Akihabara.Core
     public abstract class MpResourceHandle : DisposableObject, IMpResourceHandle
     {
         protected IntPtr Ptr;
-        
+
         protected MpResourceHandle(bool isOwner = true) : this(IntPtr.Zero, isOwner)
         {
         }
