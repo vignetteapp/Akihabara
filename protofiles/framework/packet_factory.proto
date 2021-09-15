@@ -20,7 +20,7 @@
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
 // Options used by a PacketFactory to create the Packet.
 message PacketFactoryOptions {

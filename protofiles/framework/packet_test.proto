@@ -16,7 +16,7 @@
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
 message PacketTestProto {
   // Tests that the tags used to encode the timestamp do not interfere with

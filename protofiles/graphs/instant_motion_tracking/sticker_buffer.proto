@@ -1,4 +1,4 @@
-// Copyright 2019 The MediaPipe Authors.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,20 +11,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
-// Forked from mediapipe_options.proto.
-// The forked proto must remain identical to the original proto and should be
-// ONLY used by mediapipe open source project.
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.graphs.instant_motion_tracking.protobuf;
 
-import "calculator.proto";
+message Sticker {
+  optional int32 id = 1;
+  optional float x = 2;
+  optional float y = 3;
+  optional float rotation = 4;
+  optional float scale = 5;
+  optional int32 render_id = 6;
+}
 
-message CalculatorContractTestOptions {
-  extend CalculatorOptions {
-    optional CalculatorContractTestOptions ext = 188754615;
-  }
-  optional double test_field = 1 [default = -1.0];
+message StickerRoll {
+  repeated Sticker sticker = 1;
 }
