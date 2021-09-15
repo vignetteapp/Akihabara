@@ -3,7 +3,6 @@ using System.Runtime.InteropServices;
 
 using Google.Protobuf;
 using Akihabara.Core;
-using Akihabara.External;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Protobuf;
@@ -65,7 +64,7 @@ namespace Akihabara.Framework
             UnsafeNativeMethods.mp_CalculatorGraph__Config(MpPtr, out var serializedProtoPtr).Assert();
             GC.KeepAlive(this);
 
-            var config = Protobuf.DeserializeProto<CalculatorGraphConfig>(serializedProtoPtr, CalculatorGraphConfig.Parser);
+            var config = External.Protobuf.DeserializeProto<CalculatorGraphConfig>(serializedProtoPtr, CalculatorGraphConfig.Parser);
             Native.UnsafeNativeMethods.mp_api_SerializedProto__delete(serializedProtoPtr);
 
             return config;
