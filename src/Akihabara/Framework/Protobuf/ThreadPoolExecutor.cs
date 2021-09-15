@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from thread_pool_executor.proto</summary>
@@ -41,9 +41,9 @@ namespace Akihabara.Framework.ProtoCalculator
                   "aWFQaXBlT3B0aW9ucxiT0/VKIAEoCzI/LmFraWhhYmFyYS5mcmFtZXdvcmsu",
                   "cHJvdG9fY2FsY3VsYXRvci5UaHJlYWRQb29sRXhlY3V0b3JPcHRpb25z"));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor, },
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.MediapipeOptionsReflection.Descriptor, },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions), global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Parser, new[]{ "NumThreads", "StackSize", "NicePriorityLevel", "RequireProcessorPerformance", "ThreadNamePrefix" }, null, new[]{ typeof(global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance) }, new pb::Extension[] { global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions), global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Parser, new[]{ "NumThreads", "StackSize", "NicePriorityLevel", "RequireProcessorPerformance", "ThreadNamePrefix" }, null, new[]{ typeof(global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance) }, new pb::Extension[] { global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Extensions.Ext }, null)
                 }));
         }
         #endregion
@@ -66,7 +66,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.ThreadPoolExecutorReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -219,9 +219,9 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "require_processor_performance" field.</summary>
         public const int RequireProcessorPerformanceFieldNumber = 4;
-        private readonly static global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance RequireProcessorPerformanceDefaultValue = global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance.Normal;
+        private readonly static global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance RequireProcessorPerformanceDefaultValue = global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance.Normal;
 
-        private global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance requireProcessorPerformance_;
+        private global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance requireProcessorPerformance_;
         /// <summary>
         /// The performance hint of the processor(s) that the threads will be bound to.
         /// Framework will make the best effort to run the threads on the specific
@@ -230,7 +230,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance RequireProcessorPerformance
+        public global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance RequireProcessorPerformance
         {
             get { if ((_hasBits0 & 8) != 0) { return requireProcessorPerformance_; } else { return RequireProcessorPerformanceDefaultValue; } }
             set
@@ -498,7 +498,7 @@ namespace Akihabara.Framework.ProtoCalculator
             break;
           }
           case 32: {
-            RequireProcessorPerformance = (global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance) input.ReadEnum();
+            RequireProcessorPerformance = (global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance) input.ReadEnum();
             break;
           }
           case 42: {
@@ -540,7 +540,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         }
                     case 32:
                         {
-                            RequireProcessorPerformance = (global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Types.ProcessorPerformance)input.ReadEnum();
+                            RequireProcessorPerformance = (global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Types.ProcessorPerformance)input.ReadEnum();
                             break;
                         }
                     case 42:
@@ -578,8 +578,8 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Extensions
         {
-            public static readonly pb::Extension<global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions, global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions> Ext =
-              new pb::Extension<global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions, global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions>(157116819, pb::FieldCodec.ForMessage(1256934554, global::Akihabara.Framework.ProtoCalculator.ThreadPoolExecutorOptions.Parser));
+            public static readonly pb::Extension<global::Akihabara.Framework.Protobuf.MediaPipeOptions, global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions> Ext =
+              new pb::Extension<global::Akihabara.Framework.Protobuf.MediaPipeOptions, global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions>(157116819, pb::FieldCodec.ForMessage(1256934554, global::Akihabara.Framework.Protobuf.ThreadPoolExecutorOptions.Parser));
         }
         #endregion
 

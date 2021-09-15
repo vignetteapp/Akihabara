@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from calculator.proto</summary>
@@ -99,14 +99,14 @@ namespace Akihabara.Framework.ProtoCalculator
                   "Y2FsY3VsYXRvci5Qcm9maWxlckNvbmZpZ0ICGAESFQoNbWF4X2luX2ZsaWdo",
                   "dBgQIAEoBRIXCg5leHRlcm5hbF9pbnB1dBjtByADKAlQAGIGcHJvdG8z"));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorOptionsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor, global::Akihabara.Framework.ProtoCalculator.PacketFactoryReflection.Descriptor, global::Akihabara.Framework.ProtoCalculator.PacketGeneratorReflection.Descriptor, global::Akihabara.Framework.ProtoCalculator.StatusHandlerReflection.Descriptor, global::Akihabara.Framework.ProtoCalculator.StreamHandlerReflection.Descriptor, },
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.CalculatorOptionsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Akihabara.Framework.Protobuf.MediapipeOptionsReflection.Descriptor, global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor, global::Akihabara.Framework.Protobuf.PacketGeneratorReflection.Descriptor, global::Akihabara.Framework.Protobuf.StatusHandlerReflection.Descriptor, global::Akihabara.Framework.Protobuf.StreamHandlerReflection.Descriptor, },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.ExecutorConfig), global::Akihabara.Framework.ProtoCalculator.ExecutorConfig.Parser, new[]{ "Name", "Type", "Options" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.InputCollection), global::Akihabara.Framework.ProtoCalculator.InputCollection.Parser, new[]{ "Name", "SidePacketName", "ExternalInputName", "InputType", "FileName" }, null, new[]{ typeof(global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.InputCollectionSet), global::Akihabara.Framework.ProtoCalculator.InputCollectionSet.Parser, new[]{ "InputCollection" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.InputStreamInfo), global::Akihabara.Framework.ProtoCalculator.InputStreamInfo.Parser, new[]{ "TagIndex", "BackEdge" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.ProfilerConfig), global::Akihabara.Framework.ProtoCalculator.ProfilerConfig.Parser, new[]{ "HistogramIntervalSizeUsec", "NumHistogramIntervals", "EnableInputOutputLatency", "EnableProfiler", "EnableStreamLatency", "UsePacketTimestampForAddedPacket", "TraceLogCapacity", "TraceEventTypesDisabled", "TraceLogPath", "TraceLogCount", "TraceLogIntervalUsec", "TraceLogMarginUsec", "TraceLogDurationEvents", "TraceLogIntervalCount", "TraceLogDisabled", "TraceEnabled", "TraceLogInstantEvents", "CalculatorFilter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig), global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Parser, new[]{ "Node", "PacketFactory", "PacketGenerator", "NumThreads", "StatusHandler", "InputStream", "OutputStream", "InputSidePacket", "OutputSidePacket", "MaxQueueSize", "ReportDeadlock", "InputStreamHandler", "OutputStreamHandler", "Executor", "ProfilerConfig", "Package", "Type", "Options", "GraphOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node), global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node.Parser, new[]{ "Name", "Calculator", "InputStream", "OutputStream", "InputSidePacket", "OutputSidePacket", "Options", "NodeOptions", "SourceLayer", "BufferSizeHint", "InputStreamHandler", "OutputStreamHandler", "InputStreamInfo", "Executor", "ProfilerConfig", "MaxInFlight", "ExternalInput" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.ExecutorConfig), global::Akihabara.Framework.Protobuf.ExecutorConfig.Parser, new[]{ "Name", "Type", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.InputCollection), global::Akihabara.Framework.Protobuf.InputCollection.Parser, new[]{ "Name", "SidePacketName", "ExternalInputName", "InputType", "FileName" }, null, new[]{ typeof(global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.InputCollectionSet), global::Akihabara.Framework.Protobuf.InputCollectionSet.Parser, new[]{ "InputCollection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.InputStreamInfo), global::Akihabara.Framework.Protobuf.InputStreamInfo.Parser, new[]{ "TagIndex", "BackEdge" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.ProfilerConfig), global::Akihabara.Framework.Protobuf.ProfilerConfig.Parser, new[]{ "HistogramIntervalSizeUsec", "NumHistogramIntervals", "EnableInputOutputLatency", "EnableProfiler", "EnableStreamLatency", "UsePacketTimestampForAddedPacket", "TraceLogCapacity", "TraceEventTypesDisabled", "TraceLogPath", "TraceLogCount", "TraceLogIntervalUsec", "TraceLogMarginUsec", "TraceLogDurationEvents", "TraceLogIntervalCount", "TraceLogDisabled", "TraceEnabled", "TraceLogInstantEvents", "CalculatorFilter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.CalculatorGraphConfig), global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Parser, new[]{ "Node", "PacketFactory", "PacketGenerator", "NumThreads", "StatusHandler", "InputStream", "OutputStream", "InputSidePacket", "OutputSidePacket", "MaxQueueSize", "ReportDeadlock", "InputStreamHandler", "OutputStreamHandler", "Executor", "ProfilerConfig", "Package", "Type", "Options", "GraphOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node), global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node.Parser, new[]{ "Name", "Calculator", "InputStream", "OutputStream", "InputSidePacket", "OutputSidePacket", "Options", "NodeOptions", "SourceLayer", "BufferSizeHint", "InputStreamHandler", "OutputStreamHandler", "InputStreamInfo", "Executor", "ProfilerConfig", "MaxInFlight", "ExternalInput" }, null, null, null, null)})
                 }));
         }
         #endregion
@@ -131,7 +131,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -220,7 +220,7 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "options" field.</summary>
         public const int OptionsFieldNumber = 3;
-        private global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions options_;
+        private global::Akihabara.Framework.Protobuf.MediaPipeOptions options_;
         /// <summary>
         /// The options passed to the Executor. The extension in the options field
         /// must match the type field. For example, if the type field is
@@ -229,7 +229,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions Options
+        public global::Akihabara.Framework.Protobuf.MediaPipeOptions Options
         {
             get { return options_; }
             set
@@ -381,7 +381,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (options_ == null)
                 {
-                    Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                    Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                 }
                 Options.MergeFrom(other.Options);
             }
@@ -411,7 +411,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 26: {
             if (options_ == null) {
-              Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+              Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
             }
             input.ReadMessage(Options);
             break;
@@ -448,7 +448,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (options_ == null)
                             {
-                                Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                                Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                             }
                             input.ReadMessage(Options);
                             break;
@@ -478,7 +478,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[1]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -566,14 +566,14 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "input_type" field.</summary>
         public const int InputTypeFieldNumber = 3;
-        private global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType inputType_ = global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown;
+        private global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType inputType_ = global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown;
         /// <summary>
         /// Sets the source of the input collection data.
         /// The default value is UNKNOWN.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType InputType
+        public global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType InputType
         {
             get { return inputType_; }
             set
@@ -636,7 +636,7 @@ namespace Akihabara.Framework.ProtoCalculator
             if (Name.Length != 0) hash ^= Name.GetHashCode();
             hash ^= sidePacketName_.GetHashCode();
             hash ^= externalInputName_.GetHashCode();
-            if (InputType != global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown) hash ^= InputType.GetHashCode();
+            if (InputType != global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown) hash ^= InputType.GetHashCode();
             if (FileName.Length != 0) hash ^= FileName.GetHashCode();
             if (_unknownFields != null)
             {
@@ -664,7 +664,7 @@ namespace Akihabara.Framework.ProtoCalculator
         output.WriteString(Name);
       }
       sidePacketName_.WriteTo(output, _repeated_sidePacketName_codec);
-      if (InputType != global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown) {
+      if (InputType != global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) InputType);
       }
@@ -690,7 +690,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 output.WriteString(Name);
             }
             sidePacketName_.WriteTo(ref output, _repeated_sidePacketName_codec);
-            if (InputType != global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown)
+            if (InputType != global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown)
             {
                 output.WriteRawTag(24);
                 output.WriteEnum((int)InputType);
@@ -719,7 +719,7 @@ namespace Akihabara.Framework.ProtoCalculator
             }
             size += sidePacketName_.CalculateSize(_repeated_sidePacketName_codec);
             size += externalInputName_.CalculateSize(_repeated_externalInputName_codec);
-            if (InputType != global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown)
+            if (InputType != global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown)
             {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)InputType);
             }
@@ -748,7 +748,7 @@ namespace Akihabara.Framework.ProtoCalculator
             }
             sidePacketName_.Add(other.sidePacketName_);
             externalInputName_.Add(other.externalInputName_);
-            if (other.InputType != global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType.Unknown)
+            if (other.InputType != global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType.Unknown)
             {
                 InputType = other.InputType;
             }
@@ -781,7 +781,7 @@ namespace Akihabara.Framework.ProtoCalculator
             break;
           }
           case 24: {
-            InputType = (global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType) input.ReadEnum();
+            InputType = (global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType) input.ReadEnum();
             break;
           }
           case 34: {
@@ -822,7 +822,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         }
                     case 24:
                         {
-                            InputType = (global::Akihabara.Framework.ProtoCalculator.InputCollection.Types.InputType)input.ReadEnum();
+                            InputType = (global::Akihabara.Framework.Protobuf.InputCollection.Types.InputType)input.ReadEnum();
                             break;
                         }
                     case 34:
@@ -910,7 +910,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[2]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -946,12 +946,12 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "input_collection" field.</summary>
         public const int InputCollectionFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.InputCollection> _repeated_inputCollection_codec
-            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.InputCollection.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputCollection> inputCollection_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputCollection>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.InputCollection> _repeated_inputCollection_codec
+            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.InputCollection.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputCollection> inputCollection_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputCollection>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputCollection> InputCollection
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputCollection> InputCollection
         {
             get { return inputCollection_; }
         }
@@ -1116,7 +1116,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[3]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1404,7 +1404,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[4]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2424,7 +2424,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor.MessageTypes[5]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor.MessageTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2478,24 +2478,24 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "node" field.</summary>
         public const int NodeFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node> _repeated_node_codec
-            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node> node_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node> _repeated_node_codec
+            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node> node_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node>();
         /// <summary>
         /// The nodes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Types.Node> Node
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Types.Node> Node
         {
             get { return node_; }
         }
 
         /// <summary>Field number for the "packet_factory" field.</summary>
         public const int PacketFactoryFieldNumber = 6;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.PacketFactoryConfig> _repeated_packetFactory_codec
-            = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.ProtoCalculator.PacketFactoryConfig.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketFactoryConfig> packetFactory_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketFactoryConfig>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> _repeated_packetFactory_codec
+            = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.Protobuf.PacketFactoryConfig.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> packetFactory_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig>();
         /// <summary>
         /// Create a side packet using a PacketFactory.  This side packet is
         /// created as close to the worker that does the work as possible.  A
@@ -2504,16 +2504,16 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketFactoryConfig> PacketFactory
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> PacketFactory
         {
             get { return packetFactory_; }
         }
 
         /// <summary>Field number for the "packet_generator" field.</summary>
         public const int PacketGeneratorFieldNumber = 7;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig> _repeated_packetGenerator_codec
-            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig> packetGenerator_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.PacketGeneratorConfig> _repeated_packetGenerator_codec
+            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.Protobuf.PacketGeneratorConfig.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketGeneratorConfig> packetGenerator_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketGeneratorConfig>();
         /// <summary>
         /// Configs for PacketGenerators.  Generators take zero or more
         /// input side packets and produce any number of output side
@@ -2528,7 +2528,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig> PacketGenerator
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketGeneratorConfig> PacketGenerator
         {
             get { return packetGenerator_; }
         }
@@ -2556,9 +2556,9 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "status_handler" field.</summary>
         public const int StatusHandlerFieldNumber = 9;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig> _repeated_statusHandler_codec
-            = pb::FieldCodec.ForMessage(74, global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig> statusHandler_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.StatusHandlerConfig> _repeated_statusHandler_codec
+            = pb::FieldCodec.ForMessage(74, global::Akihabara.Framework.Protobuf.StatusHandlerConfig.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StatusHandlerConfig> statusHandler_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StatusHandlerConfig>();
         /// <summary>
         /// Configs for StatusHandlers that will be called after each call to
         /// Run() on the graph.  StatusHandlers take zero or more input side
@@ -2571,7 +2571,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig> StatusHandler
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StatusHandlerConfig> StatusHandler
         {
             get { return statusHandler_; }
         }
@@ -2688,7 +2688,7 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "input_stream_handler" field.</summary>
         public const int InputStreamHandlerFieldNumber = 12;
-        private global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig inputStreamHandler_;
+        private global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig inputStreamHandler_;
         /// <summary>
         /// Config for this graph's InputStreamHandler.
         /// If unspecified, the framework will automatically install the default
@@ -2702,7 +2702,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig InputStreamHandler
+        public global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig InputStreamHandler
         {
             get { return inputStreamHandler_; }
             set
@@ -2713,7 +2713,7 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "output_stream_handler" field.</summary>
         public const int OutputStreamHandlerFieldNumber = 13;
-        private global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig outputStreamHandler_;
+        private global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig outputStreamHandler_;
         /// <summary>
         /// Config for this graph's OutputStreamHandler.
         /// If unspecified, the default output stream handler will be automatically
@@ -2721,7 +2721,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig OutputStreamHandler
+        public global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig OutputStreamHandler
         {
             get { return outputStreamHandler_; }
             set
@@ -2732,9 +2732,9 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "executor" field.</summary>
         public const int ExecutorFieldNumber = 14;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.ExecutorConfig> _repeated_executor_codec
-            = pb::FieldCodec.ForMessage(114, global::Akihabara.Framework.ProtoCalculator.ExecutorConfig.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.ExecutorConfig> executor_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.ExecutorConfig>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.ExecutorConfig> _repeated_executor_codec
+            = pb::FieldCodec.ForMessage(114, global::Akihabara.Framework.Protobuf.ExecutorConfig.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.ExecutorConfig> executor_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.ExecutorConfig>();
         /// <summary>
         /// Configs for Executors.
         /// The names of the executors must be distinct. The default executor, whose
@@ -2745,14 +2745,14 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.ExecutorConfig> Executor
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.ExecutorConfig> Executor
         {
             get { return executor_; }
         }
 
         /// <summary>Field number for the "profiler_config" field.</summary>
         public const int ProfilerConfigFieldNumber = 18;
-        private global::Akihabara.Framework.ProtoCalculator.ProfilerConfig profilerConfig_;
+        private global::Akihabara.Framework.Protobuf.ProfilerConfig profilerConfig_;
         /// <summary>
         /// The default profiler-config for all calculators.  If set, this defines the
         /// profiling settings such as num_histogram_intervals for every calculator in
@@ -2761,7 +2761,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.ProfilerConfig ProfilerConfig
+        public global::Akihabara.Framework.Protobuf.ProfilerConfig ProfilerConfig
         {
             get { return profilerConfig_; }
             set
@@ -2809,13 +2809,13 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "options" field.</summary>
         public const int OptionsFieldNumber = 1001;
-        private global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions options_;
+        private global::Akihabara.Framework.Protobuf.MediaPipeOptions options_;
         /// <summary>
         /// The types and default values for graph options, in proto2 syntax.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions Options
+        public global::Akihabara.Framework.Protobuf.MediaPipeOptions Options
         {
             get { return options_; }
             set
@@ -3134,7 +3134,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (inputStreamHandler_ == null)
                 {
-                    InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+                    InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
                 }
                 InputStreamHandler.MergeFrom(other.InputStreamHandler);
             }
@@ -3142,7 +3142,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (outputStreamHandler_ == null)
                 {
-                    OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+                    OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
                 }
                 OutputStreamHandler.MergeFrom(other.OutputStreamHandler);
             }
@@ -3151,7 +3151,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (profilerConfig_ == null)
                 {
-                    ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+                    ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
                 }
                 ProfilerConfig.MergeFrom(other.ProfilerConfig);
             }
@@ -3167,7 +3167,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (options_ == null)
                 {
-                    Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                    Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                 }
                 Options.MergeFrom(other.Options);
             }
@@ -3218,14 +3218,14 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 98: {
             if (inputStreamHandler_ == null) {
-              InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+              InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
             }
             input.ReadMessage(InputStreamHandler);
             break;
           }
           case 106: {
             if (outputStreamHandler_ == null) {
-              OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+              OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
             }
             input.ReadMessage(OutputStreamHandler);
             break;
@@ -3248,7 +3248,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 146: {
             if (profilerConfig_ == null) {
-              ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+              ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
             }
             input.ReadMessage(ProfilerConfig);
             break;
@@ -3267,7 +3267,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 8010: {
             if (options_ == null) {
-              Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+              Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
             }
             input.ReadMessage(Options);
             break;
@@ -3333,7 +3333,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (inputStreamHandler_ == null)
                             {
-                                InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+                                InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
                             }
                             input.ReadMessage(InputStreamHandler);
                             break;
@@ -3342,7 +3342,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (outputStreamHandler_ == null)
                             {
-                                OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+                                OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
                             }
                             input.ReadMessage(OutputStreamHandler);
                             break;
@@ -3371,7 +3371,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (profilerConfig_ == null)
                             {
-                                ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+                                ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
                             }
                             input.ReadMessage(ProfilerConfig);
                             break;
@@ -3395,7 +3395,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (options_ == null)
                             {
-                                Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                                Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                             }
                             input.ReadMessage(Options);
                             break;
@@ -3434,7 +3434,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor
                 {
-                    get { return global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig.Descriptor.NestedTypes[0]; }
+                    get { return global::Akihabara.Framework.Protobuf.CalculatorGraphConfig.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3589,13 +3589,13 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "options" field.</summary>
                 public const int OptionsFieldNumber = 7;
-                private global::Akihabara.Framework.ProtoCalculator.CalculatorOptions options_;
+                private global::Akihabara.Framework.Protobuf.CalculatorOptions options_;
                 /// <summary>
                 /// The options passed to the Calculator, in proto2 syntax.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public global::Akihabara.Framework.ProtoCalculator.CalculatorOptions Options
+                public global::Akihabara.Framework.Protobuf.CalculatorOptions Options
                 {
                     get { return options_; }
                     set
@@ -3680,14 +3680,14 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "input_stream_handler" field.</summary>
                 public const int InputStreamHandlerFieldNumber = 11;
-                private global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig inputStreamHandler_;
+                private global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig inputStreamHandler_;
                 /// <summary>
                 /// Config for this node's InputStreamHandler.
                 /// If unspecified, the graph-level input stream handler will be used.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig InputStreamHandler
+                public global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig InputStreamHandler
                 {
                     get { return inputStreamHandler_; }
                     set
@@ -3698,14 +3698,14 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "output_stream_handler" field.</summary>
                 public const int OutputStreamHandlerFieldNumber = 12;
-                private global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig outputStreamHandler_;
+                private global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig outputStreamHandler_;
                 /// <summary>
                 /// Config for this node's OutputStreamHandler.
                 /// If unspecified, the graph-level output stream handler will be used.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig OutputStreamHandler
+                public global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig OutputStreamHandler
                 {
                     get { return outputStreamHandler_; }
                     set
@@ -3716,16 +3716,16 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "input_stream_info" field.</summary>
                 public const int InputStreamInfoFieldNumber = 13;
-                private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.InputStreamInfo> _repeated_inputStreamInfo_codec
-                    = pb::FieldCodec.ForMessage(106, global::Akihabara.Framework.ProtoCalculator.InputStreamInfo.Parser);
-                private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputStreamInfo> inputStreamInfo_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputStreamInfo>();
+                private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.InputStreamInfo> _repeated_inputStreamInfo_codec
+                    = pb::FieldCodec.ForMessage(106, global::Akihabara.Framework.Protobuf.InputStreamInfo.Parser);
+                private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputStreamInfo> inputStreamInfo_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputStreamInfo>();
                 /// <summary>
                 /// Additional information about an input stream. The |name| field of the
                 /// InputStreamInfo must match an input_stream.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.InputStreamInfo> InputStreamInfo
+                public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.InputStreamInfo> InputStreamInfo
                 {
                     get { return inputStreamInfo_; }
                 }
@@ -3749,7 +3749,7 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "profiler_config" field.</summary>
                 public const int ProfilerConfigFieldNumber = 15;
-                private global::Akihabara.Framework.ProtoCalculator.ProfilerConfig profilerConfig_;
+                private global::Akihabara.Framework.Protobuf.ProfilerConfig profilerConfig_;
                 /// <summary>
                 /// TODO: Remove from Node when switched to Profiler.
                 /// DEPRECATED: Configs for the profiler.
@@ -3757,7 +3757,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 [global::System.ObsoleteAttribute]
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public global::Akihabara.Framework.ProtoCalculator.ProfilerConfig ProfilerConfig
+                public global::Akihabara.Framework.Protobuf.ProfilerConfig ProfilerConfig
                 {
                     get { return profilerConfig_; }
                     set
@@ -4089,7 +4089,7 @@ namespace Akihabara.Framework.ProtoCalculator
                     {
                         if (options_ == null)
                         {
-                            Options = new global::Akihabara.Framework.ProtoCalculator.CalculatorOptions();
+                            Options = new global::Akihabara.Framework.Protobuf.CalculatorOptions();
                         }
                         Options.MergeFrom(other.Options);
                     }
@@ -4106,7 +4106,7 @@ namespace Akihabara.Framework.ProtoCalculator
                     {
                         if (inputStreamHandler_ == null)
                         {
-                            InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+                            InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
                         }
                         InputStreamHandler.MergeFrom(other.InputStreamHandler);
                     }
@@ -4114,7 +4114,7 @@ namespace Akihabara.Framework.ProtoCalculator
                     {
                         if (outputStreamHandler_ == null)
                         {
-                            OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+                            OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
                         }
                         OutputStreamHandler.MergeFrom(other.OutputStreamHandler);
                     }
@@ -4127,7 +4127,7 @@ namespace Akihabara.Framework.ProtoCalculator
                     {
                         if (profilerConfig_ == null)
                         {
-                            ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+                            ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
                         }
                         ProfilerConfig.MergeFrom(other.ProfilerConfig);
                     }
@@ -4178,7 +4178,7 @@ namespace Akihabara.Framework.ProtoCalculator
               }
               case 58: {
                 if (options_ == null) {
-                  Options = new global::Akihabara.Framework.ProtoCalculator.CalculatorOptions();
+                  Options = new global::Akihabara.Framework.Protobuf.CalculatorOptions();
                 }
                 input.ReadMessage(Options);
                 break;
@@ -4197,14 +4197,14 @@ namespace Akihabara.Framework.ProtoCalculator
               }
               case 90: {
                 if (inputStreamHandler_ == null) {
-                  InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+                  InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
                 }
                 input.ReadMessage(InputStreamHandler);
                 break;
               }
               case 98: {
                 if (outputStreamHandler_ == null) {
-                  OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+                  OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
                 }
                 input.ReadMessage(OutputStreamHandler);
                 break;
@@ -4219,7 +4219,7 @@ namespace Akihabara.Framework.ProtoCalculator
               }
               case 122: {
                 if (profilerConfig_ == null) {
-                  ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+                  ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
                 }
                 input.ReadMessage(ProfilerConfig);
                 break;
@@ -4284,7 +4284,7 @@ namespace Akihabara.Framework.ProtoCalculator
                                 {
                                     if (options_ == null)
                                     {
-                                        Options = new global::Akihabara.Framework.ProtoCalculator.CalculatorOptions();
+                                        Options = new global::Akihabara.Framework.Protobuf.CalculatorOptions();
                                     }
                                     input.ReadMessage(Options);
                                     break;
@@ -4308,7 +4308,7 @@ namespace Akihabara.Framework.ProtoCalculator
                                 {
                                     if (inputStreamHandler_ == null)
                                     {
-                                        InputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.InputStreamHandlerConfig();
+                                        InputStreamHandler = new global::Akihabara.Framework.Protobuf.InputStreamHandlerConfig();
                                     }
                                     input.ReadMessage(InputStreamHandler);
                                     break;
@@ -4317,7 +4317,7 @@ namespace Akihabara.Framework.ProtoCalculator
                                 {
                                     if (outputStreamHandler_ == null)
                                     {
-                                        OutputStreamHandler = new global::Akihabara.Framework.ProtoCalculator.OutputStreamHandlerConfig();
+                                        OutputStreamHandler = new global::Akihabara.Framework.Protobuf.OutputStreamHandlerConfig();
                                     }
                                     input.ReadMessage(OutputStreamHandler);
                                     break;
@@ -4336,7 +4336,7 @@ namespace Akihabara.Framework.ProtoCalculator
                                 {
                                     if (profilerConfig_ == null)
                                     {
-                                        ProfilerConfig = new global::Akihabara.Framework.ProtoCalculator.ProfilerConfig();
+                                        ProfilerConfig = new global::Akihabara.Framework.Protobuf.ProfilerConfig();
                                     }
                                     input.ReadMessage(ProfilerConfig);
                                     break;

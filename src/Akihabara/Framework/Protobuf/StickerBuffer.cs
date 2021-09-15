@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator {
+namespace Akihabara.Framework.Protobuf {
 
   /// <summary>Holder for reflection information generated from mediapipe/graphs/instant_motion_tracking/calculators/sticker_buffer.proto</summary>
   public static partial class StickerBufferReflection {

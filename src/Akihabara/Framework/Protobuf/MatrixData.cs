@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator {
+namespace Akihabara.Framework.Protobuf {
 
   /// <summary>Holder for reflection information generated from mediapipe/framework/formats/matrix_data.proto</summary>
   public static partial class MatrixDataReflection {

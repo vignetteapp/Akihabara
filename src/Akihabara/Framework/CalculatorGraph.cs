@@ -6,7 +6,7 @@ using Akihabara.Core;
 using Akihabara.External;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
-using Akihabara.Framework.ProtoCalculator;
+using Akihabara.Framework.Protobuf;
 using Akihabara.Gpu;
 using Akihabara.Native;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
