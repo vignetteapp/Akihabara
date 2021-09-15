@@ -2,7 +2,7 @@ using NUnit.Framework;
 using Akihabara.Framework;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
-using Akihabara.Framework.ProtoCalculator;
+using Akihabara.Framework.Protobuf;
 
 namespace Akihabara.Tests.Framework
 {
