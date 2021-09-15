@@ -16,8 +16,8 @@ syntax = "proto2";
 
 package akihabara.framework.protobuf;
 
-import "matrix_data.proto";
-import "mesh_3d.proto";
+import "protofiles/matrix_data.proto";
+import "protofiles/modules/face_geometry/protos/mesh_3d.proto";
 
 // Defines the face geometry pipeline estimation result format.
 message FaceGeometry {

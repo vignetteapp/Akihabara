@@ -17,16 +17,16 @@
 // ONLY used by mediapipe open source project.
 syntax = "proto3";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
-import public "calculator_options.proto";
+import public "protofiles/framework/calculator_options.proto";
 
-import "any.proto";
-import "mediapipe_options.proto";
-import "packet_factory.proto";
-import "packet_generator.proto";
-import "status_handler.proto";
-import "stream_handler.proto";
+import "protofiles/framework/any.proto";
+import "protofiles/framework/mediapipe_options.proto";
+import "protofiles/framework/packet_factory.proto";
+import "protofiles/framework/packet_generator.proto";
+import "protofiles/framework/status_handler.proto";
+import "protofiles/framework/stream_handler.proto";
 
 // Describes a MediaPipe Executor.
 message ExecutorConfig {

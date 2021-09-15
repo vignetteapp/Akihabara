@@ -22,7 +22,7 @@ syntax = "proto2";
 
 package akihabara.framework.protobuf;
 
-import "location_data.proto";
+import "protofiles\framework\formats\location_data.proto";
 
 message Detection {
   // i-th label or label_id has a score encoded by the i-th element in score.
