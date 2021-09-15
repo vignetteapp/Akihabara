@@ -14,7 +14,7 @@
 
 syntax = "proto2";
 
-package akihabara.framework.protobuf;
+package akihabara.graphs.instant_motion_tracking.protobuf;
 
 message Sticker {
   optional int32 id = 1;

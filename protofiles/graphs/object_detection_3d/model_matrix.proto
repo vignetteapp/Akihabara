@@ -14,7 +14,7 @@
 
 syntax = "proto2";
 
-package akihabara.framework.protobuf;
+package akihabara.graphs.object_detection_3d.protobuf;
 
 message TimedModelMatrixProto {
   // 4x4 model matrix stored in ROW major order.

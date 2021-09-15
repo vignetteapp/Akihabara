@@ -14,10 +14,10 @@
 
 syntax = "proto2";
 
-package akihabara.framework.protobuf;
+package akihabara.modules.face_geometry.protobuf;
 
-import "protofiles/matrix_data.proto";
-import "protofiles/modules/face_geometry/protos/mesh_3d.proto";
+import "protofiles/framework/formats/matrix_data.proto";
+import "protofiles/modules/face_geometry/mesh_3d.proto";
 
 // Defines the face geometry pipeline estimation result format.
 message FaceGeometry {

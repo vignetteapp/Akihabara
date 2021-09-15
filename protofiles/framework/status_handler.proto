@@ -20,9 +20,9 @@
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
-import "mediapipe_options.proto";
+import "protofiles/framework/mediapipe_options.proto";
 
 // The settings specifying a status handler and its required external inputs.
 message StatusHandlerConfig {

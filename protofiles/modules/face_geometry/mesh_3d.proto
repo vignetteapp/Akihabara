@@ -14,7 +14,7 @@
 
 syntax = "proto2";
 
-package akihabara.framework.protobuf;
+package akihabara.modules.face_geometry.protobuf;
 
 message Mesh3d {
   enum VertexType {
