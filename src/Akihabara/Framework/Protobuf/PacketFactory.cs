@@ -9,188 +9,216 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.Protobuf {
+namespace Akihabara.Framework.Protobuf
+{
 
-  /// <summary>Holder for reflection information generated from protofiles/framework/packet_factory.proto</summary>
-  public static partial class PacketFactoryReflection {
+    /// <summary>Holder for reflection information generated from protofiles/framework/packet_factory.proto</summary>
+    public static partial class PacketFactoryReflection
+    {
 
-    #region Descriptor
-    /// <summary>File descriptor for protofiles/framework/packet_factory.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
-    }
-    private static pbr::FileDescriptor descriptor;
+        #region Descriptor
+        /// <summary>File descriptor for protofiles/framework/packet_factory.proto</summary>
+        public static pbr::FileDescriptor Descriptor
+        {
+            get { return descriptor; }
+        }
+        private static pbr::FileDescriptor descriptor;
 
-    static PacketFactoryReflection() {
-      byte[] descriptorData = global::System.Convert.FromBase64String(
-          string.Concat(
-            "Cilwcm90b2ZpbGVzL2ZyYW1ld29yay9wYWNrZXRfZmFjdG9yeS5wcm90bxIc",
-            "YWtpaGFiYXJhLmZyYW1ld29yay5wcm90b2J1ZiIiChRQYWNrZXRGYWN0b3J5",
-            "T3B0aW9ucyoKCKCcARCAgICAAiKoAQoTUGFja2V0RmFjdG9yeUNvbmZpZxIW",
-            "Cg5wYWNrZXRfZmFjdG9yeRgBIAEoCRIaChJvdXRwdXRfc2lkZV9wYWNrZXQY",
-            "AiABKAkSGAoPZXh0ZXJuYWxfb3V0cHV0GOoHIAEoCRJDCgdvcHRpb25zGAMg",
-            "ASgLMjIuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b2J1Zi5QYWNrZXRGYWN0",
-            "b3J5T3B0aW9ucyJYChNQYWNrZXRNYW5hZ2VyQ29uZmlnEkEKBnBhY2tldBgB",
-            "IAMoCzIxLmFraWhhYmFyYS5mcmFtZXdvcmsucHJvdG9idWYuUGFja2V0RmFj",
-            "dG9yeUNvbmZpZw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+        static PacketFactoryReflection()
+        {
+            byte[] descriptorData = global::System.Convert.FromBase64String(
+                string.Concat(
+                  "Cilwcm90b2ZpbGVzL2ZyYW1ld29yay9wYWNrZXRfZmFjdG9yeS5wcm90bxIc",
+                  "YWtpaGFiYXJhLmZyYW1ld29yay5wcm90b2J1ZiIiChRQYWNrZXRGYWN0b3J5",
+                  "T3B0aW9ucyoKCKCcARCAgICAAiKoAQoTUGFja2V0RmFjdG9yeUNvbmZpZxIW",
+                  "Cg5wYWNrZXRfZmFjdG9yeRgBIAEoCRIaChJvdXRwdXRfc2lkZV9wYWNrZXQY",
+                  "AiABKAkSGAoPZXh0ZXJuYWxfb3V0cHV0GOoHIAEoCRJDCgdvcHRpb25zGAMg",
+                  "ASgLMjIuYWtpaGFiYXJhLmZyYW1ld29yay5wcm90b2J1Zi5QYWNrZXRGYWN0",
+                  "b3J5T3B0aW9ucyJYChNQYWNrZXRNYW5hZ2VyQ29uZmlnEkEKBnBhY2tldBgB",
+                  "IAMoCzIxLmFraWhhYmFyYS5mcmFtZXdvcmsucHJvdG9idWYuUGFja2V0RmFj",
+                  "dG9yeUNvbmZpZw=="));
+            descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+                new pbr::FileDescriptor[] { },
+                new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.PacketFactoryOptions), global::Akihabara.Framework.Protobuf.PacketFactoryOptions.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.PacketFactoryConfig), global::Akihabara.Framework.Protobuf.PacketFactoryConfig.Parser, new[]{ "PacketFactory", "OutputSidePacket", "ExternalOutput", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.PacketManagerConfig), global::Akihabara.Framework.Protobuf.PacketManagerConfig.Parser, new[]{ "Packet" }, null, null, null, null)
-          }));
-    }
-    #endregion
+                }));
+        }
+        #endregion
 
-  }
-  #region Messages
-  /// <summary>
-  /// Options used by a PacketFactory to create the Packet.
-  /// </summary>
-  public sealed partial class PacketFactoryOptions : pb::IExtendableMessage<PacketFactoryOptions>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    }
+    #region Messages
+    /// <summary>
+    /// Options used by a PacketFactory to create the Packet.
+    /// </summary>
+    public sealed partial class PacketFactoryOptions : pb::IExtendableMessage<PacketFactoryOptions>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PacketFactoryOptions> _parser = new pb::MessageParser<PacketFactoryOptions>(() => new PacketFactoryOptions());
-    private pb::UnknownFieldSet _unknownFields;
-    private pb::ExtensionSet<PacketFactoryOptions> _extensions;
-    private pb::ExtensionSet<PacketFactoryOptions> _Extensions { get { return _extensions; } }
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PacketFactoryOptions> Parser { get { return _parser; } }
+#endif
+    {
+        private static readonly pb::MessageParser<PacketFactoryOptions> _parser = new pb::MessageParser<PacketFactoryOptions>(() => new PacketFactoryOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        private pb::ExtensionSet<PacketFactoryOptions> _extensions;
+        private pb::ExtensionSet<PacketFactoryOptions> _Extensions { get { return _extensions; } }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PacketFactoryOptions> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[0]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[0]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryOptions() {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryOptions()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryOptions(PacketFactoryOptions other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-      _extensions = pb::ExtensionSet.Clone(other._extensions);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryOptions(PacketFactoryOptions other) : this()
+        {
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            _extensions = pb::ExtensionSet.Clone(other._extensions);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryOptions Clone() {
-      return new PacketFactoryOptions(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryOptions Clone()
+        {
+            return new PacketFactoryOptions(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PacketFactoryOptions);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as PacketFactoryOptions);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PacketFactoryOptions other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!Equals(_extensions, other._extensions)) {
-        return false;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PacketFactoryOptions other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (!Equals(_extensions, other._extensions))
+            {
+                return false;
+            }
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_extensions != null) {
-        hash ^= _extensions.GetHashCode();
-      }
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (_extensions != null)
+            {
+                hash ^= _extensions.GetHashCode();
+            }
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            output.WriteRawMessage(this);
+#else
       if (_extensions != null) {
         _extensions.WriteTo(output);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-    #endif
-    }
+#endif
+        }
 
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (_extensions != null) {
-        _extensions.WriteTo(ref output);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (_extensions != null)
+            {
+                _extensions.WriteTo(ref output);
+            }
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
+#endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (_extensions != null) {
-        size += _extensions.CalculateSize();
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (_extensions != null)
+            {
+                size += _extensions.CalculateSize();
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PacketFactoryOptions other) {
-      if (other == null) {
-        return;
-      }
-      pb::ExtensionSet.MergeFrom(ref _extensions, other._extensions);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PacketFactoryOptions other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            pb::ExtensionSet.MergeFrom(ref _extensions, other._extensions);
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            input.ReadRawMessage(this);
+#else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -201,250 +229,288 @@ namespace Akihabara.Framework.Protobuf {
             break;
         }
       }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            if (!pb::ExtensionSet.TryMergeFieldFrom(ref _extensions, ref input)) {
-              _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            }
-            break;
+#endif
         }
-      }
-    }
-    #endif
 
-    public TValue GetExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension) {
-      return pb::ExtensionSet.Get(ref _extensions, extension);
-    }
-    public pbc::RepeatedField<TValue> GetExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension) {
-      return pb::ExtensionSet.Get(ref _extensions, extension);
-    }
-    public pbc::RepeatedField<TValue> GetOrInitializeExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension) {
-      return pb::ExtensionSet.GetOrInitialize(ref _extensions, extension);
-    }
-    public void SetExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension, TValue value) {
-      pb::ExtensionSet.Set(ref _extensions, extension, value);
-    }
-    public bool HasExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension) {
-      return pb::ExtensionSet.Has(ref _extensions, extension);
-    }
-    public void ClearExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension) {
-      pb::ExtensionSet.Clear(ref _extensions, extension);
-    }
-    public void ClearExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension) {
-      pb::ExtensionSet.Clear(ref _extensions, extension);
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
+        {
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
+            {
+                switch (tag)
+                {
+                    default:
+                        if (!pb::ExtensionSet.TryMergeFieldFrom(ref _extensions, ref input))
+                        {
+                            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        }
+                        break;
+                }
+            }
+        }
+#endif
+
+        public TValue GetExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension)
+        {
+            return pb::ExtensionSet.Get(ref _extensions, extension);
+        }
+        public pbc::RepeatedField<TValue> GetExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension)
+        {
+            return pb::ExtensionSet.Get(ref _extensions, extension);
+        }
+        public pbc::RepeatedField<TValue> GetOrInitializeExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension)
+        {
+            return pb::ExtensionSet.GetOrInitialize(ref _extensions, extension);
+        }
+        public void SetExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension, TValue value)
+        {
+            pb::ExtensionSet.Set(ref _extensions, extension, value);
+        }
+        public bool HasExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension)
+        {
+            return pb::ExtensionSet.Has(ref _extensions, extension);
+        }
+        public void ClearExtension<TValue>(pb::Extension<PacketFactoryOptions, TValue> extension)
+        {
+            pb::ExtensionSet.Clear(ref _extensions, extension);
+        }
+        public void ClearExtension<TValue>(pb::RepeatedExtension<PacketFactoryOptions, TValue> extension)
+        {
+            pb::ExtensionSet.Clear(ref _extensions, extension);
+        }
+
     }
 
-  }
-
-  /// <summary>
-  /// A PacketFactory creates a side packet.
-  /// </summary>
-  public sealed partial class PacketFactoryConfig : pb::IMessage<PacketFactoryConfig>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    /// <summary>
+    /// A PacketFactory creates a side packet.
+    /// </summary>
+    public sealed partial class PacketFactoryConfig : pb::IMessage<PacketFactoryConfig>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PacketFactoryConfig> _parser = new pb::MessageParser<PacketFactoryConfig>(() => new PacketFactoryConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PacketFactoryConfig> Parser { get { return _parser; } }
+#endif
+    {
+        private static readonly pb::MessageParser<PacketFactoryConfig> _parser = new pb::MessageParser<PacketFactoryConfig>(() => new PacketFactoryConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PacketFactoryConfig> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[1]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[1]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryConfig() {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryConfig()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryConfig(PacketFactoryConfig other) : this() {
-      packetFactory_ = other.packetFactory_;
-      outputSidePacket_ = other.outputSidePacket_;
-      externalOutput_ = other.externalOutput_;
-      options_ = other.options_ != null ? other.options_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryConfig(PacketFactoryConfig other) : this()
+        {
+            packetFactory_ = other.packetFactory_;
+            outputSidePacket_ = other.outputSidePacket_;
+            externalOutput_ = other.externalOutput_;
+            options_ = other.options_ != null ? other.options_.Clone() : null;
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketFactoryConfig Clone() {
-      return new PacketFactoryConfig(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketFactoryConfig Clone()
+        {
+            return new PacketFactoryConfig(this);
+        }
 
-    /// <summary>Field number for the "packet_factory" field.</summary>
-    public const int PacketFactoryFieldNumber = 1;
-    private readonly static string PacketFactoryDefaultValue = "";
+        /// <summary>Field number for the "packet_factory" field.</summary>
+        public const int PacketFactoryFieldNumber = 1;
+        private readonly static string PacketFactoryDefaultValue = "";
 
-    private string packetFactory_;
-    /// <summary>
-    /// The name of the registered packet factory class.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PacketFactory {
-      get { return packetFactory_ ?? PacketFactoryDefaultValue; }
-      set {
-        packetFactory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "packet_factory" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPacketFactory {
-      get { return packetFactory_ != null; }
-    }
-    /// <summary>Clears the value of the "packet_factory" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPacketFactory() {
-      packetFactory_ = null;
-    }
+        private string packetFactory_;
+        /// <summary>
+        /// The name of the registered packet factory class.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PacketFactory
+        {
+            get { return packetFactory_ ?? PacketFactoryDefaultValue; }
+            set
+            {
+                packetFactory_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "packet_factory" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPacketFactory
+        {
+            get { return packetFactory_ != null; }
+        }
+        /// <summary>Clears the value of the "packet_factory" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPacketFactory()
+        {
+            packetFactory_ = null;
+        }
 
-    /// <summary>Field number for the "output_side_packet" field.</summary>
-    public const int OutputSidePacketFieldNumber = 2;
-    private readonly static string OutputSidePacketDefaultValue = "";
+        /// <summary>Field number for the "output_side_packet" field.</summary>
+        public const int OutputSidePacketFieldNumber = 2;
+        private readonly static string OutputSidePacketDefaultValue = "";
 
-    private string outputSidePacket_;
-    /// <summary>
-    /// The name of the output side packet that this packet factory creates.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OutputSidePacket {
-      get { return outputSidePacket_ ?? OutputSidePacketDefaultValue; }
-      set {
-        outputSidePacket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "output_side_packet" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasOutputSidePacket {
-      get { return outputSidePacket_ != null; }
-    }
-    /// <summary>Clears the value of the "output_side_packet" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearOutputSidePacket() {
-      outputSidePacket_ = null;
-    }
+        private string outputSidePacket_;
+        /// <summary>
+        /// The name of the output side packet that this packet factory creates.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OutputSidePacket
+        {
+            get { return outputSidePacket_ ?? OutputSidePacketDefaultValue; }
+            set
+            {
+                outputSidePacket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "output_side_packet" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOutputSidePacket
+        {
+            get { return outputSidePacket_ != null; }
+        }
+        /// <summary>Clears the value of the "output_side_packet" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOutputSidePacket()
+        {
+            outputSidePacket_ = null;
+        }
 
-    /// <summary>Field number for the "external_output" field.</summary>
-    public const int ExternalOutputFieldNumber = 1002;
-    private readonly static string ExternalOutputDefaultValue = "";
+        /// <summary>Field number for the "external_output" field.</summary>
+        public const int ExternalOutputFieldNumber = 1002;
+        private readonly static string ExternalOutputDefaultValue = "";
 
-    private string externalOutput_;
-    /// <summary>
-    /// DEPRECATED: The old name for output_side_packet.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ExternalOutput {
-      get { return externalOutput_ ?? ExternalOutputDefaultValue; }
-      set {
-        externalOutput_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "external_output" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasExternalOutput {
-      get { return externalOutput_ != null; }
-    }
-    /// <summary>Clears the value of the "external_output" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearExternalOutput() {
-      externalOutput_ = null;
-    }
+        private string externalOutput_;
+        /// <summary>
+        /// DEPRECATED: The old name for output_side_packet.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ExternalOutput
+        {
+            get { return externalOutput_ ?? ExternalOutputDefaultValue; }
+            set
+            {
+                externalOutput_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+        /// <summary>Gets whether the "external_output" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasExternalOutput
+        {
+            get { return externalOutput_ != null; }
+        }
+        /// <summary>Clears the value of the "external_output" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearExternalOutput()
+        {
+            externalOutput_ = null;
+        }
 
-    /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
-    private global::Akihabara.Framework.Protobuf.PacketFactoryOptions options_;
-    /// <summary>
-    /// The options for the packet factory.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Akihabara.Framework.Protobuf.PacketFactoryOptions Options {
-      get { return options_; }
-      set {
-        options_ = value;
-      }
-    }
+        /// <summary>Field number for the "options" field.</summary>
+        public const int OptionsFieldNumber = 3;
+        private global::Akihabara.Framework.Protobuf.PacketFactoryOptions options_;
+        /// <summary>
+        /// The options for the packet factory.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Akihabara.Framework.Protobuf.PacketFactoryOptions Options
+        {
+            get { return options_; }
+            set
+            {
+                options_ = value;
+            }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PacketFactoryConfig);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as PacketFactoryConfig);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PacketFactoryConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (PacketFactory != other.PacketFactory) return false;
-      if (OutputSidePacket != other.OutputSidePacket) return false;
-      if (ExternalOutput != other.ExternalOutput) return false;
-      if (!object.Equals(Options, other.Options)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PacketFactoryConfig other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (PacketFactory != other.PacketFactory) return false;
+            if (OutputSidePacket != other.OutputSidePacket) return false;
+            if (ExternalOutput != other.ExternalOutput) return false;
+            if (!object.Equals(Options, other.Options)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasPacketFactory) hash ^= PacketFactory.GetHashCode();
-      if (HasOutputSidePacket) hash ^= OutputSidePacket.GetHashCode();
-      if (HasExternalOutput) hash ^= ExternalOutput.GetHashCode();
-      if (options_ != null) hash ^= Options.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            if (HasPacketFactory) hash ^= PacketFactory.GetHashCode();
+            if (HasOutputSidePacket) hash ^= OutputSidePacket.GetHashCode();
+            if (HasExternalOutput) hash ^= ExternalOutput.GetHashCode();
+            if (options_ != null) hash ^= Options.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            output.WriteRawMessage(this);
+#else
       if (HasPacketFactory) {
         output.WriteRawTag(10);
         output.WriteString(PacketFactory);
@@ -464,87 +530,107 @@ namespace Akihabara.Framework.Protobuf {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasPacketFactory) {
-        output.WriteRawTag(10);
-        output.WriteString(PacketFactory);
-      }
-      if (HasOutputSidePacket) {
-        output.WriteRawTag(18);
-        output.WriteString(OutputSidePacket);
-      }
-      if (options_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Options);
-      }
-      if (HasExternalOutput) {
-        output.WriteRawTag(210, 62);
-        output.WriteString(ExternalOutput);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasPacketFactory) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PacketFactory);
-      }
-      if (HasOutputSidePacket) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputSidePacket);
-      }
-      if (HasExternalOutput) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ExternalOutput);
-      }
-      if (options_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PacketFactoryConfig other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasPacketFactory) {
-        PacketFactory = other.PacketFactory;
-      }
-      if (other.HasOutputSidePacket) {
-        OutputSidePacket = other.OutputSidePacket;
-      }
-      if (other.HasExternalOutput) {
-        ExternalOutput = other.ExternalOutput;
-      }
-      if (other.options_ != null) {
-        if (options_ == null) {
-          Options = new global::Akihabara.Framework.Protobuf.PacketFactoryOptions();
+#endif
         }
-        Options.MergeFrom(other.Options);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            if (HasPacketFactory)
+            {
+                output.WriteRawTag(10);
+                output.WriteString(PacketFactory);
+            }
+            if (HasOutputSidePacket)
+            {
+                output.WriteRawTag(18);
+                output.WriteString(OutputSidePacket);
+            }
+            if (options_ != null)
+            {
+                output.WriteRawTag(26);
+                output.WriteMessage(Options);
+            }
+            if (HasExternalOutput)
+            {
+                output.WriteRawTag(210, 62);
+                output.WriteString(ExternalOutput);
+            }
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
+#endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            if (HasPacketFactory)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(PacketFactory);
+            }
+            if (HasOutputSidePacket)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputSidePacket);
+            }
+            if (HasExternalOutput)
+            {
+                size += 2 + pb::CodedOutputStream.ComputeStringSize(ExternalOutput);
+            }
+            if (options_ != null)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+            }
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PacketFactoryConfig other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            if (other.HasPacketFactory)
+            {
+                PacketFactory = other.PacketFactory;
+            }
+            if (other.HasOutputSidePacket)
+            {
+                OutputSidePacket = other.OutputSidePacket;
+            }
+            if (other.HasExternalOutput)
+            {
+                ExternalOutput = other.ExternalOutput;
+            }
+            if (other.options_ != null)
+            {
+                if (options_ == null)
+                {
+                    Options = new global::Akihabara.Framework.Protobuf.PacketFactoryOptions();
+                }
+                Options.MergeFrom(other.Options);
+            }
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            input.ReadRawMessage(this);
+#else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -572,190 +658,219 @@ namespace Akihabara.Framework.Protobuf {
           }
         }
       }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            PacketFactory = input.ReadString();
-            break;
-          }
-          case 18: {
-            OutputSidePacket = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              Options = new global::Akihabara.Framework.Protobuf.PacketFactoryOptions();
-            }
-            input.ReadMessage(Options);
-            break;
-          }
-          case 8018: {
-            ExternalOutput = input.ReadString();
-            break;
-          }
+#endif
         }
-      }
+
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
+        {
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
+            {
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            PacketFactory = input.ReadString();
+                            break;
+                        }
+                    case 18:
+                        {
+                            OutputSidePacket = input.ReadString();
+                            break;
+                        }
+                    case 26:
+                        {
+                            if (options_ == null)
+                            {
+                                Options = new global::Akihabara.Framework.Protobuf.PacketFactoryOptions();
+                            }
+                            input.ReadMessage(Options);
+                            break;
+                        }
+                    case 8018:
+                        {
+                            ExternalOutput = input.ReadString();
+                            break;
+                        }
+                }
+            }
+        }
+#endif
+
     }
-    #endif
 
-  }
-
-  /// <summary>
-  /// The configuration for a PacketManager.
-  /// </summary>
-  public sealed partial class PacketManagerConfig : pb::IMessage<PacketManagerConfig>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    /// <summary>
+    /// The configuration for a PacketManager.
+    /// </summary>
+    public sealed partial class PacketManagerConfig : pb::IMessage<PacketManagerConfig>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PacketManagerConfig> _parser = new pb::MessageParser<PacketManagerConfig>(() => new PacketManagerConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<PacketManagerConfig> Parser { get { return _parser; } }
+#endif
+    {
+        private static readonly pb::MessageParser<PacketManagerConfig> _parser = new pb::MessageParser<PacketManagerConfig>(() => new PacketManagerConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PacketManagerConfig> Parser { get { return _parser; } }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[2]; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor
+        {
+            get { return global::Akihabara.Framework.Protobuf.PacketFactoryReflection.Descriptor.MessageTypes[2]; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor
+        {
+            get { return Descriptor; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketManagerConfig() {
-      OnConstruction();
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketManagerConfig()
+        {
+            OnConstruction();
+        }
 
-    partial void OnConstruction();
+        partial void OnConstruction();
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketManagerConfig(PacketManagerConfig other) : this() {
-      packet_ = other.packet_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketManagerConfig(PacketManagerConfig other) : this()
+        {
+            packet_ = other.packet_.Clone();
+            _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public PacketManagerConfig Clone() {
-      return new PacketManagerConfig(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PacketManagerConfig Clone()
+        {
+            return new PacketManagerConfig(this);
+        }
 
-    /// <summary>Field number for the "packet" field.</summary>
-    public const int PacketFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> _repeated_packet_codec
-        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.PacketFactoryConfig.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> packet_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> Packet {
-      get { return packet_; }
-    }
+        /// <summary>Field number for the "packet" field.</summary>
+        public const int PacketFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> _repeated_packet_codec
+            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.PacketFactoryConfig.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> packet_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.PacketFactoryConfig> Packet
+        {
+            get { return packet_; }
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as PacketManagerConfig);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other)
+        {
+            return Equals(other as PacketManagerConfig);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(PacketManagerConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!packet_.Equals(other.packet_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PacketManagerConfig other)
+        {
+            if (ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (ReferenceEquals(other, this))
+            {
+                return true;
+            }
+            if (!packet_.Equals(other.packet_)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= packet_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode()
+        {
+            int hash = 1;
+            hash ^= packet_.GetHashCode();
+            if (_unknownFields != null)
+            {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString()
+        {
+            return pb::JsonFormatter.ToDiagnosticString(this);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            output.WriteRawMessage(this);
+#else
       packet_.WriteTo(output, _repeated_packet_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-    #endif
-    }
+#endif
+        }
 
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      packet_.WriteTo(ref output, _repeated_packet_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
+        {
+            packet_.WriteTo(ref output, _repeated_packet_codec);
+            if (_unknownFields != null)
+            {
+                _unknownFields.WriteTo(ref output);
+            }
+        }
+#endif
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += packet_.CalculateSize(_repeated_packet_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize()
+        {
+            int size = 0;
+            size += packet_.CalculateSize(_repeated_packet_codec);
+            if (_unknownFields != null)
+            {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(PacketManagerConfig other) {
-      if (other == null) {
-        return;
-      }
-      packet_.Add(other.packet_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PacketManagerConfig other)
+        {
+            if (other == null)
+            {
+                return;
+            }
+            packet_.Add(other.packet_);
+            _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input)
+        {
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            input.ReadRawMessage(this);
+#else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -768,31 +883,35 @@ namespace Akihabara.Framework.Protobuf {
           }
         }
       }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            packet_.AddEntriesFrom(ref input, _repeated_packet_codec);
-            break;
-          }
+#endif
         }
-      }
+
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input)
+        {
+            uint tag;
+            while ((tag = input.ReadTag()) != 0)
+            {
+                switch (tag)
+                {
+                    default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    case 10:
+                        {
+                            packet_.AddEntriesFrom(ref input, _repeated_packet_codec);
+                            break;
+                        }
+                }
+            }
+        }
+#endif
+
     }
-    #endif
 
-  }
-
-  #endregion
+    #endregion
 
 }
 
