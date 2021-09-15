@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from mediapipe_options.proto</summary>
@@ -34,7 +34,7 @@ namespace Akihabara.Framework.ProtoCalculator
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions), global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.MediaPipeOptions), global::Akihabara.Framework.Protobuf.MediaPipeOptions.Parser, null, null, null, null, null)
                 }));
         }
         #endregion
@@ -61,7 +61,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.MediapipeOptionsReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from calculator_profile.proto</summary>
@@ -73,14 +73,14 @@ namespace Akihabara.Framework.ProtoCalculator
                   "clByb2ZpbGUSSwoGY29uZmlnGAMgASgLMjsuYWtpaGFiYXJhLmZyYW1ld29y",
                   "ay5wcm90b19jYWxjdWxhdG9yLkNhbGN1bGF0b3JHcmFwaENvbmZpZw=="));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor, },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.TimeHistogram), global::Akihabara.Framework.ProtoCalculator.TimeHistogram.Parser, new[]{ "Total", "IntervalSizeUsec", "NumIntervals", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.StreamProfile), global::Akihabara.Framework.ProtoCalculator.StreamProfile.Parser, new[]{ "Name", "BackEdge", "Latency" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.CalculatorProfile), global::Akihabara.Framework.ProtoCalculator.CalculatorProfile.Parser, new[]{ "Name", "OpenRuntime", "CloseRuntime", "ProcessRuntime", "ProcessInputLatency", "ProcessOutputLatency", "InputStreamProfiles" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Parser, new[]{ "BaseTime", "BaseTimestamp", "CalculatorName", "StreamName", "CalculatorTrace" }, null, new[]{ typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser, new[]{ "StartTime", "FinishTime", "PacketTimestamp", "StreamId", "PacketId", "EventData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace), global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace.Parser, new[]{ "NodeId", "InputTimestamp", "EventType", "StartTime", "FinishTime", "InputTrace", "OutputTrace", "ThreadId" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.GraphProfile), global::Akihabara.Framework.ProtoCalculator.GraphProfile.Parser, new[]{ "GraphTrace", "CalculatorProfiles", "Config" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.TimeHistogram), global::Akihabara.Framework.Protobuf.TimeHistogram.Parser, new[]{ "Total", "IntervalSizeUsec", "NumIntervals", "Count" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.StreamProfile), global::Akihabara.Framework.Protobuf.StreamProfile.Parser, new[]{ "Name", "BackEdge", "Latency" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.CalculatorProfile), global::Akihabara.Framework.Protobuf.CalculatorProfile.Parser, new[]{ "Name", "OpenRuntime", "CloseRuntime", "ProcessRuntime", "ProcessInputLatency", "ProcessOutputLatency", "InputStreamProfiles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.GraphTrace), global::Akihabara.Framework.Protobuf.GraphTrace.Parser, new[]{ "BaseTime", "BaseTimestamp", "CalculatorName", "StreamName", "CalculatorTrace" }, null, new[]{ typeof(global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace), global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace.Parser, new[]{ "StartTime", "FinishTime", "PacketTimestamp", "StreamId", "PacketId", "EventData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace), global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace.Parser, new[]{ "NodeId", "InputTimestamp", "EventType", "StartTime", "FinishTime", "InputTrace", "OutputTrace", "ThreadId" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.GraphProfile), global::Akihabara.Framework.Protobuf.GraphProfile.Parser, new[]{ "GraphTrace", "CalculatorProfiles", "Config" }, null, null, null, null)
                 }));
         }
         #endregion
@@ -120,7 +120,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorProfileReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -523,7 +523,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[1]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorProfileReflection.Descriptor.MessageTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -629,13 +629,13 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "latency" field.</summary>
         public const int LatencyFieldNumber = 3;
-        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram latency_;
+        private global::Akihabara.Framework.Protobuf.TimeHistogram latency_;
         /// <summary>
         /// Total and histogram of the time that this stream took.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram Latency
+        public global::Akihabara.Framework.Protobuf.TimeHistogram Latency
         {
             get { return latency_; }
             set
@@ -787,7 +787,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (latency_ == null)
                 {
-                    Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                    Latency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                 }
                 Latency.MergeFrom(other.Latency);
             }
@@ -817,7 +817,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 26: {
             if (latency_ == null) {
-              Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+              Latency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
             }
             input.ReadMessage(Latency);
             break;
@@ -854,7 +854,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (latency_ == null)
                             {
-                                Latency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                                Latency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                             }
                             input.ReadMessage(Latency);
                             break;
@@ -886,7 +886,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[2]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorProfileReflection.Descriptor.MessageTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1030,14 +1030,14 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "process_runtime" field.</summary>
         public const int ProcessRuntimeFieldNumber = 4;
-        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processRuntime_;
+        private global::Akihabara.Framework.Protobuf.TimeHistogram processRuntime_;
         /// <summary>
         /// Total and histogram of the time that the calculator spent on the Process()
         /// (in microseconds).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessRuntime
+        public global::Akihabara.Framework.Protobuf.TimeHistogram ProcessRuntime
         {
             get { return processRuntime_; }
             set
@@ -1048,7 +1048,7 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "process_input_latency" field.</summary>
         public const int ProcessInputLatencyFieldNumber = 5;
-        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processInputLatency_;
+        private global::Akihabara.Framework.Protobuf.TimeHistogram processInputLatency_;
         /// <summary>
         /// Total and histogram of the time that the input latency, ie. difference
         /// between input timestamp and process call time.
@@ -1056,7 +1056,7 @@ namespace Akihabara.Framework.ProtoCalculator
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessInputLatency
+        public global::Akihabara.Framework.Protobuf.TimeHistogram ProcessInputLatency
         {
             get { return processInputLatency_; }
             set
@@ -1067,14 +1067,14 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "process_output_latency" field.</summary>
         public const int ProcessOutputLatencyFieldNumber = 6;
-        private global::Akihabara.Framework.ProtoCalculator.TimeHistogram processOutputLatency_;
+        private global::Akihabara.Framework.Protobuf.TimeHistogram processOutputLatency_;
         /// <summary>
         /// Total and histogram of the time that the output latency, ie. difference
         /// between input timestamp and process finished time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.TimeHistogram ProcessOutputLatency
+        public global::Akihabara.Framework.Protobuf.TimeHistogram ProcessOutputLatency
         {
             get { return processOutputLatency_; }
             set
@@ -1085,15 +1085,15 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "input_stream_profiles" field.</summary>
         public const int InputStreamProfilesFieldNumber = 7;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.StreamProfile> _repeated_inputStreamProfiles_codec
-            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.StreamProfile.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> inputStreamProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.StreamProfile> _repeated_inputStreamProfiles_codec
+            = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.Protobuf.StreamProfile.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StreamProfile> inputStreamProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StreamProfile>();
         /// <summary>
         /// Total and histogram of the time that input streams of this calculator took.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.StreamProfile> InputStreamProfiles
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.StreamProfile> InputStreamProfiles
         {
             get { return inputStreamProfiles_; }
         }
@@ -1295,7 +1295,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (processRuntime_ == null)
                 {
-                    ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                    ProcessRuntime = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                 }
                 ProcessRuntime.MergeFrom(other.ProcessRuntime);
             }
@@ -1303,7 +1303,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (processInputLatency_ == null)
                 {
-                    ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                    ProcessInputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                 }
                 ProcessInputLatency.MergeFrom(other.ProcessInputLatency);
             }
@@ -1311,7 +1311,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (processOutputLatency_ == null)
                 {
-                    ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                    ProcessOutputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                 }
                 ProcessOutputLatency.MergeFrom(other.ProcessOutputLatency);
             }
@@ -1346,21 +1346,21 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 34: {
             if (processRuntime_ == null) {
-              ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+              ProcessRuntime = new global::Akihabara.Framework.Protobuf.TimeHistogram();
             }
             input.ReadMessage(ProcessRuntime);
             break;
           }
           case 42: {
             if (processInputLatency_ == null) {
-              ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+              ProcessInputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
             }
             input.ReadMessage(ProcessInputLatency);
             break;
           }
           case 50: {
             if (processOutputLatency_ == null) {
-              ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+              ProcessOutputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
             }
             input.ReadMessage(ProcessOutputLatency);
             break;
@@ -1406,7 +1406,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (processRuntime_ == null)
                             {
-                                ProcessRuntime = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                                ProcessRuntime = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                             }
                             input.ReadMessage(ProcessRuntime);
                             break;
@@ -1415,7 +1415,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (processInputLatency_ == null)
                             {
-                                ProcessInputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                                ProcessInputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                             }
                             input.ReadMessage(ProcessInputLatency);
                             break;
@@ -1424,7 +1424,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (processOutputLatency_ == null)
                             {
-                                ProcessOutputLatency = new global::Akihabara.Framework.ProtoCalculator.TimeHistogram();
+                                ProcessOutputLatency = new global::Akihabara.Framework.Protobuf.TimeHistogram();
                             }
                             input.ReadMessage(ProcessOutputLatency);
                             break;
@@ -1460,7 +1460,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[3]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorProfileReflection.Descriptor.MessageTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1599,15 +1599,15 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "calculator_trace" field.</summary>
         public const int CalculatorTraceFieldNumber = 5;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> _repeated_calculatorTrace_codec
-            = pb::FieldCodec.ForMessage(42, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> calculatorTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace> _repeated_calculatorTrace_codec
+            = pb::FieldCodec.ForMessage(42, global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace> calculatorTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace>();
         /// <summary>
         /// Recent packet timing informtion about each calculator node and stream.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.CalculatorTrace> CalculatorTrace
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.CalculatorTrace> CalculatorTrace
         {
             get { return calculatorTrace_; }
         }
@@ -1886,7 +1886,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor
                 {
-                    get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[0]; }
+                    get { return global::Akihabara.Framework.Protobuf.GraphTrace.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2447,7 +2447,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor
                 {
-                    get { return global::Akihabara.Framework.ProtoCalculator.GraphTrace.Descriptor.NestedTypes[1]; }
+                    get { return global::Akihabara.Framework.Protobuf.GraphTrace.Descriptor.NestedTypes[1]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2559,15 +2559,15 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "event_type" field.</summary>
                 public const int EventTypeFieldNumber = 3;
-                private readonly static global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventTypeDefaultValue = global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType.Unknown;
+                private readonly static global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType EventTypeDefaultValue = global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType.Unknown;
 
-                private global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType eventType_;
+                private global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType eventType_;
                 /// <summary>
                 /// The kind of event, 1=Open, 2=Process, 3=Close, etc.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType EventType
+                public global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType EventType
                 {
                     get { if ((_hasBits0 & 4) != 0) { return eventType_; } else { return EventTypeDefaultValue; } }
                     set
@@ -2661,30 +2661,30 @@ namespace Akihabara.Framework.ProtoCalculator
 
                 /// <summary>Field number for the "input_trace" field.</summary>
                 public const int InputTraceFieldNumber = 6;
-                private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_inputTrace_codec
-                    = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
-                private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> inputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
+                private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> _repeated_inputTrace_codec
+                    = pb::FieldCodec.ForMessage(50, global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace.Parser);
+                private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> inputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace>();
                 /// <summary>
                 /// The timing data for each input packet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> InputTrace
+                public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> InputTrace
                 {
                     get { return inputTrace_; }
                 }
 
                 /// <summary>Field number for the "output_trace" field.</summary>
                 public const int OutputTraceFieldNumber = 7;
-                private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> _repeated_outputTrace_codec
-                    = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace.Parser);
-                private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> outputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace>();
+                private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> _repeated_outputTrace_codec
+                    = pb::FieldCodec.ForMessage(58, global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace.Parser);
+                private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> outputTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace>();
                 /// <summary>
                 /// The identifying timetamp and stream_id for each output packet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.StreamTrace> OutputTrace
+                public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace.Types.StreamTrace> OutputTrace
                 {
                     get { return outputTrace_; }
                 }
@@ -2960,7 +2960,7 @@ namespace Akihabara.Framework.ProtoCalculator
                 break;
               }
               case 24: {
-                EventType = (global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType) input.ReadEnum();
+                EventType = (global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType) input.ReadEnum();
                 break;
               }
               case 32: {
@@ -3013,7 +3013,7 @@ namespace Akihabara.Framework.ProtoCalculator
                                 }
                             case 24:
                                 {
-                                    EventType = (global::Akihabara.Framework.ProtoCalculator.GraphTrace.Types.EventType)input.ReadEnum();
+                                    EventType = (global::Akihabara.Framework.Protobuf.GraphTrace.Types.EventType)input.ReadEnum();
                                     break;
                                 }
                             case 32:
@@ -3071,7 +3071,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.CalculatorProfileReflection.Descriptor.MessageTypes[4]; }
+            get { return global::Akihabara.Framework.Protobuf.CalculatorProfileReflection.Descriptor.MessageTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3109,43 +3109,43 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "graph_trace" field.</summary>
         public const int GraphTraceFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.GraphTrace> _repeated_graphTrace_codec
-            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.GraphTrace.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> graphTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.GraphTrace> _repeated_graphTrace_codec
+            = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.GraphTrace.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace> graphTrace_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace>();
         /// <summary>
         /// Recent packet timing informtion about each calculator node and stream.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.GraphTrace> GraphTrace
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.GraphTrace> GraphTrace
         {
             get { return graphTrace_; }
         }
 
         /// <summary>Field number for the "calculator_profiles" field.</summary>
         public const int CalculatorProfilesFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> _repeated_calculatorProfiles_codec
-            = pb::FieldCodec.ForMessage(18, global::Akihabara.Framework.ProtoCalculator.CalculatorProfile.Parser);
-        private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> calculatorProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile>();
+        private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.CalculatorProfile> _repeated_calculatorProfiles_codec
+            = pb::FieldCodec.ForMessage(18, global::Akihabara.Framework.Protobuf.CalculatorProfile.Parser);
+        private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorProfile> calculatorProfiles_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorProfile>();
         /// <summary>
         /// Aggregated latency information about each calculator node.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.CalculatorProfile> CalculatorProfiles
+        public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.CalculatorProfile> CalculatorProfiles
         {
             get { return calculatorProfiles_; }
         }
 
         /// <summary>Field number for the "config" field.</summary>
         public const int ConfigFieldNumber = 3;
-        private global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig config_;
+        private global::Akihabara.Framework.Protobuf.CalculatorGraphConfig config_;
         /// <summary>
         /// The canonicalized calculator graph that is traced.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig Config
+        public global::Akihabara.Framework.Protobuf.CalculatorGraphConfig Config
         {
             get { return config_; }
             set
@@ -3271,7 +3271,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (config_ == null)
                 {
-                    Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+                    Config = new global::Akihabara.Framework.Protobuf.CalculatorGraphConfig();
                 }
                 Config.MergeFrom(other.Config);
             }
@@ -3301,7 +3301,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 26: {
             if (config_ == null) {
-              Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+              Config = new global::Akihabara.Framework.Protobuf.CalculatorGraphConfig();
             }
             input.ReadMessage(Config);
             break;
@@ -3338,7 +3338,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (config_ == null)
                             {
-                                Config = new global::Akihabara.Framework.ProtoCalculator.CalculatorGraphConfig();
+                                Config = new global::Akihabara.Framework.Protobuf.CalculatorGraphConfig();
                             }
                             input.ReadMessage(Config);
                             break;

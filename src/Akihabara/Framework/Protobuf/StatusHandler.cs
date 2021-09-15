@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from status_handler.proto</summary>
@@ -35,9 +35,9 @@ namespace Akihabara.Framework.ProtoCalculator
                   "ByADKAkSRwoHb3B0aW9ucxgDIAEoCzI2LmFraWhhYmFyYS5mcmFtZXdvcmsu",
                   "cHJvdG9fY2FsY3VsYXRvci5NZWRpYVBpcGVPcHRpb25z"));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.MediapipeOptionsReflection.Descriptor, },
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.MediapipeOptionsReflection.Descriptor, },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig), global::Akihabara.Framework.ProtoCalculator.StatusHandlerConfig.Parser, new[]{ "StatusHandler", "InputSidePacket", "ExternalInput", "Options" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.StatusHandlerConfig), global::Akihabara.Framework.Protobuf.StatusHandlerConfig.Parser, new[]{ "StatusHandler", "InputSidePacket", "ExternalInput", "Options" }, null, null, null, null)
                 }));
         }
         #endregion
@@ -62,7 +62,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.StatusHandlerReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.StatusHandlerReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -168,13 +168,13 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "options" field.</summary>
         public const int OptionsFieldNumber = 3;
-        private global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions options_;
+        private global::Akihabara.Framework.Protobuf.MediaPipeOptions options_;
         /// <summary>
         /// The options for the status handler.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions Options
+        public global::Akihabara.Framework.Protobuf.MediaPipeOptions Options
         {
             get { return options_; }
             set
@@ -319,7 +319,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (options_ == null)
                 {
-                    Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                    Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                 }
                 Options.MergeFrom(other.Options);
             }
@@ -349,7 +349,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 26: {
             if (options_ == null) {
-              Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+              Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
             }
             input.ReadMessage(Options);
             break;
@@ -390,7 +390,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (options_ == null)
                             {
-                                Options = new global::Akihabara.Framework.ProtoCalculator.MediaPipeOptions();
+                                Options = new global::Akihabara.Framework.Protobuf.MediaPipeOptions();
                             }
                             input.ReadMessage(Options);
                             break;

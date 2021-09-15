@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from test_calculators.proto</summary>
@@ -37,9 +37,9 @@ namespace Akihabara.Framework.ProtoCalculator
                   "YXRvck9wdGlvbnMYyKDpGCABKAsyQy5ha2loYWJhcmEuZnJhbWV3b3JrLnBy",
                   "b3RvX2NhbGN1bGF0b3IuUmFuZG9tTWF0cml4Q2FsY3VsYXRvck9wdGlvbnM="));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-                new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.CalculatorReflection.Descriptor, },
+                new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.CalculatorReflection.Descriptor, },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions), global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions.Parser, new[]{ "Rows", "Cols", "StartTimestamp", "LimitTimestamp", "TimestampStep" }, null, null, new pb::Extension[] { global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions), global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions.Parser, new[]{ "Rows", "Cols", "StartTimestamp", "LimitTimestamp", "TimestampStep" }, null, null, new pb::Extension[] { global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions.Extensions.Ext }, null)
                 }));
         }
         #endregion
@@ -62,7 +62,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.TestCalculatorsReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.TestCalculatorsReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -527,8 +527,8 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Extensions
         {
-            public static readonly pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions> Ext =
-              new pb::Extension<global::Akihabara.Framework.ProtoCalculator.CalculatorOptions, global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions>(52056136, pb::FieldCodec.ForMessage(416449090, global::Akihabara.Framework.ProtoCalculator.RandomMatrixCalculatorOptions.Parser));
+            public static readonly pb::Extension<global::Akihabara.Framework.Protobuf.CalculatorOptions, global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions> Ext =
+              new pb::Extension<global::Akihabara.Framework.Protobuf.CalculatorOptions, global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions>(52056136, pb::FieldCodec.ForMessage(416449090, global::Akihabara.Framework.Protobuf.RandomMatrixCalculatorOptions.Parser));
         }
         #endregion
 
