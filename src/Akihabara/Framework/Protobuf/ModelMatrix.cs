@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator {
+namespace Akihabara.Framework.Protobuf {
 
   /// <summary>Holder for reflection information generated from mediapipe/graphs/object_detection_3d/calculators/model_matrix.proto</summary>
   public static partial class ModelMatrixReflection {
@@ -298,11 +298,11 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     /// <summary>Field number for the "model_matrix" field.</summary>
     public const int ModelMatrixFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> _repeated_modelMatrix_codec
-        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> modelMatrix_ = new pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.TimedModelMatrixProto> _repeated_modelMatrix_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.TimedModelMatrixProto.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.TimedModelMatrixProto> modelMatrix_ = new pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> ModelMatrix {
+    public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.TimedModelMatrixProto> ModelMatrix {
       get { return modelMatrix_; }
     }
 
@@ -639,11 +639,11 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     /// <summary>Field number for the "vector_list" field.</summary>
     public const int VectorListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> _repeated_vectorList_codec
-        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.TimedVectorProto.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> vectorList_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.TimedVectorProto> _repeated_vectorList_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.TimedVectorProto.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.TimedVectorProto> vectorList_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.TimedVectorProto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> VectorList {
+    public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.TimedVectorProto> VectorList {
       get { return vectorList_; }
     }
 

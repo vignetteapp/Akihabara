@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator
+namespace Akihabara.Framework.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from packet_generator.proto</summary>
@@ -39,8 +39,8 @@ namespace Akihabara.Framework.ProtoCalculator
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions), global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig), global::Akihabara.Framework.ProtoCalculator.PacketGeneratorConfig.Parser, new[]{ "PacketGenerator", "InputSidePacket", "ExternalInput", "OutputSidePacket", "ExternalOutput", "Options" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.PacketGeneratorOptions), global::Akihabara.Framework.Protobuf.PacketGeneratorOptions.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.PacketGeneratorConfig), global::Akihabara.Framework.Protobuf.PacketGeneratorConfig.Parser, new[]{ "PacketGenerator", "InputSidePacket", "ExternalInput", "OutputSidePacket", "ExternalOutput", "Options" }, null, null, null, null)
                 }));
         }
         #endregion
@@ -67,7 +67,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.PacketGeneratorReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Akihabara.Framework.Protobuf.PacketGeneratorReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -300,7 +300,7 @@ namespace Akihabara.Framework.ProtoCalculator
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Akihabara.Framework.ProtoCalculator.PacketGeneratorReflection.Descriptor.MessageTypes[1]; }
+            get { return global::Akihabara.Framework.Protobuf.PacketGeneratorReflection.Descriptor.MessageTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -437,13 +437,13 @@ namespace Akihabara.Framework.ProtoCalculator
 
         /// <summary>Field number for the "options" field.</summary>
         public const int OptionsFieldNumber = 4;
-        private global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions options_;
+        private global::Akihabara.Framework.Protobuf.PacketGeneratorOptions options_;
         /// <summary>
         /// The options for the packet generator.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions Options
+        public global::Akihabara.Framework.Protobuf.PacketGeneratorOptions Options
         {
             get { return options_; }
             set
@@ -600,7 +600,7 @@ namespace Akihabara.Framework.ProtoCalculator
             {
                 if (options_ == null)
                 {
-                    Options = new global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions();
+                    Options = new global::Akihabara.Framework.Protobuf.PacketGeneratorOptions();
                 }
                 Options.MergeFrom(other.Options);
             }
@@ -634,7 +634,7 @@ namespace Akihabara.Framework.ProtoCalculator
           }
           case 34: {
             if (options_ == null) {
-              Options = new global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions();
+              Options = new global::Akihabara.Framework.Protobuf.PacketGeneratorOptions();
             }
             input.ReadMessage(Options);
             break;
@@ -684,7 +684,7 @@ namespace Akihabara.Framework.ProtoCalculator
                         {
                             if (options_ == null)
                             {
-                                Options = new global::Akihabara.Framework.ProtoCalculator.PacketGeneratorOptions();
+                                Options = new global::Akihabara.Framework.Protobuf.PacketGeneratorOptions();
                             }
                             input.ReadMessage(Options);
                             break;

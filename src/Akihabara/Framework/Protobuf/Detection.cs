@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Akihabara.Framework.ProtoCalculator {
+namespace Akihabara.Framework.Protobuf {
 
   /// <summary>Holder for reflection information generated from mediapipe/framework/formats/detection.proto</summary>
   public static partial class DetectionReflection {
@@ -38,10 +38,10 @@ namespace Akihabara.Framework.ProtoCalculator {
             "FC5tZWRpYXBpcGUuRGV0ZWN0aW9uQjQKImNvbS5nb29nbGUubWVkaWFwaXBl",
             "LmZvcm1hdHMucHJvdG9CDkRldGVjdGlvblByb3Rv"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.LocationDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Akihabara.Framework.Protobuf.LocationDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.Detection), global::Akihabara.Framework.ProtoCalculator.Detection.Parser, new[]{ "Label", "LabelId", "Score", "LocationData", "FeatureTag", "TrackId", "DetectionId", "AssociatedDetections", "DisplayName", "TimestampUsec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection), global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection.Parser, new[]{ "Id", "Confidence" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.DetectionList), global::Akihabara.Framework.ProtoCalculator.DetectionList.Parser, new[]{ "Detection" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.Detection), global::Akihabara.Framework.Protobuf.Detection.Parser, new[]{ "Label", "LabelId", "Score", "LocationData", "FeatureTag", "TrackId", "DetectionId", "AssociatedDetections", "DisplayName", "TimestampUsec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection), global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection.Parser, new[]{ "Id", "Confidence" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.Protobuf.DetectionList), global::Akihabara.Framework.Protobuf.DetectionList.Parser, new[]{ "Detection" }, null, null, null, null)
           }));
     }
     #endregion
@@ -57,7 +57,7 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Akihabara.Framework.ProtoCalculator.DetectionReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Akihabara.Framework.Protobuf.DetectionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -128,12 +128,12 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     /// <summary>Field number for the "location_data" field.</summary>
     public const int LocationDataFieldNumber = 4;
-    private global::Akihabara.Framework.ProtoCalculator.LocationData locationData_;
+    private global::Akihabara.Framework.Protobuf.LocationData locationData_;
     /// <summary>
     /// Location data corresponding to all detected labels above.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Akihabara.Framework.ProtoCalculator.LocationData LocationData {
+    public global::Akihabara.Framework.Protobuf.LocationData LocationData {
       get { return locationData_; }
       set {
         locationData_ = value;
@@ -232,11 +232,11 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     /// <summary>Field number for the "associated_detections" field.</summary>
     public const int AssociatedDetectionsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> _repeated_associatedDetections_codec
-        = pb::FieldCodec.ForMessage(66, global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> associatedDetections_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection> _repeated_associatedDetections_codec
+        = pb::FieldCodec.ForMessage(66, global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection> associatedDetections_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> AssociatedDetections {
+    public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection.Types.AssociatedDetection> AssociatedDetections {
       get { return associatedDetections_; }
     }
 
@@ -403,7 +403,7 @@ namespace Akihabara.Framework.ProtoCalculator {
       score_.Add(other.score_);
       if (other.HasLocationData) {
         if (!HasLocationData) {
-          LocationData = new global::Akihabara.Framework.ProtoCalculator.LocationData();
+          LocationData = new global::Akihabara.Framework.Protobuf.LocationData();
         }
         LocationData.MergeFrom(other.LocationData);
       }
@@ -448,7 +448,7 @@ namespace Akihabara.Framework.ProtoCalculator {
           }
           case 34: {
             if (!HasLocationData) {
-              LocationData = new global::Akihabara.Framework.ProtoCalculator.LocationData();
+              LocationData = new global::Akihabara.Framework.Protobuf.LocationData();
             }
             input.ReadMessage(LocationData);
             break;
@@ -499,7 +499,7 @@ namespace Akihabara.Framework.ProtoCalculator {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Akihabara.Framework.ProtoCalculator.Detection.Descriptor.NestedTypes[0]; }
+          get { return global::Akihabara.Framework.Protobuf.Detection.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -691,7 +691,7 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Akihabara.Framework.ProtoCalculator.DetectionReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Akihabara.Framework.Protobuf.DetectionReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -719,11 +719,11 @@ namespace Akihabara.Framework.ProtoCalculator {
 
     /// <summary>Field number for the "detection" field.</summary>
     public const int DetectionFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.Detection> _repeated_detection_codec
-        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.Detection.Parser);
-    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection> detection_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.Protobuf.Detection> _repeated_detection_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.Protobuf.Detection.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection> detection_ = new pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection> Detection {
+    public pbc::RepeatedField<global::Akihabara.Framework.Protobuf.Detection> Detection {
       get { return detection_; }
     }
 
