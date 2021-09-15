@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Mediapipe {
+namespace Akihabara.Framework.ProtoCalculator {
 
   /// <summary>Holder for reflection information generated from mediapipe/framework/formats/location_data.proto</summary>
   public static partial class LocationDataReflection {

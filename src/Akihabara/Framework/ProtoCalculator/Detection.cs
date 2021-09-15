@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Mediapipe {
+namespace Akihabara.Framework.ProtoCalculator {
 
   /// <summary>Holder for reflection information generated from mediapipe/framework/formats/detection.proto</summary>
   public static partial class DetectionReflection {
@@ -38,10 +38,10 @@ namespace Mediapipe {
             "FC5tZWRpYXBpcGUuRGV0ZWN0aW9uQjQKImNvbS5nb29nbGUubWVkaWFwaXBl",
             "LmZvcm1hdHMucHJvdG9CDkRldGVjdGlvblByb3Rv"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mediapipe.LocationDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Akihabara.Framework.ProtoCalculator.LocationDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.Detection), global::Mediapipe.Detection.Parser, new[]{ "Label", "LabelId", "Score", "LocationData", "FeatureTag", "TrackId", "DetectionId", "AssociatedDetections", "DisplayName", "TimestampUsec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.Detection.Types.AssociatedDetection), global::Mediapipe.Detection.Types.AssociatedDetection.Parser, new[]{ "Id", "Confidence" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.DetectionList), global::Mediapipe.DetectionList.Parser, new[]{ "Detection" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.Detection), global::Akihabara.Framework.ProtoCalculator.Detection.Parser, new[]{ "Label", "LabelId", "Score", "LocationData", "FeatureTag", "TrackId", "DetectionId", "AssociatedDetections", "DisplayName", "TimestampUsec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection), global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection.Parser, new[]{ "Id", "Confidence" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Akihabara.Framework.ProtoCalculator.DetectionList), global::Akihabara.Framework.ProtoCalculator.DetectionList.Parser, new[]{ "Detection" }, null, null, null, null)
           }));
     }
     #endregion
@@ -57,7 +57,7 @@ namespace Mediapipe {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.DetectionReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Akihabara.Framework.ProtoCalculator.DetectionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -128,12 +128,12 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "location_data" field.</summary>
     public const int LocationDataFieldNumber = 4;
-    private global::Mediapipe.LocationData locationData_;
+    private global::Akihabara.Framework.ProtoCalculator.LocationData locationData_;
     /// <summary>
     /// Location data corresponding to all detected labels above.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Mediapipe.LocationData LocationData {
+    public global::Akihabara.Framework.ProtoCalculator.LocationData LocationData {
       get { return locationData_; }
       set {
         locationData_ = value;
@@ -232,11 +232,11 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "associated_detections" field.</summary>
     public const int AssociatedDetectionsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Mediapipe.Detection.Types.AssociatedDetection> _repeated_associatedDetections_codec
-        = pb::FieldCodec.ForMessage(66, global::Mediapipe.Detection.Types.AssociatedDetection.Parser);
-    private readonly pbc::RepeatedField<global::Mediapipe.Detection.Types.AssociatedDetection> associatedDetections_ = new pbc::RepeatedField<global::Mediapipe.Detection.Types.AssociatedDetection>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> _repeated_associatedDetections_codec
+        = pb::FieldCodec.ForMessage(66, global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> associatedDetections_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mediapipe.Detection.Types.AssociatedDetection> AssociatedDetections {
+    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection.Types.AssociatedDetection> AssociatedDetections {
       get { return associatedDetections_; }
     }
 
@@ -403,7 +403,7 @@ namespace Mediapipe {
       score_.Add(other.score_);
       if (other.HasLocationData) {
         if (!HasLocationData) {
-          LocationData = new global::Mediapipe.LocationData();
+          LocationData = new global::Akihabara.Framework.ProtoCalculator.LocationData();
         }
         LocationData.MergeFrom(other.LocationData);
       }
@@ -448,7 +448,7 @@ namespace Mediapipe {
           }
           case 34: {
             if (!HasLocationData) {
-              LocationData = new global::Mediapipe.LocationData();
+              LocationData = new global::Akihabara.Framework.ProtoCalculator.LocationData();
             }
             input.ReadMessage(LocationData);
             break;
@@ -499,7 +499,7 @@ namespace Mediapipe {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Mediapipe.Detection.Descriptor.NestedTypes[0]; }
+          get { return global::Akihabara.Framework.ProtoCalculator.Detection.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -691,7 +691,7 @@ namespace Mediapipe {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.DetectionReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Akihabara.Framework.ProtoCalculator.DetectionReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -719,11 +719,11 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "detection" field.</summary>
     public const int DetectionFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Mediapipe.Detection> _repeated_detection_codec
-        = pb::FieldCodec.ForMessage(10, global::Mediapipe.Detection.Parser);
-    private readonly pbc::RepeatedField<global::Mediapipe.Detection> detection_ = new pbc::RepeatedField<global::Mediapipe.Detection>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.Detection> _repeated_detection_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.Detection.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection> detection_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mediapipe.Detection> Detection {
+    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.Detection> Detection {
       get { return detection_; }
     }
 
