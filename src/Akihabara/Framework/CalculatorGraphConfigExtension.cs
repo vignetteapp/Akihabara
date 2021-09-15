@@ -1,5 +1,5 @@
 ﻿using Google.Protobuf;
-using Akihabara.Framework.ProtoCalculator;
+using Akihabara.Framework.Protobuf;
 using Akihabara.External;
 using Akihabara.Native;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
