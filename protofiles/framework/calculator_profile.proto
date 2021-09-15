@@ -18,9 +18,9 @@
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
-import "calculator.proto";
+import "protofiles/framework/calculator.proto";
 
 // Stores the profiling information.
 //

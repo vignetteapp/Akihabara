@@ -12,15 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Forked from mediapipe/framework/mediapipe_options.proto.
+// Forked from mediapipe/framework/calculator.proto.
 // The forked proto must remain identical to the original proto and should be
 // ONLY used by mediapipe open source project.
 
 syntax = "proto2";
 
-package akihabara.framework.proto_calculator;
+package akihabara.framework.protobuf;
 
-// Options used by a MediaPipe object.
-message MediaPipeOptions {
+// Options for Calculators. Each Calculator implementation should
+// have its own options proto, which should look like this:
+//
+// message MyCalculatorOptions {
+//   extend CalculatorOptions {
+//     optional MyCalculatorOptions ext = <unique id, e.g. the CL#>;
+//   }
+//   optional string field_needed_by_my_calculator = 1;
+//   optional int32 another_field = 2;
+//   // etc
+// }
+message CalculatorOptions {
+  // If true, this proto specifies a subset of field values,
+  // which should override corresponding field values.
+  optional bool merge_fields = 1 [deprecated = true];
+
   extensions 20000 to max;
 }
