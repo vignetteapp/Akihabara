@@ -21,7 +21,7 @@ syntax = "proto2";
 
 package akihabara.framework.protobuf;
 
-import "protofiles\framework\formats\annotation\rasterization.proto";
+import "protofiles/framework/formats/annotation/rasterization.proto";
 
 message LocationData {
   // The supported formats for representing location data. A single location
