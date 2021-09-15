@@ -21,7 +21,7 @@ package akihabara.framework.protobuf;
 
 import public "protofiles/framework/calculator_options.proto";
 
-import "protofiles/framework/any.proto";
+import "protofiles/any.proto";
 import "protofiles/framework/mediapipe_options.proto";
 import "protofiles/framework/packet_factory.proto";
 import "protofiles/framework/packet_generator.proto";
