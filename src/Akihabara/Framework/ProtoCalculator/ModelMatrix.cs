@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Mediapipe {
+namespace Akihabara.Framework.ProtoCalculator {
 
   /// <summary>Holder for reflection information generated from mediapipe/graphs/object_detection_3d/calculators/model_matrix.proto</summary>
   public static partial class ModelMatrixReflection {
@@ -298,11 +298,11 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "model_matrix" field.</summary>
     public const int ModelMatrixFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Mediapipe.TimedModelMatrixProto> _repeated_modelMatrix_codec
-        = pb::FieldCodec.ForMessage(10, global::Mediapipe.TimedModelMatrixProto.Parser);
-    private readonly pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto> modelMatrix_ = new pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> _repeated_modelMatrix_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> modelMatrix_ = new pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mediapipe.TimedModelMatrixProto> ModelMatrix {
+    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedModelMatrixProto> ModelMatrix {
       get { return modelMatrix_; }
     }
 
@@ -639,11 +639,11 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "vector_list" field.</summary>
     public const int VectorListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Mediapipe.TimedVectorProto> _repeated_vectorList_codec
-        = pb::FieldCodec.ForMessage(10, global::Mediapipe.TimedVectorProto.Parser);
-    private readonly pbc::RepeatedField<global::Mediapipe.TimedVectorProto> vectorList_ = new pbc::RepeatedField<global::Mediapipe.TimedVectorProto>();
+    private static readonly pb::FieldCodec<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> _repeated_vectorList_codec
+        = pb::FieldCodec.ForMessage(10, global::Akihabara.Framework.ProtoCalculator.TimedVectorProto.Parser);
+    private readonly pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> vectorList_ = new pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Mediapipe.TimedVectorProto> VectorList {
+    public pbc::RepeatedField<global::Akihabara.Framework.ProtoCalculator.TimedVectorProto> VectorList {
       get { return vectorList_; }
     }
 

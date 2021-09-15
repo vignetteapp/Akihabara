@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Mediapipe.FaceGeometry {
+namespace Akihabara.Framework.ProtoCalculator {
 
   /// <summary>Holder for reflection information generated from mediapipe/modules/face_geometry/protos/mesh_3d.proto</summary>
   public static partial class Mesh3DReflection {
