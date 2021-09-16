@@ -446,3 +446,7 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# bazel-related products
+bazel-*
+build/
