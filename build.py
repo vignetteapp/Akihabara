@@ -112,14 +112,6 @@ class BuildCommand(Command):
       os.path.join('src', 'Akihabara', 'Framework', 'Protobuf'))
     self.console.info('Built protobuf sources')
 
-    # self.console.info('Downloading protobuf dlls...')
-    # self._run_command(self._build_proto_dlls_commands())
-
-    # for f in glob.glob(os.path.join('.nuget', '**', 'lib', 'netstandard2.0', '*.dll'), recursive=True):
-    #   basename = os.path.basename(f)
-    #   self._copy(f, os.path.join(_BUILD_PATH, 'Plugins', 'Protobuf', basename))
-
-    # self.console.info('Downloaded protobuf dlls')
 
     # if self.resources:
     #   self.console.info('Building resource files')
@@ -129,6 +121,7 @@ class BuildCommand(Command):
     #     os.path.join(_BUILD_PATH, 'Resources'))
 
     #   self.console.info('Built resource files')
+
 
     # if self.desktop:
     #   self.console.info('Building native libraries for Desktop...')
@@ -148,6 +141,7 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for Desktop')
 
+
     # if self.android:
     #   self.console.info('Building native libraries for Android...')
     #   self._run_command(self._build_android_commands())
@@ -157,6 +151,7 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for Android')
 
+
     # if self.ios:
     #   self.console.info('Building native libaries for iOS...')
     #   self._run_command(self._build_ios_commands())
@@ -165,6 +160,7 @@ class BuildCommand(Command):
     #     os.path.join(_BUILD_PATH, 'Plugins', 'iOS'))
 
     #   self.console.info('Built native libraries for iOS')
+
 
     # self.console.info('Installing...')
     # # _copytree fails on Windows, so run `cp -r` instead.
@@ -273,8 +269,6 @@ class BuildCommand(Command):
     commands.append('//mediapipe_api:mediapipe_proto_srcs')
     return commands
 
-  def _build_proto_dlls_commands(self):
-    return ['nuget', 'install', '-o', '.nuget', '-Source', 'https://api.nuget.org/v3/index.json']
 
 
 class CleanCommand(Command):
