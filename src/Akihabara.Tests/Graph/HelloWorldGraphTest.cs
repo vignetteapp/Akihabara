@@ -4,7 +4,7 @@ using Akihabara.Framework;
 using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
 
-namespace Akihabara.Tests.Framework
+namespace Akihabara.Tests.Graph
 {
     [TestFixture]
     class HelloWorldTest
