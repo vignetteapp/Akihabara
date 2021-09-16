@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Akihabara.Tests.Framework.Packet
 {
+    [TestFixture]
     public class FloatPacketTest
     {
         #region Constructor
