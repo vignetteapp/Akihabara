@@ -23,7 +23,7 @@ namespace Akihabara.Framework.ImageFormat
         }
 
         public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
-        
+
         public ImageFrame(ImageFormat.Format format, int width, int height) : this(format, width, height, KDefaultAligmentBoundary) { }
 
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()

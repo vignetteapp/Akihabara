@@ -1,6 +1,5 @@
 ﻿using Google.Protobuf;
 using Akihabara.Framework.Protobuf;
-using Akihabara.External;
 using Akihabara.Native;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
@@ -12,10 +11,11 @@ namespace Akihabara.Framework
         {
             UnsafeNativeMethods.mp_api__ConvertFromCalculatorGraphConfigTextFormat(configText, out var serializedProtoPtr).Assert();
 
-            var config = Protobuf.DeserializeProto(serializedProtoPtr, CalculatorGraphConfig.Parser);
+            var config = External.Protobuf.DeserializeProto(serializedProtoPtr, CalculatorGraphConfig.Parser);
             Native.UnsafeNativeMethods.mp_api_SerializedProto__delete(serializedProtoPtr);
 
             return config;
         }
     }
 }
+
