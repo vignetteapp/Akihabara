@@ -109,7 +109,7 @@ class BuildCommand(Command):
     self._run_command(self._build_proto_srcs_commands())
     self._unzip(
       os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_proto_srcs.zip'),
-      os.path.join(_BUILD_PATH, 'Scripts', 'Protobuf'))
+      os.path.join(_BUILD_PATH, 'src', 'Akihabara', 'Framework', 'Protobuf'))
     self.console.info('Built protobuf sources')
 
     # self.console.info('Downloading protobuf dlls...')
