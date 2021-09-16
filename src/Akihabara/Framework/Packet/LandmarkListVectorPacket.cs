@@ -33,7 +33,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
     }
 }
