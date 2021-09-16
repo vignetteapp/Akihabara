@@ -20,17 +20,17 @@ namespace Akihabara.Framework.Packet
         public int Size => SafeNativeMethods.mp_SidePacket__size(MpPtr);
 
         // According to homuler's to-do, this should be a Packet.
-        // not sure if this is correct but this should do for now.
+        // We won't bother doing that for now.
         // See: https://git.io/JcCig
-        public Packet<T> At<T>(string key)
+        public T At<T>(string key)
         {
             UnsafeNativeMethods.mp_SidePacket__at__PKc(MpPtr, key, out var packetPtr);
 
             if (packetPtr == IntPtr.Zero)
-                return default(Packet<T>);
+                return default(T);
 
             GC.KeepAlive(this);
-            return (Packet<T>)Activator.CreateInstance(typeof(Packet<T>), packetPtr, true);
+            return (T)Activator.CreateInstance(typeof(T), packetPtr, true);
         }
 
         public void Emplace<T>(string key, Packet<T> packet)
