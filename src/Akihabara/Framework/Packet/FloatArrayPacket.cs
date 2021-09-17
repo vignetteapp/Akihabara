@@ -1,7 +1,7 @@
 ﻿using Akihabara.Framework.Port;
 using Akihabara.Native;
 using System;
-using nf = Akihabara.Native.Framework;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -29,14 +29,14 @@ namespace Akihabara.Framework.Packet
 
         public FloatArrayPacket(float[] value) : base()
         {
-            nf.UnsafeNativeMethods.mp__MakeFloatArrayPacket__Pf_i(value, value.Length, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeFloatArrayPacket__Pf_i(value, value.Length, out var ptr).Assert();
             Ptr = ptr;
             Length = value.Length;
         }
 
         public FloatArrayPacket(float[] value, Timestamp timestamp) : base()
         {
-            nf.UnsafeNativeMethods.mp__MakeFloatArrayPacket_At__Pf_i_Rt(value, value.Length, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeFloatArrayPacket_At__Pf_i_Rt(value, value.Length, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
             Ptr = ptr;
             Length = value.Length;
@@ -66,7 +66,7 @@ namespace Akihabara.Framework.Packet
 
         public IntPtr GetArrayPtr()
         {
-            nf.UnsafeNativeMethods.mp_Packet__GetFloatArray(MpPtr, out var value).Assert();
+            UnsafeNativeMethods.mp_Packet__GetFloatArray(MpPtr, out var value).Assert();
             GC.KeepAlive(this);
             return value;
         }
@@ -78,7 +78,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            nf.UnsafeNativeMethods.mp_Packet__ValidateAsFloatArray(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsFloatArray(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);

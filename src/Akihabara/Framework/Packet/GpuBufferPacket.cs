@@ -2,7 +2,7 @@
 using Akihabara.Gpu;
 using Akihabara.Native;
 using System;
-using ng = Akihabara.Native.Gpu;
+using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -13,7 +13,7 @@ namespace Akihabara.Framework.Packet
 
         public GpuBufferPacket(GpuBuffer gpuBuffer) : base()
         {
-            ng.UnsafeNativeMethods.mp__MakeGpuBufferPacket__Rgb(gpuBuffer.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeGpuBufferPacket__Rgb(gpuBuffer.MpPtr, out var ptr).Assert();
             gpuBuffer.Dispose(); // respect move semantics
 
             Ptr = ptr;
@@ -21,7 +21,7 @@ namespace Akihabara.Framework.Packet
 
         public GpuBufferPacket(GpuBuffer gpuBuffer, Timestamp timestamp)
         {
-            ng.UnsafeNativeMethods.mp__MakeGpuBufferPacket_At__Rgb_Rts(gpuBuffer.MpPtr, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeGpuBufferPacket_At__Rgb_Rts(gpuBuffer.MpPtr, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
             gpuBuffer.Dispose(); // respect move semantics
 
@@ -30,7 +30,7 @@ namespace Akihabara.Framework.Packet
 
         public override GpuBuffer Get()
         {
-            ng.UnsafeNativeMethods.mp_Packet__GetGpuBuffer(MpPtr, out var gpuBufferPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__GetGpuBuffer(MpPtr, out var gpuBufferPtr).Assert();
 
             GC.KeepAlive(this);
             return new GpuBuffer(gpuBufferPtr, false);
@@ -38,7 +38,7 @@ namespace Akihabara.Framework.Packet
 
         public override StatusOr<GpuBuffer> Consume()
         {
-            ng.UnsafeNativeMethods.mp_Packet__ConsumeGpuBuffer(MpPtr, out var statusOrGpuBufferPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ConsumeGpuBuffer(MpPtr, out var statusOrGpuBufferPtr).Assert();
 
             GC.KeepAlive(this);
             return new StatusOrGpuBuffer(statusOrGpuBufferPtr);
@@ -46,7 +46,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            ng.UnsafeNativeMethods.mp_Packet__ValidateAsGpuBuffer(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsGpuBuffer(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);

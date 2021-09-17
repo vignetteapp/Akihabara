@@ -2,7 +2,7 @@
 using Akihabara.Framework.Port;
 using Akihabara.Native;
 using System;
-using ff = Akihabara.Native.Framework.Format;
+using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -14,7 +14,7 @@ namespace Akihabara.Framework.Packet
 
         public ImageFramePacket(ImageFrame imageFrame) : base()
         {
-            ff.UnsafeNativeMethods.mp__MakeImageFramePacket__Pif(imageFrame.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeImageFramePacket__Pif(imageFrame.MpPtr, out var ptr).Assert();
             imageFrame.Dispose(); // respect move semantics
 
             Ptr = ptr;
@@ -22,7 +22,7 @@ namespace Akihabara.Framework.Packet
 
         public ImageFramePacket(ImageFrame imageFrame, Timestamp timestamp) : base()
         {
-            ff.UnsafeNativeMethods.mp__MakeImageFramePacket_At__Pif_Rt(imageFrame.MpPtr, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeImageFramePacket_At__Pif_Rt(imageFrame.MpPtr, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
             imageFrame.Dispose(); // respect move semantics
 
@@ -31,7 +31,7 @@ namespace Akihabara.Framework.Packet
 
         public override ImageFrame Get()
         {
-            ff.UnsafeNativeMethods.mp_Packet__GetImageFrame(MpPtr, out var imageFramePtr).Assert();
+            UnsafeNativeMethods.mp_Packet__GetImageFrame(MpPtr, out var imageFramePtr).Assert();
 
             GC.KeepAlive(this);
             return new ImageFrame(imageFramePtr, false);
@@ -39,7 +39,7 @@ namespace Akihabara.Framework.Packet
 
         public override StatusOr<ImageFrame> Consume()
         {
-            ff.UnsafeNativeMethods.mp_Packet__ConsumeImageFrame(MpPtr, out var statusOrImageFramePtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ConsumeImageFrame(MpPtr, out var statusOrImageFramePtr).Assert();
 
             GC.KeepAlive(this);
             return new StatusOrImageFrame(statusOrImageFramePtr);
@@ -47,7 +47,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            ff.UnsafeNativeMethods.mp_Packet__ValidateAsImageFrame(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsImageFrame(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
