@@ -33,7 +33,9 @@ jobs:
           sudo apt-get update && sudo apt-get install bazel -y
       
       - name: Build (Native)
-        run: python build.py build --desktop cpu --include_opencv_libs -v
+        run: |
+         pip install numpy
+         python build.py build --desktop cpu --include_opencv_libs -v
       
       - name: Build (.NET)
         run: dotnet build -c Debug ./src/Akihabara.sln
