@@ -376,6 +376,7 @@ class Argument:
     build_command_parser.add_argument('--include_opencv_libs', action='store_true', help='Include OpenCV\'s native libraries for Desktop')
     build_command_parser.add_argument('--linkopt', '-l', action='append', help='Linker options')
     build_command_parser.add_argument('--verbose', '-v', action='count', default=0)
+    build_command_parser.add_argument('--protobuf', '-p', action=argparse.BooleanOptionalAction, default=False, help='Build protobuf C# source code')
 
     clean_command_parser = subparsers.add_parser('clean', help='Clean temporary files')
     clean_command_parser.add_argument('--verbose', '-v', action='count', default=0)

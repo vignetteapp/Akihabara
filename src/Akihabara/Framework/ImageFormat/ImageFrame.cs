@@ -47,7 +47,7 @@ namespace Akihabara.Framework.ImageFormat
                     pixelData.Ptr,
                     ReleasePixelData,
                     out var ptr
-                );
+                ).Assert();
 
                 Ptr = ptr;
             }
@@ -76,7 +76,7 @@ namespace Akihabara.Framework.ImageFormat
 
         public bool IsAligned(uint alignmentBoundary)
         {
-            SafeNativeMethods.mp_ImageFrame__IsAligned__ui(MpPtr, alignmentBoundary, out var value);
+            SafeNativeMethods.mp_ImageFrame__IsAligned__ui(MpPtr, alignmentBoundary, out var value).Assert();
 
             GC.KeepAlive(this);
             return value;
@@ -99,28 +99,26 @@ namespace Akihabara.Framework.ImageFormat
 
         public int ChannelSize()
         {
-            SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
+            var code = SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
 
-            // This is supposed to have a ValueOrFormatException() Function but we don't know
-            // what it implements.
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int NumberOfChannels()
         {
-            SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val).Assert();
+            var code = SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int ByteDepth()
         {
-            SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val).Assert();
+            var code = SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int WidthStep()
@@ -128,9 +126,9 @@ namespace Akihabara.Framework.ImageFormat
             return SafeNativeMethods.mp_ImageFrame__WidthStep(MpPtr);
         }
 
-        public int MutablePixelData()
+        public IntPtr MutablePixelData()
         {
-            return (int)SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
+            return SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
         }
 
         public int PixelDataSize()
@@ -140,10 +138,10 @@ namespace Akihabara.Framework.ImageFormat
 
         public int PixelDataSizeStoredContiguously()
         {
-            SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
+            var code = SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public void SetToZero()
@@ -184,7 +182,7 @@ namespace Akihabara.Framework.ImageFormat
             {
                 fixed (T* bufferPtr = buffer)
                 {
-                    handler(MpPtr, (IntPtr)bufferPtr, bufferSize);
+                    handler(MpPtr, (IntPtr)bufferPtr, bufferSize).Assert();
                 }
             }
 
