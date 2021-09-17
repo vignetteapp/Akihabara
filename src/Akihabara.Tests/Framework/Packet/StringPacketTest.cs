@@ -12,7 +12,7 @@ namespace Akihabara.Tests.Framework.Packet
     public class StringPacketTest
     {
         #region Constructor
-        [Test] // previously [Test, SignalAbort] - I don't know why it was there
+        [Test, SignalAbort]
         public void Ctor_ShouldInstantiatePacket_When_CalledWithNoArguments()
         {
             var packet = new StringPacket();
