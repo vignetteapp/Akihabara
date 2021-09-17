@@ -15,7 +15,9 @@ jobs:
         with:
           dotnet-version: "5.0.x"
 
-      - uses: actions/setup-python@v2
+      # FIXME: Setup will fail if you use a Python version lower than 3.9
+      - name: Force Python 3.9
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
           architecture: 'x64'
@@ -31,13 +33,15 @@ jobs:
           sudo apt-get update && sudo apt-get install bazel -y
       
       - name: Build (Native)
-        run: python build.py build --desktop cpu --include_opencv_libs -v
+        run: |
+         pip install numpy
+         python build.py build --desktop cpu --include_opencv_libs -v
       
       - name: Build (.NET)
         run: dotnet build -c Debug ./src/Akihabara.sln
       
       - name: Test
-        run: dotnet test $pwd/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
+        run: dotnet test $pwd/src/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
