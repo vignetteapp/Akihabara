@@ -42,8 +42,7 @@ namespace Akihabara.Gpu
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
-        // GLES functions here!
-        // only use this if you're invoking this from a GLES device
+        #if OPENGL_ES
         public IntPtr EglDisplay => SafeNativeMethods.mp_GlContext__egl_display(MpPtr);
 
         public IntPtr EglConfig => SafeNativeMethods.mp_GlContext__egl_config(MpPtr);
@@ -53,7 +52,7 @@ namespace Akihabara.Gpu
         public IntPtr NsglContext => SafeNativeMethods.mp_GlContext__nsgl_context(MpPtr);
 
         public IntPtr EaglContext => SafeNativeMethods.mp_GlContext__eagl_context(MpPtr);
-        // end of GLES functions
+        #endif
 
         public bool IsCurrent => SafeNativeMethods.mp_GlContext__IsCurrent(MpPtr);
 
