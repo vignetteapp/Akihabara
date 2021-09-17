@@ -39,7 +39,7 @@ namespace Akihabara.Gpu
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
-        public StatusOrGpuResources Create()
+        public static StatusOrGpuResources Create()
         {
             UnsafeNativeMethods.mp_GpuResources_Create(out var statusOrGpuResourcesPtr).Assert();
 
