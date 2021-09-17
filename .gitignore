@@ -450,3 +450,6 @@ $RECYCLE.BIN/
 # bazel-related products
 bazel-*
 build/
+
+#Python
+.venv

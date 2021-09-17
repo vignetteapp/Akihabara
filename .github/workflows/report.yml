@@ -1,0 +1,19 @@
+name: Report
+on:
+  workflow_run:
+    workflows: [ 'Continuous Integration' ]
+    types:
+      - completed
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+    steps:
+      - name: Report
+        uses: dorny/test-reporter@v1.4.2
+        with:
+          artifact: TestResults-Vignette.Game.Tests
+          name: Test Results
+          path: "*.trx"
+          reporter: dotnet-trx
