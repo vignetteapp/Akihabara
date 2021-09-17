@@ -1,4 +1,4 @@
-﻿using Akihabara.Core;
+using Akihabara.Core;
 using Akihabara.Framework;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
@@ -16,7 +16,7 @@ namespace Akihabara.Tests.Framework.Packet
     [TestFixture]
     public class EglSurfaceHolderPacketTest
     {
-#region Constructor
+        #region Constructor
         [Test]
         public void Ctor_ShouldInstantiatePacket_When_CalledWithNoArguments()
         {
@@ -35,9 +35,9 @@ namespace Akihabara.Tests.Framework.Packet
             Assert.True(packet.ValidateAsType().ok);
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
-#endregion
+        #endregion
 
-#region #isDisposed
+        #region #isDisposed
         [Test]
         public void IsDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
@@ -56,7 +56,7 @@ namespace Akihabara.Tests.Framework.Packet
         }
 #endregion
 
-#region #Get
+        #region #Get
         [Test] // previously [Test, SignalAbort] - I don't know why it was there
         public void Get_ShouldThrowMediaPipeException_When_DataIsEmpty()
         {
@@ -76,9 +76,9 @@ namespace Akihabara.Tests.Framework.Packet
             Assert.False(value.OwnsResource());
             Assert.True(value.FlipY());
         }
-#endregion
+        #endregion
 
-#region #DebugTypeName
+        #region #DebugTypeName
         [Test]
         public void DebugTypeName_ShouldReturnFloat_When_ValueIsSet()
         {
@@ -86,7 +86,7 @@ namespace Akihabara.Tests.Framework.Packet
 
             Assert.AreEqual(packet.DebugTypeName(), "std::unique_ptr<mediapipe::EglSurfaceHolder, std::default_delete<mediapipe::EglSurfaceHolder> >");
         }
-#endregion
+        #endregion
     }
 #endif
 }
