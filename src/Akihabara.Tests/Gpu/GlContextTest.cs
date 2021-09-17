@@ -55,10 +55,6 @@ namespace Akihabara.Tests.Gpu
             Assert.AreEqual(glContext.glMajorVersion, 3);
             Assert.AreEqual(glContext.glMinorVersion, 2);
             Assert.AreEqual(glContext.glFinishCount, 0);
-#elif STANDALONE_OSX
-            Assert.AreNotEqual(glContext.nsglContext, IntPtr.Zero);
-#elif IOS
-            Assert.AreNotEqual(glContext.eaglContext, IntPtr.Zero);
 #endif
         }
         #endregion
