@@ -25,7 +25,7 @@ namespace Akihabara.Tests.Framework.Packet
             Assert.AreEqual(packet.ValidateAsType().Code, Status.StatusCode.Internal);
         }
 
-        [Test]
+        [Test, GpuOnly]
         public void Ctor_ShouldInstantiatePacket_When_CalledWithValue()
         {
             var eglSurfaceHolder = new EglSurfaceHolder();
@@ -65,7 +65,7 @@ namespace Akihabara.Tests.Framework.Packet
             Assert.Throws<MediapipeException>(() => { packet.Get(); });
         }
 
-        [Test]
+        [Test, GpuOnly]
         public void Get_ShouldReturnEglSurfaceHolder_When_DataIsNotEmpty()
         {
             var eglSurfaceHolder = new EglSurfaceHolder();
@@ -79,7 +79,7 @@ namespace Akihabara.Tests.Framework.Packet
         #endregion
 
         #region #DebugTypeName
-        [Test]
+        [Test, GpuOnly]
         public void DebugTypeName_ShouldReturnFloat_When_ValueIsSet()
         {
             var packet = new EglSurfaceHolderPacket(new EglSurfaceHolder());
