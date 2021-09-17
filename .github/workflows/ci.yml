@@ -41,7 +41,7 @@ jobs:
         run: dotnet build -c Debug ./src/Akihabara.sln
       
       - name: Test
-        run: dotnet test $pwd/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
+        run: dotnet test $pwd/src/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
