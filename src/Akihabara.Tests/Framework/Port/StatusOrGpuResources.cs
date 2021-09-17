@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace Akihabara.Framework.Port
 {
+    [TestFixture]
     public class StatusOrGpuResourcesTest
     {
         #region #status

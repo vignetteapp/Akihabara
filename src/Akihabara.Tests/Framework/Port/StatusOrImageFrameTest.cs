@@ -6,6 +6,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
+    [TestFixture]
     public class StatusOrImageFrameTest
     {
         #region #status

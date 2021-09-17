@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace Tests
 {
+    [TestFixture]
     public class GpuResourcesTest
     {
         #region Create

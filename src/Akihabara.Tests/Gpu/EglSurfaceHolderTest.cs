@@ -6,6 +6,7 @@ using System;
 
 namespace Akihabara.Tests.Gpu
 {
+    [TestFixture]
     public class EglSurfaceHolderTest
     {
 #region Constructor

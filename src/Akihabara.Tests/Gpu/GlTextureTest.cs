@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace Akihabara.Tests.Gpu
 {
+    [TestFixture]
     public class GlTextureTest
     {
         #region Constructor

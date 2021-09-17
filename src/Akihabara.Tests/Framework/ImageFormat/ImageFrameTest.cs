@@ -7,6 +7,7 @@ using UnmanageUtility;
 
 namespace Akihabara.Tests.Format
 {
+    [TestFixture]
     public class ImageFrameTest
     {
         #region Constructor

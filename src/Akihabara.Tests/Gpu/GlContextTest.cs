@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace Akihabara.Tests.Gpu
 {
+    [TestFixture]
     public class GlContextTest
     {
         #region GetCurrent
