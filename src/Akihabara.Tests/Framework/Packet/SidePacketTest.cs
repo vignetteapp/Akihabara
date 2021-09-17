@@ -3,6 +3,7 @@ using Akihabara.Framework.Packet;
 
 namespace Akihabara.Tests.Framework.Packet
 {
+    [TestFixture]
     public class SidePacketTest
     {
         #region #Size

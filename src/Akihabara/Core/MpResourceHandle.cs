@@ -71,7 +71,7 @@ namespace Akihabara.Core
 
         protected string MarshalStringFromNative(StringOutFunc func)
         {
-            func(MpPtr, out var strPtr);
+            func(MpPtr, out var strPtr).Assert();
             GC.KeepAlive(this);
 
             var str = Marshal.PtrToStringAnsi(strPtr);
