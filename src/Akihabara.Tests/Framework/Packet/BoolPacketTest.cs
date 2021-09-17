@@ -7,6 +7,7 @@ using Akihabara.Framework.Packet;
 
 namespace Akihabara.Tests.Framework.Packet
 {
+    [TestFixture]
     public class BoolPacketTest
     {
         #region Constructor
