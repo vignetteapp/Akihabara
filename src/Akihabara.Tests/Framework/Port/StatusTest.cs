@@ -88,7 +88,7 @@ namespace Tests
             Assert.DoesNotThrow(() => { status.AssertOk(); });
         }
 
-        public void AssertOk_ShouldThrow_When_StatusIsNotOk()
+        public static void AssertOk_ShouldThrow_When_StatusIsNotOk()
         {
             var status = Status.FailedPrecondition();
 

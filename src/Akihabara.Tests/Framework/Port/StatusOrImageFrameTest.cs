@@ -52,7 +52,7 @@ namespace Tests
         }
         #endregion
 
-        private StatusOrImageFrame InitializeSubject()
+        private static StatusOrImageFrame InitializeSubject()
         {
             var imageFrame = new ImageFrame(ImageFormat.Format.Sbgra, 10, 10);
             var packet = new ImageFramePacket(imageFrame, new Timestamp(1));

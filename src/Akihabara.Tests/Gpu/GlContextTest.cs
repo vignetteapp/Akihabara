@@ -62,7 +62,7 @@ namespace Akihabara.Tests.Gpu
         }
         #endregion
 
-        private GlContext GetGlContext()
+        private static GlContext GetGlContext()
         {
             GlContext glContext = null;
 

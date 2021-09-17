@@ -86,7 +86,7 @@ namespace Akihabara.Tests.Framework.Packet
             Assert.Throws<MediapipeException>(() => { packet.Get(); });
         }
 
-        public void Get_ShouldReturnImageFrame_When_DataIsNotEmpty()
+        public static void Get_ShouldReturnImageFrame_When_DataIsNotEmpty()
         {
             var packet = new ImageFramePacket(new ImageFrame(ImageFormat.Format.Sbgra, 10, 10));
             var imageFrame = packet.Get();
