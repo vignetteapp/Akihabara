@@ -83,7 +83,7 @@ namespace Akihabara.Tests.Framework.Packet
         #endregion
 
         #region #Get
-        [Test] // previously [Test, SignalAbort] - I don't know why it was there
+        [Test, SignalAbort]
         public void Get_ShouldThrowMediaPipeException_When_DataIsEmpty()
         {
             var packet = new ImageFramePacket();
