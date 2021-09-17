@@ -1,5 +1,5 @@
-using Akihabara.Gpu;
 using Akihabara.Framework.Port;
+using Akihabara.Gpu;
 using NUnit.Framework;
 
 namespace Akihabara.Tests.Gpu
@@ -47,18 +47,18 @@ namespace Akihabara.Tests.Gpu
         {
             var glContext = GetGlContext();
 
-            #if OPENGL_ES
+#if OPENGL_ES
             Assert.AreNotEqual(glContext.eglDisplay, IntPtr.Zero);
             Assert.AreNotEqual(glContext.eglConfig, IntPtr.Zero);
             Assert.AreNotEqual(glContext.eglContext, IntPtr.Zero);
             Assert.AreEqual(glContext.glMajorVersion, 3);
             Assert.AreEqual(glContext.glMinorVersion, 2);
             Assert.AreEqual(glContext.glFinishCount, 0);
-            #elif STANDALONE_OSX
+#elif STANDALONE_OSX
             Assert.AreNotEqual(glContext.nsglContext, IntPtr.Zero);
-            #elif IOS
+#elif IOS
             Assert.AreNotEqual(glContext.eaglContext, IntPtr.Zero);
-            #endif
+#endif
         }
         #endregion
 

@@ -1,6 +1,6 @@
-using NUnit.Framework;
 using Akihabara.Core;
 using Akihabara.Framework.ImageFormat;
+using NUnit.Framework;
 using System;
 using System.Linq;
 using UnmanageUtility;

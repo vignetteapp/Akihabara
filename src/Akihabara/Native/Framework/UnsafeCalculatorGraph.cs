@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Akihabara.Framework;
+using System;
 using System.Runtime.InteropServices;
-
-using Akihabara.Framework;
 
 namespace Akihabara.Native.Framework
 {

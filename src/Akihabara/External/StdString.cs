@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 
 namespace Akihabara.External
 {
@@ -13,7 +13,7 @@ namespace Akihabara.External
         public StdString(byte[] bytes) : base()
         {
             UnsafeNativeMethods.std_string__PKc_i(bytes, bytes.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()

@@ -9,7 +9,7 @@ namespace Akihabara.Native.Gpu
         public static extern void glFlush();
 
         [DllImport(MediaPipeLibrary)]
-        public static extern void glReadPixels(int x, int y, int width, int height, UInt32 glFormat, UInt32 glType,
+        public static extern void glReadPixels(int x, int y, int width, int height, uint glFormat, uint glType,
             IntPtr pixels);
     }
 }

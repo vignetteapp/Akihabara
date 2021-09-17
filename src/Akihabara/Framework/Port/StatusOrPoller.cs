@@ -1,8 +1,7 @@
-using System;
-
 using Akihabara.Native;
-using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
+using System;
 using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Port
 {

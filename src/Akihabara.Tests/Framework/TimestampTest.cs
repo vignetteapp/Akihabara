@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using Akihabara.Framework;
+using NUnit.Framework;
 
 namespace Akihabara.Tests.Framework
 {

@@ -1,12 +1,8 @@
-﻿using Akihabara.Gpu;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using  ng = Akihabara.Native.Gpu;
-using Akihabara.Framework.Port;
+﻿using Akihabara.Framework.Port;
+using Akihabara.Gpu;
 using Akihabara.Native;
+using System;
+using ng = Akihabara.Native.Gpu;
 
 namespace Akihabara.Framework.Packet
 {
@@ -20,7 +16,7 @@ namespace Akihabara.Framework.Packet
             ng.UnsafeNativeMethods.mp__MakeGpuBufferPacket__Rgb(gpuBuffer.MpPtr, out var ptr).Assert();
             gpuBuffer.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public GpuBufferPacket(GpuBuffer gpuBuffer, Timestamp timestamp)
@@ -29,7 +25,7 @@ namespace Akihabara.Framework.Packet
             GC.KeepAlive(timestamp);
             gpuBuffer.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override GpuBuffer Get()

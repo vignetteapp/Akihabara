@@ -1,15 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-
-using Google.Protobuf;
 using Akihabara.Core;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
 using Akihabara.Framework.Protobuf;
 using Akihabara.Gpu;
 using Akihabara.Native;
-using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
+using Google.Protobuf;
+using System;
+using System.Runtime.InteropServices;
 using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework
 {
@@ -21,19 +20,19 @@ namespace Akihabara.Framework
         public CalculatorGraph() : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(string textFormatConfig) : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(byte[] serializedConfig) : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(CalculatorGraphConfig config) : this(config.ToByteArray()) { }

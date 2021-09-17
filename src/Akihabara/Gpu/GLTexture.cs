@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -12,14 +12,14 @@ namespace Akihabara.Gpu
         {
             UnsafeNativeMethods.mp_GlTexture__(out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public GlTexture(uint name, int width, int height) : base()
         {
             UnsafeNativeMethods.mp_GlTexture__ui_i_i(name, width, height, out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }

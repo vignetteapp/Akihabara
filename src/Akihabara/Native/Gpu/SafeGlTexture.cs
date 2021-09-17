@@ -13,9 +13,9 @@ namespace Akihabara.Native.Gpu
         public static extern int mp_GlTexture__height(IntPtr glTexture);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTexture__target(IntPtr glTexture);
+        public static extern uint mp_GlTexture__target(IntPtr glTexture);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTexture__name(IntPtr glTexture);
+        public static extern uint mp_GlTexture__name(IntPtr glTexture);
     }
 }

@@ -1,12 +1,8 @@
 ﻿using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Port;
-using ff = Akihabara.Native.Framework.Format;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Akihabara.Native;
+using System;
+using ff = Akihabara.Native.Framework.Format;
 
 namespace Akihabara.Framework.Packet
 {
@@ -21,7 +17,7 @@ namespace Akihabara.Framework.Packet
             ff.UnsafeNativeMethods.mp__MakeImageFramePacket__Pif(imageFrame.MpPtr, out var ptr).Assert();
             imageFrame.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public ImageFramePacket(ImageFrame imageFrame, Timestamp timestamp) : base()
@@ -30,7 +26,7 @@ namespace Akihabara.Framework.Packet
             GC.KeepAlive(timestamp);
             imageFrame.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override ImageFrame Get()

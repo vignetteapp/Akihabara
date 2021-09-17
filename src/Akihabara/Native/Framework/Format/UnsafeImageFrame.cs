@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Akihabara.Framework.ImageFormat;
+using System;
 using System.Runtime.InteropServices;
-using Akihabara.Framework.ImageFormat;
 
 namespace Akihabara.Native.Framework.Format
 {
@@ -11,7 +11,7 @@ namespace Akihabara.Native.Framework.Format
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_ImageFrame__ui_i_i_ui(
-            ImageFormat.Format format, int width, int height, UInt32 alignmentBoundary, out IntPtr imageFrame);
+            ImageFormat.Format format, int width, int height, uint alignmentBoundary, out IntPtr imageFrame);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_ImageFrame__ui_i_i_i_Pui8_PF(

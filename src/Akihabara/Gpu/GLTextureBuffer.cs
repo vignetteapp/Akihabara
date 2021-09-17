@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -24,7 +24,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
 
-            this.Ptr = _sharedPtrHandle.Get();
+            Ptr = _sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint target, uint name, int width, int height, GpuBufferFormat format,

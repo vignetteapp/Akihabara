@@ -1,8 +1,7 @@
-using NUnit.Framework;
-using System;
 using Akihabara.Framework;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
+using NUnit.Framework;
 
 namespace Akihabara.Tests.Graph
 {
@@ -45,7 +44,7 @@ node {
 
             Assert.DoesNotThrow(() =>
             {
-                int timestamp = System.Environment.TickCount & System.Int32.MaxValue;
+                int timestamp = System.Environment.TickCount & int.MaxValue;
                 var inputPacket = new StringPacket("Hello World", new Timestamp(timestamp));
                 outputPacket = new StringPacket();
                 pushedInput = helloWorldGraph.AddPacketToInputStream(inputStream, inputPacket);

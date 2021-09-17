@@ -1,6 +1,6 @@
-﻿using Google.Protobuf;
-using Akihabara.Framework.Protobuf;
+﻿using Akihabara.Framework.Protobuf;
 using Akihabara.Native;
+using Google.Protobuf;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework

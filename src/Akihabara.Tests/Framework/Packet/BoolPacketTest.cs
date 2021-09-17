@@ -1,9 +1,9 @@
-using System;
-using NUnit.Framework;
 using Akihabara.Core;
 using Akihabara.Framework;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
+using NUnit.Framework;
+using System;
 
 namespace Akihabara.Tests.Framework.Packet
 {

@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -20,7 +20,7 @@ namespace Akihabara.Gpu
         public GlContext(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
             _sharedPtrHandle = new GlContextSharedPtr(ptr);
-            this.Ptr = _sharedPtrHandle.Get();
+            Ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
@@ -42,7 +42,7 @@ namespace Akihabara.Gpu
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
-        #if OPENGL_ES
+#if OPENGL_ES
         public IntPtr EglDisplay => SafeNativeMethods.mp_GlContext__egl_display(MpPtr);
 
         public IntPtr EglConfig => SafeNativeMethods.mp_GlContext__egl_config(MpPtr);
@@ -52,7 +52,7 @@ namespace Akihabara.Gpu
         public IntPtr NsglContext => SafeNativeMethods.mp_GlContext__nsgl_context(MpPtr);
 
         public IntPtr EaglContext => SafeNativeMethods.mp_GlContext__eagl_context(MpPtr);
-        #endif
+#endif
 
         public bool IsCurrent => SafeNativeMethods.mp_GlContext__IsCurrent(MpPtr);
 

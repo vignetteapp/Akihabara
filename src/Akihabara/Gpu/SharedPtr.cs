@@ -1,5 +1,5 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
+using System;
 
 namespace Akihabara.Gpu
 {

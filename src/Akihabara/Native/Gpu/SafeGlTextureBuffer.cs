@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Akihabara.Gpu;
+using System;
 using System.Diagnostics.Contracts;
 using System.Runtime.InteropServices;
-using Akihabara.Gpu;
 
 namespace Akihabara.Native.Gpu
 {
@@ -9,10 +9,10 @@ namespace Akihabara.Native.Gpu
     {
         #region GlTextureBuffer
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTextureBuffer__name(IntPtr glTextureBuffer);
+        public static extern uint mp_GlTextureBuffer__name(IntPtr glTextureBuffer);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTextureBuffer__target(IntPtr glTextureBuffer);
+        public static extern uint mp_GlTextureBuffer__target(IntPtr glTextureBuffer);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern int mp_GlTextureBuffer__width(IntPtr glTextureBuffer);

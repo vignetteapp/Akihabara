@@ -19,7 +19,7 @@ namespace Akihabara.Core
         protected DisposableObject(bool isOwner)
         {
             IsDisposed = false;
-            this.IsOwner = isOwner;
+            IsOwner = isOwner;
         }
 
         public void Dispose()

@@ -1,6 +1,6 @@
-using System;
 using Akihabara.Framework.Port;
 using Akihabara.Native;
+using System;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
@@ -14,14 +14,14 @@ namespace Akihabara.Framework.Packet
         public FloatPacket(float value) : base()
         {
             UnsafeNativeMethods.mp__MakeFloatPacket__f(value, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public FloatPacket(float value, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeFloatPacket_At__f_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override float Get()

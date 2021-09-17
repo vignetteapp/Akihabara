@@ -6,7 +6,7 @@ namespace Akihabara.Native.Framework
     public partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern MpReturnCode mp_Timestamp__l(Int64 value, out IntPtr timestamp);
+        public static extern MpReturnCode mp_Timestamp__l(long value, out IntPtr timestamp);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_Timestamp__delete(IntPtr timestamp);

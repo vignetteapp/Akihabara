@@ -1,8 +1,8 @@
-using NUnit.Framework;
 using Akihabara.Framework;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
 using Akihabara.Framework.Protobuf;
+using NUnit.Framework;
 
 namespace Akihabara.Tests.Framework
 {

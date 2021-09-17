@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Akihabara.Gpu;
+using System;
 using System.Runtime.InteropServices;
-using Akihabara.Gpu;
 
 namespace Akihabara.Native.Gpu
 {

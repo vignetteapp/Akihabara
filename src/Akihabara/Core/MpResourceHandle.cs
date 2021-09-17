@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Akihabara.Native;
+using System;
 using System.Runtime.InteropServices;
-using Akihabara.Native;
 
 namespace Akihabara.Core
 {
@@ -14,7 +14,7 @@ namespace Akihabara.Core
 
         protected MpResourceHandle(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         #region IMpResourceHandle

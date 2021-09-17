@@ -1,6 +1,6 @@
-using System;
 using Akihabara.Gpu;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 

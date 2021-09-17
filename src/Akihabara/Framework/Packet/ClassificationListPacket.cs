@@ -1,7 +1,7 @@
-using System;
-using Akihabara.Framework.Protobuf;
 using Akihabara.Framework.Port;
+using Akihabara.Framework.Protobuf;
 using Akihabara.Native;
+using System;
 
 namespace Akihabara.Framework.Packet
 {

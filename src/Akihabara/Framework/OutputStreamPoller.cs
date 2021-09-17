@@ -1,8 +1,7 @@
-using System;
-
 using Akihabara.Core;
-using Akihabara.Native;
 using Akihabara.Framework.Packet;
+using Akihabara.Native;
+using System;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework

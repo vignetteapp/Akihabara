@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Akihabara.Framework.ImageFormat;
+using System;
 using System.Diagnostics.Contracts;
 using System.Runtime.InteropServices;
-using Akihabara.Framework.ImageFormat;
 
 namespace Akihabara.Native.Framework.Format
 {
@@ -17,7 +17,7 @@ namespace Akihabara.Native.Framework.Format
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_ImageFrame__IsAligned__ui(
-            IntPtr imageFrame, UInt32 alignmentBoundary, [MarshalAs(UnmanagedType.I1)] out bool value);
+            IntPtr imageFrame, uint alignmentBoundary, [MarshalAs(UnmanagedType.I1)] out bool value);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern ImageFormat.Format mp_ImageFrame__Format(IntPtr imageFrame);

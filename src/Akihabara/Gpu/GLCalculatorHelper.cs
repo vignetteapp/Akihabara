@@ -1,9 +1,9 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Port;
 using Akihabara.Native;
+using System;
+using System.Runtime.InteropServices;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -19,7 +19,7 @@ namespace Akihabara.Gpu
         {
             UnsafeNativeMethods.mp_GlCalculatorHelper__(out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()

@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -15,7 +15,7 @@ namespace Akihabara.Gpu
             UnsafeNativeMethods.mp_GpuBuffer__PSgtb(glTextureBuffer.SharedPtr, out var ptr).Assert();
             glTextureBuffer.Dispose();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GpuBuffer__delete(Ptr);

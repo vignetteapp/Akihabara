@@ -1,7 +1,7 @@
 using Akihabara.Framework;
+using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
-using Akihabara.Framework.ImageFormat;
 using NUnit.Framework;
 
 namespace Tests

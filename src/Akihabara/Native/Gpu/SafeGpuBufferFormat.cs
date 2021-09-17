@@ -1,7 +1,7 @@
-﻿using System.Diagnostics.Contracts;
-using System.Runtime.InteropServices;
-using Akihabara.Framework.ImageFormat;
+﻿using Akihabara.Framework.ImageFormat;
 using Akihabara.Gpu;
+using System.Diagnostics.Contracts;
+using System.Runtime.InteropServices;
 
 namespace Akihabara.Native.Gpu
 {

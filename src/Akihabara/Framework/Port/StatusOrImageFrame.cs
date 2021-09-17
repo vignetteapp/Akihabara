@@ -1,8 +1,8 @@
-using System;
-using Akihabara.Native;
 using Akihabara.Framework.ImageFormat;
-using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
+using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Framework.Format.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Port
 {

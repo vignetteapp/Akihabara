@@ -1,14 +1,4 @@
-﻿using Akihabara.Native;
-using ng = Akihabara.Native.Gpu;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Akihabara.Framework.Port;
-using Akihabara.Gpu;
-
-namespace Akihabara.Framework.Packet
+﻿namespace Akihabara.Framework.Packet
 {
     /* 
      * defined on Linux, but useful only with OpenGL ES

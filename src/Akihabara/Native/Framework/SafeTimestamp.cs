@@ -7,13 +7,13 @@ namespace Akihabara.Native.Framework
     public partial class SafeNativeMethods : NativeMethods
     {
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern Int64 mp_Timestamp__Value(IntPtr timestamp);
+        public static extern long mp_Timestamp__Value(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern double mp_Timestamp__Seconds(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern Int64 mp_Timestamp__Microseconds(IntPtr timestamp);
+        public static extern long mp_Timestamp__Microseconds(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]

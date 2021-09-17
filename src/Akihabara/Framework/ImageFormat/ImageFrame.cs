@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using UnmanageUtility;
 using SafeNativeMethods = Akihabara.Native.Framework.Format.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
@@ -19,7 +19,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame() : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__(out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
@@ -29,7 +29,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         // there is no equivalent of NativeArray<T> so the closest thing we have is UnmanagedArray<T> or ArrayPooL<T>, which is recommended
@@ -41,12 +41,12 @@ namespace Akihabara.Framework.ImageFormat
             {
                 UnsafeNativeMethods.mp_ImageFrame__ui_i_i_i_Pui8_PF(
                     format, width, height, widthStep,
-                    (IntPtr)pixelData.Ptr,
+                    pixelData.Ptr,
                     ReleasePixelData,
                     out var ptr
                 );
 
-                this.Ptr = ptr;
+                Ptr = ptr;
             }
         }
 

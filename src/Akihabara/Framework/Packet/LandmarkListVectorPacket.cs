@@ -1,12 +1,8 @@
-﻿using Akihabara.External;
-using Akihabara.Framework.Port;
+﻿using Akihabara.Framework.Port;
 using Akihabara.Framework.Protobuf;
 using Akihabara.Native;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Akihabara.Framework.Packet
 {

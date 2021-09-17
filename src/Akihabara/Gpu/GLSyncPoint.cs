@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native;
+using System;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 
@@ -14,7 +14,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GlSyncPointSharedPtr(ptr);
 
-            this.Ptr = _sharedPtrHandle.Get();
+            Ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()

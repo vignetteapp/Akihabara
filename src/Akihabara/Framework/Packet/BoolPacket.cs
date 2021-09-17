@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Framework.Port;
+﻿using Akihabara.Framework.Port;
 using Akihabara.Native;
+using System;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
@@ -15,14 +15,14 @@ namespace Akihabara.Framework.Packet
         {
             UnsafeNativeMethods.mp__MakeBoolPacket__b(value, out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public BoolPacket(bool value, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeBoolPacket_At__b_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override bool Get()

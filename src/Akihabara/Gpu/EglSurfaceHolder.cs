@@ -1,10 +1,4 @@
-﻿using Akihabara.Core;
-using Akihabara.Native;
-using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
-using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
-using System;
-
-namespace Akihabara.Gpu
+﻿namespace Akihabara.Gpu
 {
 #if OPENGL_ES
     public class EglSurfaceHolder : MpResourceHandle

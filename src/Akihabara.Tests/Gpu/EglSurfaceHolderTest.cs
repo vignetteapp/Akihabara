@@ -8,7 +8,7 @@ namespace Akihabara.Tests.Gpu
 {
     public class EglSurfaceHolderTest
     {
-        #region Constructor
+#region Constructor
         [Test, GpuOnly]
         public void Ctor_ShouldInstantiateEglSurfaceHolder()
         {
@@ -16,9 +16,9 @@ namespace Akihabara.Tests.Gpu
 
             Assert.False(eglSurfaceHolder.FlipY());
         }
-        #endregion
+#endregion
 
-        #region #isDisposed
+#region #isDisposed
         [Test, GpuOnly]
         public void isDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
@@ -35,9 +35,9 @@ namespace Akihabara.Tests.Gpu
 
             Assert.True(eglSurfaceHolder.isDisposed);
         }
-        #endregion
+#endregion
 
-        #region #SetFlipY
+#region #SetFlipY
         [Test, GpuOnly]
         public void SetFilpY_ShouldSetFlipY()
         {
@@ -46,9 +46,9 @@ namespace Akihabara.Tests.Gpu
 
             Assert.True(eglSurfaceHolder.FlipY());
         }
-        #endregion
+#endregion
 
-        #region #SetSurface
+#region #SetSurface
         void ExpectSetSurfaceOk(IntPtr surface)
         {
             var eglSurfaceHolder = new EglSurfaceHolder();
@@ -82,7 +82,7 @@ namespace Akihabara.Tests.Gpu
             ExpectSetSurfaceOk(texture.GetNativeTexturePtr());
         }
         */
-        #endregion
+#endregion
     }
 }
 #endif

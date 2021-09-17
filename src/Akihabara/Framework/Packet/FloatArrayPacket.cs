@@ -1,11 +1,7 @@
 ﻿using Akihabara.Framework.Port;
-using nf = Akihabara.Native.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Akihabara.Native;
+using System;
+using nf = Akihabara.Native.Framework;
 
 namespace Akihabara.Framework.Packet
 {
@@ -34,7 +30,7 @@ namespace Akihabara.Framework.Packet
         public FloatArrayPacket(float[] value) : base()
         {
             nf.UnsafeNativeMethods.mp__MakeFloatArrayPacket__Pf_i(value, value.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
             Length = value.Length;
         }
 
@@ -42,7 +38,7 @@ namespace Akihabara.Framework.Packet
         {
             nf.UnsafeNativeMethods.mp__MakeFloatArrayPacket_At__Pf_i_Rt(value, value.Length, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
             Length = value.Length;
         }
 

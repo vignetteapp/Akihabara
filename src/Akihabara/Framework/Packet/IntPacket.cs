@@ -1,11 +1,7 @@
-﻿using Akihabara.Native;
-using nf = Akihabara.Native.Framework;
+﻿using Akihabara.Framework.Port;
+using Akihabara.Native;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Akihabara.Framework.Port;
+using nf = Akihabara.Native.Framework;
 
 namespace Akihabara.Framework.Packet
 {
@@ -18,14 +14,14 @@ namespace Akihabara.Framework.Packet
         public IntPacket(int value) : base()
         {
             nf.UnsafeNativeMethods.mp__MakeIntPacket__i(value, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public IntPacket(int value, Timestamp timestamp) : base()
         {
             nf.UnsafeNativeMethods.mp__MakeIntPacket_At__i_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override int Get()

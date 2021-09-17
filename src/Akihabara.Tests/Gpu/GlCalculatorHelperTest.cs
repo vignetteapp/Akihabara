@@ -1,6 +1,6 @@
-using Akihabara.Gpu;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.ImageFormat;
+using Akihabara.Framework.Port;
+using Akihabara.Gpu;
 using NUnit.Framework;
 using System;
 
@@ -166,13 +166,13 @@ namespace Akihabara.Tests.Gpu
 
             var glContext = glCalculatorHelper.GetGlContext();
 
-            #if OPENGL_ES
+#if OPENGL_ES
             Assert.AreNotEqual(glContext.eglContext, IntPtr.Zero);
-            #elif UNITY_STANDALONE_OSX
+#elif UNITY_STANDALONE_OSX
             Assert.AreNotEqual(glContext.nsglContext, IntPtr.Zero);
-            #elif UNITY_IOS
+#elif UNITY_IOS
             Assert.AreNotEqual(glContext.eaglContext, IntPtr.Zero);
-            #endif
+#endif
         }
         #endregion
     }

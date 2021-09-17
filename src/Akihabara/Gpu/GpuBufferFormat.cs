@@ -1,6 +1,6 @@
-﻿using System.Runtime.InteropServices;
-using Akihabara.Framework.ImageFormat;
+﻿using Akihabara.Framework.ImageFormat;
 using Akihabara.Native.Gpu;
+using System.Runtime.InteropServices;
 
 namespace Akihabara.Gpu
 {

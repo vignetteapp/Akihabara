@@ -1,6 +1,6 @@
-﻿using System;
-using Akihabara.Core;
+﻿using Akihabara.Core;
 using Akihabara.Native.Framework;
+using System;
 
 namespace Akihabara.Framework.Packet
 {
@@ -9,7 +9,7 @@ namespace Akihabara.Framework.Packet
         public SidePacket() : base()
         {
             UnsafeNativeMethods.mp_SidePacket__(out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
