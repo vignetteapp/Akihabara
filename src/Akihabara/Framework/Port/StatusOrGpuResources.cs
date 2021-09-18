@@ -1,4 +1,8 @@
-﻿using System;
+// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using System;
 using Akihabara.Gpu;
 using Akihabara.Native;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
