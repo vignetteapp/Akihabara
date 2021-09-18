@@ -1,4 +1,8 @@
-﻿using Akihabara.Gpu;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Gpu;
 using System;
 using System.Collections.Generic;
 using System.Linq;

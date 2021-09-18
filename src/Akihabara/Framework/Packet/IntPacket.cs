@@ -1,4 +1,8 @@
-﻿using Akihabara.Native;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Native;
 using nf = Akihabara.Native.Framework;
 using System;
 using System.Collections.Generic;

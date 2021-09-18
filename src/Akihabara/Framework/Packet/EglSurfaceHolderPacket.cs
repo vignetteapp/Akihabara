@@ -1,4 +1,8 @@
-﻿using Akihabara.Native;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Native;
 using ng = Akihabara.Native.Gpu;
 using System;
 using System.Collections.Generic;

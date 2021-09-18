@@ -1,4 +1,8 @@
-﻿using Akihabara.Framework.Port;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Framework.Port;
 using Akihabara.Framework.Protobuf.FaceGeometry;
 using Akihabara.Native;
 using System;

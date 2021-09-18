@@ -1,4 +1,8 @@
-﻿namespace Akihabara.Framework.ImageFormat
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+namespace Akihabara.Framework.ImageFormat
 {
     public class ImageFormat
     {

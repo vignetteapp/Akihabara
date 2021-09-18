@@ -1,4 +1,8 @@
-﻿using Akihabara.Framework.ImageFormat;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Port;
 using ff = Akihabara.Native.Framework.Format;
 using System;

@@ -1,4 +1,8 @@
-﻿using Google.Protobuf;
+﻿// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Google.Protobuf;
 using Akihabara.Framework.Protobuf;
 using Akihabara.Native;
 using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
