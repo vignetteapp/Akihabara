@@ -1,4 +1,8 @@
-﻿using System.Diagnostics.Contracts;
+// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using System.Diagnostics.Contracts;
 using System.Runtime.InteropServices;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Gpu;

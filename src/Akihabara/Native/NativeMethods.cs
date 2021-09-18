@@ -1,4 +1,8 @@
-﻿namespace Akihabara.Native
+// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+namespace Akihabara.Native
 {
     /// <summary>
     /// A base class where <see cref="SafeNativeMethods"/> and <see cref="UnsafeNativeMethods"/> relies on.

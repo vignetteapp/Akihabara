@@ -1,4 +1,8 @@
-﻿using Akihabara.Core;
+// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Core;
 using Akihabara.Framework;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
