@@ -1,4 +1,8 @@
-﻿using Akihabara.Core;
+// Copyright 2021 (c) homuler and The Vignette Authors
+// Licensed under MIT
+// See LICENSE for details
+
+using Akihabara.Core;
 using Akihabara.Native;
 using UnsafeNativeMethods = Akihabara.Native.Gpu.UnsafeNativeMethods;
 using SafeNativeMethods = Akihabara.Native.Gpu.SafeNativeMethods;
