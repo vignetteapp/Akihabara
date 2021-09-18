@@ -14,7 +14,7 @@ indent_size = 2
 generated_code = true
 
 [*.cs]
-file_header_template = Copyright (c) homuer & The Vignette Authors. Licensed under the MIT license.\nSee the LICENSE file in the repository root for more details.
+file_header_template = Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.\nSee the LICENSE file in the repository root for more details.
 
 #Formatting - indentation options
 
