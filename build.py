@@ -93,6 +93,7 @@ class BuildCommand(Command):
 
     self.system = platform.system()
     self.desktop = command_args.args.desktop
+    self.protobuf = command_args.args.protobuf
     # self.android = command_args.args.android
     # self.ios= command_args.args.ios
     self.resources = command_args.args.resources
@@ -102,7 +103,6 @@ class BuildCommand(Command):
 
     self.compilation_mode = command_args.args.compilation_mode
     self.linkopt = command_args.args.linkopt
-    self.protobuf = command_args.args.protobuf
 
   def run(self):
     if self.protobuf:
@@ -163,7 +163,7 @@ class BuildCommand(Command):
     #     os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'objc', 'MediaPipeUnity.zip'),
     #     os.path.join(_BUILD_PATH, 'Plugins', 'iOS'))
 
-    #   self.console.info('Built native libraries for iOS')
+    
 
     self.console.info('Printing build path...')
     for root, directories, files in os.walk(_BUILD_PATH, topdown=False):
@@ -325,7 +325,7 @@ class UninstallCommand(Command):
     if self.ios:
       self.console.info('Uninstalling native libraries for iOS...')
 
-      ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'MediaPipeUnity.framework')
+      ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
 
       if os.path.exists(ios_framework_path):
         self._rmtree(ios_framework_path)
@@ -376,7 +376,6 @@ class Argument:
     build_command_parser.add_argument('--include_opencv_libs', action='store_true', help='Include OpenCV\'s native libraries for Desktop')
     build_command_parser.add_argument('--linkopt', '-l', action='append', help='Linker options')
     build_command_parser.add_argument('--verbose', '-v', action='count', default=0)
-    build_command_parser.add_argument('--protobuf', '-p', action=argparse.BooleanOptionalAction, default=False, help='Build protobuf C# source code')
 
     clean_command_parser = subparsers.add_parser('clean', help='Clean temporary files')
     clean_command_parser.add_argument('--verbose', '-v', action='count', default=0)
