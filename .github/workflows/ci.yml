@@ -66,7 +66,7 @@ jobs:
 
       - name: Test
         run: |
-          cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.*" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/" && \
+          cp $pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.* $pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/ && \
           dotnet test "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
