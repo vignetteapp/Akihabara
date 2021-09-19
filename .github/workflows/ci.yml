@@ -7,6 +7,7 @@ jobs:
     runs-on: ${{matrix.os.fullname}}
     env:
       PROJECT_NAME: Akihabara
+      NET_ENV: net5.0
     strategy:
       fail-fast: false
       matrix:
@@ -58,7 +59,7 @@ jobs:
 
       - name: Test
         run: |
-          cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/*/libmediapipe_c.so" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/*/libmediapipe_c.so"
+          cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.*" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/" && \
           dotnet test "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
