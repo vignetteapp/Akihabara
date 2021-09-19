@@ -65,7 +65,6 @@ jobs:
         run: dotnet build -c Debug ./src/Akihabara.sln
 
       - name: Test
-        if: ${{ matrix.os.prettyname != 'Linux' }}
         run: |
           cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.*" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/" && \
           dotnet test "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
