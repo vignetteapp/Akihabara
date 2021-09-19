@@ -34,8 +34,15 @@ jobs:
       
       - name: Build (Native)
         run: |
-         pip install numpy
-         python build.py build --desktop cpu --include_opencv_libs -v
+          sudo apt-get install -y \
+            libopencv-core-dev \
+            libopencv-highgui-dev \
+            libopencv-calib3d-dev \
+            libopencv-features2d-dev \
+            libopencv-imgproc-dev \
+            libopencv-video-dev
+          pip install numpy
+          python build.py build --desktop cpu --include_opencv_libs -v
       
       - name: Build (.NET)
         run: dotnet build -c Debug ./src/Akihabara.sln
