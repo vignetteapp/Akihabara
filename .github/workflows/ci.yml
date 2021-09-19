@@ -34,13 +34,6 @@ jobs:
       
       - name: Build (Native)
         run: |
-          sudo apt-get install -y \
-            libopencv-core-dev \
-            libopencv-highgui-dev \
-            libopencv-calib3d-dev \
-            libopencv-features2d-dev \
-            libopencv-imgproc-dev \
-            libopencv-video-dev
           pip install numpy
           python build.py build --desktop cpu --opencv=cmake -vv
       
