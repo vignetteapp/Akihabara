@@ -42,7 +42,7 @@ jobs:
             libopencv-imgproc-dev \
             libopencv-video-dev
           pip install numpy
-          python build.py build --desktop cpu --include_opencv_libs -v
+          python build.py build --desktop cpu --opencv=cmake -vv
       
       - name: Build (.NET)
         run: dotnet build -c Debug ./src/Akihabara.sln
