@@ -41,7 +41,10 @@ jobs:
         run: dotnet build -c Debug ./src/Akihabara.sln
       
       - name: Test
-        run: dotnet test $pwd/src/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
+        run: |
+          project=Akihabara
+          cp "$pwd/src/$project"{,.Tests}"/bin/Debug/*/libmediapipe_c.so"
+          dotnet test "$pwd/src/$project.Tests" --logger "trx;LogFileName=TestResults-Linux.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
