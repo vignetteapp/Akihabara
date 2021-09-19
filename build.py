@@ -165,6 +165,13 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for iOS')
 
+    self.console.info('Printing build path...')
+    for root, directories, files in os.walk(_BUILD_PATH, topdown=False):
+      for name in files:
+        print(os.path.join(root, name))
+      for name in directories:
+        print(os.path.join(root, name) + '/')
+
     self.console.info('Installing...')
     # _copytree fails on Windows, so run `cp -r` instead.
     self._copytree(_BUILD_PATH, _INSTALL_PATH)
