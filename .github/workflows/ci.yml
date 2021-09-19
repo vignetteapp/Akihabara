@@ -21,7 +21,7 @@ jobs:
           cache-name: bazel-cache
         with:
           path: ~/.cache/bazel
-          key: ${{runner.os}}-${{env.cache-name}}-${{github.ref}}
+          key: ${{runner.os}}-${{env.cache-name}}-development
           restore-keys: ${{runner.os}}-${{env.cache-name}}-development
 
       - name: Checkout
