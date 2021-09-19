@@ -62,7 +62,9 @@ jobs:
           python build.py build --desktop cpu --opencv=cmake -vv
 
       - name: Build (.NET)
-        run: dotnet build -c Debug ./src/Akihabara.sln
+        run: |
+          ls **/
+          dotnet build -c Debug ./src/Akihabara.sln
 
       - name: Test
         run: |
