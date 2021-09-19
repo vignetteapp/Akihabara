@@ -175,6 +175,11 @@ class BuildCommand(Command):
     self.console.info('Installing...')
     # _copytree fails on Windows, so run `cp -r` instead.
     self._copytree(_BUILD_PATH, _INSTALL_PATH)
+    for root, directories, files in os.walk(os.path.join(_INSTALL_PATH, 'bin'), topdown=False):
+      for name in files:
+        print(os.path.join(root, name))
+      for name in directories:
+        print(os.path.join(root, name) + '/')
     self.console.info('Installed')
 
   def _is_windows(self):
