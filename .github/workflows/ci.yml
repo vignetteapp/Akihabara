@@ -5,6 +5,8 @@ jobs:
   test:
     name: Test
     runs-on: ${{matrix.os.fullname}}
+    env:
+      PROJECT_NAME: Akihabara
     strategy:
        fail-fast: false
        matrix:
@@ -37,9 +39,8 @@ jobs:
       
       - name: Test
         run: |
-          project=Akihabara
-          cp "$pwd/src/$project"{,.Tests}"/bin/Debug/*/libmediapipe_c.so"
-          dotnet test "$pwd/src/$project.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+          cp "$pwd/src/${{PROJECT_NAME}}/bin/Debug/*/libmediapipe_c.so" "$pwd/src/${{PROJECT_NAME}}.Tests/bin/Debug/*/libmediapipe_c.so"
+          dotnet test "$pwd/src/${{PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
