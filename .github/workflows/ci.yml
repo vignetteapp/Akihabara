@@ -63,7 +63,6 @@ jobs:
 
       - name: Build (.NET)
         run: |
-          ls **/
           dotnet build -c Debug ./src/Akihabara.sln
 
       - name: Test
