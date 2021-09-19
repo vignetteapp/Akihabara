@@ -53,17 +53,16 @@ jobs:
           $env:PYTHON_BIN_PATH=(Get-Command python).Path
           echo $env:PYTHON_BIN_PATH
           pip install numpy
-          python build.py build --desktop cpu --opencv=cmake -vv
+          python build.py build --desktop gpu --opencv=cmake -vv
 
       - name: Build (Native, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           pip install numpy
-          python build.py build --desktop cpu --opencv=cmake -vv
+          python build.py build --desktop gpu --opencv=cmake -vv
 
       - name: Build (.NET)
-        run: |
-          dotnet build -c Debug ./src/Akihabara.sln
+        run: dotnet build -c Debug src/Akihabara.sln
 
       - name: Test
         run: |
