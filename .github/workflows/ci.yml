@@ -14,6 +14,15 @@ jobs:
           - { prettyname: Windows, fullname: windows-latest }
           - { prettyname: Linux, fullname: ubuntu-latest }
     steps:
+      - name: Cache Bazel directory
+        uses: actions/cache@v2
+        env:
+          cache-name: bazel-cache
+        with:
+          path: ~/.cache/bazel
+          key: ${{runner.os}}-${{env.cache-name}}-${{github.ref}}
+          restore-keys: ${{runner.os}}-${{env.cache-name}}-development
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -28,7 +37,7 @@ jobs:
         with:
           python-version: '3.9'
           architecture: 'x64'
-      
+
       - name: Build (Native)
         run: |
           pip install numpy
