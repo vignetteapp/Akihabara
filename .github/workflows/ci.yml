@@ -39,8 +39,8 @@ jobs:
       
       - name: Test
         run: |
-          cp "$pwd/src/${{PROJECT_NAME}}/bin/Debug/*/libmediapipe_c.so" "$pwd/src/${{PROJECT_NAME}}.Tests/bin/Debug/*/libmediapipe_c.so"
-          dotnet test "$pwd/src/${{PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+          cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/*/libmediapipe_c.so" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/*/libmediapipe_c.so"
+          dotnet test "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
