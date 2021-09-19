@@ -73,9 +73,31 @@ jobs:
 
       # Attempt to upload results even if test fails.
       # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#always
-      - name: Upload Test Results
+      - name: Upload Test Results (*nix)
         uses: actions/upload-artifact@v2
-        if: ${{ always() }}
+        if: ${{ matrix.os.prettyname != 'Windows' }}
         with:
           name: TestResults-Linux
           path: ${{github.workspace}}/TestResults/TestResults-Linux.trx
+
+      - name: Upload Test Results (Windows)
+        uses: actions/upload-artifact@v2
+        if: ${{ matrix.os.prettyname == 'Windows' }}
+        with:
+          name: TestResults-Windows
+          path: ${{github.workspace}}/TestResults/TestResults-Windows.trx
+
+      # The contents of the build folder
+      - name: Upload Build Artifacts (*nix)
+        if: ${{ matrix.os.prettyname != 'Windows' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts-linux
+          path: build/
+
+      - name: Upload Build Artifacts (Windows)
+        if: ${{ matrix.os.prettyname == 'Windows' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts-windows
+          path: build/
