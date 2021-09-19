@@ -35,17 +35,27 @@ jobs:
       - name: Force Python 3.9
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
-          architecture: 'x64'
+          python-version: "3.9"
+          architecture: "x64"
 
-      - name: Build (Native)
+      - name: Build (Native, Windows)
+        if: ${{ matrix.os.prettyname == 'Windows' }}
+        run: |
+          echo "Setting PYTHON_BIN_PATH to python in PATH"
+          $env:PYTHON_BIN_PATH=$(which python)
+          echo $env:PYTHON_BIN_PATH
+          pip install numpy
+          python build.py build --desktop cpu --opencv=cmake -vv
+
+      - name: Build (Native, *nix)
+        if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           pip install numpy
           python build.py build --desktop cpu --opencv=cmake -vv
-      
+
       - name: Build (.NET)
         run: dotnet build -c Debug ./src/Akihabara.sln
-      
+
       - name: Test
         run: |
           cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/*/libmediapipe_c.so" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/*/libmediapipe_c.so"
