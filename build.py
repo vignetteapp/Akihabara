@@ -165,10 +165,10 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for iOS')
 
-    # self.console.info('Installing...')
-    # # _copytree fails on Windows, so run `cp -r` instead.
-    # self._copytree(_BUILD_PATH, _INSTALL_PATH)
-    # self.console.info('Installed')
+    self.console.info('Installing...')
+    # _copytree fails on Windows, so run `cp -r` instead.
+    self._copytree(_BUILD_PATH, _INSTALL_PATH)
+    self.console.info('Installed')
 
   def _is_windows(self):
     return self.system == 'Windows'
