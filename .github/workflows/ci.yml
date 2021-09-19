@@ -21,8 +21,15 @@ jobs:
           cache-name: bazel-cache
         with:
           path: ~/.cache/bazel
-          key: ${{runner.os}}-${{env.cache-name}}-development
-          restore-keys: ${{runner.os}}-${{env.cache-name}}-development
+          key: ${{runner.os}}-${{env.cache-name}}-dev
+
+      - name: Cache build directory
+        uses: actions/cache@v2
+        env:
+          cache-name: build-cache
+        with:
+          path: build
+          key: ${{runner.os}}-${{env.cache-name}}-dev
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -58,6 +65,7 @@ jobs:
         run: dotnet build -c Debug ./src/Akihabara.sln
 
       - name: Test
+        if: ${{ matrix.os.prettyname != 'Linux' }}
         run: |
           cp "$pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.*" "$pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/" && \
           dotnet test "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
