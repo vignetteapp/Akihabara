@@ -68,9 +68,9 @@ jobs:
         run: cp $pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.* $pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/
         shell: pwsh
 
-      - name: Test (CPU)
-        run: dotnet test --filter TestCategory!=GpuOnlyTest "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
-        shell: pwsh
+      # - name: Test (CPU)
+      #   run: dotnet test --filter TestCategory!=GpuOnlyTest "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+      #   shell: pwsh
 
       # Attempt to upload results even if test fails.
       # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#always
