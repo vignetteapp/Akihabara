@@ -46,6 +46,12 @@ jobs:
           python-version: "3.9"
           architecture: "x64"
 
+      - name: Set up MinGW
+        if: ${{ matrix.os.prettyname == 'Windows' }}
+        uses: egor-tensin/setup-mingw@v2
+        with:
+          platform: x64
+
       - name: Build (Native, Windows)
         if: ${{ matrix.os.prettyname == 'Windows' }}
         run: |
