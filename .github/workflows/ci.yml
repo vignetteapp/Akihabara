@@ -62,9 +62,9 @@ jobs:
           python build.py build --desktop cpu --opencv=cmake -vv
 
       - name: Build (.NET)
-        run: dotnet build -c Debug src/Akihabara.sln
+        run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
       
-      - name: Copy libmediapipe_c.* into ${{env.PROJECT_NAME}}.Tests
+      - name: Copy libmediapipe_c.* into Akihabara.tests
         run: cp $pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.* $pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/
         shell: pwsh
 
