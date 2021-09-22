@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -16,14 +15,14 @@ namespace Akihabara.Gpu
         {
             UnsafeNativeMethods.mp_GlTexture__(out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public GlTexture(uint name, int width, int height) : base()
         {
             UnsafeNativeMethods.mp_GlTexture__ui_i_i(name, width, height, out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }

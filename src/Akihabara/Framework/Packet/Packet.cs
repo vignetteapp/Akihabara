@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -15,7 +14,7 @@ namespace Akihabara.Framework.Packet
         public Packet() : base()
         {
             UnsafeNativeMethods.mp_Packet__(out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public Packet(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner)
@@ -32,7 +31,7 @@ namespace Akihabara.Framework.Packet
 
             GC.KeepAlive(timestamp);
 
-            return (Packet<T>)Activator.CreateInstance(this.GetType(), packetPtr, true);
+            return (Packet<T>)Activator.CreateInstance(GetType(), packetPtr, true);
         }
 
         public Status ValidateAsProtoMessageLite()

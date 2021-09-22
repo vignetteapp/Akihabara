@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Gpu;
@@ -19,15 +18,12 @@ namespace Akihabara.Framework.Port
             UnsafeNativeMethods.mp_StatusOrGpuBuffer__delete(Ptr);
         }
 
-        public override bool Ok
-        {
+        public override bool Ok {
             get { return SafeNativeMethods.mp_StatusOrGpuBuffer__ok(MpPtr); }
         }
 
-        public override Status Status
-        {
-            get
-            {
+        public override Status Status {
+            get {
                 UnsafeNativeMethods.mp_StatusOrGpuBuffer__status(MpPtr, out var statusPtr).Assert();
 
                 GC.KeepAlive(this);

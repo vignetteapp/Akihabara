@@ -1,12 +1,10 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
-
 using Akihabara.Native;
-using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Port
 {
@@ -21,15 +19,12 @@ namespace Akihabara.Framework.Port
             UnsafeNativeMethods.mp_StatusOrPoller__delete(Ptr);
         }
 
-        public override bool Ok
-        {
+        public override bool Ok {
             get { return SafeNativeMethods.mp_StatusOrPoller__ok(MpPtr); }
         }
 
-        public override Status Status
-        {
-            get
-            {
+        public override Status Status {
+            get {
                 UnsafeNativeMethods.mp_StatusOrPoller__status(MpPtr, out var statusPtr).Assert();
 
                 GC.KeepAlive(this);

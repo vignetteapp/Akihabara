@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Diagnostics.Contracts;
@@ -11,13 +10,13 @@ namespace Akihabara.Native.Framework
     public partial class SafeNativeMethods : NativeMethods
     {
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern Int64 mp_Timestamp__Value(IntPtr timestamp);
+        public static extern long mp_Timestamp__Value(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern double mp_Timestamp__Seconds(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern Int64 mp_Timestamp__Microseconds(IntPtr timestamp);
+        public static extern long mp_Timestamp__Microseconds(IntPtr timestamp);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]

@@ -1,19 +1,17 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Runtime.InteropServices;
-
-using Google.Protobuf;
 using Akihabara.Core;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
 using Akihabara.Framework.Protobuf;
 using Akihabara.Gpu;
 using Akihabara.Native;
-using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
+using Google.Protobuf;
 using SafeNativeMethods = Akihabara.Native.Framework.SafeNativeMethods;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework
 {
@@ -25,19 +23,19 @@ namespace Akihabara.Framework
         public CalculatorGraph() : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__(out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(string textFormatConfig) : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__PKc(textFormatConfig, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(byte[] serializedConfig) : base()
         {
             UnsafeNativeMethods.mp_CalculatorGraph__PKc_i(serializedConfig, serializedConfig.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public CalculatorGraph(CalculatorGraphConfig config) : this(config.ToByteArray()) { }
@@ -84,8 +82,7 @@ namespace Akihabara.Framework
 
         public Status ObserveOutputStream<T, TU>(string streamName, PacketCallback<T, TU> packetCallback, out GCHandle callbackHandle) where T : Packet<TU>
         {
-            NativePacketCallback nativePacketCallback = (IntPtr packetPtr) =>
-            {
+            NativePacketCallback nativePacketCallback = (IntPtr packetPtr) => {
                 Status status = null;
                 try
                 {

@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Runtime.InteropServices;
@@ -19,27 +18,27 @@ namespace Akihabara.Framework.Packet
         public StringPacket(string value) : base()
         {
             UnsafeNativeMethods.mp__MakeStringPacket__PKc(value, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public StringPacket(byte[] bytes) : base()
         {
             UnsafeNativeMethods.mp__MakeStringPacket__PKc_i(bytes, bytes.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public StringPacket(string value, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeStringPacket_At__PKc_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public StringPacket(byte[] bytes, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeStringPacket_At__PKc_i_Rt(bytes, bytes.Length, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override string Get()

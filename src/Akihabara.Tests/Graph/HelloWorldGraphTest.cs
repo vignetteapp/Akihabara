@@ -1,12 +1,10 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
-using NUnit.Framework;
-using System;
 using Akihabara.Framework;
-using Akihabara.Framework.Port;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
+using NUnit.Framework;
 
 namespace Akihabara.Tests.Graph
 {
@@ -38,8 +36,7 @@ node {
         [Test]
         public static void MainTest()
         {
-            Assert.DoesNotThrow(() =>
-            {
+            Assert.DoesNotThrow(() => {
                 helloWorldGraph = new CalculatorGraph(graphConfigText);
                 outputStreamPoller = helloWorldGraph.AddOutputStreamPoller<string>(outputStream).Value();
             });
@@ -47,9 +44,8 @@ node {
             Status graphStartResult = helloWorldGraph.StartRun();
             Assert.True(graphStartResult.ok);
 
-            Assert.DoesNotThrow(() =>
-            {
-                int timestamp = System.Environment.TickCount & System.Int32.MaxValue;
+            Assert.DoesNotThrow(() => {
+                int timestamp = System.Environment.TickCount & int.MaxValue;
                 var inputPacket = new StringPacket("Hello World", new Timestamp(timestamp));
                 outputPacket = new StringPacket();
                 pushedInput = helloWorldGraph.AddPacketToInputStream(inputStream, inputPacket);

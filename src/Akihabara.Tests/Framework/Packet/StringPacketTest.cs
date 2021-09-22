@@ -1,14 +1,13 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
+using System;
+using System.Text.RegularExpressions;
 using Akihabara.Core;
 using Akihabara.Framework;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
 using NUnit.Framework;
-using System;
-using System.Text.RegularExpressions;
 
 namespace Akihabara.Tests.Framework.Packet
 {

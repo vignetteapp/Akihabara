@@ -1,15 +1,15 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
-using Akihabara.Gpu;
-using Akihabara.Framework.Port;
-using Akihabara.Framework.ImageFormat;
-using NUnit.Framework;
 using System;
+using Akihabara.Framework.ImageFormat;
+using Akihabara.Framework.Port;
+using Akihabara.Gpu;
+using NUnit.Framework;
 
 namespace Akihabara.Tests.Gpu
 {
+    [TestFixture]
     public class GlCalculatorHelperTest
     {
         #region Constructor
@@ -94,8 +94,7 @@ namespace Akihabara.Tests.Gpu
             glCalculatorHelper.InitializeForTest(GpuResources.Create().Value());
 
             var imageFrame = new ImageFrame(ImageFormat.Format.Srgba, 32, 24);
-            var status = glCalculatorHelper.RunInGlContext(() =>
-            {
+            var status = glCalculatorHelper.RunInGlContext(() => {
                 var texture = glCalculatorHelper.CreateSourceTexture(imageFrame);
 
                 Assert.AreEqual(texture.Width, 32);
@@ -116,8 +115,7 @@ namespace Akihabara.Tests.Gpu
             glCalculatorHelper.InitializeForTest(GpuResources.Create().Value());
 
             var imageFrame = new ImageFrame(ImageFormat.Format.Sbgra, 32, 24);
-            var status = glCalculatorHelper.RunInGlContext(() =>
-            {
+            var status = glCalculatorHelper.RunInGlContext(() => {
                 using (var texture = glCalculatorHelper.CreateSourceTexture(imageFrame))
                 {
                     texture.Release();
@@ -136,8 +134,7 @@ namespace Akihabara.Tests.Gpu
             var glCalculatorHelper = new GlCalculatorHelper();
             glCalculatorHelper.InitializeForTest(GpuResources.Create().Value());
 
-            var status = glCalculatorHelper.RunInGlContext(() =>
-            {
+            var status = glCalculatorHelper.RunInGlContext(() => {
                 var glTexture = glCalculatorHelper.CreateDestinationTexture(32, 24, GpuBufferFormat.KBgra32);
 
                 Assert.AreEqual(glTexture.Width, 32);
@@ -170,13 +167,13 @@ namespace Akihabara.Tests.Gpu
 
             var glContext = glCalculatorHelper.GetGlContext();
 
-            #if OPENGL_ES
+#if OPENGL_ES
             Assert.AreNotEqual(glContext.eglContext, IntPtr.Zero);
-            #elif UNITY_STANDALONE_OSX
+#elif UNITY_STANDALONE_OSX
             Assert.AreNotEqual(glContext.nsglContext, IntPtr.Zero);
-            #elif UNITY_IOS
+#elif UNITY_IOS
             Assert.AreNotEqual(glContext.eaglContext, IntPtr.Zero);
-            #endif
+#endif
         }
         #endregion
     }
