@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - { prettyname: Windows, fullname: windows-latest }
+          # - { prettyname: Windows, fullname: windows-latest }
           - { prettyname: Linux, fullname: ubuntu-latest }
     steps:
       - name: Cache Bazel directory
@@ -52,14 +52,14 @@ jobs:
         with:
           platform: x64
 
-      - name: Build (Native, Windows)
-        if: ${{ matrix.os.prettyname == 'Windows' }}
-        run: |
-          echo "Setting PYTHON_BIN_PATH to python in PATH"
-          $env:PYTHON_BIN_PATH=(Get-Command python).Path
-          echo $env:PYTHON_BIN_PATH
-          pip install numpy
-          python build.py build --desktop cpu --opencv=cmake -vv
+      # - name: Build (Native, Windows)
+      #   if: ${{ matrix.os.prettyname == 'Windows' }}
+      #   run: |
+      #     echo "Setting PYTHON_BIN_PATH to python in PATH"
+      #     $env:PYTHON_BIN_PATH=(Get-Command python).Path
+      #     echo $env:PYTHON_BIN_PATH
+      #     pip install numpy
+      #     python build.py build --desktop cpu --opencv=cmake -vv
 
       - name: Build (Native, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
