@@ -3,7 +3,6 @@ import glob
 import os
 import platform
 import shutil
-import stat
 import subprocess
 
 try:
@@ -14,7 +13,7 @@ except ImportError:
 
 _BAZEL_BIN_PATH = 'bazel-bin'
 _BUILD_PATH = 'build'
-_INSTALL_PATH = os.path.join('Packages', 'com.github.homuler.mediapipe', 'Runtime')
+_INSTALL_PATH = os.path.join('src', 'Akihabara')
 
 class Console:
   def __init__(self, verbose):
@@ -94,8 +93,8 @@ class BuildCommand(Command):
 
     self.system = platform.system()
     self.desktop = command_args.args.desktop
-    self.android = command_args.args.android
-    self.ios= command_args.args.ios
+    # self.android = command_args.args.android
+    # self.ios= command_args.args.ios
     self.resources = command_args.args.resources
     self.opencv = command_args.args.opencv
     self.opencv_deps = command_args.args.opencv_deps
@@ -103,44 +102,50 @@ class BuildCommand(Command):
 
     self.compilation_mode = command_args.args.compilation_mode
     self.linkopt = command_args.args.linkopt
+    self.protobuf = command_args.args.protobuf
 
   def run(self):
-    self.console.info('Building protobuf sources...')
-    self._run_command(self._build_proto_srcs_commands())
-    self._unzip(
-      os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_proto_srcs.zip'),
-      os.path.join('src', 'Akihabara', 'Framework', 'Protobuf'))
-    self.console.info('Built protobuf sources')
+    if self.protobuf:
+      self.console.info('Building protobuf sources...')
+      self._run_command(self._build_proto_srcs_commands())
+      self._unzip(
+        os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_proto_srcs.zip'),
+        os.path.join(_BUILD_PATH, 'Framework', 'Protobuf'))
+      self.console.info('Built protobuf sources')
 
+    # # Unity-specific requirements, not needed for .NET
+    # self.console.info('Downloading protobuf dlls...')
+    # self._run_command(self._build_proto_dlls_commands())
+    # for f in glob.glob(os.path.join('.nuget', '**', 'lib', 'netstandard2.0', '*.dll'), recursive=True):
+    #   basename = os.path.basename(f)
+    #   self._copy(f, os.path.join(_BUILD_PATH, 'Plugins', 'Protobuf', basename))
+    # self.console.info('Downloaded protobuf dlls')
 
-    # if self.resources:
-    #   self.console.info('Building resource files')
-    #   self._run_command(self._build_resources_commands())
-    #   self._unzip(
-    #     os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_assets.zip'),
-    #     os.path.join(_BUILD_PATH, 'Resources'))
+    if self.resources:
+      self.console.info('Building resource files')
+      self._run_command(self._build_resources_commands())
+      self._unzip(
+        os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_assets.zip'),
+        os.path.join(_BUILD_PATH, 'Resources'))
+      self.console.info('Built resource files')
 
-    #   self.console.info('Built resource files')
+    if self.desktop:
+      self.console.info('Building native libraries for Desktop...')
+      self._run_command(self._build_desktop_commands())
+      self._unzip(
+        os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_desktop.zip'),
+        os.path.join(_BUILD_PATH, 'bin', 'Debug', 'net5.0'))
 
+      if self.include_opencv_libs:
+        if self.opencv == 'cmake':
+          self.console.warn('OpenCV objects are included in libmediapipe_c, so skip copying OpenCV library files')
+        else:
+          self._run_command(self._build_opencv_libs())
+          self._unzip(
+            os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'opencv_libs.zip'),
+            os.path.join(_BUILD_PATH, 'bin', 'Debug', 'net5.0', 'opencv'))
 
-    # if self.desktop:
-    #   self.console.info('Building native libraries for Desktop...')
-    #   self._run_command(self._build_desktop_commands())
-    #   self._unzip(
-    #     os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_desktop.zip'),
-    #     os.path.join(_BUILD_PATH, 'Plugins'))
-
-    #   if self.include_opencv_libs:
-    #     if self.opencv == 'cmake':
-    #       self.console.warn('OpenCV objects are included in libmediapipe_c, so skip copying OpenCV library files')
-    #     else:
-    #       self._run_command(self._build_opencv_libs())
-    #       self._unzip(
-    #         os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'opencv_libs.zip'),
-    #         os.path.join(_BUILD_PATH, 'Plugins', 'OpenCV'))
-
-    #   self.console.info('Built native libraries for Desktop')
-
+      self.console.info('Built native libraries for Desktop')
 
     # if self.android:
     #   self.console.info('Building native libraries for Android...')
@@ -151,7 +156,6 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for Android')
 
-
     # if self.ios:
     #   self.console.info('Building native libaries for iOS...')
     #   self._run_command(self._build_ios_commands())
@@ -161,10 +165,21 @@ class BuildCommand(Command):
 
     #   self.console.info('Built native libraries for iOS')
 
+    self.console.info('Printing build path...')
+    for root, directories, files in os.walk(_BUILD_PATH, topdown=False):
+      for name in files:
+        print(os.path.join(root, name))
+      for name in directories:
+        print(os.path.join(root, name) + '/')
 
-    # self.console.info('Installing...')
-    # # _copytree fails on Windows, so run `cp -r` instead.
-    # self._copytree(_BUILD_PATH, _INSTALL_PATH)
+    self.console.info('Installing...')
+    # _copytree fails on Windows, so run `cp -r` instead.
+    self._copytree(_BUILD_PATH, _INSTALL_PATH)
+    for root, directories, files in os.walk(os.path.join(_INSTALL_PATH, 'bin'), topdown=False):
+      for name in files:
+        print(os.path.join(root, name))
+      for name in directories:
+        print(os.path.join(root, name) + '/')
     self.console.info('Installed')
 
   def _is_windows(self):
@@ -238,23 +253,23 @@ class BuildCommand(Command):
 
     return commands
 
-  def _build_android_commands(self):
-    if self.android is None:
-      return []
+  # def _build_android_commands(self):
+  #   if self.android is None:
+  #     return []
 
-    commands = self._build_common_commands()
-    commands.append(f'--config=android_{self.android}')
-    commands.append('//mediapipe_api/java/com/github/homuler/mediapipe:mediapipe_android')
-    return commands
+  #   commands = self._build_common_commands()
+  #   commands.append(f'--config=android_{self.android}')
+  #   commands.append('//mediapipe_api/java/com/github/homuler/mediapipe:mediapipe_android')
+  #   return commands
 
-  def _build_ios_commands(self):
-    if self.ios is None:
-      return []
+  # def _build_ios_commands(self):
+  #   if self.ios is None:
+  #     return []
 
-    commands = self._build_common_commands()
-    commands += [f'--config=ios_{self.ios}', '--copt=-fembed-bitcode', '--apple_bitcode=embedded']
-    commands.append('//mediapipe_api/objc:MediaPipeUnity')
-    return commands
+  #   commands = self._build_common_commands()
+  #   commands += [f'--config=ios_{self.ios}', '--copt=-fembed-bitcode', '--apple_bitcode=embedded']
+  #   commands.append('//mediapipe_api/objc:MediaPipeUnity')
+  #   return commands
 
   def _build_resources_commands(self):
     if not self.resources:
@@ -269,6 +284,8 @@ class BuildCommand(Command):
     commands.append('//mediapipe_api:mediapipe_proto_srcs')
     return commands
 
+  # def _build_proto_dlls_commands(self):
+  #   return ['nuget', 'install', '-o', '.nuget', '-Source', 'https://api.nuget.org/v3/index.json']
 
 
 class CleanCommand(Command):
@@ -348,10 +365,11 @@ class Argument:
     subparsers = self.argument_parser.add_subparsers(dest='command')
 
     build_command_parser = subparsers.add_parser('build', help='Build and install native libraries')
-    build_command_parser.add_argument('--desktop', choices=['cpu', 'gpu'])
-    build_command_parser.add_argument('--android', choices=['arm', 'arm64'])
-    build_command_parser.add_argument('--ios', choices=['arm64'])
-    build_command_parser.add_argument('--resources', action=argparse.BooleanOptionalAction, default=True)
+    build_command_parser.add_argument('--protobuf', '-p', action=argparse.BooleanOptionalAction, help='Build C# protobuf sources for Akihabara')
+    build_command_parser.add_argument('--desktop', '-d', choices=['cpu', 'gpu'])
+    # build_command_parser.add_argument('--android', '-a', choices=['arm', 'arm64'])
+    # build_command_parser.add_argument('--ios', '-i', choices=['arm64'])
+    build_command_parser.add_argument('--resources', '-R', action=argparse.BooleanOptionalAction)
     build_command_parser.add_argument('--compilation_mode', '-c', choices=['fastbuild', 'opt', 'dbg'], default='opt')
     build_command_parser.add_argument('--opencv', choices=['local', 'cmake'], default='local', help='Decide to which OpenCV to link for Desktop native libraries')
     build_command_parser.add_argument('--opencv_deps', action='append', choices=['ffmpeg'], default=[], help='OpenCV Dependencies (only used when `--opencv=cmake`)')
@@ -364,8 +382,8 @@ class Argument:
 
     uninstall_command_parser = subparsers.add_parser('uninstall', help='Uninstall native libraries')
     uninstall_command_parser.add_argument('--desktop', action=argparse.BooleanOptionalAction, default=True)
-    uninstall_command_parser.add_argument('--android', action=argparse.BooleanOptionalAction, default=True)
-    uninstall_command_parser.add_argument('--ios', action=argparse.BooleanOptionalAction, default=True)
+    # uninstall_command_parser.add_argument('--android', action=argparse.BooleanOptionalAction, default=True)
+    # uninstall_command_parser.add_argument('--ios', action=argparse.BooleanOptionalAction, default=True)
     uninstall_command_parser.add_argument('--resources', action=argparse.BooleanOptionalAction, default=True)
     uninstall_command_parser.add_argument('--protobuf', action=argparse.BooleanOptionalAction, default=True)
     uninstall_command_parser.add_argument('--verbose', '-v', action='count', default=0)
