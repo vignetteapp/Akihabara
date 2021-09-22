@@ -1,9 +1,8 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
-using NUnit.Framework;
 using System;
+using NUnit.Framework;
 
-[AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
-public class SignalAbortAttribute : CategoryAttribute {}
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+public class SignalAbortAttribute : CategoryAttribute { }

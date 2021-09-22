@@ -1,16 +1,16 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
-using NUnit.Framework;
-using Akihabara.Core;
-using Akihabara.Framework.ImageFormat;
 using System;
 using System.Linq;
+using Akihabara.Core;
+using Akihabara.Framework.ImageFormat;
+using NUnit.Framework;
 using UnmanageUtility;
 
 namespace Akihabara.Tests.Format
 {
+    [TestFixture]
     public class ImageFrameTest
     {
         #region Constructor

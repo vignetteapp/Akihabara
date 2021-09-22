@@ -1,15 +1,10 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
-using Akihabara.Native;
-using nf = Akihabara.Native.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Akihabara.Framework.Port;
+using Akihabara.Native;
+using UnsafeNativeMethods = Akihabara.Native.Framework.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -21,20 +16,20 @@ namespace Akihabara.Framework.Packet
 
         public IntPacket(int value) : base()
         {
-            nf.UnsafeNativeMethods.mp__MakeIntPacket__i(value, out var ptr).Assert();
-            this.Ptr = ptr;
+            UnsafeNativeMethods.mp__MakeIntPacket__i(value, out var ptr).Assert();
+            Ptr = ptr;
         }
 
         public IntPacket(int value, Timestamp timestamp) : base()
         {
-            nf.UnsafeNativeMethods.mp__MakeIntPacket_At__i_Rt(value, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeIntPacket_At__i_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override int Get()
         {
-            nf.UnsafeNativeMethods.mp_Packet__GetInt(MpPtr, out var value).Assert();
+            UnsafeNativeMethods.mp_Packet__GetInt(MpPtr, out var value).Assert();
 
             GC.KeepAlive(this);
             return value;
@@ -47,7 +42,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            nf.UnsafeNativeMethods.mp_Packet__ValidateAsInt(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsInt(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);

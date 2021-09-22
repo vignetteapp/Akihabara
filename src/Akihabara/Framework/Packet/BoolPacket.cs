@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Framework.Port;
@@ -19,14 +18,14 @@ namespace Akihabara.Framework.Packet
         {
             UnsafeNativeMethods.mp__MakeBoolPacket__b(value, out var ptr).Assert();
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public BoolPacket(bool value, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeBoolPacket_At__b_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override bool Get()

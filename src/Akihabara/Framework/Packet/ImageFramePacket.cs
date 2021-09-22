@@ -1,16 +1,11 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
+using System;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Port;
-using ff = Akihabara.Native.Framework.Format;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Akihabara.Native;
+using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
 
 namespace Akihabara.Framework.Packet
 {
@@ -22,24 +17,24 @@ namespace Akihabara.Framework.Packet
 
         public ImageFramePacket(ImageFrame imageFrame) : base()
         {
-            ff.UnsafeNativeMethods.mp__MakeImageFramePacket__Pif(imageFrame.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeImageFramePacket__Pif(imageFrame.MpPtr, out var ptr).Assert();
             imageFrame.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public ImageFramePacket(ImageFrame imageFrame, Timestamp timestamp) : base()
         {
-            ff.UnsafeNativeMethods.mp__MakeImageFramePacket_At__Pif_Rt(imageFrame.MpPtr, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeImageFramePacket_At__Pif_Rt(imageFrame.MpPtr, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
             imageFrame.Dispose(); // respect move semantics
 
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override ImageFrame Get()
         {
-            ff.UnsafeNativeMethods.mp_Packet__GetImageFrame(MpPtr, out var imageFramePtr).Assert();
+            UnsafeNativeMethods.mp_Packet__GetImageFrame(MpPtr, out var imageFramePtr).Assert();
 
             GC.KeepAlive(this);
             return new ImageFrame(imageFramePtr, false);
@@ -47,7 +42,7 @@ namespace Akihabara.Framework.Packet
 
         public override StatusOr<ImageFrame> Consume()
         {
-            ff.UnsafeNativeMethods.mp_Packet__ConsumeImageFrame(MpPtr, out var statusOrImageFramePtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ConsumeImageFrame(MpPtr, out var statusOrImageFramePtr).Assert();
 
             GC.KeepAlive(this);
             return new StatusOrImageFrame(statusOrImageFramePtr);
@@ -55,7 +50,7 @@ namespace Akihabara.Framework.Packet
 
         public override Status ValidateAsType()
         {
-            ff.UnsafeNativeMethods.mp_Packet__ValidateAsImageFrame(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsImageFrame(MpPtr, out var statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);

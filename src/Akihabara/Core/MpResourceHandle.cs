@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Runtime.InteropServices;
@@ -18,15 +17,13 @@ namespace Akihabara.Core
 
         protected MpResourceHandle(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         #region IMpResourceHandle
 
-        public IntPtr MpPtr
-        {
-            get
-            {
+        public IntPtr MpPtr {
+            get {
                 ThrowIfDisposed();
                 return Ptr;
             }

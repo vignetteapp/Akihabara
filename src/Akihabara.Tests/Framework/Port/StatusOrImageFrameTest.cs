@@ -1,15 +1,15 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using Akihabara.Framework;
+using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
-using Akihabara.Framework.ImageFormat;
 using NUnit.Framework;
 
 namespace Tests
 {
+    [TestFixture]
     public class StatusOrImageFrameTest
     {
         #region #status
@@ -56,7 +56,7 @@ namespace Tests
         }
         #endregion
 
-        private StatusOrImageFrame InitializeSubject()
+        private static StatusOrImageFrame InitializeSubject()
         {
             var imageFrame = new ImageFrame(ImageFormat.Format.Sbgra, 10, 10);
             var packet = new ImageFramePacket(imageFrame, new Timestamp(1));

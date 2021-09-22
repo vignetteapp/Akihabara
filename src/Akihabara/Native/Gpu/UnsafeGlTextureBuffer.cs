@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Runtime.InteropServices;
@@ -45,7 +44,7 @@ namespace Akihabara.Native.Gpu
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_SharedGlTextureBuffer__ui_ui_i_i_ui_PF_PSgc(
-            UInt32 target, UInt32 name, int width, int height, GpuBufferFormat format,
+            uint target, uint name, int width, int height, GpuBufferFormat format,
             [MarshalAs(UnmanagedType.FunctionPtr)] GlTextureBuffer.DeletionCallback deletionCallback,
             IntPtr producerContext, out IntPtr sharedGlTextureBuffer);
 

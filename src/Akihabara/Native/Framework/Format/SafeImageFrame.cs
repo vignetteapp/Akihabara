@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Diagnostics.Contracts;
@@ -21,7 +20,7 @@ namespace Akihabara.Native.Framework.Format
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_ImageFrame__IsAligned__ui(
-            IntPtr imageFrame, UInt32 alignmentBoundary, [MarshalAs(UnmanagedType.I1)] out bool value);
+            IntPtr imageFrame, uint alignmentBoundary, [MarshalAs(UnmanagedType.I1)] out bool value);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern ImageFormat.Format mp_ImageFrame__Format(IntPtr imageFrame);
