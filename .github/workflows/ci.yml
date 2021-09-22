@@ -4,9 +4,33 @@ name: Continuous Integration
 jobs:
   test:
     name: Test
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+    runs-on: ${{matrix.os.fullname}}
+    env:
+      PROJECT_NAME: Akihabara
+      NET_ENV: net5.0
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          # - { prettyname: Windows, fullname: windows-latest }
+          - { prettyname: Linux, fullname: ubuntu-latest }
     steps:
+      - name: Cache Bazel directory
+        uses: actions/cache@v2
+        env:
+          cache-name: bazel-cache
+        with:
+          path: ~/.cache/bazel
+          key: ${{runner.os}}-${{env.cache-name}}-dev
+
+      - name: Cache build directory
+        uses: actions/cache@v2
+        env:
+          cache-name: build-cache
+        with:
+          path: build
+          key: ${{runner.os}}-${{env.cache-name}}-dev
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -19,36 +43,51 @@ jobs:
       - name: Force Python 3.9
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
-          architecture: 'x64'
+          python-version: "3.9"
+          architecture: "x64"
 
-      # We'd love to use the action but the action isn't exactly clean so we're going to do this the manual way.
-      - name: Setup Bazel
-        run: |
-          sudo apt-get -y install apt-transport-https curl gnupg && \
-          curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel.gpg && \
-          sudo mv bazel.gpg /etc/apt/trusted.gpg.d/ && \
-          echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list;
+      # - name: Set up MinGW
+      #   if: ${{ matrix.os.prettyname == 'Windows' }}
+      #   uses: egor-tensin/setup-mingw@v2
+      #   with:
+      #     platform: x64
 
-          sudo apt-get update && sudo apt-get install bazel -y
-      
-      - name: Build (Native)
+      # - name: Build (Native, Windows)
+      #   if: ${{ matrix.os.prettyname == 'Windows' }}
+      #   run: |
+      #     echo "Setting PYTHON_BIN_PATH to python in PATH"
+      #     $env:PYTHON_BIN_PATH=(Get-Command python).Path
+      #     echo $env:PYTHON_BIN_PATH
+      #     pip install numpy
+      #     python build.py build --desktop cpu --opencv=cmake -vv
+
+      - name: Build (Native, *nix)
         run: |
-         pip install numpy
-         python build.py build --desktop cpu --include_opencv_libs -v
-      
+          pip install numpy
+          python build.py build --desktop cpu --opencv=cmake -vv
+
       - name: Build (.NET)
-        run: dotnet build -c Debug ./src/Akihabara.sln
+        run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
       
-      - name: Test
-        run: dotnet test $pwd/src/*.Tests/bin/Debug/*/*.Tests.dll --logger "trx;LogFileName=TestResults-Linux.trx"
+      - name: Copy libmediapipe_c.* into Akihabara.tests
+        run: cp $pwd/src/${{env.PROJECT_NAME}}/bin/Debug/${{env.NET_ENV}}/libmediapipe_c.* $pwd/src/${{env.PROJECT_NAME}}.Tests/bin/Debug/${{env.NET_ENV}}/
+        shell: pwsh
+
+      - name: Test (CPU)
+        run: dotnet test --filter TestCategory!=GpuOnlyTest "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
       # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#always
-      - name: Upload Test Results
+      - name: Upload Test Results (${{matrix.os.prettyname}})
         uses: actions/upload-artifact@v2
-        if: ${{ always() }}
         with:
-          name: TestResults-Linux
-          path: ${{github.workspace}}/TestResults/TestResults-Linux.trx
+          name: TestResults-${{matrix.os.prettyname}}
+          path: ${{github.workspace}}/TestResults/TestResults-${{matrix.os.prettyname}}*.trx
+
+      # The contents of the build folder
+      - name: Upload Build Artifacts (${{matrix.os.prettyname}})
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts-${{matrix.os.prettyname}}
+          path: build/

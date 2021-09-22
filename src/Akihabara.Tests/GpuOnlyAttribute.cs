@@ -5,5 +5,8 @@
 using NUnit.Framework;
 using System;
 
-[AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
-public class GpuOnlyAttribute : CategoryAttribute {}
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+public class GpuOnlyAttribute : CategoryAttribute
+{
+    public GpuOnlyAttribute() : base("GpuOnlyTest") { }
+}
