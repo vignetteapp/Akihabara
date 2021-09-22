@@ -62,7 +62,6 @@ jobs:
       #     python build.py build --desktop cpu --opencv=cmake -vv
 
       - name: Build (Native, *nix)
-        if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           pip install numpy
           python build.py build --desktop cpu --opencv=cmake -vv
