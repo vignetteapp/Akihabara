@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -24,7 +23,7 @@ namespace Akihabara.Gpu
         public GlContext(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
             _sharedPtrHandle = new GlContextSharedPtr(ptr);
-            this.Ptr = _sharedPtrHandle.Get();
+            Ptr = _sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
@@ -46,7 +45,7 @@ namespace Akihabara.Gpu
 
         public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
-        #if OPENGL_ES
+#if OPENGL_ES
         public IntPtr EglDisplay => SafeNativeMethods.mp_GlContext__egl_display(MpPtr);
 
         public IntPtr EglConfig => SafeNativeMethods.mp_GlContext__egl_config(MpPtr);
@@ -56,7 +55,7 @@ namespace Akihabara.Gpu
         public IntPtr NsglContext => SafeNativeMethods.mp_GlContext__nsgl_context(MpPtr);
 
         public IntPtr EaglContext => SafeNativeMethods.mp_GlContext__eagl_context(MpPtr);
-        #endif
+#endif
 
         public bool IsCurrent => SafeNativeMethods.mp_GlContext__IsCurrent(MpPtr);
 

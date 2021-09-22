@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 namespace Akihabara.Framework.ImageFormat
 {
@@ -21,6 +20,6 @@ namespace Akihabara.Framework.ImageFormat
             Lab8 = 10,
             Sbgra = 11,
             Vec32F2 = 12,
-        }        
+        }
     }
 }

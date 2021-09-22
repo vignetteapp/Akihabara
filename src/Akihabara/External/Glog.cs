@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using Akihabara.Native;
 
@@ -26,31 +25,31 @@ namespace Akihabara.External
             switch (severity)
             {
                 case Severity.Info:
-                {
-                    UnsafeNativeMethods.glog_LOG_INFO__PKc(str).Assert();
-                    break;
-                }
+                    {
+                        UnsafeNativeMethods.glog_LOG_INFO__PKc(str).Assert();
+                        break;
+                    }
                 case Severity.Warning:
-                {
-                    UnsafeNativeMethods.glog_LOG_WARNING__PKc(str).Assert();
-                    break;
-                }
+                    {
+                        UnsafeNativeMethods.glog_LOG_WARNING__PKc(str).Assert();
+                        break;
+                    }
                 case Severity.Error:
-                {
-                    UnsafeNativeMethods.glog_LOG_ERROR__PKc(str).Assert();
-                    break;
-                }
+                    {
+                        UnsafeNativeMethods.glog_LOG_ERROR__PKc(str).Assert();
+                        break;
+                    }
                 case Severity.Fatal:
-                {
-                    UnsafeNativeMethods.glog_LOG_FATAL__PKc(str).Assert();
-                    break;
-                }
+                    {
+                        UnsafeNativeMethods.glog_LOG_FATAL__PKc(str).Assert();
+                        break;
+                    }
                 default:
-                {
-                    // just to appease Roslyn and ReSharper
-                    UnsafeNativeMethods.glog_LOG_INFO__PKc(str);
-                    break;
-                }
+                    {
+                        // just to appease Roslyn and ReSharper
+                        UnsafeNativeMethods.glog_LOG_INFO__PKc(str);
+                        break;
+                    }
             }
         }
     }

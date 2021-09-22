@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -17,7 +16,7 @@ namespace Akihabara.External
         public StdString(byte[] bytes) : base()
         {
             UnsafeNativeMethods.std_string__PKc_i(bytes, bytes.Length, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()

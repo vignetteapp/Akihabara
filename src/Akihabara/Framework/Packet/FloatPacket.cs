@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Framework.Port;
@@ -18,14 +17,14 @@ namespace Akihabara.Framework.Packet
         public FloatPacket(float value) : base()
         {
             UnsafeNativeMethods.mp__MakeFloatPacket__f(value, out var ptr).Assert();
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public FloatPacket(float value, Timestamp timestamp) : base()
         {
             UnsafeNativeMethods.mp__MakeFloatPacket_At__f_Rt(value, timestamp.MpPtr, out var ptr).Assert();
             GC.KeepAlive(timestamp);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public override float Get()

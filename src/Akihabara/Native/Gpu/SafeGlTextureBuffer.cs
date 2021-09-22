@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Diagnostics.Contracts;
@@ -13,10 +12,10 @@ namespace Akihabara.Native.Gpu
     {
         #region GlTextureBuffer
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTextureBuffer__name(IntPtr glTextureBuffer);
+        public static extern uint mp_GlTextureBuffer__name(IntPtr glTextureBuffer);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
-        public static extern UInt32 mp_GlTextureBuffer__target(IntPtr glTextureBuffer);
+        public static extern uint mp_GlTextureBuffer__target(IntPtr glTextureBuffer);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern int mp_GlTextureBuffer__width(IntPtr glTextureBuffer);

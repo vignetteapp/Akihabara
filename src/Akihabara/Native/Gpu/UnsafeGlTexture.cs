@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using System.Runtime.InteropServices;
@@ -14,7 +13,7 @@ namespace Akihabara.Native.Gpu
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode
-            mp_GlTexture__ui_i_i(UInt32 name, int width, int height, out IntPtr glTexture);
+            mp_GlTexture__ui_i_i(uint name, int width, int height, out IntPtr glTexture);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_GlTexture__delete(IntPtr glTexture);

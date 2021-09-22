@@ -1,16 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
-
-using Akihabara.Native;
-using ng = Akihabara.Native.Gpu;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Akihabara.Framework.Port;
-using Akihabara.Gpu;
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 namespace Akihabara.Framework.Packet
 {

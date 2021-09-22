@@ -1,10 +1,9 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
-using Akihabara.Framework.Protobuf;
 using Akihabara.Framework.Port;
+using Akihabara.Framework.Protobuf;
 using Akihabara.Native;
 
 namespace Akihabara.Framework.Packet

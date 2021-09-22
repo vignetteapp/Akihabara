@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -28,7 +27,7 @@ namespace Akihabara.Gpu
         {
             _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
 
-            this.Ptr = _sharedPtrHandle.Get();
+            Ptr = _sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint target, uint name, int width, int height, GpuBufferFormat format,

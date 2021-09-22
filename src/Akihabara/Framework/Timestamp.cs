@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -19,7 +18,7 @@ namespace Akihabara.Framework
         public Timestamp(long val) : base()
         {
             UnsafeNativeMethods.mp_Timestamp__l(val, out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         protected override void DeleteMpPtr()
@@ -35,7 +34,7 @@ namespace Akihabara.Framework
             return Microseconds() == other.Microseconds();
         }
 
-        public override bool Equals(Object obj)
+        public override bool Equals(object obj)
         {
             Timestamp timestampObj = obj == null ? null : (obj as Timestamp);
 
@@ -64,7 +63,7 @@ namespace Akihabara.Framework
 
         public override int GetHashCode()
         {
-            return this.Microseconds().GetHashCode();
+            return Microseconds().GetHashCode();
         }
         #endregion
 

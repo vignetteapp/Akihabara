@@ -1,6 +1,5 @@
-// Copyright 2021 (c) homuler and The Vignette Authors
-// Licensed under MIT
-// See LICENSE for details
+// Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
+// See the LICENSE file in the repository root for more details.
 
 using System;
 using Akihabara.Core;
@@ -23,7 +22,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame() : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__(out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         public ImageFrame(IntPtr imageFramePtr, bool isOwner = true) : base(imageFramePtr, isOwner) { }
@@ -33,7 +32,7 @@ namespace Akihabara.Framework.ImageFormat
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
             UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
-            this.Ptr = ptr;
+            Ptr = ptr;
         }
 
         // there is no equivalent of NativeArray<T> so the closest thing we have is UnmanagedArray<T> or ArrayPooL<T>, which is recommended
@@ -45,12 +44,12 @@ namespace Akihabara.Framework.ImageFormat
             {
                 UnsafeNativeMethods.mp_ImageFrame__ui_i_i_i_Pui8_PF(
                     format, width, height, widthStep,
-                    (IntPtr)pixelData.Ptr,
+                    pixelData.Ptr,
                     ReleasePixelData,
                     out var ptr
                 );
 
-                this.Ptr = ptr;
+                Ptr = ptr;
             }
         }
 
