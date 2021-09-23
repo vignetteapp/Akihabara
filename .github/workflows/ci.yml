@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - { prettyname: Windows, fullname: windows-latest }
+          - { prettyname: Windows, fullname: windows-latest }
           - { prettyname: Linux, fullname: ubuntu-latest }
     steps:
       - name: Cache Bazel directory
@@ -64,7 +64,7 @@ jobs:
       - name: Build (Native, *nix)
         run: |
           pip install numpy
-          python build.py build --desktop cpu --opencv=cmake -vv
+          python build.py build --desktop cpu -vv
 
       - name: Build (.NET)
         run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
