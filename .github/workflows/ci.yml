@@ -60,13 +60,13 @@ jobs:
            $env:PYTHON_BIN_PATH=(Get-Command python).Path
            echo $env:PYTHON_BIN_PATH
            pip install numpy
-           python build.py build --desktop cpu --opencv=local -vv
+           python build.py build --desktop cpu -vv
 
       - name: Build (Native, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           pip install numpy
-          python build.py build --desktop cpu --opencv=local -vv
+          python build.py build --desktop cpu -vv
 
       - name: Build (.NET)
         run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
