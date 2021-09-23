@@ -9,11 +9,17 @@ jobs:
   report:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion != 'cancelled' }}
+    strategy:
+       fail-fast: false
+       matrix:
+          os:
+#            - { prettyname: Windows }
+            - { prettyname: Linux }    
     steps:
       - name: Report
         uses: dorny/test-reporter@v1.4.2
         with:
-          artifact: TestResults-Vignette.Game.Tests
+          artifact: TestResults-${{matrix.os.prettyname}}
           name: Test Results
           path: "*.trx"
           reporter: dotnet-trx
