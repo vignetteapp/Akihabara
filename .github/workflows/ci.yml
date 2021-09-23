@@ -84,7 +84,7 @@ jobs:
         if: ${{ always() }}
         with:
           name: TestResults-${{matrix.os.prettyname}}
-          path: ${{github.workspace}}/TestResults/TestResults-${{matrix.os.prettyname}}*.trx
+          path: ${{github.workspace}}/src/Akihabara.Tests/TestResults/TestResults-${{matrix.os.prettyname}}.trx
 
       # The contents of the build folder
       - name: Upload Build Artifacts (${{matrix.os.prettyname}})
