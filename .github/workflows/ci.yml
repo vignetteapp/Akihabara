@@ -81,6 +81,7 @@ jobs:
       # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#always
       - name: Upload Test Results (${{matrix.os.prettyname}})
         uses: actions/upload-artifact@v2
+        if: ${{ always() }}
         with:
           name: TestResults-${{matrix.os.prettyname}}
           path: ${{github.workspace}}/TestResults/TestResults-${{matrix.os.prettyname}}*.trx
