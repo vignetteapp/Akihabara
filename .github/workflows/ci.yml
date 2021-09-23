@@ -17,6 +17,7 @@ jobs:
     steps:
       - name: Cache Bazel directory
         uses: actions/cache@v2
+        if: ${{ always() }}
         env:
           cache-name: bazel-cache
         with:
@@ -46,25 +47,26 @@ jobs:
           python-version: "3.9"
           architecture: "x64"
 
-      # - name: Set up MinGW
-      #   if: ${{ matrix.os.prettyname == 'Windows' }}
-      #   uses: egor-tensin/setup-mingw@v2
-      #   with:
-      #     platform: x64
+       - name: Set up MinGW
+         if: ${{ matrix.os.prettyname == 'Windows' }}
+         uses: egor-tensin/setup-mingw@v2
+         with:
+           platform: x64
 
-      # - name: Build (Native, Windows)
-      #   if: ${{ matrix.os.prettyname == 'Windows' }}
-      #   run: |
-      #     echo "Setting PYTHON_BIN_PATH to python in PATH"
-      #     $env:PYTHON_BIN_PATH=(Get-Command python).Path
-      #     echo $env:PYTHON_BIN_PATH
-      #     pip install numpy
-      #     python build.py build --desktop cpu --opencv=cmake -vv
+       - name: Build (Native, Windows)
+         if: ${{ matrix.os.prettyname == 'Windows' }}
+         run: |
+           echo "Setting PYTHON_BIN_PATH to python in PATH"
+           $env:PYTHON_BIN_PATH=(Get-Command python).Path
+           echo $env:PYTHON_BIN_PATH
+           pip install numpy
+           python build.py build --desktop cpu --opencv=local -vv
 
       - name: Build (Native, *nix)
+        if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           pip install numpy
-          python build.py build --desktop cpu -vv
+          python build.py build --desktop cpu --opencv=local -vv
 
       - name: Build (.NET)
         run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
