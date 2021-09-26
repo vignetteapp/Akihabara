@@ -31,7 +31,7 @@ namespace Akihabara.Framework.ImageFormat
 
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
-            UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr);
+            UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr).Assert();
             Ptr = ptr;
         }
 
