@@ -21,7 +21,7 @@ namespace Akihabara.Framework.ImageFormat
 
         public ImageFrame() : base()
         {
-            UnsafeNativeMethods.mp_ImageFrame__(out var ptr);
+            UnsafeNativeMethods.mp_ImageFrame__(out var ptr).Assert();
             Ptr = ptr;
         }
 
