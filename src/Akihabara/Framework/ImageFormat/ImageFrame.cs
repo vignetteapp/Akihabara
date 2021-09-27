@@ -99,28 +99,26 @@ namespace Akihabara.Framework.ImageFormat
 
         public int ChannelSize()
         {
-            SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
+            var code = SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
 
-            // This is supposed to have a ValueOrFormatException() Function but we don't know
-            // what it implements.
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int NumberOfChannels()
         {
-            SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val).Assert();
+            var code = SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int ByteDepth()
         {
-            SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val).Assert();
+            var code = SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public int WidthStep()
@@ -140,10 +138,10 @@ namespace Akihabara.Framework.ImageFormat
 
         public int PixelDataSizeStoredContiguously()
         {
-            SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
+            var code = SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
 
             GC.KeepAlive(this);
-            return val;
+            return ValueOrFormatException(code, val);
         }
 
         public void SetToZero()
