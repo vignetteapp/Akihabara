@@ -17,7 +17,7 @@ namespace Akihabara.Native
     {
         #region ABSL
 
-        [DllImport(MediaPipeLibrary, ExactSpelling = true, CharSet = CharSet.Unicode)]
+        [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode absl_Status__i_PKc(int code, string message, out IntPtr status);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
