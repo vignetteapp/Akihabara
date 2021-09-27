@@ -12,6 +12,7 @@ namespace Akihabara.Native
         #region ABSL
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
+        [return: MarshalAs(UnmanagedType.I1)]
         public static extern bool absl_Status__ok(IntPtr status);
 
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
