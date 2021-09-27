@@ -128,9 +128,9 @@ namespace Akihabara.Framework.ImageFormat
             return SafeNativeMethods.mp_ImageFrame__WidthStep(MpPtr);
         }
 
-        public int MutablePixelData()
+        public IntPtr MutablePixelData()
         {
-            return (int)SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
+            return SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
         }
 
         public int PixelDataSize()
