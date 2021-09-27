@@ -4,6 +4,7 @@
 using Akihabara.Core;
 using Akihabara.Framework.Port;
 using NUnit.Framework;
+using System;
 
 namespace Tests
 {
@@ -78,6 +79,12 @@ namespace Tests
         public void IsOk_ShouldReturnFalse_When_StatusIsFailedPrecondition()
         {
             var status = Status.FailedPrecondition();
+
+            Console.WriteLine($"Status: {status}");
+            Console.WriteLine($"status.Code: {status.Code}");
+            Console.WriteLine($"status.RawCode: {status.RawCode}");
+            Console.WriteLine($"status.ok: {status.ok}");
+            Console.WriteLine("HOW IS IT LITERALLY CONTRADICTING ITSELF");
 
             Assert.False(status.ok);
         }
