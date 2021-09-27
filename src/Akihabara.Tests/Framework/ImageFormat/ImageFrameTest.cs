@@ -4,6 +4,7 @@
 using System;
 using System.Linq;
 using Akihabara.Core;
+using Akihabara.External;
 using Akihabara.Framework.ImageFormat;
 using NUnit.Framework;
 using UnmanageUtility;
@@ -145,9 +146,10 @@ namespace Akihabara.Tests.Format
             Assert.IsEmpty(normalBuffer.Where((x, i) => x != largeBuffer[i]));
         }
 
-        [Test]
+        [Test, SignalAbort]
         public void CopyToByteBuffer_ShouldThrowException_When_BufferSizeIsTooSmall()
         {
+            Glog.Initialize("ImageFrameTest", "/home/speykious/ImageFrameTest_Glog");
             var imageFrame = new ImageFrame(ImageFormat.Format.Gray8, 10, 10);
 
             Assert.Throws<MediapipeException>(() => { imageFrame.CopyToByteBuffer(99); });
@@ -163,7 +165,7 @@ namespace Akihabara.Tests.Format
             Assert.IsEmpty(normalBuffer.Where((x, i) => x != largeBuffer[i]));
         }
 
-        [Test]
+        [Test, SignalAbort]
         public void CopyToUshortBuffer_ShouldThrowException_When_BufferSizeIsTooSmall()
         {
             var imageFrame = new ImageFrame(ImageFormat.Format.Gray16, 10, 10);
@@ -181,7 +183,7 @@ namespace Akihabara.Tests.Format
             Assert.IsEmpty(normalBuffer.Where((x, i) => Math.Abs(x - largeBuffer[i]) > 1e-9));
         }
 
-        [Test]
+        [Test, SignalAbort]
         public void CopyToFloatBuffer_ShouldThrowException_When_BufferSizeIsTooSmall()
         {
             var imageFrame = new ImageFrame(ImageFormat.Format.Vec32F1, 10, 10);
