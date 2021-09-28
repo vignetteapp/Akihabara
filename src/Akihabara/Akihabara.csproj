@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageId>Akihabara</PackageId>
+    <Version>2021.928.0</Version>
+    <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
+    <Description>A .NET port for Google Mediapipe, inspired of MediaPipeUnityPlugin.</Description>
+    <Authors>The Vignette Authors</Authors>
+    <Company>The Vignette Authors</Company>
   </PropertyGroup>
 
   <ItemGroup>
