@@ -49,8 +49,10 @@ namespace Akihabara.Core
         {
             if (OwnsResource())
             {
-                ReleaseMpPtr();
+                DeleteMpPtr();
             }
+            ReleaseMpPtr();
+            base.DisposeUnmanaged();
         }
 
         /// <summary>

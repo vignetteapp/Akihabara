@@ -65,7 +65,7 @@ namespace Akihabara.Gpu
 
         protected override void DeleteMpPtr()
         {
-            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(MpPtr);
+            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(Ptr);
         }
 
         public override IntPtr Get()
