@@ -5,4 +5,7 @@ using System;
 using NUnit.Framework;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-public class SignalAbortAttribute : CategoryAttribute { }
+public class SignalAbortAttribute : CategoryAttribute
+{
+    public SignalAbortAttribute() : base("SignalAbortTest") { }
+}

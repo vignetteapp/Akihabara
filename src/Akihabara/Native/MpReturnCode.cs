@@ -7,10 +7,11 @@ namespace Akihabara.Native
 {
     public enum MpReturnCode : int
     {
+        Success = 0,
         /// <summary>
         /// A standard Exception is thrown
         /// </summary>
-        Success = 0,
+        StandardError = 1,
         /// <summary>
         /// An error beyond standard Exception is thrown
         /// </summary>
@@ -33,7 +34,7 @@ namespace Akihabara.Native
             {
                 case MpReturnCode.Success: return;
                 case MpReturnCode.Aborted:
-                    throw new MediapipeException("MediaPipe has aborted. See Glog files for details.");
+                    throw new MediapipeException("Mediapipe has aborted. See Glog files for details.");
                 default:
                     throw new MediapipePluginException($"Failed to call a native function (code={code})");
             }
