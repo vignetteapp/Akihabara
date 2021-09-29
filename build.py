@@ -316,17 +316,17 @@ class UninstallCommand(Command):
 
     #if self.android:
     #  self.console.info('Uninstalling native libraries for Android...')
-	#
+    #
     #  aar_path = os.path.join(_INSTALL_PATH, 'Plugins', 'Android', 'mediapipe_android.aar')
-	#
+    #
     #  if os.path.exists(aar_path):
     #    self._remove(aar_path)
 
     #if self.ios:
     #  self.console.info('Uninstalling native libraries for iOS...')
-	#
-	#	ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
-	#
+    #
+    #  ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
+    #
     #  if os.path.exists(ios_framework_path):
     #    self._rmtree(ios_framework_path)
 
