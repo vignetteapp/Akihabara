@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Akihabara\Akihabara.csproj" />
+    <ProjectReference Include="..\..\Akihabara\Akihabara.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
