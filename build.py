@@ -302,8 +302,8 @@ class UninstallCommand(Command):
     Command.__init__(self, command_args)
 
     self.desktop = command_args.args.desktop
-    self.android = command_args.args.android
-    self.ios = command_args.args.ios
+    #self.android = command_args.args.android
+    #self.ios = command_args.args.ios
     self.resources = command_args.args.resources
     self.protobuf = command_args.args.protobuf
 
@@ -314,21 +314,21 @@ class UninstallCommand(Command):
         if f.endswith('.dll') or f.endswith('.dylib') or f.endswith('.so'):
           self._remove(f)
 
-    if self.android:
-      self.console.info('Uninstalling native libraries for Android...')
+    #if self.android:
+    #  self.console.info('Uninstalling native libraries for Android...')
+    #
+    #  aar_path = os.path.join(_INSTALL_PATH, 'Plugins', 'Android', 'mediapipe_android.aar')
+    #
+    #  if os.path.exists(aar_path):
+    #    self._remove(aar_path)
 
-      aar_path = os.path.join(_INSTALL_PATH, 'Plugins', 'Android', 'mediapipe_android.aar')
-
-      if os.path.exists(aar_path):
-        self._remove(aar_path)
-
-    if self.ios:
-      self.console.info('Uninstalling native libraries for iOS...')
-
-      ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
-
-      if os.path.exists(ios_framework_path):
-        self._rmtree(ios_framework_path)
+    #if self.ios:
+    #  self.console.info('Uninstalling native libraries for iOS...')
+    #
+    #  ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
+    #
+    #  if os.path.exists(ios_framework_path):
+    #    self._rmtree(ios_framework_path)
 
     if self.resources:
       self.console.info('Uninstalling resource files...')
