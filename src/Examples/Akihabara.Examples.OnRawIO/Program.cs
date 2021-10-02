@@ -33,18 +33,20 @@ namespace Akihabara.Examples.OnRawIO
             var length = width * height * 4;
             var pixelData = new UnmanagedArray<byte>(length);
             pixelData.CopyFrom(srcBytes);
-            var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData);
-            var inputPacket = new ImageFramePacket(inputFrame);
+            using (var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData))
+            {
+                var inputPacket = new ImageFramePacket(inputFrame);
 
-            graph.AddPacketToInputStream(kInputStream, inputPacket);
-            graph.CloseInputStream(kInputStream);
+                graph.AddPacketToInputStream(kInputStream, inputPacket);
+                /* graph.CloseInputStream(kInputStream); */
 
-            var packet = new ImageFramePacket();
-            poller.Next(packet);
-            var imageFrame = packet.Get();
-            var bytes = imageFrame.CopyToByteBuffer(length);
+                var packet = new ImageFramePacket();
+                poller.Next(packet);
+                var imageFrame = packet.Get();
+                var bytes = imageFrame.CopyToByteBuffer(length);
 
-            ByteArrayToFile("outputImage.rawstuff", bytes);
+                ByteArrayToFile("outputImage.rawstuff", bytes);
+            }
         }
 
         static void Usage()
