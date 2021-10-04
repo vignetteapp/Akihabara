@@ -56,7 +56,7 @@ namespace Akihabara.Examples.OnRawIO
 
             while (true)
             {
-                int bytesRead = stdin.Read(inBytes, 0, length);
+                int bytesRead = ReadBytesFromStream(stdin, inBytes);
                 if (bytesRead == 0)
                     break;
                 else if (bytesRead != length)
@@ -88,6 +88,22 @@ namespace Akihabara.Examples.OnRawIO
             stdout.Dispose();
 
             return doneStatus;
+        }
+
+        static int ReadBytesFromStream(Stream stream, byte[] bytes)
+        {
+            int bytesToRead = bytes.Length;
+            int totalBytesRead = 0;
+
+            while (bytesToRead > 0)
+            {
+                int n = stream.Read(bytes, totalBytesRead, bytesToRead);
+                if (n == 0) break;
+                totalBytesRead += n;
+                bytesToRead -= n;
+            }
+
+            return totalBytesRead;
         }
 
         static void Usage()
