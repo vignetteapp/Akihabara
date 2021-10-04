@@ -44,6 +44,8 @@ namespace Akihabara.Examples.OnRawIO
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
                 graph.CloseInputStream(kInputStream);
 
+                graph.WaitUntilIdle();
+
                 var packet = new ImageFramePacket();
                 Console.WriteLine("Waiting for packet...");
                 if (!poller.Next(packet))
