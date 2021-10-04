@@ -4,6 +4,7 @@ using Akihabara.External;
 using Akihabara.Framework;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
+using Akihabara.Framework.Port;
 using UnmanageUtility;
 
 namespace Akihabara.Examples.OnRawIO
@@ -15,73 +16,83 @@ namespace Akihabara.Examples.OnRawIO
 
         static void Main(string[] args)
         {
-            Glog.Initialize("stuff", "stuff");
-            if (args.Length != 4)
+            if (args.Length != 3)
             {
                 Usage();
                 return;
             }
-
+            
             int width = Int32.Parse(args[0]);
             int height = Int32.Parse(args[1]);
-            byte[] srcBytes = File.ReadAllBytes(args[2]);
-            string configText = File.ReadAllText(args[3]);
+            string configText = File.ReadAllText(args[2]);
 
-            Console.WriteLine($"srcBytes: {srcBytes.Length}");
+            Glog.Initialize("stuff", "stuff");
 
+            Status runStatus = RunGraph(width, height, configText);
+
+            if (!runStatus.ok)
+            {
+                Glog.Log(Glog.Severity.Error, $"Failed to run the graph: {runStatus}");
+                Environment.Exit(1);
+            }
+            else
+            {
+                Glog.Log(Glog.Severity.Info, "Success!");
+            }
+        }
+
+        static Status RunGraph(int width, int height, string configText)
+        {
             var graph = new CalculatorGraph(configText);
             var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
 
             graph.StartRun();
 
             var length = width * height * 4;
-            var pixelData = new UnmanagedArray<byte>(length);
-            pixelData.CopyFrom(srcBytes);
-            using (var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData))
+            var inBytes = new byte[length];
+
+            Stream stdin = Console.OpenStandardInput(length);
+            Stream stdout = Console.OpenStandardOutput(length);
+
+            while (true)
             {
+                int bytesRead = stdin.Read(inBytes, 0, length);
+                if (bytesRead == 0)
+                    break;
+                else if (bytesRead != length)
+                    throw new FormatException($"Expected a raw RGBA image of byte size {length} ({width}x{height}x4), but received {bytesRead} bytes");
+
+                var pixelData = new UnmanagedArray<byte>(length);
+                pixelData.CopyFrom(inBytes);
+
+                var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData);
                 int timestamp = System.Environment.TickCount & int.MaxValue;
                 var inputPacket = new ImageFramePacket(inputFrame, new Timestamp(timestamp));
 
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
-                graph.CloseInputStream(kInputStream);
-
-                graph.WaitUntilIdle();
 
                 var packet = new ImageFramePacket();
-                Console.WriteLine("Waiting for packet...");
                 if (!poller.Next(packet))
-                {
-                    Console.WriteLine("IT FUCKING FAILED TO RETRIEVE THE PACKET");
-                    return;
-                }
+                    break;
+                
                 var imageFrame = packet.Get();
-                var bytes = imageFrame.CopyToByteBuffer(length);
-
-                Console.WriteLine("IT FUCKING WORKED");
-                ByteArrayToFile("outputImage.rawstuff", bytes);
+                var outBytes = imageFrame.CopyToByteBuffer(length);
+                stdout.Write(outBytes, 0, length);
             }
+
+            Glog.Log(Glog.Severity.Info, "Shutting down.");
+            graph.CloseInputStream(kInputStream);
+            var doneStatus = graph.WaitUntilDone();
+
+            stdin.Dispose();
+            stdout.Dispose();
+
+            return doneStatus;
         }
 
         static void Usage()
         {
-            Console.WriteLine("Usage: dotnet run <width> <height> <image> <graph-config>");
-        }
-
-        static bool ByteArrayToFile(string fileName, byte[] byteArray)
-        {
-            try
-            {
-                using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write))
-                {
-                    fs.Write(byteArray, 0, byteArray.Length);
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception caught in process: {0}", ex);
-                return false;
-            }
+            Console.WriteLine("Usage: dotnet run <width> <height> <graph-config> < raw_image_input > raw_image_output");
         }
     }
 }
