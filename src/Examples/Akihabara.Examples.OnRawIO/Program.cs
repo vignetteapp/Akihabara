@@ -39,7 +39,8 @@ namespace Akihabara.Examples.OnRawIO
             pixelData.CopyFrom(srcBytes);
             using (var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData))
             {
-                var inputPacket = new ImageFramePacket(inputFrame);
+                int timestamp = System.Environment.TickCount & int.MaxValue;
+                var inputPacket = new ImageFramePacket(inputFrame, new Timestamp(timestamp));
 
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
                 graph.CloseInputStream(kInputStream);
@@ -56,6 +57,7 @@ namespace Akihabara.Examples.OnRawIO
                 var imageFrame = packet.Get();
                 var bytes = imageFrame.CopyToByteBuffer(length);
 
+                Console.WriteLine("IT FUCKING WORKED");
                 ByteArrayToFile("outputImage.rawstuff", bytes);
             }
         }
