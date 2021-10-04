@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Akihabara.External;
 using Akihabara.Framework;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
@@ -14,6 +15,7 @@ namespace Akihabara.Examples.OnRawIO
 
         static void Main(string[] args)
         {
+            Glog.Initialize("stuff", "stuff");
             if (args.Length != 4)
             {
                 Usage();
@@ -24,6 +26,8 @@ namespace Akihabara.Examples.OnRawIO
             int height = Int32.Parse(args[1]);
             byte[] srcBytes = File.ReadAllBytes(args[2]);
             string configText = File.ReadAllText(args[3]);
+
+            Console.WriteLine($"srcBytes: {srcBytes.Length}");
 
             var graph = new CalculatorGraph(configText);
             var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
@@ -38,10 +42,15 @@ namespace Akihabara.Examples.OnRawIO
                 var inputPacket = new ImageFramePacket(inputFrame);
 
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
-                /* graph.CloseInputStream(kInputStream); */
+                graph.CloseInputStream(kInputStream);
 
                 var packet = new ImageFramePacket();
-                poller.Next(packet);
+                Console.WriteLine("Waiting for packet...");
+                if (!poller.Next(packet))
+                {
+                    Console.WriteLine("IT FUCKING FAILED TO RETRIEVE THE PACKET");
+                    return;
+                }
                 var imageFrame = packet.Get();
                 var bytes = imageFrame.CopyToByteBuffer(length);
 
