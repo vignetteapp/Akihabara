@@ -108,7 +108,7 @@ namespace Akihabara.Examples.OnRawIO
 
         static void Usage()
         {
-            Console.WriteLine("Usage: dotnet run <width> <height> <graph-config> < raw_image_input > raw_image_output");
+            Console.WriteLine("Usage: Akihabara.Examples.OnRawIO <width> <height> <graph-config> < raw_image_input > raw_image_output");
         }
     }
 }
