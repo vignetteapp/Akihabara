@@ -51,8 +51,8 @@ namespace Akihabara.Examples.OnRawIO
             var length = width * height * 4;
             var inBytes = new byte[length];
 
-            Stream stdin = Console.OpenStandardInput(length);
-            Stream stdout = Console.OpenStandardOutput(length);
+            var stdin = new BufferedStream(Console.OpenStandardInput(length));
+            var stdout = new BufferedStream(Console.OpenStandardOutput(length));
 
             while (true)
             {
