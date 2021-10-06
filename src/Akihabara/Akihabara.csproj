@@ -26,9 +26,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Documents">
-    <Content Include="..\..\README.md">
-      <Link>README.md</Link>
-    </Content>
+    <Content Include="..\..\README.md" Link="README.md" />
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
