@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Project">
+    <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyTitle>Akihabara native Windows x64 libraries (CPU)</AssemblyTitle>
+    <AssemblyName>Akihabara.Runtime.Windows_x64.CPU</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <IsPackable>true</IsPackable>
+    <PackageId>Akihabara.Runtime.Windows_x64.CPU</PackageId>
+    <Version>2021.1006.0</Version>
+    <Authors>The Vignette Authors</Authors>
+    <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
+    <Title>Akihabara native Windows x64 libraries (CPU)</Title>
+    <Description>Native libraries for Akihabara on Windows x64, CPU version.</Description>
+    <Copyright>2021 homuler and The Vignette Authors</Copyright>
+    <PackageProjectUrl>https://github.com/vignetteapp/Akihabara</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- I didn't think it would be this criminally simple to include the native library -->
+    <Content Include="*.dll" Pack="true" PackagePath="lib\$(TargetFramework)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Label="Documents">
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>
+
+
