@@ -2,6 +2,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Akihabara\Akihabara.csproj" />
+    <!-- <ProjectReference -->
+    <!--     Include="..\..\Runtime\Akihabara.Runtime.Linux_x64.CPU\Akihabara.Runtime.Linux_x64.CPU.csproj" -->
+    <!--     Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' " /> -->
   </ItemGroup>
 
   <PropertyGroup>
