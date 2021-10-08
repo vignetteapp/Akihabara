@@ -25,5 +25,6 @@ build.py build --desktop gpu --vv
 - Python 3.9 (We tried it with 3.8 but for some odd reason things were broken for this build. PRs welcome to fix this though!)
 - .NET 5.0 or .NET 6.0 LTS
 - GCC-9 (GCC-10 also works but not guranteed to work since Mediapipe uses a lot of deprecated syntax).
+- Bazel
 - CMake (Needed if you wanna compile opencv locally with `build.py --opencv=cmake`.
 
