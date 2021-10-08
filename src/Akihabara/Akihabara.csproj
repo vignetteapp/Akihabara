@@ -1,29 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+  <PropertyGroup Label="Project">
     <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PackageId>Akihabara</PackageId>
-    <Version>2021.928.0</Version>
-    <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
-    <Description>A .NET port for Google Mediapipe, inspired of MediaPipeUnityPlugin.</Description>
-    <Authors>The Vignette Authors</Authors>
-    <Company>The Vignette Authors</Company>
+    <AssemtlyTitle>Akihabara</AssemtlyTitle>
+    <AssemblyName>Akihabara</AssemblyName>
   </PropertyGroup>
 
-  <ItemGroup>
+  <PropertyGroup Label="Nuget">
+    <PackageId>Akihabara</PackageId>
+    <Version>2021.1005.0</Version>
+    <Authors>The Vignette Authors</Authors>
+    <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
+    <Title>Akihabara</Title>
+    <Description>Mediapipe wrapper library.</Description>
+    <Copyright>2021 homuler and The Vignette Authors</Copyright>
+    <PackageProjectUrl>https://github.com/vignetteapp/Akihabara</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup Label="Package References">
     <PackageReference Include="Google.Protobuf" Version="3.17.3" />
     <PackageReference Include="UnmanagedArray" Version="2.1.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="..\..\README.md">
-      <Link>README.md</Link>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Annotations" />
+  <ItemGroup Label="Documents">
+    <Content Include="..\..\README.md" Link="README.md" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>
