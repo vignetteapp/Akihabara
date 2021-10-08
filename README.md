@@ -11,13 +11,13 @@ Keep in mind Mediapipe supports both CPU and GPU so you will need to compile as 
 If you want CPU (Recommended)
 
 ```
-build.py --desktop cpu -vv
+build.py build --desktop cpu -vv
 ```
 
 If you want GPU (Experimental, doesn't work yet!)
 
 ```
-build.py --desktop gpu --vv
+build.py build --desktop gpu --vv
 ```
 
 ## Prerequisites
@@ -25,5 +25,6 @@ build.py --desktop gpu --vv
 - Python 3.9 (We tried it with 3.8 but for some odd reason things were broken for this build. PRs welcome to fix this though!)
 - .NET 5.0 or .NET 6.0 LTS
 - GCC-9 (GCC-10 also works but not guranteed to work since Mediapipe uses a lot of deprecated syntax).
+- Bazel
 - CMake (Needed if you wanna compile opencv locally with `build.py --opencv=cmake`.
 
