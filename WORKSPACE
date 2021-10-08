@@ -51,7 +51,8 @@ http_archive(
         "@//third_party:mediapipe_workaround.diff",
         "@//third_party:mediapipe_visibility.diff",
         "@//third_party:mediapipe_model_path.diff",
-        "@//third_party:mediapipe_extension.diff"
+        "@//third_party:mediapipe_extension.diff",
+        "@//third_party:mediapipe_resource_path.diff"
     ],
     patch_args = [
         "-p1",
