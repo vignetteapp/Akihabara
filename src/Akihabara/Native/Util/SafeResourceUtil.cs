@@ -8,8 +8,10 @@ namespace Akihabara.Native.Util
 {
     public partial class SafeNativeMethods : NativeMethods
     {
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate string PathResolver(string path);
 
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate bool ResourceProvider(string path, IntPtr output);
 
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
