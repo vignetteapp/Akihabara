@@ -94,10 +94,3 @@ jobs:
         with:
           name: TestResults-${{matrix.os.prettyname}}
           path: ${{github.workspace}}/src/Akihabara.Tests/TestResults/TestResults-${{matrix.os.prettyname}}.trx
-
-      # The contents of the build folder
-      - name: Upload Build Artifacts (${{matrix.os.prettyname}})
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-artifacts-${{matrix.os.prettyname}}
-          path: build/
