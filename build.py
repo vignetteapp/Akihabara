@@ -98,7 +98,6 @@ class BuildCommand(Command):
     # self.ios= command_args.args.ios
     self.resources = command_args.args.resources
     self.opencv = command_args.args.opencv
-    self.opencv_deps = command_args.args.opencv_deps
     self.include_opencv_libs = command_args.args.include_opencv_libs
 
     self.compilation_mode = command_args.args.compilation_mode
@@ -163,7 +162,7 @@ class BuildCommand(Command):
     #     os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'objc', 'MediaPipeUnity.zip'),
     #     os.path.join(_BUILD_PATH, 'Plugins', 'iOS'))
 
-    
+
 
     self.console.info('Printing build path...')
     for root, directories, files in os.walk(_BUILD_PATH, topdown=False):
@@ -216,9 +215,6 @@ class BuildCommand(Command):
 
   def _build_opencv_switch(self):
     commands = [f'--@opencv//:switch={self.opencv}']
-
-    if self.opencv == 'cmake':
-      commands += [f'--@opencv//:deps={switch}' for switch in self.opencv_deps]
 
     return commands
 
@@ -372,7 +368,6 @@ class Argument:
     build_command_parser.add_argument('--resources', '-R', action=argparse.BooleanOptionalAction)
     build_command_parser.add_argument('--compilation_mode', '-c', choices=['fastbuild', 'opt', 'dbg'], default='opt')
     build_command_parser.add_argument('--opencv', choices=['local', 'cmake'], default='local', help='Decide to which OpenCV to link for Desktop native libraries')
-    build_command_parser.add_argument('--opencv_deps', action='append', choices=['ffmpeg'], default=[], help='OpenCV Dependencies (only used when `--opencv=cmake`)')
     build_command_parser.add_argument('--include_opencv_libs', action='store_true', help='Include OpenCV\'s native libraries for Desktop')
     build_command_parser.add_argument('--linkopt', '-l', action='append', help='Linker options')
     build_command_parser.add_argument('--verbose', '-v', action='count', default=0)
