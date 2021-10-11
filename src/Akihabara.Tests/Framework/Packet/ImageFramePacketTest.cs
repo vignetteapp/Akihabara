@@ -7,6 +7,7 @@ using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
 using NUnit.Framework;
+using System;
 
 namespace Akihabara.Tests.Framework.Packet
 {
@@ -121,7 +122,14 @@ namespace Akihabara.Tests.Framework.Packet
         {
             var packet = new ImageFramePacket(new ImageFrame());
 
-            Assert.AreEqual(packet.DebugTypeName(), "mediapipe::ImageFrame");
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                Assert.AreEqual(packet.DebugTypeName(), "class mediapipe::ImageFrame");
+            }
+            else
+            {
+                Assert.AreEqual(packet.DebugTypeName(), "mediapipe::ImageFrame");
+            }
         }
         #endregion
     }

@@ -89,7 +89,7 @@ namespace Akihabara.Tests.Format
             }
         }
 
-        [Test]
+        [Test, SignalAbort]
         public void Ctor_ShouldThrowMediaPipeException_When_CalledWithInvalidArgument()
         {
             Assert.Throws<MediapipeException>(() => { new ImageFrame(ImageFormat.Format.Sbgra, 640, 480, 0); });
