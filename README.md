@@ -11,13 +11,13 @@ Keep in mind Mediapipe supports both CPU and GPU so you will need to compile as 
 If you want CPU (Recommended)
 
 ```
-build.py build --desktop cpu -vv
+python3 /path/to/build.py build --desktop cpu -vv
 ```
 
 If you want GPU (Experimental, doesn't work yet!)
 
 ```
-build.py build --desktop gpu --vv
+python3 /path/to/build.py build --desktop gpu --vv
 ```
 
 ## Prerequisites
