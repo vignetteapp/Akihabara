@@ -96,7 +96,14 @@ namespace Akihabara.Tests.Framework.Packet
             float[] array = { 0.01f };
             var packet = new FloatArrayPacket(array);
 
-            Assert.AreEqual(packet.DebugTypeName(), "float []");
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                Assert.AreEqual(packet.DebugTypeName(), "float [0]");
+            }
+            else
+            {
+                Assert.AreEqual(packet.DebugTypeName(), "float []");
+            }
         }
         #endregion
     }
