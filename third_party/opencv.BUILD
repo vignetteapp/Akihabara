@@ -131,7 +131,8 @@ cmake(
                 "CMAKE_CXX_FLAGS": "/std:c++14",
                 # required to link to .dll statically
                 "BUILD_WITH_STATIC_CRT": "OFF",
-                "WITH_LAPACK": "ON",
+                # disable LAPACK to reduce build time in CI
+                "WITH_LAPACK": "OFF",
             },
             "//conditions:default": {
                 # https://github.com/opencv/opencv/issues/19846
