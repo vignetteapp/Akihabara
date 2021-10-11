@@ -41,7 +41,7 @@ class Command:
     self.verbose = command_args.args.verbose
     self.console = Console(self.verbose)
 
-  def _run_command(self, command_list, shell=False):
+  def _run_command(self, command_list, shell=True):
     self.console.v(f"Running `{' '.join(command_list)}`")
 
     if shell:
@@ -69,7 +69,7 @@ class Command:
       os.makedirs(dest, 0o755)
 
     # `shutil.copytree` fails on Windows if target file exists, so run `cp -r` instead.
-    self._run_command(['cp', '-r', f'{source}/*', dest], shell=True)
+    self._run_command(['cp', '-r', f'{source}/*', dest])
 
   def _remove(self, path):
     self.console.v(f"Removing '{path}'...")
@@ -196,8 +196,36 @@ class BuildCommand(Command):
     commands += self._build_linkopt()
 
     if self._is_windows():
-      python_bin_path = os.environ['PYTHON_BIN_PATH'].replace('\\', '//')
-      commands += ['--action_env', f'PYTHON_BIN_PATH={python_bin_path}']
+      python_bin_path_key = 'PYTHON_BIN_PATH'
+      if python_bin_path_key not in os.environ:
+        raise RuntimeError(f'`{python_bin_path_key}` is not set')
+
+      python_bin_path = os.environ[python_bin_path_key].replace('\\', '//')
+      commands += ['--action_env', f'{python_bin_path_key}="{python_bin_path}"']
+
+      # Required to compile OpenCV
+      # Without this environment variable, Visual Studio instances won't be found
+      # cf. https://github.com/bazelbuild/rules_foreign_cc/issues/793
+      program_data_key = 'ProgramData'
+      if program_data_key in os.environ:
+        commands += ['--action_env', program_data_key]
+
+      # Enable CMake to detect processors when configuring OpenCV
+      processor_architecture_key = 'PROCESSOR_ARCHITECTURE'
+      if processor_architecture_key in os.environ:
+        commands += ['--action_env', processor_architecture_key]
+
+      processor_identifier_key = 'PROCESSOR_IDENTIFIER'
+      if processor_identifier_key in os.environ:
+        commands += ['--action_env', processor_identifier_key]
+
+      processor_level_key = 'PROCESSOR_LEVEL'
+      if processor_level_key in os.environ:
+        commands += ['--action_env', processor_level_key]
+
+      processor_revision_key = 'PROCESSOR_REVISION'
+      if processor_revision_key in os.environ:
+        commands += ['--action_env', processor_revision_key]
 
     if self.verbose > 1:
       commands.append('--verbose_failures')
