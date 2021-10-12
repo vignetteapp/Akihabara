@@ -18,6 +18,7 @@ namespace Akihabara.Framework.ImageFormat
         public static readonly uint KGlDefaultAlignmentBoundary = 4;
 
         public delegate void Deleter(IntPtr ptr);
+        private static Deleter deleter = ReleasePixelData;
 
         public ImageFrame() : base()
         {
@@ -45,7 +46,7 @@ namespace Akihabara.Framework.ImageFormat
                 UnsafeNativeMethods.mp_ImageFrame__ui_i_i_i_Pui8_PF(
                     format, width, height, widthStep,
                     pixelData.Ptr,
-                    ReleasePixelData,
+                    deleter,
                     out var ptr
                 ).Assert();
 
