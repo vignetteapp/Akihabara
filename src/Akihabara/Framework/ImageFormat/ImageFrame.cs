@@ -58,10 +58,12 @@ namespace Akihabara.Framework.ImageFormat
             }
         }
 
-        protected override void DisposeUnmanaged() {
+        protected override void DisposeUnmanaged()
+        {
             base.DisposeUnmanaged();
             // `deleter` must not be garbage collected until unmanaged code calls it.
-            if (deleterHandle.IsAllocated) {
+            if (deleterHandle.IsAllocated)
+            {
                 deleterHandle.Free();
             }
         }
