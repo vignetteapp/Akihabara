@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Akihabara.External;
 using Akihabara.Framework;
 using Akihabara.Framework.ImageFormat;
 using Akihabara.Framework.Packet;
 using Akihabara.Framework.Port;
+using Akihabara.Framework.Protobuf;
 using UnmanageUtility;
 
 namespace Akihabara.Examples.OnRawIO
@@ -32,7 +34,7 @@ namespace Akihabara.Examples.OnRawIO
                 Usage();
                 return;
             }
-            
+
             // Since it only receives the raw pixels and no additional information,
             // you have to give it the width and height of the video or image.
             int width = Int32.Parse(args[0]);
@@ -62,8 +64,15 @@ namespace Akihabara.Examples.OnRawIO
         {
             // Initialize and start the graph
             var graph = new CalculatorGraph(configText);
+            graph.ObserveOutputStream<NormalizedLandmarkListVectorPacket, List<NormalizedLandmarkList>>("multi_face_landmarks", (packet) => {
+                var landmarks = packet.Get();
+
+                Glog.Log(Glog.Severity.Info, $"Got landmarks at timestamp {packet.Timestamp().Value()}");
+                return Status.Ok();
+            }, out var callbackRef).AssertOk();
+
             var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
-            graph.StartRun();
+            graph.StartRun().AssertOk();
 
             // Preparing image byte buffer
             var length = width * height * 4;
@@ -73,8 +82,9 @@ namespace Akihabara.Examples.OnRawIO
             var stdin = new BufferedStream(Console.OpenStandardInput(length));
             var stdout = new BufferedStream(Console.OpenStandardOutput(length));
 
+
             // Process one image at a time until we can't read anything more
-            while (true)
+            for (;;)
             {
                 int bytesRead = ReadBytesFromStream(stdin, inBytes);
                 if (bytesRead == 0)
@@ -96,12 +106,13 @@ namespace Akihabara.Examples.OnRawIO
                 // Finally send the packet to the graph
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
 
+
                 // At this point, the poller can fail to retrieve the next packet,
                 // so we break out of the loop if it is the case.
                 var packet = new ImageFramePacket();
                 if (!poller.Next(packet))
                     break;
-                
+
                 // After getting the packet, we retrieve the image frame and then the raw byte data
                 // to finally send it in raw binary form to stdout.
                 var imageFrame = packet.Get();
@@ -113,6 +124,8 @@ namespace Akihabara.Examples.OnRawIO
             Glog.Log(Glog.Severity.Info, "Shutting down.");
             graph.CloseInputStream(kInputStream);
             var doneStatus = graph.WaitUntilDone();
+
+            GC.KeepAlive(callbackRef);
 
             stdin.Dispose();
             stdout.Dispose();
