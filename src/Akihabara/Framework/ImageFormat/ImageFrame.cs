@@ -2,6 +2,7 @@
 // See the LICENSE file in the repository root for more details.
 
 using System;
+using System.Runtime.InteropServices;
 using Akihabara.Core;
 using Akihabara.Native;
 using UnmanageUtility;
@@ -18,7 +19,7 @@ namespace Akihabara.Framework.ImageFormat
         public static readonly uint KGlDefaultAlignmentBoundary = 4;
 
         public delegate void Deleter(IntPtr ptr);
-        private static Deleter deleter = ReleasePixelData;
+        private GCHandle deleterHandle;
 
         public ImageFrame() : base()
         {
@@ -41,6 +42,9 @@ namespace Akihabara.Framework.ImageFormat
         // https://docs.microsoft.com/en-us/dotnet/standard/native-interop/best-practices
         public ImageFrame(ImageFormat.Format format, int width, int height, int widthStep, UnmanagedArray<byte> pixelData)
         {
+            Deleter deleter = ReleasePixelData;
+            GCHandle.Alloc(deleter);
+
             unsafe
             {
                 UnsafeNativeMethods.mp_ImageFrame__ui_i_i_i_Pui8_PF(
@@ -51,6 +55,16 @@ namespace Akihabara.Framework.ImageFormat
                 ).Assert();
 
                 Ptr = ptr;
+            }
+        }
+
+        protected override void DisposeUnmanaged()
+        {
+            base.DisposeUnmanaged();
+            // `deleter` must not be garbage collected until unmanaged code calls it.
+            if (deleterHandle.IsAllocated)
+            {
+                deleterHandle.Free();
             }
         }
 
