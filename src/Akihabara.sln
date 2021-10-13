@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.HelloWor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.OnRawIO", "Examples\Akihabara.Examples.OnRawIO\Akihabara.Examples.OnRawIO.csproj", "{DD5B913F-5C2A-43A1-A983-8628638DD0EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.FaceLandmarksOnRawIO", "Examples\Akihabara.Examples.FaceLandmarksOnRawIO\Akihabara.Examples.FaceLandmarksOnRawIO.csproj", "{B976FA3C-C46E-477E-A867-D2F5505FDB68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,9 +76,22 @@ Global
 		{DD5B913F-5C2A-43A1-A983-8628638DD0EE}.Release|x64.Build.0 = Release|Any CPU
 		{DD5B913F-5C2A-43A1-A983-8628638DD0EE}.Release|x86.ActiveCfg = Release|Any CPU
 		{DD5B913F-5C2A-43A1-A983-8628638DD0EE}.Release|x86.Build.0 = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|x64.Build.0 = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Debug|x86.Build.0 = Debug|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|x64.ActiveCfg = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|x64.Build.0 = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|x86.ActiveCfg = Release|Any CPU
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{24C11F34-9B39-430D-A4B5-B6A7E6A58836} = {3C5851B6-9514-4AF6-845D-877DDDADE8D2}
 		{DD5B913F-5C2A-43A1-A983-8628638DD0EE} = {3C5851B6-9514-4AF6-845D-877DDDADE8D2}
+		{B976FA3C-C46E-477E-A867-D2F5505FDB68} = {3C5851B6-9514-4AF6-845D-877DDDADE8D2}
 	EndGlobalSection
 EndGlobal
