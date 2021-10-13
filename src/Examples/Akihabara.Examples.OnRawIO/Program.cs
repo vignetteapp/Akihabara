@@ -64,13 +64,6 @@ namespace Akihabara.Examples.OnRawIO
         {
             // Initialize and start the graph
             var graph = new CalculatorGraph(configText);
-            graph.ObserveOutputStream<NormalizedLandmarkListVectorPacket, List<NormalizedLandmarkList>>("multi_face_landmarks", (packet) => {
-                var landmarks = packet.Get();
-
-                Glog.Log(Glog.Severity.Info, $"Got landmarks at timestamp {packet.Timestamp().Value()}");
-                return Status.Ok();
-            }, out var callbackRef).AssertOk();
-
             var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
             graph.StartRun().AssertOk();
 
@@ -81,7 +74,6 @@ namespace Akihabara.Examples.OnRawIO
             // Using stdin and stdout as buffered streams for IO optimization
             var stdin = new BufferedStream(Console.OpenStandardInput(length));
             var stdout = new BufferedStream(Console.OpenStandardOutput(length));
-
 
             // Process one image at a time until we can't read anything more
             for (;;)
@@ -124,8 +116,6 @@ namespace Akihabara.Examples.OnRawIO
             Glog.Log(Glog.Severity.Info, "Shutting down.");
             graph.CloseInputStream(kInputStream);
             var doneStatus = graph.WaitUntilDone();
-
-            GC.KeepAlive(callbackRef);
 
             stdin.Dispose();
             stdout.Dispose();
