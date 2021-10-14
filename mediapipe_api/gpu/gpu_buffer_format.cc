@@ -1,3 +1,9 @@
+// Copyright (c) 2021 homuler
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
+
 #include "mediapipe_api/gpu/gpu_buffer_format.h"
 
 mediapipe::ImageFormat::Format mp__ImageFormatForGpuBufferFormat__ui(mediapipe::GpuBufferFormat format) {

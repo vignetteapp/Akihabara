@@ -1,3 +1,9 @@
+// Copyright (c) 2021 homuler
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
+
 #include "mediapipe_api/gpu/egl_surface_holder.h"
 #include "mediapipe/framework/port/ret_check.h"
 

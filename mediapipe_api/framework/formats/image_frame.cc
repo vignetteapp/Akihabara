@@ -1,3 +1,9 @@
+// Copyright (c) 2021 homuler
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
+
 #include "mediapipe_api/framework/formats/image_frame.h"
 
 MpReturnCode mp_ImageFrame__(mediapipe::ImageFrame** image_frame_out) {

@@ -1,3 +1,9 @@
+// Copyright (c) 2021 homuler
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
+
 #ifndef C_MEDIAPIPE_API_FRAMEWORK_FORMATS_IMAGE_FRAME_H_
 #define C_MEDIAPIPE_API_FRAMEWORK_FORMATS_IMAGE_FRAME_H_
 
