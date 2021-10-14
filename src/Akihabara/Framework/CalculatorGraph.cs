@@ -80,9 +80,9 @@ namespace Akihabara.Framework
             return new Status(statusPtr);
         }
 
-        public Status ObserveOutputStream<T, TU>(string streamName, PacketCallback<T, TU> packetCallback, out NativePacketCallback nativePacketCallback) where T : Packet<TU>
+        public Status ObserveOutputStream<T, TU>(string streamName, PacketCallback<T, TU> packetCallback, out GCHandle callbackHandle) where T : Packet<TU>
         {
-            nativePacketCallback = (IntPtr packetPtr) => {
+            NativePacketCallback nativePacketCallback = (IntPtr packetPtr) => {
                 Status status = null;
                 try
                 {
@@ -96,6 +96,7 @@ namespace Akihabara.Framework
                 return status.MpPtr;
             };
 
+            callbackHandle = GCHandle.Alloc(nativePacketCallback);
             return ObserveOutputStream(streamName, nativePacketCallback);
         }
 

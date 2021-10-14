@@ -83,7 +83,7 @@ namespace Akihabara.Examples.OnRawIO
                 File.WriteAllText($"landmarks/landmark_{timestamp}.json", jsonLandmarks);
 
                 return Status.Ok();
-            }, out var callbackRef).AssertOk();
+            }, out var callbackHandle).AssertOk();
 
             // Preparing image byte buffer
             var length = width * height * 4;
@@ -140,8 +140,7 @@ namespace Akihabara.Examples.OnRawIO
             graph.CloseInputStream(kInputStream);
             var doneStatus = graph.WaitUntilDone();
 
-            GC.KeepAlive(callbackRef);
-
+            callbackHandle.Free();
             stdin.Dispose();
             stdout.Dispose();
 
