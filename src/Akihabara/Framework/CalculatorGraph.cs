@@ -95,8 +95,8 @@ namespace Akihabara.Framework
                 }
                 return status.MpPtr;
             };
-            callbackHandle = GCHandle.Alloc(nativePacketCallback, GCHandleType.Pinned);
 
+            callbackHandle = GCHandle.Alloc(nativePacketCallback);
             return ObserveOutputStream(streamName, nativePacketCallback);
         }
 

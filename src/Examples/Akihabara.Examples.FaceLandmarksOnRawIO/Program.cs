@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 using Akihabara.External;
 using Akihabara.Framework;
 using Akihabara.Framework.ImageFormat;
@@ -43,6 +44,7 @@ namespace Akihabara.Examples.OnRawIO
             // The content of the `.pbtxt` file used to generate and run the Mediapipe graph.
             string configText = File.ReadAllText(args[2]);
 
+            //
             Glog.Initialize("stuff", "stuff");
 
             Status runStatus = RunGraph(width, height, configText);
@@ -62,10 +64,26 @@ namespace Akihabara.Examples.OnRawIO
         /// It feeds it from raw RGBA images read from stdin, and outputs a sequence of raw RGBA images to stdout.
         static Status RunGraph(int width, int height, string configText)
         {
-            // Initialize and start the graph
+            // Initialize the graph
             var graph = new CalculatorGraph(configText);
             var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
-            graph.StartRun().AssertOk();
+
+            // Here we register a delegate that is gonna be called each time the graph is able to
+            // detect landmarks from the input video. It will get the landmarks and write them in
+            // a new file in plain JSON format.
+            Directory.CreateDirectory("landmarks");
+            var jserOptions = new JsonSerializerOptions { WriteIndented = true };
+            graph.ObserveOutputStream<NormalizedLandmarkListVectorPacket, List<NormalizedLandmarkList>>("multi_face_landmarks", (packet) => {
+                var timestamp = packet.Timestamp().Value();
+                Glog.Log(Glog.Severity.Info, $"Got landmarks at timestamp {timestamp}");
+
+                var landmarks = packet.Get();
+
+                var jsonLandmarks = JsonSerializer.Serialize(landmarks, jserOptions);
+                File.WriteAllText($"landmarks/landmark_{timestamp}.json", jsonLandmarks);
+
+                return Status.Ok();
+            }, out var callbackHandle).AssertOk();
 
             // Preparing image byte buffer
             var length = width * height * 4;
@@ -74,6 +92,9 @@ namespace Akihabara.Examples.OnRawIO
             // Using stdin and stdout as buffered streams for IO optimization
             var stdin = new BufferedStream(Console.OpenStandardInput(length));
             var stdout = new BufferedStream(Console.OpenStandardOutput(length));
+
+            // Start the graph
+            graph.StartRun().AssertOk();
 
             // Process one image at a time until we can't read anything more
             for (;;)
@@ -98,6 +119,7 @@ namespace Akihabara.Examples.OnRawIO
                 // Finally send the packet to the graph
                 graph.AddPacketToInputStream(kInputStream, inputPacket);
 
+                // It seems like you have to retrieve the image frame packets
 
                 // At this point, the poller can fail to retrieve the next packet,
                 // so we break out of the loop if it is the case.
@@ -109,6 +131,7 @@ namespace Akihabara.Examples.OnRawIO
                 // to finally send it in raw binary form to stdout.
                 var imageFrame = packet.Get();
                 var outBytes = imageFrame.CopyToByteBuffer(length);
+
                 stdout.Write(outBytes, 0, length);
             }
 
@@ -117,6 +140,7 @@ namespace Akihabara.Examples.OnRawIO
             graph.CloseInputStream(kInputStream);
             var doneStatus = graph.WaitUntilDone();
 
+            callbackHandle.Free();
             stdin.Dispose();
             stdout.Dispose();
 
