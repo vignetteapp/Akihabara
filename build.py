@@ -13,7 +13,7 @@ except ImportError:
 
 _BAZEL_BIN_PATH = 'bazel-bin'
 _BUILD_PATH = 'build'
-_INSTALL_PATH = os.path.join('src', 'Akihabara')
+_INSTALL_PATH = 'src'
 
 class Console:
   def __init__(self, verbose):
@@ -92,6 +92,7 @@ class BuildCommand(Command):
     Command.__init__(self, command_args)
 
     self.system = platform.system()
+    self.install = command_args.args.install
     self.desktop = command_args.args.desktop
     self.protobuf = command_args.args.protobuf
     # self.android = command_args.args.android
@@ -109,7 +110,7 @@ class BuildCommand(Command):
       self._run_command(self._build_proto_srcs_commands())
       self._unzip(
         os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_proto_srcs.zip'),
-        os.path.join(_BUILD_PATH, 'Framework', 'Protobuf'))
+        os.path.join(_BUILD_PATH, 'Akihabara', 'Framework', 'Protobuf'))
       self.console.info('Built protobuf sources')
 
     # # Unity-specific requirements, not needed for .NET
@@ -129,11 +130,14 @@ class BuildCommand(Command):
       self.console.info('Built resource files')
 
     if self.desktop:
-      self.console.info('Building native libraries for Desktop...')
+      self.console.info(f'Building native libraries for {self.system} Desktop...')
+
+      native_build_path = os.path.join(_BUILD_PATH, 'Runtime', f'Akihabara.Runtime.{self.system}_x64.CPU')
+
       self._run_command(self._build_desktop_commands())
       self._unzip(
         os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_desktop.zip'),
-        os.path.join(_BUILD_PATH, 'bin', 'Debug', 'net5.0'))
+        native_build_path)
 
       if self.include_opencv_libs:
         if self.opencv == 'cmake':
@@ -142,7 +146,7 @@ class BuildCommand(Command):
           self._run_command(self._build_opencv_libs())
           self._unzip(
             os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'opencv_libs.zip'),
-            os.path.join(_BUILD_PATH, 'bin', 'Debug', 'net5.0', 'opencv'))
+            os.path.join(native_build_path, 'opencv'))
 
       self.console.info('Built native libraries for Desktop')
 
@@ -165,21 +169,23 @@ class BuildCommand(Command):
 
 
     self.console.info('Printing build path...')
-    for root, directories, files in os.walk(_BUILD_PATH, topdown=False):
+    self._print_dir_tree(_BUILD_PATH)
+    self.console.info('Done')
+
+    if self.install:
+      self.console.info('Installing...')
+      # _copytree fails on Windows, so run `cp -r` instead.
+      self._copytree(_BUILD_PATH, _INSTALL_PATH)
+      self._print_dir_tree(os.path.join(_INSTALL_PATH, 'bin'))
+      self.console.info('Installed')
+
+  def _print_dir_tree(self, dir_path):
+    for root, directories, files in os.walk(dir_path, topdown=False):
       for name in files:
         print(os.path.join(root, name))
       for name in directories:
         print(os.path.join(root, name) + '/')
 
-    self.console.info('Installing...')
-    # _copytree fails on Windows, so run `cp -r` instead.
-    self._copytree(_BUILD_PATH, _INSTALL_PATH)
-    for root, directories, files in os.walk(os.path.join(_INSTALL_PATH, 'bin'), topdown=False):
-      for name in files:
-        print(os.path.join(root, name))
-      for name in directories:
-        print(os.path.join(root, name) + '/')
-    self.console.info('Installed')
 
   def _is_windows(self):
     return self.system == 'Windows'
@@ -389,11 +395,12 @@ class Argument:
     subparsers = self.argument_parser.add_subparsers(dest='command')
 
     build_command_parser = subparsers.add_parser('build', help='Build and install native libraries')
-    build_command_parser.add_argument('--protobuf', '-p', action=argparse.BooleanOptionalAction, help='Build C# protobuf sources for Akihabara')
-    build_command_parser.add_argument('--desktop', '-d', choices=['cpu', 'gpu'])
-    # build_command_parser.add_argument('--android', '-a', choices=['arm', 'arm64'])
-    # build_command_parser.add_argument('--ios', '-i', choices=['arm64'])
-    build_command_parser.add_argument('--resources', '-R', action=argparse.BooleanOptionalAction)
+    build_command_parser.add_argument('--install', action=argparse.BooleanOptionalAction, help='Integrate built artifacts in the repository', default=True)
+    build_command_parser.add_argument('--protobuf', action=argparse.BooleanOptionalAction, help='Build C# protobuf sources for Akihabara')
+    build_command_parser.add_argument('--desktop', choices=['cpu', 'gpu'])
+    # build_command_parser.add_argument('--android', choices=['arm', 'arm64'])
+    # build_command_parser.add_argument('--ios', choices=['arm64'])
+    build_command_parser.add_argument('--resources', action=argparse.BooleanOptionalAction)
     build_command_parser.add_argument('--compilation_mode', '-c', choices=['fastbuild', 'opt', 'dbg'], default='opt')
     build_command_parser.add_argument('--opencv', choices=['local', 'cmake'], default='local', help='Decide to which OpenCV to link for Desktop native libraries')
     build_command_parser.add_argument('--include_opencv_libs', action='store_true', help='Include OpenCV\'s native libraries for Desktop')
