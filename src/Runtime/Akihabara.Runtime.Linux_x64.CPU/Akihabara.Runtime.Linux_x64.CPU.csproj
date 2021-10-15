@@ -21,6 +21,15 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
+  <PropertyGroup Label="Pre-build task">
+    <PreBuildEvent>
+      if [ ! -f $(MSBuildProjectDirectory)/libmediapipe_c.so ]; then
+        cd $(MSBuildProjectDirectory)/../../../
+        python3 build.py build --desktop cpu -v
+      fi
+    </PreBuildEvent>
+  </PropertyGroup>
+
   <ItemGroup>
     <!-- I didn't think it would be this criminally simple to include the native library -->
     <Content Include="*.so" Pack="true" PackagePath="lib\$(TargetFramework)">
