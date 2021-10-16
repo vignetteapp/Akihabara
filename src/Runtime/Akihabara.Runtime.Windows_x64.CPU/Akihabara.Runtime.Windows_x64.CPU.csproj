@@ -23,12 +23,10 @@
 
   <PropertyGroup Label="Pre-build task">
     <PreBuildEvent>
-      $PSVersionTable
-      if (!(Test-Path "$(MSBuildProjectDirectory)\libmediapipe_c.dll" -PathType Leaf))
-      {
+      if not exist "$(MSBuildProjectDirectory)\libmediapipe_c.dll" (
           cd $(MSBuildProjectDirectory)\..\..\..\
           python3 build.py build --desktop cpu -v
-      }
+      )
     </PreBuildEvent>
   </PropertyGroup>
 
