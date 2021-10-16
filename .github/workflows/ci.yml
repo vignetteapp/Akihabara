@@ -55,7 +55,7 @@ jobs:
 
       - name: Test Powershell
         run: |
-          if (!(Test-Path D:\a\Akihabara\Akihabara\src\Runtime\Akihabara.Runtime.Windows_x64.CPU\libmediapipe_c.dll -PathType Leaf))
+          if (!(Test-Path "D:\a\Akihabara\Akihabara\src\Runtime\Akihabara.Runtime.Windows_x64.CPU\libmediapipe_c.dll" -PathType Leaf))
           {
               Write-Host "it works"
           }
