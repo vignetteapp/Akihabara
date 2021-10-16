@@ -53,18 +53,6 @@ jobs:
         with:
           platform: x64
 
-      - name: Test Powershell
-        if: ${{ matrix.os.prettyname == 'Windows' }}
-        run: |
-          if (!(Test-Path "D:\a\Akihabara\Akihabara\src\Runtime\Akihabara.Runtime.Windows_x64.CPU\libmediapipe_c.dll" -PathType Leaf))
-          {
-              Write-Host "it works"
-          }
-          else
-          {
-              Write-Host "it still works"
-          }
-
       # - name: Build (Native, Windows)
       #   if: ${{ matrix.os.prettyname == 'Windows' }}
       #   run: |
