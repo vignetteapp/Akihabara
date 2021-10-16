@@ -23,7 +23,7 @@
 
   <PropertyGroup Label="Pre-build task">
     <PreBuildEvent>
-      if (!(Test-Path -Path "$(MSBuildProjectDirectory)\libmediapipe_c.dll" -PathType Leaf))
+      if (!(Test-Path "$(MSBuildProjectDirectory)\libmediapipe_c.dll" -PathType Leaf))
       {
           cd $(MSBuildProjectDirectory)\..\..\..\
           python3 build.py build --desktop cpu -v
