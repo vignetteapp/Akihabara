@@ -21,6 +21,15 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
+  <PropertyGroup Label="Pre-build task">
+    <PreBuildEvent>
+      if not exist "$(MSBuildProjectDirectory)\libmediapipe_c.dll" (
+          cd $(MSBuildProjectDirectory)\..\..\..\
+          python3 build.py build --desktop cpu -v
+      )
+    </PreBuildEvent>
+  </PropertyGroup>
+
   <ItemGroup>
     <!-- I didn't think it would be this criminally simple to include the native library -->
     <Content Include="*.dll" Pack="true" PackagePath="lib\$(TargetFramework)">
