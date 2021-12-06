@@ -2,12 +2,12 @@
 // See the LICENSE file in the repository root for more details.
 
 using System;
-using Akihabara.Framework.ImageFormat;
-using Akihabara.Framework.Port;
-using Akihabara.Gpu;
+using Mediapipe.Net.Framework.ImageFormat;
+using Mediapipe.Net.Framework.Port;
+using Mediapipe.Net.Gpu;
 using NUnit.Framework;
 
-namespace Akihabara.Tests.Gpu
+namespace Mediapipe.Net.Tests.Gpu
 {
     [TestFixture]
     public class GlCalculatorHelperTest

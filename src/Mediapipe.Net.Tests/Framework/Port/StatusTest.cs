@@ -1,8 +1,8 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Akihabara.Core;
-using Akihabara.Framework.Port;
+using Mediapipe.Net.Core;
+using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
 using System;
 

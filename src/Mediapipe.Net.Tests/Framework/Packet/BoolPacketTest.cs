@@ -2,23 +2,22 @@
 // See the LICENSE file in the repository root for more details.
 
 using System;
-using Akihabara.Core;
-using Akihabara.Framework;
-using Akihabara.Framework.Packet;
-using Akihabara.Framework.Port;
+using Mediapipe.Net.Core;
+using Mediapipe.Net.Framework;
+using Mediapipe.Net.Framework.Packet;
+using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
 
-namespace Akihabara.Tests.Framework.Packet
+namespace Mediapipe.Net.Tests.Framework.Packet
 {
     [TestFixture]
-    public class FloatArrayPacketTest
+    public class BoolPacketTest
     {
         #region Constructor
         [Test, SignalAbort]
         public void Ctor_ShouldInstantiatePacket_When_CalledWithNoArguments()
         {
-            var packet = new FloatArrayPacket();
-            packet.Length = 0;
+            var packet = new BoolPacket();
 
             Assert.AreEqual(packet.ValidateAsType().Code, Status.StatusCode.Internal);
             Assert.Throws<MediapipeException>(() => { packet.Get(); });
@@ -26,24 +25,22 @@ namespace Akihabara.Tests.Framework.Packet
         }
 
         [Test]
-        public void Ctor_ShouldInstantiatePacket_When_CalledWithEmptyArray()
+        public void Ctor_ShouldInstantiatePacket_When_CalledWithTrue()
         {
-            float[] array = { };
-            var packet = new FloatArrayPacket(array);
+            var packet = new BoolPacket(true);
 
             Assert.True(packet.ValidateAsType().ok);
-            Assert.AreEqual(packet.Get(), array);
+            Assert.True(packet.Get());
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
 
         [Test]
-        public void Ctor_ShouldInstantiatePacket_When_CalledWithArray()
+        public void Ctor_ShouldInstantiatePacket_When_CalledWithFalse()
         {
-            float[] array = { 0.01f };
-            var packet = new FloatArrayPacket(array);
+            var packet = new BoolPacket(false);
 
             Assert.True(packet.ValidateAsType().ok);
-            Assert.AreEqual(packet.Get(), array);
+            Assert.False(packet.Get());
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
 
@@ -51,20 +48,19 @@ namespace Akihabara.Tests.Framework.Packet
         public void Ctor_ShouldInstantiatePacket_When_CalledWithValueAndTimestamp()
         {
             var timestamp = new Timestamp(1);
-            float[] array = { 0.01f, 0.02f };
-            var packet = new FloatArrayPacket(array, timestamp);
+            var packet = new BoolPacket(true, timestamp);
 
             Assert.True(packet.ValidateAsType().ok);
-            Assert.AreEqual(packet.Get(), array);
+            Assert.True(packet.Get());
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }
         #endregion
 
-        #region #isDisposed
+        #region #IsDisposed
         [Test]
         public void IsDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
-            var packet = new FloatArrayPacket();
+            var packet = new BoolPacket();
 
             Assert.False(packet.IsDisposed);
         }
@@ -72,7 +68,7 @@ namespace Akihabara.Tests.Framework.Packet
         [Test]
         public void IsDisposed_ShouldReturnTrue_When_AlreadyDisposed()
         {
-            var packet = new FloatArrayPacket();
+            var packet = new BoolPacket();
             packet.Dispose();
 
             Assert.True(packet.IsDisposed);
@@ -83,7 +79,7 @@ namespace Akihabara.Tests.Framework.Packet
         [Test]
         public void Consume_ShouldThrowNotSupportedException()
         {
-            var packet = new FloatArrayPacket();
+            var packet = new BoolPacket();
 
             Assert.Throws<NotSupportedException>(() => { packet.Consume(); });
         }
@@ -91,19 +87,11 @@ namespace Akihabara.Tests.Framework.Packet
 
         #region #DebugTypeName
         [Test]
-        public void DebugTypeName_ShouldReturnFloat_When_ValueIsSet()
+        public void DebugTypeName_ShouldReturnBool_When_ValueIsSet()
         {
-            float[] array = { 0.01f };
-            var packet = new FloatArrayPacket(array);
+            var packet = new BoolPacket(true);
 
-            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
-            {
-                Assert.AreEqual(packet.DebugTypeName(), "float [0]");
-            }
-            else
-            {
-                Assert.AreEqual(packet.DebugTypeName(), "float []");
-            }
+            Assert.AreEqual(packet.DebugTypeName(), "bool");
         }
         #endregion
     }

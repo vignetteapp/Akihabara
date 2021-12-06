@@ -1,10 +1,10 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Akihabara.Framework.Packet;
+using Mediapipe.Net.Framework.Packet;
 using NUnit.Framework;
 
-namespace Akihabara.Tests.Framework.Packet
+namespace Mediapipe.Net.Tests.Framework.Packet
 {
     [TestFixture]
     public class SidePacketTest

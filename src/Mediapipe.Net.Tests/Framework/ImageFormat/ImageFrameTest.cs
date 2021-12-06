@@ -3,13 +3,13 @@
 
 using System;
 using System.Linq;
-using Akihabara.Core;
-using Akihabara.External;
-using Akihabara.Framework.ImageFormat;
+using Mediapipe.Net.Core;
+using Mediapipe.Net.External;
+using Mediapipe.Net.Framework.ImageFormat;
 using NUnit.Framework;
 using UnmanageUtility;
 
-namespace Akihabara.Tests.Format
+namespace Mediapipe.Net.Tests.Format
 {
     [TestFixture]
     public class ImageFrameTest

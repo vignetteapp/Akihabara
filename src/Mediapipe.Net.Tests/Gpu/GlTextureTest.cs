@@ -1,10 +1,10 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Akihabara.Gpu;
+using Mediapipe.Net.Gpu;
 using NUnit.Framework;
 
-namespace Akihabara.Tests.Gpu
+namespace Mediapipe.Net.Tests.Gpu
 {
     [TestFixture]
     public class GlTextureTest

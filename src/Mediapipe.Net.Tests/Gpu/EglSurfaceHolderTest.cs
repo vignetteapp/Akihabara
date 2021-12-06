@@ -2,12 +2,12 @@
 // See the LICENSE file in the repository root for more details.
 
 #if OPENGL_ES
-using Akihabara.Gpu;
-using Akihabara.Framework.Port;
+using Mediapipe.Net.Gpu;
+using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
 using System;
 
-namespace Akihabara.Tests.Gpu
+namespace Mediapipe.Net.Tests.Gpu
 {
     [TestFixture]
     public class EglSurfaceHolderTest

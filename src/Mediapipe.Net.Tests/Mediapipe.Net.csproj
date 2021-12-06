@@ -9,12 +9,12 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Akihabara\Akihabara.csproj" />
+    <ProjectReference Include="..\Mediapipe.Net\Mediapipe.Net.csproj" />
     <ProjectReference
-        Include="..\Runtime\Akihabara.Runtime.Linux_x64.CPU\Akihabara.Runtime.Linux_x64.CPU.csproj"
+        Include="..\Runtime\Mediapipe.Net.Runtime.Linux_x64.CPU\Mediapipe.Net.Runtime.Linux_x64.CPU.csproj"
         Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' " />
     <ProjectReference
-        Include="..\Runtime\Akihabara.Runtime.Windows_x64.CPU\Akihabara.Runtime.Windows_x64.CPU.csproj"
+        Include="..\Runtime\Mediapipe.Net.Runtime.Windows_x64.CPU\Mediapipe.Net.Runtime.Windows_x64.CPU.csproj"
         Condition=" '$(OS)' == 'Windows_NT' " />
   </ItemGroup>
 </Project>

@@ -1,10 +1,10 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Akihabara.Framework;
+using Mediapipe.Net.Framework;
 using NUnit.Framework;
 
-namespace Akihabara.Tests.Framework
+namespace Mediapipe.Net.Tests.Framework
 {
     [TestFixture]
     public class TimestampTest

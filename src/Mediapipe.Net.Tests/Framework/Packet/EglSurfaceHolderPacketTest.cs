@@ -1,7 +1,7 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-namespace Akihabara.Tests.Framework.Packet
+namespace Mediapipe.Net.Tests.Framework.Packet
 {
 #if OPENGL_ES
     [TestFixture]

@@ -1,15 +1,15 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Akihabara.Core;
-using Akihabara.Framework;
-using Akihabara.Framework.ImageFormat;
-using Akihabara.Framework.Packet;
-using Akihabara.Framework.Port;
+using Mediapipe.Net.Core;
+using Mediapipe.Net.Framework;
+using Mediapipe.Net.Framework.ImageFormat;
+using Mediapipe.Net.Framework.Packet;
+using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
 using System;
 
-namespace Akihabara.Tests.Framework.Packet
+namespace Mediapipe.Net.Tests.Framework.Packet
 {
     [TestFixture]
     public class ImageFramePacketTest
