@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Mediapipe.Net.Native;
-using pb = global::Google.Protobuf;
+using pb = Google.Protobuf;
 
 namespace Mediapipe.Net.External
 {
@@ -14,36 +14,31 @@ namespace Mediapipe.Net.External
     {
         public delegate void ProtobufLogHandler(int level, string filename, int line, string message);
 
-        private static readonly ProtobufLogHandler protobufLogHandler = LogProtobufMessage;
+        private static readonly ProtobufLogHandler protobufLogHandler = logProtobufMessage;
 
         static Protobuf()
         {
             UnsafeNativeMethods.google_protobuf__SetLogHandler__PF(protobufLogHandler).Assert();
         }
 
-        static void LogProtobufMessage(int level, string filename, int line, string message)
-        {
-            Debug.Print($"[libprotobuf ({FormatProtobufLogLevel(level)}) {filename}:{line}] {message}");
-        }
+        private static void logProtobufMessage(int level, string filename, int line, string message) =>
+            Debug.Print($"[libprotobuf ({formatProtobufLogLevel(level)}) {filename}:{line}] {message}");
 
-        private static string FormatProtobufLogLevel(int level)
+        private static string formatProtobufLogLevel(int level) => level switch
         {
-            switch (level)
-            {
-                case 1: return "WARNING";
-                case 2: return "ERROR";
-                case 3: return "FATAL";
-                default: return "INFO";
-            }
-        }
+            1 => "WARNING",
+            2 => "ERROR",
+            3 => "FATAL",
+            _ => "INFO",
+        };
 
         public static T DeserializeProto<T>(IntPtr ptr, pb::MessageParser<T> parser)
             where T : pb::IMessage<T>
         {
-            var serializedProto = Marshal.PtrToStructure<SerializedProto>(ptr);
-            var bytes = new byte[serializedProto.length];
+            SerializedProto serializedProto = Marshal.PtrToStructure<SerializedProto>(ptr);
+            byte[] bytes = new byte[serializedProto.Length];
 
-            Marshal.Copy(serializedProto.str, bytes, 0, bytes.Length);
+            Marshal.Copy(serializedProto.Str, bytes, 0, bytes.Length);
 
             return parser.ParseFrom(bytes);
         }
@@ -51,16 +46,16 @@ namespace Mediapipe.Net.External
         public static List<T> DeserializeProtoVector<T>(IntPtr ptr, pb::MessageParser<T> parser)
             where T : pb::IMessage<T>
         {
-            var serializedProtoVector = Marshal.PtrToStructure<SerializedProtoVector>(ptr);
-            var protos = new List<T>(serializedProtoVector.size);
+            SerializedProtoVector serializedProtoVector = Marshal.PtrToStructure<SerializedProtoVector>(ptr);
+            var protos = new List<T>(serializedProtoVector.Size);
 
             // UNSAFE CODE AHOY!
             // Do not touch this one unless you have an idea with pointers!
             unsafe
             {
-                byte** protoPtr = (byte**)serializedProtoVector.data;
+                byte** protoPtr = (byte**)serializedProtoVector.Data;
 
-                for (var i = 0; i < serializedProtoVector.size; i++)
+                for (int i = 0; i < serializedProtoVector.Size; i++)
                 {
                     protos.Add(Protobuf.DeserializeProto<T>((IntPtr)(*protoPtr++), parser));
                 }

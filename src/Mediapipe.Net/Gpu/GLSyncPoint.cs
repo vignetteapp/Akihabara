@@ -12,21 +12,21 @@ namespace Mediapipe.Net.Gpu
 {
     public class GlSyncPoint : MpResourceHandle
     {
-        private SharedPtrHandle _sharedPtrHandle;
+        private SharedPtrHandle sharedPtrHandle;
 
         public GlSyncPoint(IntPtr ptr) : base(ptr)
         {
-            _sharedPtrHandle = new GlSyncPointSharedPtr(ptr);
+            sharedPtrHandle = new GlSyncPointSharedPtr(ptr);
 
-            Ptr = _sharedPtrHandle.Get();
+            Ptr = sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
         {
-            if (_sharedPtrHandle != null)
+            if (sharedPtrHandle != null)
             {
-                _sharedPtrHandle.Dispose();
-                _sharedPtrHandle = null;
+                sharedPtrHandle.Dispose();
+                sharedPtrHandle = null;
             }
 
             base.DisposeManaged();
@@ -37,7 +37,7 @@ namespace Mediapipe.Net.Gpu
         /// </summary>
         protected override void DeleteMpPtr() { }
 
-        public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
+        public IntPtr SharedPtr => sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
         public void Wait() => UnsafeNativeMethods.mp_GlSyncPoint__Wait(MpPtr).Assert();
 
@@ -45,7 +45,7 @@ namespace Mediapipe.Net.Gpu
 
         public bool IsReady()
         {
-            UnsafeNativeMethods.mp_GlSyncPoint__IsReady(MpPtr, out var val).Assert();
+            UnsafeNativeMethods.mp_GlSyncPoint__IsReady(MpPtr, out bool val).Assert();
 
             GC.KeepAlive(this);
             return val;
@@ -53,7 +53,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlContext GetContext()
         {
-            UnsafeNativeMethods.mp_GlSyncPoint__GetContext(MpPtr, out var sharedGlContextPtr).Assert();
+            UnsafeNativeMethods.mp_GlSyncPoint__GetContext(MpPtr, out IntPtr sharedGlContextPtr).Assert();
 
             GC.KeepAlive(this);
             return new GlContext(sharedGlContextPtr);
@@ -65,19 +65,10 @@ namespace Mediapipe.Net.Gpu
     {
         public GlSyncPointSharedPtr(IntPtr ptr) : base(ptr) { }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_GlSyncToken__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GlSyncToken__delete(Ptr);
 
-        public override IntPtr Get()
-        {
-            return SafeNativeMethods.mp_GlSyncToken__get(MpPtr);
-        }
+        public override IntPtr Get() => SafeNativeMethods.mp_GlSyncToken__get(MpPtr);
 
-        public override void Reset()
-        {
-            UnsafeNativeMethods.mp_GlSyncToken__reset(MpPtr);
-        }
+        public override void Reset() => UnsafeNativeMethods.mp_GlSyncToken__reset(MpPtr);
     }
 }

@@ -12,7 +12,7 @@ namespace Mediapipe.Net.Gpu
 {
     public class GlTextureBuffer : MpResourceHandle
     {
-        private SharedPtrHandle _sharedPtrHandle;
+        private SharedPtrHandle sharedPtrHandle;
 
         /// <remarks>
         ///  According to homuler, DeletionCallback should only recieve GlSyncToken.
@@ -26,33 +26,33 @@ namespace Mediapipe.Net.Gpu
 
         public GlTextureBuffer(IntPtr ptr, bool isOwner = true) : base(isOwner)
         {
-            _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
+            sharedPtrHandle = new GlTextureBufferSharedPtr(ptr, isOwner);
 
-            Ptr = _sharedPtrHandle.Get();
+            Ptr = sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint target, uint name, int width, int height, GpuBufferFormat format,
             DeletionCallback callback, GlContext context)
         {
-            var sharedCtxPtr = context?.SharedPtr ?? IntPtr.Zero;
+            IntPtr sharedCtxPtr = context?.SharedPtr ?? IntPtr.Zero;
             UnsafeNativeMethods.mp_SharedGlTextureBuffer__ui_ui_i_i_ui_PF_PSgc(target, name, width, height, format,
-                callback, sharedCtxPtr, out var ptr).Assert();
+                callback, sharedCtxPtr, out IntPtr ptr).Assert();
 
-            _sharedPtrHandle = new GlTextureBufferSharedPtr(ptr);
-            base.Ptr = _sharedPtrHandle.Get();
+            sharedPtrHandle = new GlTextureBufferSharedPtr(ptr);
+            base.Ptr = sharedPtrHandle.Get();
         }
 
         public GlTextureBuffer(uint name, int width, int height, GpuBufferFormat format, DeletionCallback callback,
-            GlContext context = null) : this(Gl.glTexture2D, name, width, height, format, callback, context)
+            GlContext context = null) : this(Gl.GlTexture2D, name, width, height, format, callback, context)
         {
         }
 
         protected override void DisposeManaged()
         {
-            if (_sharedPtrHandle != null)
+            if (sharedPtrHandle != null)
             {
-                _sharedPtrHandle.Dispose();
-                _sharedPtrHandle = null;
+                sharedPtrHandle.Dispose();
+                sharedPtrHandle = null;
             }
 
             base.DisposeManaged();
@@ -63,7 +63,7 @@ namespace Mediapipe.Net.Gpu
         /// </summary>
         protected override void DeleteMpPtr() { }
 
-        public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
+        public IntPtr SharedPtr => sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
         public uint Name => SafeNativeMethods.mp_GlTextureBuffer__name(MpPtr);
 
@@ -92,26 +92,17 @@ namespace Mediapipe.Net.Gpu
         public void WaitForConsumersOnGpu() => UnsafeNativeMethods.mp_GlTextureBuffer__WaitForConsumersOnGpu(MpPtr);
 
         public GlContext GetProducerContext() =>
-            new GlContext(SafeNativeMethods.mp_GlTextureBuffer__GetProducerContext(MpPtr), false);
+            new(SafeNativeMethods.mp_GlTextureBuffer__GetProducerContext(MpPtr), false);
     }
 
     internal class GlTextureBufferSharedPtr : SharedPtr
     {
         public GlTextureBufferSharedPtr(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_SharedGlTextureBuffer__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_SharedGlTextureBuffer__delete(Ptr);
 
-        public override IntPtr Get()
-        {
-            return SafeNativeMethods.mp_SharedGlTextureBuffer__get(MpPtr);
-        }
+        public override IntPtr Get() => SafeNativeMethods.mp_SharedGlTextureBuffer__get(MpPtr);
 
-        public override void Reset()
-        {
-            UnsafeNativeMethods.mp_SharedGlTextureBuffer__reset(MpPtr);
-        }
+        public override void Reset() => UnsafeNativeMethods.mp_SharedGlTextureBuffer__reset(MpPtr);
     }
 }

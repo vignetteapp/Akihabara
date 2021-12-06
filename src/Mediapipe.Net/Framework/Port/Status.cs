@@ -36,11 +36,11 @@ namespace Mediapipe.Net.Framework.Port
 
         protected override void DeleteMpPtr() => UnsafeNativeMethods.absl_Status__delete(Ptr);
 
-        public bool ok => SafeNativeMethods.absl_Status__ok(MpPtr);
+        public bool Ok => SafeNativeMethods.absl_Status__ok(MpPtr);
 
         public void AssertOk()
         {
-            if (!ok)
+            if (!Ok)
                 throw new MediapipeException(ToString());
         }
 
@@ -51,12 +51,12 @@ namespace Mediapipe.Net.Framework.Port
 
         public static Status Build(StatusCode code, string message, bool isOwner = true)
         {
-            UnsafeNativeMethods.absl_Status__i_PKc((int)code, message, out var ptr).Assert();
+            UnsafeNativeMethods.absl_Status__i_PKc((int)code, message, out IntPtr ptr).Assert();
 
             return new Status(ptr, isOwner);
         }
 
-        public static Status Ok(bool isOwner = true) => Status.Build(StatusCode.Ok, "", isOwner);
+        public static Status GetOk(bool isOwner = true) => Build(StatusCode.Ok, "", isOwner);
 
         public static Status FailedPrecondition(string message = "", bool isOwner = true) =>
             Status.Build(StatusCode.FailedPrecondition, message, isOwner);

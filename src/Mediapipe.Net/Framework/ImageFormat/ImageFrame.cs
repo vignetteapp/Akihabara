@@ -23,7 +23,7 @@ namespace Mediapipe.Net.Framework.ImageFormat
 
         public ImageFrame() : base()
         {
-            UnsafeNativeMethods.mp_ImageFrame__(out var ptr).Assert();
+            UnsafeNativeMethods.mp_ImageFrame__(out IntPtr ptr).Assert();
             Ptr = ptr;
         }
 
@@ -33,7 +33,7 @@ namespace Mediapipe.Net.Framework.ImageFormat
 
         public ImageFrame(ImageFormat.Format format, int width, int height, uint alignmentBoundary) : base()
         {
-            UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out var ptr).Assert();
+            UnsafeNativeMethods.mp_ImageFrame__ui_i_i_ui(format, width, height, alignmentBoundary, out IntPtr ptr).Assert();
             Ptr = ptr;
         }
 
@@ -51,7 +51,7 @@ namespace Mediapipe.Net.Framework.ImageFormat
                     format, width, height, widthStep,
                     pixelData.Ptr,
                     deleter,
-                    out var ptr
+                    out IntPtr ptr
                 ).Assert();
 
                 Ptr = ptr;
@@ -68,95 +68,68 @@ namespace Mediapipe.Net.Framework.ImageFormat
             }
         }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_ImageFrame__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_ImageFrame__delete(Ptr);
 
-        private static void ReleasePixelData(IntPtr ptr)
+        public static void ReleasePixelData(IntPtr ptr)
         {
             // This does nothing since pixelData is already removed.
             // probably just a shim so ImageFrame() works.
         }
 
-        public bool IsEmpty()
-        {
-            return SafeNativeMethods.mp_ImageFrame__IsEmpty(MpPtr);
-        }
+        public bool IsEmpty() => SafeNativeMethods.mp_ImageFrame__IsEmpty(MpPtr);
 
-        public bool IsContiguous()
-        {
-            return SafeNativeMethods.mp_ImageFrame__IsContiguous(MpPtr);
-        }
+        public bool IsContiguous() => SafeNativeMethods.mp_ImageFrame__IsContiguous(MpPtr);
 
         public bool IsAligned(uint alignmentBoundary)
         {
-            SafeNativeMethods.mp_ImageFrame__IsAligned__ui(MpPtr, alignmentBoundary, out var value).Assert();
+            SafeNativeMethods.mp_ImageFrame__IsAligned__ui(MpPtr, alignmentBoundary, out bool value).Assert();
 
             GC.KeepAlive(this);
             return value;
         }
 
-        public ImageFormat.Format Format()
-        {
-            return SafeNativeMethods.mp_ImageFrame__Format(MpPtr);
-        }
+        public ImageFormat.Format Format() => SafeNativeMethods.mp_ImageFrame__Format(MpPtr);
 
-        public int Width()
-        {
-            return SafeNativeMethods.mp_ImageFrame__Width(MpPtr);
-        }
+        public int Width() => SafeNativeMethods.mp_ImageFrame__Width(MpPtr);
 
-        public int Height()
-        {
-            return SafeNativeMethods.mp_ImageFrame__Height(MpPtr);
-        }
+        public int Height() => SafeNativeMethods.mp_ImageFrame__Height(MpPtr);
 
         public int ChannelSize()
         {
-            var code = SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out var val);
+            MpReturnCode code = SafeNativeMethods.mp_ImageFrame__ChannelSize(MpPtr, out int val);
 
             GC.KeepAlive(this);
-            return ValueOrFormatException(code, val);
+            return valueOrFormatException(code, val);
         }
 
         public int NumberOfChannels()
         {
-            var code = SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out var val);
+            MpReturnCode code = SafeNativeMethods.mp_ImageFrame__NumberOfChannels(MpPtr, out int val);
 
             GC.KeepAlive(this);
-            return ValueOrFormatException(code, val);
+            return valueOrFormatException(code, val);
         }
 
         public int ByteDepth()
         {
-            var code = SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out var val);
+            MpReturnCode code = SafeNativeMethods.mp_ImageFrame__ByteDepth(MpPtr, out int val);
 
             GC.KeepAlive(this);
-            return ValueOrFormatException(code, val);
+            return valueOrFormatException(code, val);
         }
 
-        public int WidthStep()
-        {
-            return SafeNativeMethods.mp_ImageFrame__WidthStep(MpPtr);
-        }
+        public int WidthStep() => SafeNativeMethods.mp_ImageFrame__WidthStep(MpPtr);
 
-        public IntPtr MutablePixelData()
-        {
-            return SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
-        }
+        public IntPtr MutablePixelData() => SafeNativeMethods.mp_ImageFrame__MutablePixelData(MpPtr);
 
-        public int PixelDataSize()
-        {
-            return SafeNativeMethods.mp_ImageFrame__PixelDataSize(MpPtr);
-        }
+        public int PixelDataSize() => SafeNativeMethods.mp_ImageFrame__PixelDataSize(MpPtr);
 
         public int PixelDataSizeStoredContiguously()
         {
-            var code = SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out var val);
+            MpReturnCode code = SafeNativeMethods.mp_ImageFrame__PixelDataSizeStoredContiguously(MpPtr, out int val);
 
             GC.KeepAlive(this);
-            return ValueOrFormatException(code, val);
+            return valueOrFormatException(code, val);
         }
 
         public void SetToZero()
@@ -172,24 +145,15 @@ namespace Mediapipe.Net.Framework.ImageFormat
             GC.KeepAlive(this);
         }
 
-        public byte[] CopyToByteBuffer(int bufferSize)
-        {
-            return CopyToBuffer<byte>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pui8_i, bufferSize);
-        }
+        public byte[] CopyToByteBuffer(int bufferSize) => copyToBuffer<byte>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pui8_i, bufferSize);
 
-        public ushort[] CopyToUshortBuffer(int bufferSize)
-        {
-            return CopyToBuffer<ushort>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pui16_i, bufferSize);
-        }
+        public ushort[] CopyToUshortBuffer(int bufferSize) => copyToBuffer<ushort>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pui16_i, bufferSize);
 
-        public float[] CopyToFloatBuffer(int bufferSize)
-        {
-            return CopyToBuffer<float>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pf_i, bufferSize);
-        }
+        public float[] CopyToFloatBuffer(int bufferSize) => copyToBuffer<float>(UnsafeNativeMethods.mp_ImageFrame__CopyToBuffer__Pf_i, bufferSize);
 
         private delegate MpReturnCode CopyToBufferHandler(IntPtr ptr, IntPtr buffer, int bufferSize);
 
-        private T[] CopyToBuffer<T>(CopyToBufferHandler handler, int bufferSize) where T : unmanaged
+        private T[] copyToBuffer<T>(CopyToBufferHandler handler, int bufferSize) where T : unmanaged
         {
             var buffer = new T[bufferSize];
 
@@ -205,7 +169,7 @@ namespace Mediapipe.Net.Framework.ImageFormat
             return buffer;
         }
 
-        private T ValueOrFormatException<T>(MpReturnCode code, T val)
+        private T valueOrFormatException<T>(MpReturnCode code, T val)
         {
             try
             {

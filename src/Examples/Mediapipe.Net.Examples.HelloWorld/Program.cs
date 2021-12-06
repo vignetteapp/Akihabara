@@ -5,16 +5,16 @@ using Mediapipe.Net.Framework.Port;
 
 namespace Mediapipe.Net.Examples.HelloWorld
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("Hello World!");
-            var status = PrintHelloWorld();
+            Status status = printHelloWorld();
             Console.WriteLine($"Status: {status}");
         }
 
-        static Status PrintHelloWorld()
+        private static Status printHelloWorld()
         {
             // Configure a simple graph, which concatenates 2 PassThroughCalculators.
             const string graphConfigText = @"
@@ -33,7 +33,7 @@ namespace Mediapipe.Net.Examples.HelloWorld
                 ";
 
             var graph = new CalculatorGraph(graphConfigText);
-            var poller = graph.AddOutputStreamPoller<string>("out").Value();
+            OutputStreamPoller<string> poller = graph.AddOutputStreamPoller<string>("out").Value();
 
             graph.StartRun();
 

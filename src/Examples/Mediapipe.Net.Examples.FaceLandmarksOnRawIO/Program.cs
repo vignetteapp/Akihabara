@@ -50,7 +50,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
 
             Status runStatus = RunGraph(width, height, configText);
 
-            if (!runStatus.ok)
+            if (!runStatus.Ok)
             {
                 Glog.Log(Glog.Severity.Error, $"Failed to run the graph: {runStatus}");
                 Environment.Exit(1);
@@ -83,7 +83,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
                 string jsonLandmarks = JsonSerializer.Serialize(landmarks, jserOptions);
                 File.WriteAllText($"landmarks/landmark_{timestamp}.json", jsonLandmarks);
 
-                return Status.Ok();
+                return Status.GetOk();
             }, out GCHandle callbackHandle).AssertOk();
 
             // Preparing image byte buffer

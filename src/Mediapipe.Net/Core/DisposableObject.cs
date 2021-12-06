@@ -10,7 +10,7 @@ namespace Mediapipe.Net.Core
     // https://git.io/Jc3xr
     public abstract class DisposableObject : IDisposable
     {
-        private volatile int _disposeSignaled = 0;
+        private volatile int disposeSignaled = 0;
 
         public bool IsDisposed { get; protected set; }
         protected bool IsOwner { get; private set; }
@@ -33,7 +33,7 @@ namespace Mediapipe.Net.Core
 
         protected virtual void Dispose(bool disposing)
         {
-            if (Interlocked.Exchange(ref _disposeSignaled, 1) != 0)
+            if (Interlocked.Exchange(ref disposeSignaled, 1) != 0)
             {
                 return;
             }
@@ -61,10 +61,7 @@ namespace Mediapipe.Net.Core
         {
         }
 
-        public void TransferOwnership()
-        {
-            IsOwner = false;
-        }
+        public void TransferOwnership() => IsOwner = false;
 
         public void ThrowIfDisposed()
         {

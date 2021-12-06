@@ -11,17 +11,15 @@ namespace Mediapipe.Net.Framework.Packet
 {
     public class FloatArrayPacket : Packet<float[]>
     {
-        int _Length = -1;
+        private int length = -1;
 
         public int Length {
-            get { return _Length; }
+            get => length;
             set {
-                if (_Length >= 0)
-                {
+                if (length >= 0)
                     throw new InvalidOperationException("Length is already set and cannot be changed");
-                }
 
-                _Length = value;
+                length = value;
             }
         }
 
@@ -31,14 +29,14 @@ namespace Mediapipe.Net.Framework.Packet
 
         public FloatArrayPacket(float[] value) : base()
         {
-            UnsafeNativeMethods.mp__MakeFloatArrayPacket__Pf_i(value, value.Length, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeFloatArrayPacket__Pf_i(value, value.Length, out IntPtr ptr).Assert();
             Ptr = ptr;
             Length = value.Length;
         }
 
         public FloatArrayPacket(float[] value, Timestamp timestamp) : base()
         {
-            UnsafeNativeMethods.mp__MakeFloatArrayPacket_At__Pf_i_Rt(value, value.Length, timestamp.MpPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp__MakeFloatArrayPacket_At__Pf_i_Rt(value, value.Length, timestamp.MpPtr, out IntPtr ptr).Assert();
             GC.KeepAlive(timestamp);
             Ptr = ptr;
             Length = value.Length;
@@ -51,13 +49,13 @@ namespace Mediapipe.Net.Framework.Packet
                 throw new InvalidOperationException("The array's length is unknown, set Length first");
             }
 
-            var result = new float[Length];
+            float[] result = new float[Length];
 
             unsafe
             {
                 float* src = (float*)GetArrayPtr();
 
-                for (var i = 0; i < result.Length; i++)
+                for (int i = 0; i < result.Length; i++)
                 {
                     result[i] = *src++;
                 }
@@ -68,19 +66,16 @@ namespace Mediapipe.Net.Framework.Packet
 
         public IntPtr GetArrayPtr()
         {
-            UnsafeNativeMethods.mp_Packet__GetFloatArray(MpPtr, out var value).Assert();
+            UnsafeNativeMethods.mp_Packet__GetFloatArray(MpPtr, out IntPtr value).Assert();
             GC.KeepAlive(this);
             return value;
         }
 
-        public override StatusOr<float[]> Consume()
-        {
-            throw new NotSupportedException();
-        }
+        public override StatusOr<float[]> Consume() => throw new NotSupportedException();
 
         public override Status ValidateAsType()
         {
-            UnsafeNativeMethods.mp_Packet__ValidateAsFloatArray(MpPtr, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_Packet__ValidateAsFloatArray(MpPtr, out IntPtr statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
