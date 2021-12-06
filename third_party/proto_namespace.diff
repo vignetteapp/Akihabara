@@ -6,7 +6,7 @@ index 89af5eb..0004db7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -18,7 +18,7 @@ index 97d7f20..bc555f2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -30,7 +30,7 @@ index b721117..30297f9 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -42,7 +42,7 @@ index ef6faa8..8114b32 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -54,7 +54,7 @@ index 9e5b074..d0c1408 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -66,7 +66,7 @@ index 6044f77..ecebf0a 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -78,7 +78,7 @@ index 3753ffb..886cf98 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -90,7 +90,7 @@ index 57f5dc5..990828d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/framework/formats/classification.proto";
@@ -102,7 +102,7 @@ index 3af8e11..d1b7fd2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -114,7 +114,7 @@ index 0f7c925..1864252 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -126,7 +126,7 @@ index 76bacc7..7ab3d54 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -138,7 +138,7 @@ index e30672f..5c29fb2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -150,7 +150,7 @@ index f7ca470..ee53161 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -162,7 +162,7 @@ index 6c69f3a..5d659d3 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -174,7 +174,7 @@ index 0ccc3c0..ce0b393 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -186,7 +186,7 @@ index cdcd284..074ae2b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -198,7 +198,7 @@ index 40301f8..771a0c0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -210,7 +210,7 @@ index a787437..b535bb3 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -222,7 +222,7 @@ index 7bff235..2afca89 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -234,7 +234,7 @@ index 6fa05dc..d881032 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -246,7 +246,7 @@ index 55d3467..12bd61d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -258,7 +258,7 @@ index c90e03b..f3b0ff0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/gpu/scale_mode.proto";
@@ -270,7 +270,7 @@ index 3b82d61..d95a28a 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -282,7 +282,7 @@ index 3ec29bd..afb274f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -294,7 +294,7 @@ index 0564fb2..8d7eba6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -306,7 +306,7 @@ index abbf084..ef79172 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -318,7 +318,7 @@ index e51ccaf..f028119 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/framework/formats/image_format.proto";
@@ -330,7 +330,7 @@ index 12b10cc..110fed6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -342,7 +342,7 @@ index 3f07ddb..dd6143b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -354,7 +354,7 @@ index 6a5cfb0..7abd1df 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -366,7 +366,7 @@ index 0451dc5..d9919ea 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/gpu/gpu_origin.proto";
@@ -378,7 +378,7 @@ index e0b538a..98d2031 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -390,7 +390,7 @@ index 97c2154..3c65ea6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -402,7 +402,7 @@ index 3934a61..785a3b2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -414,7 +414,7 @@ index 364eb5c..8c82b3f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -426,7 +426,7 @@ index 6940501..dfac450 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -438,7 +438,7 @@ index 2608a14..a9852ac 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -450,7 +450,7 @@ index 1662576..2febc65 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/gpu/gpu_origin.proto";
@@ -462,7 +462,7 @@ index 1196ca1..3a13e6c 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/packet_generator.proto";
  
@@ -474,7 +474,7 @@ index 0e5a477..ae595f6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "tensorflow/core/framework/types.proto";
@@ -486,7 +486,7 @@ index bcd1498..03bae44 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -498,7 +498,7 @@ index 50a1775..ed3ea07 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -510,7 +510,7 @@ index 1491446..b6d24a1 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -522,7 +522,7 @@ index 695eb6b..d064835 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "tensorflow/core/example/feature.proto";
@@ -534,7 +534,7 @@ index 87c5978..689c5e8 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -546,7 +546,7 @@ index 3410068..da03e51 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -558,7 +558,7 @@ index e864770..fda96e9 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/framework/formats/time_series_header.proto";
@@ -570,7 +570,7 @@ index c9aa67f..e737240 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -582,7 +582,7 @@ index 98dbd5b..819f951 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -594,7 +594,7 @@ index 87b2304..00061c2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "tensorflow/core/protobuf/config.proto";
@@ -606,7 +606,7 @@ index 4643b4d..74c6791 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/packet_generator.proto";
  import "tensorflow/core/protobuf/config.proto";
@@ -618,7 +618,7 @@ index 927d3b5..d710495 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "tensorflow/core/protobuf/config.proto";
@@ -630,7 +630,7 @@ index d24a1cd..1255915 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/packet_generator.proto";
  import "tensorflow/core/protobuf/config.proto";
@@ -642,7 +642,7 @@ index 51cc870..d2f0778 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/calculators/core/packet_resampler_calculator.proto";
  import "mediapipe/framework/calculator.proto";
@@ -654,7 +654,7 @@ index 01be3b7..7e06d49 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -666,7 +666,7 @@ index 65554bb..51c7f48 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "tensorflow/core/framework/types.proto";
@@ -678,7 +678,7 @@ index 908d98d..821c078 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -690,7 +690,7 @@ index c892488..78d4f73 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -702,7 +702,7 @@ index 5ed7087..0634dfe 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -714,7 +714,7 @@ index 546165a..e24cb86 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -726,7 +726,7 @@ index 02dc208..7141516 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -738,7 +738,7 @@ index c6c9d91..4bb468e 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -750,7 +750,7 @@ index ef494c2..0fc4d55 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -762,7 +762,7 @@ index 793639a..8e91b0f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -774,7 +774,7 @@ index d04aa56..d68e986 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -786,7 +786,7 @@ index 339bb21..9a00d07 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -798,7 +798,7 @@ index ca66f80..cc75cc1 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -810,7 +810,7 @@ index f482277..06718ce 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -822,7 +822,7 @@ index 198ca4d..8c36a3f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -834,7 +834,7 @@ index d49eb6c..f7de0e4 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -846,7 +846,7 @@ index acc847d..32cc23f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -858,7 +858,7 @@ index c5012ce..44628e2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -870,7 +870,7 @@ index 221adbe..428695f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -882,7 +882,7 @@ index 017facb..392e346 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  
@@ -894,7 +894,7 @@ index b5a5636..72dcbaf 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -906,7 +906,7 @@ index 310251e..18a8b6d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -918,7 +918,7 @@ index 9909195..5b1a004 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -930,7 +930,7 @@ index 4b122fb..c49ddce 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Contains the latency information for a packet stream in mediapipe. The
  // following are provided
@@ -942,7 +942,7 @@ index 17876c8..81ec478 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -954,7 +954,7 @@ index fe00a2d..232c1b0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -966,7 +966,7 @@ index 5fa9604..00badcb 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -978,7 +978,7 @@ index 177a73b..ee39def 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Contains the packet frequency information.
  message PacketFrequency {
@@ -990,7 +990,7 @@ index e7be1c4..cafa6ac 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1002,7 +1002,7 @@ index 63ec5f9..a4b2f36 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1014,7 +1014,7 @@ index 9b6d5e6..e5e8bf0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -1026,7 +1026,7 @@ index dda6e2c..9715db2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1038,7 +1038,7 @@ index 44e781d..964a08f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1050,7 +1050,7 @@ index eebcaed..2cc72a1 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1062,7 +1062,7 @@ index b8d81ad..62967c7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1074,7 +1074,7 @@ index 95cf765..e03b34f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1086,7 +1086,7 @@ index 31e1ecb..af978d8 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -1098,7 +1098,7 @@ index 08fb7a7..ae2f1df 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1110,7 +1110,7 @@ index df25937..76e48a0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  
@@ -1122,7 +1122,7 @@ index 3b99192..e7cdab6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  
@@ -1134,7 +1134,7 @@ index f0eb42f..f150292 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/tracking/box_detector.proto";
@@ -1146,7 +1146,7 @@ index 2001082..694d313 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/tracking/box_tracker.proto";
@@ -1158,7 +1158,7 @@ index c1e91d8..11adce4 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/tracking/flow_packager.proto";
@@ -1170,7 +1170,7 @@ index 6d5fb84..926efef 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1182,7 +1182,7 @@ index a2af77d..fb48ff5 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/tracking/motion_analysis.proto";
@@ -1194,7 +1194,7 @@ index a3a7af3..db07b33 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1206,7 +1206,7 @@ index 02f3fc1..fe1738b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Message storing min value and max value for normalization in all channels.
  message QuantizerModelData {
@@ -1218,7 +1218,7 @@ index 4462425..1f115ef 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/tracking/tracked_detection_manager_config.proto";
@@ -1230,7 +1230,7 @@ index 8e87ce9..609c1dd 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1242,7 +1242,7 @@ index 726237e..041755a 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1254,7 +1254,7 @@ index 9be74a3..ec8d8f0 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1266,7 +1266,7 @@ index 6516ed2..1942701 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/examples/desktop/autoflip/quality/kinematic_path_solver.proto";
  import "mediapipe/framework/calculator.proto";
@@ -1278,7 +1278,7 @@ index 1a4a1c6..16dc43c 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1290,7 +1290,7 @@ index 86e4c31..807cabf 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/examples/desktop/autoflip/quality/visual_scorer.proto";
  import "mediapipe/framework/calculator.proto";
@@ -1302,7 +1302,7 @@ index 1dd00ac..7fcdab4 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1314,7 +1314,7 @@ index f9ba9cb..34ec0c0 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/examples/desktop/autoflip/quality/cropping.proto";
  import "mediapipe/framework/calculator.proto";
@@ -1326,7 +1326,7 @@ index b0f3bd9..657b41d 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1338,7 +1338,7 @@ index 3f14935..5cac99e 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/examples/desktop/autoflip/autoflip_messages.proto";
  import "mediapipe/framework/calculator.proto";
@@ -1350,7 +1350,7 @@ index 997696a..3154d4f 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1362,7 +1362,7 @@ index f8a62b2..50667a0 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  import "mediapipe/examples/desktop/autoflip/autoflip_messages.proto";
  import "mediapipe/examples/desktop/autoflip/quality/kinematic_path_solver.proto";
@@ -1374,7 +1374,7 @@ index e53b3ed..051a809 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  // Focus point location (normalized w.r.t. frame_width and frame_height, i.e.
  // specified in the domain [0, 1] x [0, 1]).
@@ -1386,7 +1386,7 @@ index 9f481db..ccf05fc 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  message KinematicOptions {
    // Weighted update of new camera velocity (measurement) vs current state
@@ -1398,7 +1398,7 @@ index 4623e1e..eae08f9 100644
  syntax = "proto2";
  
  package mediapipe.autoflip;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.AutoFlip";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.AutoFlip";
  
  // Options for the VisualScorer module.
  // Next tag: 6
@@ -1410,7 +1410,7 @@ index b39b95a..dd4d1b7 100644
  syntax = "proto3";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import public "mediapipe/framework/calculator_options.proto";
  
@@ -1422,7 +1422,7 @@ index d86d99f..10e2282 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1434,7 +1434,7 @@ index 747e9c4..cc2cf92 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.proto";
  option java_outer_classname = "CalculatorOptionsProto";
@@ -1446,7 +1446,7 @@ index 723178a..28d7198 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1458,7 +1458,7 @@ index 77762df..89361b1 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Describes a field within a message.
  message FieldDescriptorProto {
@@ -1470,7 +1470,7 @@ index a079cca..86a03ef 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/formats/annotation/rasterization.proto";
  
@@ -1482,7 +1482,7 @@ index 38414df..4bac219 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.formats.annotation.proto";
  option java_outer_classname = "RasterizationProto";
@@ -1494,7 +1494,7 @@ index dbe079f..19299f6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option objc_class_prefix = "MediaPipe";
  option java_package = "com.google.mediapipe.formats.proto";
@@ -1506,7 +1506,7 @@ index 3e2d067..76e64f7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/formats/location_data.proto";
  
@@ -1518,7 +1518,7 @@ index 0d3cd62..04d0cb0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // A list of properties extracted from EXIF metadata from an image file.
  message ImageFileProperties {
@@ -1530,7 +1530,7 @@ index 4bedb8c..b4d114b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message ImageFormat {
    enum Format {
@@ -1542,7 +1542,7 @@ index eb6a454..07dc086 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.formats.proto";
  option java_outer_classname = "LandmarkProto";
@@ -1554,7 +1554,7 @@ index 3edd542..73dd844 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/formats/annotation/rasterization.proto";
  
@@ -1566,7 +1566,7 @@ index d4aa457..2dbe08c 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.formats.proto";
  option java_outer_classname = "MatrixDataProto";
@@ -1578,7 +1578,7 @@ index c2dda97..f076370 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message OpticalFlowFieldData {
    optional int32 width = 1;
@@ -1590,7 +1590,7 @@ index 8eeed48..9eb87a2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // The anchor representation for object detection.
  message Anchor {
@@ -1602,7 +1602,7 @@ index 6b57a4a..4645027 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.formats.proto";
  option java_outer_classname = "RectProto";
@@ -1614,7 +1614,7 @@ index a16f47d..9910441 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Header for a uniformly sampled time series stream. Each Packet in
  // the stream is a Matrix, and each column is a (vector-valued) sample of
@@ -1626,7 +1626,7 @@ index 0ded959..9a2b2cf 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.proto";
  option java_outer_classname = "MediaPipeOptionsProto";
@@ -1638,7 +1638,7 @@ index 518097f..94e292c 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Options used by a PacketFactory to create the Packet.
  message PacketFactoryOptions {
@@ -1650,7 +1650,7 @@ index 14f13a1..f4c8e1f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Options used by a PacketGenerator.
  message PacketGeneratorOptions {
@@ -1662,7 +1662,7 @@ index bccfd6b..54ce241 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message PacketTestProto {
    // Tests that the tags used to encode the timestamp do not interfere with
@@ -1674,7 +1674,7 @@ index 6e7ce83..5146db2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1686,7 +1686,7 @@ index e0731d9..e7c7693 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1698,7 +1698,7 @@ index 11638e7..ba75041 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1710,7 +1710,7 @@ index f2ce235..41e249c 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1722,7 +1722,7 @@ index 8dc4d0f..f7e38c1 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1734,7 +1734,7 @@ index cbbe297..2af1989 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1746,7 +1746,7 @@ index af75dc1..05c304f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1758,7 +1758,7 @@ index 3618043..2a31ed2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1770,7 +1770,7 @@ index 0bf0445..1490a0c 100644
  syntax = "proto3";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // A proto3 calculator options for testing.
  message SkyLightCalculatorOptions {
@@ -1782,7 +1782,7 @@ index 50b19eb..de830f7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/mediapipe_options.proto";
  
@@ -1794,7 +1794,7 @@ index c2fc6aa..b3b461d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/framework/deps/proto_descriptor.proto";
@@ -1806,7 +1806,7 @@ index c6e8980..f8dab49 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1818,7 +1818,7 @@ index 40660bb..5934856 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1830,7 +1830,7 @@ index ac39950..c3f7c22 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1842,7 +1842,7 @@ index fca53e9..8a639a4 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1854,7 +1854,7 @@ index 25b82c2..2ebc9d8 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1866,7 +1866,7 @@ index 99c0d43..263873f 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/gpu/scale_mode.proto";
@@ -1878,7 +1878,7 @@ index 8621908..09f683d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/gpu/scale_mode.proto";
@@ -1890,7 +1890,7 @@ index f4db835..59e9838 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message GpuOrigin {
    enum Mode {
@@ -1902,7 +1902,7 @@ index ef7d7af..5580881 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // We wrap the enum in a message to avoid namespace collisions.
  message ScaleMode {
@@ -1914,7 +1914,7 @@ index b73209c..817aae7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.graphs.instantmotiontracking";
  option java_outer_classname = "StickerBufferProto";
@@ -1926,7 +1926,7 @@ index 786cd30..36b89f2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1938,7 +1938,7 @@ index e0fc677..f2311fc 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -1950,7 +1950,7 @@ index c0159d4..6a6f265 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1962,7 +1962,7 @@ index 1e04d95..f5ed8f0 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/util/color.proto";
@@ -1974,7 +1974,7 @@ index 4966f0a..d3c96c2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -1986,7 +1986,7 @@ index 406cc9f..94164e2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message TimedModelMatrixProto {
    // 4x4 model matrix stored in ROW major order.
@@ -1998,7 +1998,7 @@ index 6c23903..4358919 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  
@@ -2010,7 +2010,7 @@ index dea2ae0..5c80760 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  import "mediapipe/modules/face_geometry/protos/environment.proto";
@@ -2022,7 +2022,7 @@ index 638bb45..06e61cf 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator_options.proto";
  
@@ -2034,7 +2034,7 @@ index cca3f29..184178a 100644
  syntax = "proto2";
  
  package mediapipe.face_geometry;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.FaceGeometry";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.FaceGeometry";
  
  option java_package = "com.google.mediapipe.modules.facegeometry";
  option java_outer_classname = "EnvironmentProto";
@@ -2046,7 +2046,7 @@ index b91a7d7..5baac68 100644
  syntax = "proto2";
  
  package mediapipe.face_geometry;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.FaceGeometry";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.FaceGeometry";
  
  import "mediapipe/framework/formats/matrix_data.proto";
  import "mediapipe/modules/face_geometry/protos/mesh_3d.proto";
@@ -2058,7 +2058,7 @@ index dac0e25..19f9cf1 100644
  syntax = "proto2";
  
  package mediapipe.face_geometry;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.FaceGeometry";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.FaceGeometry";
  
  import "mediapipe/modules/face_geometry/protos/mesh_3d.proto";
  
@@ -2070,7 +2070,7 @@ index 4db45c1..b9c3802 100644
  syntax = "proto2";
  
  package mediapipe.face_geometry;
-+option csharp_namespace = "Akihabara.Framework.Protobuf.FaceGeometry";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf.FaceGeometry";
  
  option java_package = "com.google.mediapipe.modules.facegeometry";
  option java_outer_classname = "Mesh3dProto";
@@ -2082,7 +2082,7 @@ index ec3cf22..b1d8ab4 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -2094,7 +2094,7 @@ index edc8c4b..e4c14fb 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Info about the camera characteristics used to capture images and depth data.
  // See developer.apple.com/documentation/avfoundation/avcameracalibrationdata
@@ -2106,7 +2106,7 @@ index 897e700..d490915 100644
  syntax = "proto3";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/modules/objectron/calculators/a_r_capture_metadata.proto";
  import "mediapipe/modules/objectron/calculators/object.proto";
@@ -2118,7 +2118,7 @@ index f0f10ae..f4e5eac 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message BeliefDecoderConfig {
    optional float heatmap_threshold = 1 [default = 0.9];
@@ -2130,7 +2130,7 @@ index f5c843b..e11e9b6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message CameraParametersProto {
    // This number is non-negative, it represents camera height above ground
@@ -2142,7 +2142,7 @@ index ea79b8d..3a7a2e2 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -2154,7 +2154,7 @@ index 8959cb8..0e75776 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -2166,7 +2166,7 @@ index f37308a..21d2f81 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -2178,7 +2178,7 @@ index a3005c1..f6e6613 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/modules/objectron/calculators/belief_decoder_config.proto";
@@ -2190,7 +2190,7 @@ index a07e83f..3eb3124 100644
  syntax = "proto3";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message KeyPoint {
    // The position of the keypoint in the local coordinate system of the rigid
@@ -2202,7 +2202,7 @@ index 8d46fce..fc55c6d 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/modules/objectron/calculators/belief_decoder_config.proto";
@@ -2214,7 +2214,7 @@ index 32520d9..54dfa5b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  import "mediapipe/modules/objectron/calculators/belief_decoder_config.proto";
@@ -2226,7 +2226,7 @@ index 67c54a2..0347ce7 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/framework/calculator.proto";
  
@@ -2238,7 +2238,7 @@ index c612112..4ba764b 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message Color {
    optional int32 r = 1;
@@ -2250,7 +2250,7 @@ index 54a2d65..1ce3267 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/color.proto";
  
@@ -2262,7 +2262,7 @@ index 287ba4e..608aeef 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/box_tracker.proto";
  import "mediapipe/util/tracking/region_flow.proto";
@@ -2274,7 +2274,7 @@ index 404c1bd..7156238 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/tracking.proto";
  
@@ -2286,7 +2286,7 @@ index 9e19f4a..e93b830 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/motion_models.proto";
  
@@ -2298,7 +2298,7 @@ index 5ab71e7..ae91f4c 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/motion_models.proto";
  import "mediapipe/util/tracking/region_flow.proto";
@@ -2310,7 +2310,7 @@ index 35712c2..2d8c2a6 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/camera_motion.proto";
  import "mediapipe/util/tracking/frame_selection_solution_evaluator.proto";
@@ -2322,7 +2322,7 @@ index b2b92c9..4610c79 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message FrameSelectionSolutionEvaluatorOptions {
    extensions 20000 to max;
@@ -2334,7 +2334,7 @@ index 97d6d1d..993ee37 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/motion_estimation.proto";
  import "mediapipe/util/tracking/motion_saliency.proto";
@@ -2346,7 +2346,7 @@ index 79d60c6..ffe3e26 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Note: In general for Estimation modes, the prefix are used as follows:
  // L2:        minimize squared norm of error
@@ -2358,7 +2358,7 @@ index 889cc42..84ce542 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Here x represents a 2D point in the image plane, in the following
  // coordinate system:
@@ -2370,7 +2370,7 @@ index b7702da..b11684a 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Next tag: 17
  message MotionSaliencyOptions {
@@ -2382,7 +2382,7 @@ index fa27e87..78d15e8 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message PushPullOptions {
    // Sigma for color difference.
@@ -2394,7 +2394,7 @@ index bd93c0b..eb556d4 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  option java_package = "com.google.mediapipe.tracking";
  option java_multiple_files = true;
@@ -2406,7 +2406,7 @@ index 800e430..1ed1a48 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/tone_estimation.proto";
  
@@ -2418,7 +2418,7 @@ index 711765a..2153768 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/tone_models.proto";
  
@@ -2430,7 +2430,7 @@ index d53ad21..846b564 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  // Transforms a 3D color vector x = (c1, c2, c3) according to
  //  [ gain_c1    0      0      bias_c1       *   [ c1
@@ -2442,7 +2442,7 @@ index 9162c95..62df410 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  message TrackedDetectionManagerConfig {
    // When we compare two detection boxes, if the ratio of the area is
@@ -2454,7 +2454,7 @@ index ff00380..153c3bd 100644
  syntax = "proto2";
  
  package mediapipe;
-+option csharp_namespace = "Akihabara.Framework.Protobuf";
++option csharp_namespace = "Mediapipe.Net.Framework.Protobuf";
  
  import "mediapipe/util/tracking/motion_models.proto";
  
