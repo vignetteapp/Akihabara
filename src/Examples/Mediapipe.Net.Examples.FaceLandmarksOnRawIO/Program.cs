@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 using Mediapipe.Net.External;
 using Mediapipe.Net.Framework;
@@ -15,7 +16,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
     /// This program reads a sequence of raw images from stdin and outputs a sequence of raw images to stdout.
     /// The best way to use this program is to sandwich it between 2 ffmpeg commands to decode
     /// an image or video and encode the output back.
-    class Program
+    internal class Program
     {
         // The name of the input and output streams.
         // If you read the `.pbtxt` file, you will see this name appear at the
@@ -23,12 +24,12 @@ namespace Mediapipe.Net.Examples.OnRawIO
         // mediapipe/graphs/face_mesh/face_mesh_desktop_live.pbtxt, there is
         // also a second output stream called "multi_face_landmarks" containing
         // the actual face landmarks that can be processed by another program.
-        const string kInputStream = "input_video";
-        const string kOutputStream = "output_video";
+        private const string k_input_stream = "input_video";
+        private const string k_output_stream = "output_video";
 
         /// Parses arguments and fetches the necessar data before
         /// running the `RunGraph` function and reporting its state.
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
             if (args.Length != 3)
             {
@@ -38,8 +39,8 @@ namespace Mediapipe.Net.Examples.OnRawIO
 
             // Since it only receives the raw pixels and no additional information,
             // you have to give it the width and height of the video or image.
-            int width = Int32.Parse(args[0]);
-            int height = Int32.Parse(args[1]);
+            int width = int.Parse(args[0]);
+            int height = int.Parse(args[1]);
 
             // The content of the `.pbtxt` file used to generate and run the Mediapipe graph.
             string configText = File.ReadAllText(args[2]);
@@ -62,11 +63,11 @@ namespace Mediapipe.Net.Examples.OnRawIO
 
         /// Runs the Mediapipe graph.
         /// It feeds it from raw RGBA images read from stdin, and outputs a sequence of raw RGBA images to stdout.
-        static Status RunGraph(int width, int height, string configText)
+        internal static Status RunGraph(int width, int height, string configText)
         {
             // Initialize the graph
             var graph = new CalculatorGraph(configText);
-            var poller = graph.AddOutputStreamPoller<ImageFrame>(kOutputStream).Value();
+            OutputStreamPoller<ImageFrame> poller = graph.AddOutputStreamPoller<ImageFrame>(k_output_stream).Value();
 
             // Here we register a delegate that is gonna be called each time the graph is able to
             // detect landmarks from the input video. It will get the landmarks and write them in
@@ -74,20 +75,20 @@ namespace Mediapipe.Net.Examples.OnRawIO
             Directory.CreateDirectory("landmarks");
             var jserOptions = new JsonSerializerOptions { WriteIndented = true };
             graph.ObserveOutputStream<NormalizedLandmarkListVectorPacket, List<NormalizedLandmarkList>>("multi_face_landmarks", (packet) => {
-                var timestamp = packet.Timestamp().Value();
+                long timestamp = packet.Timestamp().Value();
                 Glog.Log(Glog.Severity.Info, $"Got landmarks at timestamp {timestamp}");
 
-                var landmarks = packet.Get();
+                List<NormalizedLandmarkList> landmarks = packet.Get();
 
-                var jsonLandmarks = JsonSerializer.Serialize(landmarks, jserOptions);
+                string jsonLandmarks = JsonSerializer.Serialize(landmarks, jserOptions);
                 File.WriteAllText($"landmarks/landmark_{timestamp}.json", jsonLandmarks);
 
                 return Status.Ok();
-            }, out var callbackHandle).AssertOk();
+            }, out GCHandle callbackHandle).AssertOk();
 
             // Preparing image byte buffer
-            var length = width * height * 4;
-            var inBytes = new byte[length];
+            int length = width * height * 4;
+            byte[] inBytes = new byte[length];
 
             // Using stdin and stdout as buffered streams for IO optimization
             var stdin = new BufferedStream(Console.OpenStandardInput(length));
@@ -117,7 +118,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
                 var inputPacket = new ImageFramePacket(inputFrame, new Timestamp(timestamp));
 
                 // Finally send the packet to the graph
-                graph.AddPacketToInputStream(kInputStream, inputPacket);
+                graph.AddPacketToInputStream(k_input_stream, inputPacket);
 
                 // It seems like you have to retrieve the image frame packets
 
@@ -129,16 +130,16 @@ namespace Mediapipe.Net.Examples.OnRawIO
 
                 // After getting the packet, we retrieve the image frame and then the raw byte data
                 // to finally send it in raw binary form to stdout.
-                var imageFrame = packet.Get();
-                var outBytes = imageFrame.CopyToByteBuffer(length);
+                ImageFrame imageFrame = packet.Get();
+                byte[] outBytes = imageFrame.CopyToByteBuffer(length);
 
                 stdout.Write(outBytes, 0, length);
             }
 
             // Important things to do before we exit the program
             Glog.Log(Glog.Severity.Info, "Shutting down.");
-            graph.CloseInputStream(kInputStream);
-            var doneStatus = graph.WaitUntilDone();
+            graph.CloseInputStream(k_input_stream);
+            Status doneStatus = graph.WaitUntilDone();
 
             callbackHandle.Free();
             stdin.Dispose();
@@ -149,7 +150,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
 
         /// This function is needed because the `Stream.Read` function won't necessarily
         /// read the exact number of bytes that we specified.
-        static int ReadBytesFromStream(Stream stream, byte[] bytes)
+        internal static int ReadBytesFromStream(Stream stream, byte[] bytes)
         {
             int bytesToRead = bytes.Length;
             int totalBytesRead = 0;
@@ -165,9 +166,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
             return totalBytesRead;
         }
 
-        static void Usage()
-        {
+        internal static void Usage() =>
             Console.WriteLine("Usage: Mediapipe.Net.Examples.OnRawIO <width> <height> <graph-config> < raw_image_input > raw_image_output");
-        }
     }
 }

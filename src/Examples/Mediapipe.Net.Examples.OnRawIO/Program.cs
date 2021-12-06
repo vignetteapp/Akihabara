@@ -92,7 +92,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
                 var inputFrame = new ImageFrame(ImageFormat.Format.Srgba, width, height, width * 4, pixelData);
 
                 // Then, we need a timestamp to package the image frame in an actual `ImageFramePacket`.
-                int timestamp = System.Environment.TickCount & int.MaxValue;
+                int timestamp = Environment.TickCount & int.MaxValue;
                 var inputPacket = new ImageFramePacket(inputFrame, new Timestamp(timestamp));
 
                 // Finally send the packet to the graph
