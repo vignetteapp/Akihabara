@@ -4,7 +4,7 @@
 using Mediapipe.Net.Gpu;
 using NUnit.Framework;
 
-namespace Tests
+namespace Mediapipe.Net.Tests
 {
     [TestFixture]
     public class GpuResourcesTest

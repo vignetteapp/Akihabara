@@ -6,7 +6,7 @@ using Mediapipe.Net.Core;
 using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
 
-namespace Tests
+namespace Mediapipe.Net.Tests
 {
     [TestFixture]
     public class StatusTest
