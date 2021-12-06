@@ -30,7 +30,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
         {
             var packet = new StringPacket("test");
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), "test");
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -41,7 +41,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             byte[] bytes = new byte[] { (byte)'t', (byte)'e', (byte)'s', (byte)'t' };
             var packet = new StringPacket(bytes);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), "test");
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -52,7 +52,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             var timestamp = new Timestamp(1);
             var packet = new StringPacket("test", timestamp);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), "test");
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }
@@ -64,7 +64,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             byte[] bytes = new byte[] { (byte)'t', (byte)'e', (byte)'s', (byte)'t' };
             var packet = new StringPacket(bytes, timestamp);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), "test");
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Framework
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern void mp_SidePacket__clear(IntPtr sidePacket);

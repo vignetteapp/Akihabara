@@ -55,7 +55,7 @@ namespace Mediapipe.Net.Tests.Gpu
         {
             var glTexture = new GlTexture();
 
-            Assert.AreEqual(glTexture.Target, Gl.glTexture2D);
+            Assert.AreEqual(glTexture.Target, Gl.GlTexture2D);
         }
         #endregion
     }

@@ -29,7 +29,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
         {
             var packet = new BoolPacket(true);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.True(packet.Get());
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -39,7 +39,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
         {
             var packet = new BoolPacket(false);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.False(packet.Get());
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -50,7 +50,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             var timestamp = new Timestamp(1);
             var packet = new BoolPacket(true, timestamp);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.True(packet.Get());
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }

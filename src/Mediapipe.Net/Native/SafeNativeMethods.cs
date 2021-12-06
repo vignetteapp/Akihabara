@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         #region ABSL
 

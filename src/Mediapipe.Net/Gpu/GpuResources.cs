@@ -13,21 +13,21 @@ namespace Mediapipe.Net.Gpu
 {
     public class GpuResources : MpResourceHandle
     {
-        private SharedPtrHandle _sharedPtrHandle;
+        private SharedPtrHandle sharedPtrHandle;
 
         public GpuResources(IntPtr ptr) : base()
         {
-            _sharedPtrHandle = new GpuResourceSharedPtr(ptr);
+            sharedPtrHandle = new GpuResourceSharedPtr(ptr);
 
-            Ptr = _sharedPtrHandle.Get();
+            Ptr = sharedPtrHandle.Get();
         }
 
         protected override void DisposeManaged()
         {
-            if (_sharedPtrHandle != null)
+            if (sharedPtrHandle != null)
             {
-                _sharedPtrHandle.Dispose();
-                _sharedPtrHandle = null;
+                sharedPtrHandle.Dispose();
+                sharedPtrHandle = null;
             }
             base.DisposeManaged();
         }
@@ -41,18 +41,18 @@ namespace Mediapipe.Net.Gpu
             // if you are seeing this please help me this is a call for help
         }
 
-        public IntPtr SharedPtr => _sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
+        public IntPtr SharedPtr => sharedPtrHandle?.MpPtr ?? IntPtr.Zero;
 
         public static StatusOrGpuResources Create()
         {
-            UnsafeNativeMethods.mp_GpuResources_Create(out var statusOrGpuResourcesPtr).Assert();
+            UnsafeNativeMethods.mp_GpuResources_Create(out IntPtr statusOrGpuResourcesPtr).Assert();
 
             return new StatusOrGpuResources(statusOrGpuResourcesPtr);
         }
 
         public static StatusOrGpuResources Create(IntPtr externalContext)
         {
-            UnsafeNativeMethods.mp_GpuResources_Create__Pv(externalContext, out var statusOrGpuResourcesPtr).Assert();
+            UnsafeNativeMethods.mp_GpuResources_Create__Pv(externalContext, out IntPtr statusOrGpuResourcesPtr).Assert();
 
             return new StatusOrGpuResources(statusOrGpuResourcesPtr);
         }
@@ -64,19 +64,10 @@ namespace Mediapipe.Net.Gpu
     {
         public GpuResourceSharedPtr(IntPtr ptr) : base(ptr) { }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_StatusOrGpuResources__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_StatusOrGpuResources__delete(Ptr);
 
-        public override IntPtr Get()
-        {
-            return SafeNativeMethods.mp_SharedGpuResources__get(MpPtr);
-        }
+        public override IntPtr Get() => SafeNativeMethods.mp_SharedGpuResources__get(MpPtr);
 
-        public override void Reset()
-        {
-            UnsafeNativeMethods.mp_SharedGlContext__reset(MpPtr);
-        }
+        public override void Reset() => UnsafeNativeMethods.mp_SharedGlContext__reset(MpPtr);
     }
 }

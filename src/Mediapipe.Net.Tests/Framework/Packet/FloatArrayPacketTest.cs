@@ -31,7 +31,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             float[] array = { };
             var packet = new FloatArrayPacket(array);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), array);
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -42,7 +42,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             float[] array = { 0.01f };
             var packet = new FloatArrayPacket(array);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), array);
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -54,7 +54,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             float[] array = { 0.01f, 0.02f };
             var packet = new FloatArrayPacket(array, timestamp);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), array);
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }

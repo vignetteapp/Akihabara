@@ -7,7 +7,7 @@ using Mediapipe.Net.Framework.ImageFormat;
 
 namespace Mediapipe.Net.Native.Framework.Format
 {
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_ImageFrame__(out IntPtr imageFrame);

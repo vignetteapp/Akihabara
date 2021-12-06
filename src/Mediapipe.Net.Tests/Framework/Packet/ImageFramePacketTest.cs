@@ -33,7 +33,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             var packet = new ImageFramePacket(srcImageFrame);
 
             Assert.True(srcImageFrame.IsDisposed);
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
 
             var statusOrImageFrame = packet.Consume();
@@ -51,7 +51,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             var packet = new ImageFramePacket(srcImageFrame, timestamp);
 
             Assert.True(srcImageFrame.IsDisposed);
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
 
             var statusOrImageFrame = packet.Consume();
             Assert.True(statusOrImageFrame.Ok);

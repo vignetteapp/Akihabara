@@ -7,7 +7,7 @@ using Mediapipe.Net.Gpu;
 
 namespace Mediapipe.Net.Native.Gpu
 {
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_GlCalculatorHelper__(out IntPtr glCalculatorHelper);

@@ -42,7 +42,7 @@ node {
             });
 
             Status graphStartResult = helloWorldGraph.StartRun();
-            Assert.True(graphStartResult.ok);
+            Assert.True(graphStartResult.Ok);
 
             Assert.DoesNotThrow(() => {
                 int timestamp = System.Environment.TickCount & int.MaxValue;

@@ -8,7 +8,7 @@ using Mediapipe.Net.Gpu;
 
 namespace Mediapipe.Net.Native.Gpu
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         #region GlTextureBuffer
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]

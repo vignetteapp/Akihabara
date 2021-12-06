@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Framework
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]

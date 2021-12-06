@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Gpu
 {
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_GpuBuffer__PSgtb(IntPtr glTextureBuffer, out IntPtr gpuBuffer);

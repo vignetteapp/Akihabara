@@ -15,7 +15,7 @@ namespace Tests
         [Test]
         public void code_ShouldReturnStatusCode_When_StatusIsOk()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
             Assert.AreEqual(status.Code, Status.StatusCode.Ok);
         }
@@ -33,7 +33,7 @@ namespace Tests
         [Test]
         public void isDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
             Assert.False(status.IsDisposed);
         }
@@ -41,7 +41,7 @@ namespace Tests
         [Test]
         public void isDisposed_ShouldReturnTrue_When_AlreadyDisposed()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
             status.Dispose();
 
             Assert.True(status.IsDisposed);
@@ -52,7 +52,7 @@ namespace Tests
         [Test]
         public void rawCode_ShouldReturnRawCode_When_StatusIsOk()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
             Assert.AreEqual(status.RawCode, 0);
         }
@@ -70,9 +70,9 @@ namespace Tests
         [Test]
         public void IsOk_ShouldReturnTrue_When_StatusIsOk()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
-            Assert.True(status.ok);
+            Assert.True(status.Ok);
         }
 
         [Test]
@@ -83,10 +83,10 @@ namespace Tests
             Console.WriteLine($"Status: {status}");
             Console.WriteLine($"status.Code: {status.Code}");
             Console.WriteLine($"status.RawCode: {status.RawCode}");
-            Console.WriteLine($"status.ok: {status.ok}");
+            Console.WriteLine($"status.Ok: {status.Ok}");
             Console.WriteLine("HOW IS IT LITERALLY CONTRADICTING ITSELF");
 
-            Assert.False(status.ok);
+            Assert.False(status.Ok);
         }
         #endregion
 
@@ -94,7 +94,7 @@ namespace Tests
         [Test]
         public void AssertOk_ShouldNotThrow_When_StatusIsOk()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
             Assert.DoesNotThrow(() => { status.AssertOk(); });
         }
@@ -111,7 +111,7 @@ namespace Tests
         [Test]
         public void ToString_ShouldReturnMessage_When_StatusIsOk()
         {
-            var status = Status.Ok();
+            var status = Status.GetOk();
 
             Assert.AreEqual(status.ToString(), "OK");
         }

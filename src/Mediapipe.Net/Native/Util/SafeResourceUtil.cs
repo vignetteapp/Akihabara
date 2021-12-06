@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Util
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate string PathResolver(string path);

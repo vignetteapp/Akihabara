@@ -8,7 +8,7 @@ using Mediapipe.Net.Framework.ImageFormat;
 
 namespace Mediapipe.Net.Native.Framework.Format
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         [Pure, DllImport(MediaPipeLibrary, ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]

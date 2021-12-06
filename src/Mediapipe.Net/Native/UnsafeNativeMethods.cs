@@ -13,7 +13,7 @@ namespace Mediapipe.Net.Native
     /// Using instructions here should be mindful that since these are unsafe,
     /// There are no guarantee this wouldn't leak or cause a segfault.
     /// </summary>
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         #region ABSL
 

@@ -30,7 +30,7 @@ namespace Mediapipe.Net.Tests.Gpu
 
                 Assert.NotNull(glContext);
                 Assert.True(glContext.IsCurrent);
-                return Status.Ok();
+                return Status.GetOk();
             }).AssertOk();
         }
         #endregion
@@ -70,7 +70,7 @@ namespace Mediapipe.Net.Tests.Gpu
 
             glCalculatorHelper.RunInGlContext(() => {
                 glContext = GlContext.GetCurrent();
-                return Status.Ok();
+                return Status.GetOk();
             }).AssertOk();
 
             return glContext;

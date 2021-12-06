@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Framework
 {
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary, ExactSpelling = true)]
         public static extern MpReturnCode mp_Timestamp__l(long value, out IntPtr timestamp);

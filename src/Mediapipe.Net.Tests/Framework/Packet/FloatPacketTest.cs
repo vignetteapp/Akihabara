@@ -29,7 +29,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
         {
             var packet = new FloatPacket(0.01f);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), 0.01f);
             Assert.AreEqual(packet.Timestamp(), Timestamp.Unset());
         }
@@ -40,7 +40,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
             var timestamp = new Timestamp(1);
             var packet = new FloatPacket(0.01f, timestamp);
 
-            Assert.True(packet.ValidateAsType().ok);
+            Assert.True(packet.ValidateAsType().Ok);
             Assert.AreEqual(packet.Get(), 0.01f);
             Assert.AreEqual(packet.Timestamp(), timestamp);
         }

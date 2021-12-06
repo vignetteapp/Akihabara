@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace Mediapipe.Net.Native.Gpu
 {
-    public partial class SafeNativeMethods : NativeMethods
+    internal partial class SafeNativeMethods : NativeMethods
     {
         [Pure, DllImport(MediaPipeLibrary)]
         public static extern IntPtr eglGetCurrentContext();

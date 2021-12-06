@@ -8,7 +8,7 @@ namespace Mediapipe.Net.Native.Gpu
 {
     // in the original code this is usually for Linux and Android, as this is useful with GLES, but we probably want it too.
     // DO NOT CALL THIS METHODS if in desktop or in a non-Linux environment!
-    public partial class UnsafeNativeMethods : NativeMethods
+    internal partial class UnsafeNativeMethods : NativeMethods
     {
         [DllImport(MediaPipeLibrary)]
         public static extern MpReturnCode mp_EglSurfaceHolderUniquePtr__(out IntPtr eglSurfaceHolder);

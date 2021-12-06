@@ -60,8 +60,8 @@ namespace Mediapipe.Net.Tests.Gpu
             var glCalculatorHelper = new GlCalculatorHelper();
             glCalculatorHelper.InitializeForTest(GpuResources.Create().Value());
 
-            var status = glCalculatorHelper.RunInGlContext(() => { return Status.Ok(); });
-            Assert.True(status.ok);
+            var status = glCalculatorHelper.RunInGlContext(() => { return Status.GetOk(); });
+            Assert.True(status.Ok);
         }
 
         [Test, GpuOnly]
@@ -101,10 +101,10 @@ namespace Mediapipe.Net.Tests.Gpu
                 Assert.AreEqual(texture.Height, 24);
 
                 texture.Dispose();
-                return Status.Ok();
+                return Status.GetOk();
             });
 
-            Assert.True(status.ok);
+            Assert.True(status.Ok);
         }
 
         [Test, GpuOnly]
@@ -120,7 +120,7 @@ namespace Mediapipe.Net.Tests.Gpu
                 {
                     texture.Release();
                 }
-                return Status.Ok();
+                return Status.GetOk();
             });
 
             Assert.AreEqual(status.Code, Status.StatusCode.FailedPrecondition);
@@ -139,10 +139,10 @@ namespace Mediapipe.Net.Tests.Gpu
 
                 Assert.AreEqual(glTexture.Width, 32);
                 Assert.AreEqual(glTexture.Height, 24);
-                return Status.Ok();
+                return Status.GetOk();
             });
 
-            Assert.True(status.ok);
+            Assert.True(status.Ok);
         }
         #endregion
 
