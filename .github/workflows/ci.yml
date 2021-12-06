@@ -6,7 +6,7 @@ jobs:
     name: Test
     runs-on: ${{matrix.os.fullname}}
     env:
-      PROJECT_NAME: Akihabara
+      PROJECT_NAME: Mediapipe.Net
       NET_ENV: net5.0
     strategy:
       fail-fast: false
@@ -89,4 +89,4 @@ jobs:
         if: ${{ always() }}
         with:
           name: TestResults-${{matrix.os.prettyname}}
-          path: ${{github.workspace}}/src/Akihabara.Tests/TestResults/TestResults-${{matrix.os.prettyname}}.trx
+          path: ${{github.workspace}}/src/Mediapipe.Net.Tests/TestResults/TestResults-${{matrix.os.prettyname}}.trx
