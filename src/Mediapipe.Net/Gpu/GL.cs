@@ -8,7 +8,7 @@ namespace Mediapipe.Net.Gpu
 {
     public class Gl
     {
-        public static uint GlTexture2D = 0x0DE1;
+        internal static uint GlTexture2D = 0x0DE1;
 
         public static void Flush() => UnsafeNativeMethods.glFlush();
 

@@ -11,7 +11,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
     {
         #region #Size
         [Test]
-        public void size_ShouldReturnZero_When_Initialized()
+        public void Size_ShouldReturnZero_When_Initialized()
         {
             var sidePacket = new SidePacket();
 
@@ -19,7 +19,7 @@ namespace Mediapipe.Net.Tests.Framework.Packet
         }
 
         [Test]
-        public void size_ShouldReturnSize_When_AfterPacketsAreEmplaced()
+        public void Size_ShouldReturnSize_When_AfterPacketsAreEmplaced()
         {
             var sidePacket = new SidePacket();
             var flagPacket = new BoolPacket(true);

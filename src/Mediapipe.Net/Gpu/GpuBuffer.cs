@@ -16,7 +16,7 @@ namespace Mediapipe.Net.Gpu
 
         public GpuBuffer(GlTextureBuffer glTextureBuffer) : base()
         {
-            UnsafeNativeMethods.mp_GpuBuffer__PSgtb(glTextureBuffer.SharedPtr, out var ptr).Assert();
+            UnsafeNativeMethods.mp_GpuBuffer__PSgtb(glTextureBuffer.SharedPtr, out IntPtr ptr).Assert();
             glTextureBuffer.Dispose();
 
             Ptr = ptr;
@@ -25,7 +25,7 @@ namespace Mediapipe.Net.Gpu
         protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GpuBuffer__delete(Ptr);
 
         public GlTextureBuffer GetGlTextureBuffer() =>
-            new GlTextureBuffer(SafeNativeMethods.mp_GpuBuffer__GetGlTextureBufferSharedPtr(MpPtr),
+            new(SafeNativeMethods.mp_GpuBuffer__GetGlTextureBufferSharedPtr(MpPtr),
                 false);
 
         public GpuBufferFormat Format() => SafeNativeMethods.mp_GpuBuffer__format(MpPtr);

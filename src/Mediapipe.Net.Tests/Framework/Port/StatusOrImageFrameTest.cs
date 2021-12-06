@@ -14,9 +14,9 @@ namespace Tests
     {
         #region #status
         [Test]
-        public void status_ShouldReturnOk_When_StatusIsOk()
+        public void Status_ShouldReturnOk_When_StatusIsOk()
         {
-            var statusOrImageFrame = InitializeSubject();
+            StatusOrImageFrame statusOrImageFrame = initializeSubject();
 
             Assert.True(statusOrImageFrame.Ok);
             Assert.AreEqual(statusOrImageFrame.Status.Code, Status.StatusCode.Ok);
@@ -25,17 +25,17 @@ namespace Tests
 
         #region #isDisposed
         [Test]
-        public void isDisposed_ShouldReturnFalse_When_NotDisposedYet()
+        public void IsDisposed_ShouldReturnFalse_When_NotDisposedYet()
         {
-            var statusOrImageFrame = InitializeSubject();
+            StatusOrImageFrame statusOrImageFrame = initializeSubject();
 
             Assert.False(statusOrImageFrame.IsDisposed);
         }
 
         [Test]
-        public void isDisposed_ShouldReturnTrue_When_AlreadyDisposed()
+        public void IsDisposed_ShouldReturnTrue_When_AlreadyDisposed()
         {
-            var statusOrImageFrame = InitializeSubject();
+            StatusOrImageFrame statusOrImageFrame = initializeSubject();
             statusOrImageFrame.Dispose();
 
             Assert.True(statusOrImageFrame.IsDisposed);
@@ -46,17 +46,17 @@ namespace Tests
         [Test]
         public void Value_ShouldReturnImageFrame_When_StatusIsOk()
         {
-            var statusOrImageFrame = InitializeSubject();
+            StatusOrImageFrame statusOrImageFrame = initializeSubject();
             Assert.True(statusOrImageFrame.Ok);
 
-            var imageFrame = statusOrImageFrame.Value();
+            ImageFrame imageFrame = statusOrImageFrame.Value();
             Assert.AreEqual(imageFrame.Width(), 10);
             Assert.AreEqual(imageFrame.Height(), 10);
             Assert.True(statusOrImageFrame.IsDisposed);
         }
         #endregion
 
-        private static StatusOrImageFrame InitializeSubject()
+        private static StatusOrImageFrame initializeSubject()
         {
             var imageFrame = new ImageFrame(ImageFormat.Format.Sbgra, 10, 10);
             var packet = new ImageFramePacket(imageFrame, new Timestamp(1));

@@ -21,15 +21,12 @@ namespace Mediapipe.Net.Gpu
 
         public GlCalculatorHelper() : base()
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__(out var ptr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__(out IntPtr ptr).Assert();
 
             Ptr = ptr;
         }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GlCalculatorHelper__delete(Ptr);
 
         public void InitializeForTest(GpuResources gpuResources)
         {
@@ -41,8 +38,7 @@ namespace Mediapipe.Net.Gpu
 
         public Status RunInGlContext(NativeGlStatusFunction nativeGlStatusFunction)
         {
-            UnsafeNativeMethods
-                .mp_GlCalculatorHelper__RunInGlContext__PF(MpPtr, nativeGlStatusFunction, out var statusPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__RunInGlContext__PF(MpPtr, nativeGlStatusFunction, out IntPtr statusPtr).Assert();
 
             GC.KeepAlive(this);
             return new Status(statusPtr);
@@ -67,7 +63,7 @@ namespace Mediapipe.Net.Gpu
             }
 
             var nativeGlStatusFuncHandle = GCHandle.Alloc((NativeGlStatusFunction)NativeGlStatusFunction, GCHandleType.Pinned);
-            var status = RunInGlContext(NativeGlStatusFunction);
+            Status status = RunInGlContext(NativeGlStatusFunction);
             nativeGlStatusFuncHandle.Free();
 
             tmpStatus?.Dispose();
@@ -77,7 +73,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlTexture CreateSourceTexture(ImageFrame imageFrame)
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rif(MpPtr, imageFrame.MpPtr, out var texPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rif(MpPtr, imageFrame.MpPtr, out IntPtr texPtr).Assert();
 
             GC.KeepAlive(this);
             GC.KeepAlive(imageFrame);
@@ -86,7 +82,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlTexture CreateSourceTexture(GpuBuffer gpuBuffer)
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rgb(MpPtr, gpuBuffer.MpPtr, out var texPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rgb(MpPtr, gpuBuffer.MpPtr, out IntPtr texPtr).Assert();
 
             GC.KeepAlive(this);
             GC.KeepAlive(gpuBuffer);
@@ -95,7 +91,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlTexture CreateSourceTexture(GpuBuffer gpuBuffer, int plane)
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rgb_i(MpPtr, gpuBuffer.MpPtr, plane, out var texPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateSourceTexture__Rgb_i(MpPtr, gpuBuffer.MpPtr, plane, out IntPtr texPtr).Assert();
 
             GC.KeepAlive(this);
             GC.KeepAlive(gpuBuffer);
@@ -104,7 +100,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlTexture CreateDestinationTexture(int width, int height, GpuBufferFormat format)
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateDestinationTexture__i_i_ui(MpPtr, width, height, format, out var texPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateDestinationTexture__i_i_ui(MpPtr, width, height, format, out IntPtr texPtr).Assert();
 
             GC.KeepAlive(this);
             return new GlTexture(texPtr);
@@ -112,7 +108,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlTexture CreateDestinationTexture(GpuBuffer gpuBuffer)
         {
-            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateDestinationTexture__Rgb(MpPtr, gpuBuffer.MpPtr, out var texPtr).Assert();
+            UnsafeNativeMethods.mp_GlCalculatorHelper__CreateDestinationTexture__Rgb(MpPtr, gpuBuffer.MpPtr, out IntPtr texPtr).Assert();
 
             GC.KeepAlive(this);
             GC.KeepAlive(gpuBuffer);
@@ -131,7 +127,7 @@ namespace Mediapipe.Net.Gpu
 
         public GlContext GetGlContext()
         {
-            var glCtxPtr = SafeNativeMethods.mp_GlCalculatorHelper__GetGlContext(MpPtr);
+            IntPtr glCtxPtr = SafeNativeMethods.mp_GlCalculatorHelper__GetGlContext(MpPtr);
 
             GC.KeepAlive(this);
             return new GlContext(glCtxPtr);

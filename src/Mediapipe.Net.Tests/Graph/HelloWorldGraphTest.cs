@@ -9,11 +9,11 @@ using NUnit.Framework;
 namespace Mediapipe.Net.Tests.Graph
 {
     [TestFixture]
-    class HelloWorldTest
+    public class HelloWorldTest
     {
-        private const string inputStream = "in";
-        private const string outputStream = "out";
-        private const string graphConfigText = @"
+        private const string input_stream = "in";
+        private const string output_stream = "out";
+        private const string graph_config_text = @"
 input_stream: ""in""
 output_stream: ""out""
 node {
@@ -31,14 +31,13 @@ node {
         private static CalculatorGraph helloWorldGraph;
         private static OutputStreamPoller<string> outputStreamPoller;
         private static StringPacket outputPacket;
-        private static Status pushedInput;
 
         [Test]
         public static void MainTest()
         {
             Assert.DoesNotThrow(() => {
-                helloWorldGraph = new CalculatorGraph(graphConfigText);
-                outputStreamPoller = helloWorldGraph.AddOutputStreamPoller<string>(outputStream).Value();
+                helloWorldGraph = new CalculatorGraph(graph_config_text);
+                outputStreamPoller = helloWorldGraph.AddOutputStreamPoller<string>(output_stream).Value();
             });
 
             Status graphStartResult = helloWorldGraph.StartRun();
@@ -48,7 +47,7 @@ node {
                 int timestamp = System.Environment.TickCount & int.MaxValue;
                 var inputPacket = new StringPacket("Hello World", new Timestamp(timestamp));
                 outputPacket = new StringPacket();
-                pushedInput = helloWorldGraph.AddPacketToInputStream(inputStream, inputPacket);
+                helloWorldGraph.AddPacketToInputStream(input_stream, inputPacket);
             });
 
             if (outputStreamPoller.Next(outputPacket))

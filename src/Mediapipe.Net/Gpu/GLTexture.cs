@@ -14,24 +14,21 @@ namespace Mediapipe.Net.Gpu
     {
         public GlTexture() : base()
         {
-            UnsafeNativeMethods.mp_GlTexture__(out var ptr).Assert();
+            UnsafeNativeMethods.mp_GlTexture__(out IntPtr ptr).Assert();
 
             Ptr = ptr;
         }
 
         public GlTexture(uint name, int width, int height) : base()
         {
-            UnsafeNativeMethods.mp_GlTexture__ui_i_i(name, width, height, out var ptr).Assert();
+            UnsafeNativeMethods.mp_GlTexture__ui_i_i(name, width, height, out IntPtr ptr).Assert();
 
             Ptr = ptr;
         }
 
         public GlTexture(IntPtr ptr, bool isOwner = true) : base(ptr, isOwner) { }
 
-        protected override void DeleteMpPtr()
-        {
-            UnsafeNativeMethods.mp_GlTexture__delete(Ptr);
-        }
+        protected override void DeleteMpPtr() => UnsafeNativeMethods.mp_GlTexture__delete(Ptr);
 
         public int Width => SafeNativeMethods.mp_GlTexture__width(MpPtr);
 
@@ -49,7 +46,7 @@ namespace Mediapipe.Net.Gpu
 
         public GpuBuffer GetGpuBufferFrame()
         {
-            UnsafeNativeMethods.mp_GlTexture__GetGpuBufferFrame(MpPtr, out var gpuBufferPtr).Assert();
+            UnsafeNativeMethods.mp_GlTexture__GetGpuBufferFrame(MpPtr, out IntPtr gpuBufferPtr).Assert();
 
             GC.KeepAlive(this);
             return new GpuBuffer(gpuBufferPtr);
