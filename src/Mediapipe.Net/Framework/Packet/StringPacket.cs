@@ -3,8 +3,8 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Mediapipe.Net.Native;
 using Mediapipe.Net.Framework.Port;
+using Mediapipe.Net.Native;
 using Mediapipe.Net.Native.Framework;
 using UnsafeNativeMethods = Mediapipe.Net.Native.Framework.UnsafeNativeMethods;
 

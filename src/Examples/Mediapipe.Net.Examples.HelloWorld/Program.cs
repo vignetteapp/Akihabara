@@ -1,7 +1,7 @@
-﻿using Mediapipe.Net.Framework;
+using System;
+using Mediapipe.Net.Framework;
 using Mediapipe.Net.Framework.Packet;
 using Mediapipe.Net.Framework.Port;
-using System;
 
 namespace Mediapipe.Net.Examples.HelloWorld
 {

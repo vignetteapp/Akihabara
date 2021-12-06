@@ -3,13 +3,13 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Mediapipe.Net.Native;
 using Google.Protobuf;
 using Mediapipe.Net.Core;
 using Mediapipe.Net.Framework.Packet;
 using Mediapipe.Net.Framework.Port;
 using Mediapipe.Net.Framework.Protobuf;
 using Mediapipe.Net.Gpu;
+using Mediapipe.Net.Native;
 using Mediapipe.Net.Native.Framework;
 using SafeNativeMethods = Mediapipe.Net.Native.Framework.SafeNativeMethods;
 using UnsafeNativeMethods = Mediapipe.Net.Native.Framework.UnsafeNativeMethods;

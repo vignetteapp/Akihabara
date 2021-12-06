@@ -3,10 +3,10 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Mediapipe.Net.Native;
 using Mediapipe.Net.Core;
 using Mediapipe.Net.Framework.ImageFormat;
 using Mediapipe.Net.Framework.Port;
+using Mediapipe.Net.Native;
 using Mediapipe.Net.Native.Gpu;
 using SafeNativeMethods = Mediapipe.Net.Native.Gpu.SafeNativeMethods;
 using UnsafeNativeMethods = Mediapipe.Net.Native.Gpu.UnsafeNativeMethods;

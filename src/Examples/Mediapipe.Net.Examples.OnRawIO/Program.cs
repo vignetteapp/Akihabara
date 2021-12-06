@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Mediapipe.Net.External;
@@ -76,7 +76,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
             var stdout = new BufferedStream(Console.OpenStandardOutput(length));
 
             // Process one image at a time until we can't read anything more
-            for (;;)
+            while (true)
             {
                 int bytesRead = ReadBytesFromStream(stdin, inBytes);
                 if (bytesRead == 0)

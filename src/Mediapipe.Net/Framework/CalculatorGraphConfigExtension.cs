@@ -1,9 +1,9 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
-using Mediapipe.Net.Native;
 using Google.Protobuf;
 using Mediapipe.Net.Framework.Protobuf;
+using Mediapipe.Net.Native;
 using Mediapipe.Net.Native.Framework;
 using UnsafeNativeMethods = Mediapipe.Net.Native.Framework.UnsafeNativeMethods;
 

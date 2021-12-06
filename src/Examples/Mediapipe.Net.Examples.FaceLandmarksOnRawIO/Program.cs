@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -98,7 +98,7 @@ namespace Mediapipe.Net.Examples.OnRawIO
             graph.StartRun().AssertOk();
 
             // Process one image at a time until we can't read anything more
-            for (;;)
+            while (true)
             {
                 int bytesRead = ReadBytesFromStream(stdin, inBytes);
                 if (bytesRead == 0)

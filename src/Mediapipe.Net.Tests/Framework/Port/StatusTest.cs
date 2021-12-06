@@ -1,10 +1,10 @@
 // Copyright (c) homuler & The Vignette Authors. Licensed under the MIT license.
 // See the LICENSE file in the repository root for more details.
 
+using System;
 using Mediapipe.Net.Core;
 using Mediapipe.Net.Framework.Port;
 using NUnit.Framework;
-using System;
 
 namespace Tests
 {

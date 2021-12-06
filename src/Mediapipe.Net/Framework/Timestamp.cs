@@ -2,8 +2,8 @@
 // See the LICENSE file in the repository root for more details.
 
 using System;
-using Mediapipe.Net.Native;
 using Mediapipe.Net.Core;
+using Mediapipe.Net.Native;
 using Mediapipe.Net.Native.Framework;
 using SafeNativeMethods = Mediapipe.Net.Native.Framework.SafeNativeMethods;
 using UnsafeNativeMethods = Mediapipe.Net.Native.Framework.UnsafeNativeMethods;

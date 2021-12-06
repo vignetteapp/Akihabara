@@ -59,7 +59,7 @@ namespace Mediapipe.Net.Tests.Gpu
             Assert.AreEqual(glContext.glFinishCount, 0);
 #endif
         }
-#endregion
+        #endregion
 
         private static GlContext GetGlContext()
         {
