@@ -3,13 +3,13 @@
 
 using System;
 using System.Runtime.InteropServices;
-using Akihabara.Core;
-using Akihabara.Native;
+using Mediapipe.Net.Core;
+using Mediapipe.Net.Native;
 using UnmanageUtility;
-using SafeNativeMethods = Akihabara.Native.Framework.Format.SafeNativeMethods;
-using UnsafeNativeMethods = Akihabara.Native.Framework.Format.UnsafeNativeMethods;
+using SafeNativeMethods = Mediapipe.Net.Native.Framework.Format.SafeNativeMethods;
+using UnsafeNativeMethods = Mediapipe.Net.Native.Framework.Format.UnsafeNativeMethods;
 
-namespace Akihabara.Framework.ImageFormat
+namespace Mediapipe.Net.Framework.ImageFormat
 {
     public class ImageFrame : MpResourceHandle
     {

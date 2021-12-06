@@ -4,16 +4,16 @@
     <TargetFramework>net5.0</TargetFramework>
     <OutputType>Library</OutputType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <AssemtlyTitle>Akihabara</AssemtlyTitle>
-    <AssemblyName>Akihabara</AssemblyName>
+    <AssemtlyTitle>Mediapipe.Net</AssemtlyTitle>
+    <AssemblyName>Mediapipe.Net</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
-    <PackageId>Akihabara</PackageId>
+    <PackageId>Mediapipe.Net</PackageId>
     <Version>2021.1005.0</Version>
     <Authors>The Vignette Authors</Authors>
     <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
-    <Title>Akihabara</Title>
+    <Title>Mediapipe.Net</Title>
     <Description>Mediapipe wrapper library.</Description>
     <Copyright>2021 homuler and The Vignette Authors</Copyright>
     <PackageProjectUrl>https://github.com/vignetteapp/Akihabara</PackageProjectUrl>
