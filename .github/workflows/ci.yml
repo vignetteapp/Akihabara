@@ -68,13 +68,8 @@ jobs:
           pip install numpy
           python build.py build --desktop cpu --opencv=cmake -vv
 
-      - name: Build (.NET, Windows)
-        if: ${{ matrix.os.prettyname == 'Windows' }}
-        run: dotnet build --runtime win-x64 -c Debug src/${{env.PROJECT_NAME}}.sln
-
-      - name: Build (.NET, *nix)
-        if: ${{ matrix.os.prettyname != 'Windows' }}
-        run: dotnet build --runtime linux-x64 -c Debug src/${{env.PROJECT_NAME}}.sln
+      - name: Build (.NET)
+        run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
 
       # On Windows, ignore tests that can signal SIGABRT because it will abort the process.
       - name: Test (CPU, Windows)
