@@ -112,7 +112,7 @@ class BuildCommand(Command):
       self._run_command(self._build_proto_srcs_commands())
       self._unzip(
         os.path.join(_BAZEL_BIN_PATH, 'mediapipe_api', 'mediapipe_proto_srcs.zip'),
-        os.path.join(_BUILD_PATH, 'Akihabara', 'Framework', 'Protobuf'))
+        os.path.join(_BUILD_PATH, 'Mediapipe.Net', 'Framework', 'Protobuf'))
       self.console.info('Built protobuf sources')
 
     # # Unity-specific requirements, not needed for .NET
@@ -134,7 +134,7 @@ class BuildCommand(Command):
     if self.desktop:
       self.console.info(f'Building native libraries for {self.system} Desktop...')
 
-      native_build_path = os.path.join(_BUILD_PATH, 'Runtime', f'Akihabara.Runtime.{self.system}_x64.CPU')
+      native_build_path = os.path.join(_BUILD_PATH, 'Runtime', f'Mediapipe.Net.Runtime.{self.system}_x64.CPU')
 
       self._run_command(self._build_desktop_commands())
       self._unzip(
@@ -357,7 +357,7 @@ class UninstallCommand(Command):
     #if self.ios:
     #  self.console.info('Uninstalling native libraries for iOS...')
     #
-    #  ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Akihabara.framework')
+    #  ios_framework_path = os.path.join(_INSTALL_PATH, 'Plugins', 'iOS', 'Mediapipe.Net.framework')
     #
     #  if os.path.exists(ios_framework_path):
     #    self._rmtree(ios_framework_path)
@@ -398,7 +398,7 @@ class Argument:
 
     build_command_parser = subparsers.add_parser('build', help='Build and install native libraries')
     build_command_parser.add_argument('--install', action=argparse.BooleanOptionalAction, help='Integrate built artifacts in the repository', default=True)
-    build_command_parser.add_argument('--protobuf', action=argparse.BooleanOptionalAction, help='Build C# protobuf sources for Akihabara')
+    build_command_parser.add_argument('--protobuf', action=argparse.BooleanOptionalAction, help='Build C# protobuf sources for Mediapipe.Net')
     build_command_parser.add_argument('--desktop', choices=['cpu', 'gpu'])
     # build_command_parser.add_argument('--android', choices=['arm', 'arm64'])
     # build_command_parser.add_argument('--ios', choices=['arm64'])

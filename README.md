@@ -1,6 +1,6 @@
-# Akihabara
+# Mediapipe.Net
 
-Akihabara is Vignette's pure .NET port of Mediapipe, based on [Junrou Nishida's](https://github.com/homuler) MediaPipeUnity project.
+Mediapipe.Net is Vignette's pure .NET port of Mediapipe, based on [Junrou Nishida's](https://github.com/homuler) MediaPipeUnity project.
 
 ## Getting Started
 
