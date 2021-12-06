@@ -3,20 +3,20 @@
   <PropertyGroup Label="Project">
     <TargetFramework>net5.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AssemblyTitle>Akihabara native Windows x64 libraries (CPU)</AssemblyTitle>
-    <AssemblyName>Akihabara.Runtime.Windows_x64.CPU</AssemblyName>
+    <AssemblyTitle>Mediapipe.Net native Windows x64 libraries (CPU)</AssemblyTitle>
+    <AssemblyName>Mediapipe.Net.Runtime.Windows_x64.CPU</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
     <IsPackable>true</IsPackable>
-    <PackageId>Akihabara.Runtime.Windows_x64.CPU</PackageId>
+    <PackageId>Mediapipe.Net.Runtime.Windows_x64.CPU</PackageId>
     <Version>2021.1006.0</Version>
     <Authors>The Vignette Authors</Authors>
     <PackageTags>Google;Mediapipe;Tracking;Media Analysis</PackageTags>
-    <Title>Akihabara native Windows x64 libraries (CPU)</Title>
-    <Description>Native libraries for Akihabara on Windows x64, CPU version.</Description>
+    <Title>Mediapipe.Net native Windows x64 libraries (CPU)</Title>
+    <Description>Native libraries for Mediapipe.Net on Windows x64, CPU version.</Description>
     <Copyright>2021 homuler and The Vignette Authors</Copyright>
-    <PackageProjectUrl>https://github.com/vignetteapp/Akihabara</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/vignetteapp/Mediapipe.Net</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>

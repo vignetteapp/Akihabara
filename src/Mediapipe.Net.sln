@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara", "Akihabara\Akihabara.csproj", "{91EFD9CB-6080-418D-B797-68E56526D7A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediapipe.Net", "Mediapipe.Net\Mediapipe.Net.csproj", "{91EFD9CB-6080-418D-B797-68E56526D7A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Tests", "Akihabara.Tests\Akihabara.Tests.csproj", "{211AA84F-B55B-45D3-B012-6422A3A1B18A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediapipe.Net.Tests", "Mediapipe.Net.Tests\Mediapipe.Net.Tests.csproj", "{211AA84F-B55B-45D3-B012-6422A3A1B18A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{3C5851B6-9514-4AF6-845D-877DDDADE8D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.HelloWorld", "Examples\Akihabara.Examples.HelloWorld\Akihabara.Examples.HelloWorld.csproj", "{24C11F34-9B39-430D-A4B5-B6A7E6A58836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediapipe.Net.Examples.HelloWorld", "Examples\Mediapipe.Net.Examples.HelloWorld\Mediapipe.Net.Examples.HelloWorld.csproj", "{24C11F34-9B39-430D-A4B5-B6A7E6A58836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.OnRawIO", "Examples\Akihabara.Examples.OnRawIO\Akihabara.Examples.OnRawIO.csproj", "{DD5B913F-5C2A-43A1-A983-8628638DD0EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediapipe.Net.Examples.OnRawIO", "Examples\Mediapipe.Net.Examples.OnRawIO\Mediapipe.Net.Examples.OnRawIO.csproj", "{DD5B913F-5C2A-43A1-A983-8628638DD0EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akihabara.Examples.FaceLandmarksOnRawIO", "Examples\Akihabara.Examples.FaceLandmarksOnRawIO\Akihabara.Examples.FaceLandmarksOnRawIO.csproj", "{B976FA3C-C46E-477E-A867-D2F5505FDB68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediapipe.Net.Examples.FaceLandmarksOnRawIO", "Examples\Mediapipe.Net.Examples.FaceLandmarksOnRawIO\Mediapipe.Net.Examples.FaceLandmarksOnRawIO.csproj", "{B976FA3C-C46E-477E-A867-D2F5505FDB68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
