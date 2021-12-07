@@ -74,7 +74,7 @@ jobs:
       - name: Check MediaPipe DLL Dependencies (Native, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
-          dotnet build "src/${{env.PROJECT_NAME}}.Tests"
+          dotnet build --runtime linux-x64 "src/${{env.PROJECT_NAME}}.Tests"
           ldd "src/${{env.PROJECT_NAME}}.Tests/bin/Debug/net5.0/linux-x64/libmediapipe_c.so" | grep "not found" && exit 1 || exit 0
         shell: pwsh
 
