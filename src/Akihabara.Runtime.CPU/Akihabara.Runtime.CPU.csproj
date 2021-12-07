@@ -50,7 +50,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Documents">
-    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>
