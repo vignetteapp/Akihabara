@@ -23,14 +23,14 @@
 
   <PropertyGroup Label="Pre-build task">
     <PreBuildEvent Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' ">
-      if [ ! -f $(MSBuildProjectDirectory)/libmediapipe_c.so ]; then
-        cd $(MSBuildProjectDirectory)/../../../
+      if [ ! -f $(MSBuildProjectDirectory)/runtimes/linux-x64/native/libmediapipe_c.so ]; then
+        cd $(MSBuildProjectDirectory)/../../
         python3 build.py build --desktop cpu --opencv=cmake -v
       fi
     </PreBuildEvent>
     <PreBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">
-      if not exist "$(MSBuildProjectDirectory)\libmediapipe_c.dll" (
-          cd $(MSBuildProjectDirectory)\..\..\..\
+      if not exist "$(MSBuildProjectDirectory)\runtimes\win-x64\native\libmediapipe_c.dll" (
+          cd $(MSBuildProjectDirectory)\..\..\
           python3 build.py build --desktop cpu --opencv=cmake -v
       )
     </PreBuildEvent>
