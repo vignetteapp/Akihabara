@@ -79,7 +79,7 @@ jobs:
           If ($Deps)
           {
             echo $Deps
-            throw "Missing Shared Library Dependencies!`n$Deps"
+            throw "Missing Shared Library Dependencies!"
           }
         shell: pwsh
 
@@ -92,8 +92,6 @@ jobs:
       - name: Test (CPU, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: dotnet test --runtime linux-x64 --filter "TestCategory!=GpuOnlyTest" "src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
-        env:
-          LD_LIBRARY_PATH:
         shell: pwsh
 
       # Attempt to upload results even if test fails.
