@@ -74,12 +74,12 @@ jobs:
       # On Windows, ignore tests that can signal SIGABRT because it will abort the process.
       - name: Test (CPU, Windows)
         if: ${{ matrix.os.prettyname == 'Windows' }}
-        run: dotnet test --runtime win-x64 --filter "TestCategory!=GpuOnlyTest&TestCategory!=SignalAbortTest" "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+        run: dotnet test --runtime win-x64 --filter "TestCategory!=GpuOnlyTest&TestCategory!=SignalAbortTest" "src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
       - name: Test (CPU, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
-        run: dotnet test --runtime linux-x64 --filter TestCategory!=GpuOnlyTest "$pwd/src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+        run: dotnet test --runtime linux-x64 --filter "TestCategory!=GpuOnlyTest" "src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
         shell: pwsh
 
       # Attempt to upload results even if test fails.
