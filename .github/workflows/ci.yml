@@ -71,6 +71,13 @@ jobs:
       - name: Build (.NET)
         run: dotnet build -c Debug src/${{env.PROJECT_NAME}}.sln
 
+      - name: Check MediaPipe DLL Dependencies (Native, *nix)
+        if: ${{ matrix.os.prettyname != 'Windows' }}
+        run: |
+          dotnet build "src/${{env.PROJECT_NAME}}.Tests"
+          ldd "src/${{env.PROJECT_NAME}}.Tests/bin/Debug/net5.0/linux-x64/libmediapipe_c.so" | grep "not found" && exit 1 || exit 0
+        shell: pwsh
+
       # On Windows, ignore tests that can signal SIGABRT because it will abort the process.
       - name: Test (CPU, Windows)
         if: ${{ matrix.os.prettyname == 'Windows' }}
@@ -80,6 +87,8 @@ jobs:
       - name: Test (CPU, *nix)
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: dotnet test --runtime linux-x64 --filter "TestCategory!=GpuOnlyTest" "src/${{env.PROJECT_NAME}}.Tests" --logger "trx;LogFileName=TestResults-${{matrix.os.prettyname}}.trx"
+        env:
+          LD_LIBRARY_PATH:
         shell: pwsh
 
       # Attempt to upload results even if test fails.
