@@ -75,7 +75,12 @@ jobs:
         if: ${{ matrix.os.prettyname != 'Windows' }}
         run: |
           dotnet build --runtime linux-x64 "src/${{env.PROJECT_NAME}}.Tests"
-          ldd "src/${{env.PROJECT_NAME}}.Tests/bin/Debug/net5.0/linux-x64/libmediapipe_c.so" | grep "not found" && exit 1 || exit 0
+          $Deps = ldd "src/${{env.PROJECT_NAME}}.Tests/bin/Debug/net5.0/linux-x64/libmediapipe_c.so" | grep "not found"
+          If ($Deps)
+          {
+            echo $Deps
+            throw "Missing Shared Library Dependencies!`n$Deps"
+          }
         shell: pwsh
 
       # On Windows, ignore tests that can signal SIGABRT because it will abort the process.
