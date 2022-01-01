@@ -1,20 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
+
+  <PropertyGroup Label="Project">
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <ItemGroup>
+
+  <ItemGroup Label="Package References">
+    <PackageReference Include="Akihabara.Runtime.CPU" Version="2021.1207.0" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
-  <ItemGroup>
+
+  <ItemGroup Label="Project References">
     <ProjectReference Include="..\Akihabara\Akihabara.csproj" />
-    <ProjectReference
-        Include="..\Runtime\Akihabara.Runtime.Linux_x64.CPU\Akihabara.Runtime.Linux_x64.CPU.csproj"
-        Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' " />
-    <ProjectReference
-        Include="..\Runtime\Akihabara.Runtime.Windows_x64.CPU\Akihabara.Runtime.Windows_x64.CPU.csproj"
-        Condition=" '$(OS)' == 'Windows_NT' " />
   </ItemGroup>
+
 </Project>
