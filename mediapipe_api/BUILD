@@ -60,7 +60,7 @@ cc_binary(
 )
 
 cc_binary(
-    name = "libmediapipe_c.dll",
+    name = "mediapipe_c.dll",
     deps = [":mediapipe_c"],
     linkshared = True,
     linkstatic = True,
