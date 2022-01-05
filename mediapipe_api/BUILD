@@ -71,7 +71,7 @@ alias(
     name = "libmediapipe_c",
     actual = select({
         "@com_google_mediapipe//mediapipe:macos": ":libmediapipe_c.dylib",
-        "@com_google_mediapipe//mediapipe:windows": ":libmediapipe_c.dll",
+        "@com_google_mediapipe//mediapipe:windows": ":mediapipe_c.dll",
         "//conditions:default": ":libmediapipe_c.so",
     }),
 )
