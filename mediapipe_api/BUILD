@@ -60,7 +60,7 @@ cc_binary(
 )
 
 cc_binary(
-    name = "libmediapipe_c.dll",
+    name = "mediapipe_c.dll",
     deps = [":mediapipe_c"],
     linkshared = True,
     linkstatic = True,
@@ -71,7 +71,7 @@ alias(
     name = "libmediapipe_c",
     actual = select({
         "@com_google_mediapipe//mediapipe:macos": ":libmediapipe_c.dylib",
-        "@com_google_mediapipe//mediapipe:windows": ":libmediapipe_c.dll",
+        "@com_google_mediapipe//mediapipe:windows": ":mediapipe_c.dll",
         "//conditions:default": ":libmediapipe_c.so",
     }),
 )
