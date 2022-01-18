@@ -1,3 +1,8 @@
+# Deprecation Note
+
+This library has been superseded by [MediaPipe.NET](https://github.com/vignetteapp/MediaPipe.NET), which has a more cleaner take to the library. As such, MediaPipe.NET
+is a natural evolution from Akihabara's codebase and is much more predictable and maintainable. We will no longer provide maintenance to Akihabara.
+
 # Akihabara
 
 Akihabara is Vignette's pure .NET port of Mediapipe, based on [Junrou Nishida's](https://github.com/homuler) MediaPipeUnity project.
